@@ -1,0 +1,3 @@
+com\paliup\nutrition\ServletInitializer.class
+com\paliup\nutrition\NutritionProjectApplication.class
+com\paliup\nutrition\controller\HomeController.class
