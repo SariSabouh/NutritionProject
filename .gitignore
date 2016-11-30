@@ -47,8 +47,8 @@ Temporary Items
 .apdisk
 
 #Project specific
-target
 .classpath
 .settings
 .project
 
+/target/
