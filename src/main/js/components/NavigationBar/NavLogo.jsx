@@ -2,23 +2,17 @@ import React from 'react';
 
 export default class NavLogo extends React.Component {
     render() {
-
-        const logoStyle = {
-            marginTop: '-7px',
-            maxWidth: '200%',
-            maxHeight: '200%',
-        };
-
+// Actual logo set in CSS
         return (
             <div className="navbar-header">
-                <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span className="sr-only">Toggle navigation</span>
                     <span className="icon-bar"></span>
                     <span className="icon-bar"></span>
                     <span className="icon-bar"></span>
                 </button>
-                <a className="navbar-brand" href="#myPage"><img style={logoStyle} src="images/itg.png"/></a>
+                <a className="navbar-brand page-scroll" href="body">Unika</a>
             </div>
-
         )
     }
 }

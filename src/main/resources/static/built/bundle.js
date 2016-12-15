@@ -21457,9 +21457,45 @@
 	
 	var _componentsNavigationBarNavigationBarJsx2 = _interopRequireDefault(_componentsNavigationBarNavigationBarJsx);
 	
-	var _componentsJumbotronJumbotronJsx = __webpack_require__(176);
+	var _componentsCarouselCarouselJsx = __webpack_require__(176);
 	
-	var _componentsJumbotronJumbotronJsx2 = _interopRequireDefault(_componentsJumbotronJumbotronJsx);
+	var _componentsCarouselCarouselJsx2 = _interopRequireDefault(_componentsCarouselCarouselJsx);
+	
+	var _componentsBodyRijeemakSectionJsx = __webpack_require__(178);
+	
+	var _componentsBodyRijeemakSectionJsx2 = _interopRequireDefault(_componentsBodyRijeemakSectionJsx);
+	
+	var _componentsBodyCounterSectionJsx = __webpack_require__(180);
+	
+	var _componentsBodyCounterSectionJsx2 = _interopRequireDefault(_componentsBodyCounterSectionJsx);
+	
+	var _componentsBodyServicesSectionJsx = __webpack_require__(181);
+	
+	var _componentsBodyServicesSectionJsx2 = _interopRequireDefault(_componentsBodyServicesSectionJsx);
+	
+	var _componentsBodyTestimonialsSectionJsx = __webpack_require__(182);
+	
+	var _componentsBodyTestimonialsSectionJsx2 = _interopRequireDefault(_componentsBodyTestimonialsSectionJsx);
+	
+	var _componentsBodyPricesSectionJsx = __webpack_require__(183);
+	
+	var _componentsBodyPricesSectionJsx2 = _interopRequireDefault(_componentsBodyPricesSectionJsx);
+	
+	var _componentsBodyTeamSectionJsx = __webpack_require__(184);
+	
+	var _componentsBodyTeamSectionJsx2 = _interopRequireDefault(_componentsBodyTeamSectionJsx);
+	
+	var _componentsBodyPartnersSectionJsx = __webpack_require__(185);
+	
+	var _componentsBodyPartnersSectionJsx2 = _interopRequireDefault(_componentsBodyPartnersSectionJsx);
+	
+	var _componentsBodySocialSectionJsx = __webpack_require__(186);
+	
+	var _componentsBodySocialSectionJsx2 = _interopRequireDefault(_componentsBodySocialSectionJsx);
+	
+	var _componentsBodyContactSectionJsx = __webpack_require__(187);
+	
+	var _componentsBodyContactSectionJsx2 = _interopRequireDefault(_componentsBodyContactSectionJsx);
 	
 	var App = (function (_React$Component) {
 	    _inherits(App, _React$Component);
@@ -21475,9 +21511,24 @@
 	        value: function render() {
 	            return _react2['default'].createElement(
 	                'div',
-	                null,
+	                { id: 'app' },
 	                _react2['default'].createElement(_componentsNavigationBarNavigationBarJsx2['default'], null),
-	                _react2['default'].createElement(_componentsJumbotronJumbotronJsx2['default'], null)
+	                _react2['default'].createElement(_componentsCarouselCarouselJsx2['default'], null),
+	                _react2['default'].createElement(_componentsBodyRijeemakSectionJsx2['default'], null),
+	                _react2['default'].createElement('div', { className: 'extra-space-l' }),
+	                _react2['default'].createElement(_componentsBodyCounterSectionJsx2['default'], null),
+	                _react2['default'].createElement(_componentsBodyServicesSectionJsx2['default'], null),
+	                _react2['default'].createElement(_componentsBodyTestimonialsSectionJsx2['default'], null),
+	                _react2['default'].createElement(_componentsBodyPricesSectionJsx2['default'], null),
+	                _react2['default'].createElement(_componentsBodyTeamSectionJsx2['default'], null),
+	                _react2['default'].createElement(_componentsBodyPartnersSectionJsx2['default'], null),
+	                _react2['default'].createElement(_componentsBodySocialSectionJsx2['default'], null),
+	                _react2['default'].createElement(_componentsBodyContactSectionJsx2['default'], null),
+	                _react2['default'].createElement(
+	                    'a',
+	                    { className: 'scrolltotop' },
+	                    _react2['default'].createElement('i', { className: 'fa fa-arrow-up' })
+	                )
 	            );
 	        }
 	    }]);
@@ -21533,11 +21584,11 @@
 	        key: 'render',
 	        value: function render() {
 	            return _react2['default'].createElement(
-	                'div',
-	                null,
+	                'header',
+	                { id: 'header', className: 'header-main' },
 	                _react2['default'].createElement(
 	                    'nav',
-	                    { className: 'navbar navbar-default navbar-fixed-top' },
+	                    { id: 'main-navbar', className: 'navbar navbar-default navbar-fixed-top', role: 'navigation' },
 	                    _react2['default'].createElement(
 	                        'div',
 	                        { className: 'container' },
@@ -21559,21 +21610,21 @@
 /* 174 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 	
-	Object.defineProperty(exports, '__esModule', {
+	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
 	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 	
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
 	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var _react = __webpack_require__(1);
 	
@@ -21585,43 +21636,42 @@
 	    function NavLogo() {
 	        _classCallCheck(this, NavLogo);
 	
-	        _get(Object.getPrototypeOf(NavLogo.prototype), 'constructor', this).apply(this, arguments);
+	        _get(Object.getPrototypeOf(NavLogo.prototype), "constructor", this).apply(this, arguments);
 	    }
 	
 	    _createClass(NavLogo, [{
-	        key: 'render',
+	        key: "render",
 	        value: function render() {
-	
-	            var logoStyle = {
-	                marginTop: '-7px',
-	                maxWidth: '200%',
-	                maxHeight: '200%'
-	            };
-	
-	            return _react2['default'].createElement(
-	                'div',
-	                { className: 'navbar-header' },
-	                _react2['default'].createElement(
-	                    'button',
-	                    { type: 'button', className: 'navbar-toggle', 'data-toggle': 'collapse', 'data-target': '#myNavbar' },
-	                    _react2['default'].createElement('span', { className: 'icon-bar' }),
-	                    _react2['default'].createElement('span', { className: 'icon-bar' }),
-	                    _react2['default'].createElement('span', { className: 'icon-bar' })
+	            // Actual logo set in CSS
+	            return _react2["default"].createElement(
+	                "div",
+	                { className: "navbar-header" },
+	                _react2["default"].createElement(
+	                    "button",
+	                    { type: "button", className: "navbar-toggle collapsed", "data-toggle": "collapse", "data-target": "#bs-example-navbar-collapse-1" },
+	                    _react2["default"].createElement(
+	                        "span",
+	                        { className: "sr-only" },
+	                        "Toggle navigation"
+	                    ),
+	                    _react2["default"].createElement("span", { className: "icon-bar" }),
+	                    _react2["default"].createElement("span", { className: "icon-bar" }),
+	                    _react2["default"].createElement("span", { className: "icon-bar" })
 	                ),
-	                _react2['default'].createElement(
-	                    'a',
-	                    { className: 'navbar-brand', href: '#myPage' },
-	                    _react2['default'].createElement('img', { style: logoStyle, src: 'images/itg.png' })
+	                _react2["default"].createElement(
+	                    "a",
+	                    { className: "navbar-brand page-scroll", href: "body" },
+	                    "Unika"
 	                )
 	            );
 	        }
 	    }]);
 	
 	    return NavLogo;
-	})(_react2['default'].Component);
+	})(_react2["default"].Component);
 	
-	exports['default'] = NavLogo;
-	module.exports = exports['default'];
+	exports["default"] = NavLogo;
+	module.exports = exports["default"];
 
 /***/ },
 /* 175 */
@@ -21661,7 +21711,7 @@
 	        value: function render() {
 	            return _react2["default"].createElement(
 	                "div",
-	                { className: "collapse navbar-collapse", id: "myNavbar" },
+	                { className: "collapse navbar-collapse", id: "bs-example-navbar-collapse-1" },
 	                _react2["default"].createElement(
 	                    "ul",
 	                    { className: "nav navbar-nav navbar-right" },
@@ -21670,8 +21720,8 @@
 	                        null,
 	                        _react2["default"].createElement(
 	                            "a",
-	                            { href: "#why" },
-	                            "WHY"
+	                            { className: "page-scroll", href: "body" },
+	                            "Home"
 	                        )
 	                    ),
 	                    _react2["default"].createElement(
@@ -21679,8 +21729,8 @@
 	                        null,
 	                        _react2["default"].createElement(
 	                            "a",
-	                            { href: "#services" },
-	                            "SERVICES"
+	                            { className: "page-scroll", href: "#rijeemak-section" },
+	                            "Rijeemak"
 	                        )
 	                    ),
 	                    _react2["default"].createElement(
@@ -21688,8 +21738,8 @@
 	                        null,
 	                        _react2["default"].createElement(
 	                            "a",
-	                            { href: "#testimonials" },
-	                            "TESTIMONIALS"
+	                            { className: "page-scroll", href: "#services-section" },
+	                            "Services"
 	                        )
 	                    ),
 	                    _react2["default"].createElement(
@@ -21697,40 +21747,26 @@
 	                        null,
 	                        _react2["default"].createElement(
 	                            "a",
-	                            { href: "#apply" },
-	                            "APPLY"
+	                            { className: "page-scroll", href: "#prices-section" },
+	                            "Prices"
 	                        )
 	                    ),
 	                    _react2["default"].createElement(
 	                        "li",
-	                        { className: "dropdown" },
+	                        null,
 	                        _react2["default"].createElement(
 	                            "a",
-	                            { className: "dropdown-toggle", "data-toggle": "dropdown", href: "#" },
-	                            "US",
-	                            _react2["default"].createElement("span", { className: "caret" })
-	                        ),
+	                            { className: "page-scroll", href: "#team-section" },
+	                            "Team"
+	                        )
+	                    ),
+	                    _react2["default"].createElement(
+	                        "li",
+	                        null,
 	                        _react2["default"].createElement(
-	                            "ul",
-	                            { className: "dropdown-menu" },
-	                            _react2["default"].createElement(
-	                                "li",
-	                                null,
-	                                _react2["default"].createElement(
-	                                    "a",
-	                                    { href: "#contact", className: "dropdown-nav" },
-	                                    "CONTACT US"
-	                                )
-	                            ),
-	                            _react2["default"].createElement(
-	                                "li",
-	                                null,
-	                                _react2["default"].createElement(
-	                                    "a",
-	                                    { href: "#about", className: "dropdown-nav" },
-	                                    "ABOUT US"
-	                                )
-	                            )
+	                            "a",
+	                            { className: "page-scroll", href: "#contact-section" },
+	                            "Contact"
 	                        )
 	                    )
 	                )
@@ -21768,99 +21804,119 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _CompanyInfoJsx = __webpack_require__(177);
+	var _CarouselItemJsx = __webpack_require__(177);
 	
-	var _CompanyInfoJsx2 = _interopRequireDefault(_CompanyInfoJsx);
+	var _CarouselItemJsx2 = _interopRequireDefault(_CarouselItemJsx);
 	
-	var _ImageSliderJsx = __webpack_require__(178);
+	var Carousel = (function (_React$Component) {
+	    _inherits(Carousel, _React$Component);
 	
-	var _ImageSliderJsx2 = _interopRequireDefault(_ImageSliderJsx);
+	    function Carousel() {
+	        _classCallCheck(this, Carousel);
 	
-	var Jumbotron = (function (_React$Component) {
-	    _inherits(Jumbotron, _React$Component);
-	
-	    function Jumbotron() {
-	        _classCallCheck(this, Jumbotron);
-	
-	        _get(Object.getPrototypeOf(Jumbotron.prototype), 'constructor', this).apply(this, arguments);
+	        _get(Object.getPrototypeOf(Carousel.prototype), 'constructor', this).apply(this, arguments);
 	    }
 	
-	    _createClass(Jumbotron, [{
+	    _createClass(Carousel, [{
 	        key: 'render',
 	        value: function render() {
+	
+	            var carouselStyle = {
+	                backgroundImage: 'url(img/slider-bg.jpg)'
+	            };
+	
 	            return _react2['default'].createElement(
-	                'div',
-	                { className: 'jumbotron text-center' },
-	                _react2['default'].createElement(_CompanyInfoJsx2['default'], null),
-	                _react2['default'].createElement(_ImageSliderJsx2['default'], null)
+	                'section',
+	                { id: 'text-carousel-intro-section', className: 'parallax', 'data-stellar-background-ratio': '0.5', style: carouselStyle },
+	                _react2['default'].createElement(
+	                    'div',
+	                    { className: 'container' },
+	                    _react2['default'].createElement(
+	                        'div',
+	                        { className: 'caption text-center text-white', 'data-stellar-ratio': '0.7' },
+	                        _react2['default'].createElement(
+	                            'div',
+	                            { id: 'owl-intro-text', className: 'owl-carousel' },
+	                            _react2['default'].createElement(_CarouselItemJsx2['default'], { header: 'Rijeemak Online', subHeader: 'Your Diet, At Your Comfort', href: '#rijeemak-section', hrefText: 'Learn More!' }),
+	                            _react2['default'].createElement(_CarouselItemJsx2['default'], { header: 'IT\'S ALL ABOUT YOU', subHeader: 'Love, Care and a great health program', href: '#services-section', hrefText: 'Learn More!' }),
+	                            _react2['default'].createElement(_CarouselItemJsx2['default'], { header: 'Best Prices', subHeader: 'Cheaper than going to an actual appointment? WHAAAAT?!?', href: '#prices-section', hrefText: 'Learn More!' })
+	                        )
+	                    )
+	                )
 	            );
 	        }
 	    }]);
 	
-	    return Jumbotron;
+	    return Carousel;
 	})(_react2['default'].Component);
 	
-	exports['default'] = Jumbotron;
+	exports['default'] = Carousel;
 	module.exports = exports['default'];
 
 /***/ },
 /* 177 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 	
-	Object.defineProperty(exports, '__esModule', {
+	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
 	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 	
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
 	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var _react = __webpack_require__(1);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var CompanyInfo = (function (_React$Component) {
-	    _inherits(CompanyInfo, _React$Component);
+	var CarouselItem = (function (_React$Component) {
+	    _inherits(CarouselItem, _React$Component);
 	
-	    function CompanyInfo() {
-	        _classCallCheck(this, CompanyInfo);
+	    function CarouselItem() {
+	        _classCallCheck(this, CarouselItem);
 	
-	        _get(Object.getPrototypeOf(CompanyInfo.prototype), 'constructor', this).apply(this, arguments);
+	        _get(Object.getPrototypeOf(CarouselItem.prototype), "constructor", this).apply(this, arguments);
 	    }
 	
-	    _createClass(CompanyInfo, [{
-	        key: 'render',
+	    _createClass(CarouselItem, [{
+	        key: "render",
 	        value: function render() {
-	            return _react2['default'].createElement(
-	                'div',
-	                null,
-	                _react2['default'].createElement(
-	                    'h1',
+	            return _react2["default"].createElement(
+	                "div",
+	                { className: "item carousel-text" },
+	                _react2["default"].createElement(
+	                    "h1",
 	                    null,
-	                    'Nutrition'
+	                    this.props.header
 	                ),
-	                _react2['default'].createElement(
-	                    'p',
+	                _react2["default"].createElement(
+	                    "p",
 	                    null,
-	                    'Get Healthy'
+	                    this.props.subHeader
+	                ),
+	                _react2["default"].createElement("div", { className: "extra-space-l" }),
+	                _react2["default"].createElement(
+	                    "a",
+	                    { className: "btn btn-blank page-scroll", href: this.props.href },
+	                    this.props.hrefText
 	                )
 	            );
 	        }
 	    }]);
 	
-	    return CompanyInfo;
-	})(_react2['default'].Component);
+	    return CarouselItem;
+	})(_react2["default"].Component);
 	
-	exports['default'] = CompanyInfo;
-	module.exports = exports['default'];
+	exports["default"] = CarouselItem;
+	module.exports = exports["default"];
 
 /***/ },
 /* 178 */
@@ -21886,55 +21942,219 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _nukaCarousel = __webpack_require__(179);
+	var _SectionHeaderJsx = __webpack_require__(179);
 	
-	var _nukaCarousel2 = _interopRequireDefault(_nukaCarousel);
+	var _SectionHeaderJsx2 = _interopRequireDefault(_SectionHeaderJsx);
 	
-	var ImageSlider = (function (_React$Component) {
-	    _inherits(ImageSlider, _React$Component);
+	var RijeemakSection = (function (_React$Component) {
+	    _inherits(RijeemakSection, _React$Component);
 	
-	    function ImageSlider() {
-	        _classCallCheck(this, ImageSlider);
+	    function RijeemakSection() {
+	        _classCallCheck(this, RijeemakSection);
 	
-	        _get(Object.getPrototypeOf(ImageSlider.prototype), 'constructor', this).apply(this, arguments);
+	        _get(Object.getPrototypeOf(RijeemakSection.prototype), 'constructor', this).apply(this, arguments);
 	    }
 	
-	    _createClass(ImageSlider, [{
+	    _createClass(RijeemakSection, [{
 	        key: 'render',
 	        value: function render() {
 	            return _react2['default'].createElement(
-	                _nukaCarousel2['default'],
-	                {
-	                    autoplay: true,
-	                    autoplayInterval: 3000,
-	                    slideWidth: 0.6,
-	                    width: "80%" },
-	                _react2['default'].createElement('img', { className: 'balls', src: 'http://placehold.it/1000x400/ffffff/c0392b/&text=slide1' }),
-	                _react2['default'].createElement('img', { src: 'http://placehold.it/1000x400/ffffff/c0392b/&text=slide2' }),
-	                _react2['default'].createElement('img', { src: 'http://placehold.it/1000x400/ffffff/c0392b/&text=slide3' }),
-	                _react2['default'].createElement('img', { src: 'http://placehold.it/1000x400/ffffff/c0392b/&text=slide4' }),
-	                _react2['default'].createElement('img', { src: 'http://placehold.it/1000x400/ffffff/c0392b/&text=slide5' }),
-	                _react2['default'].createElement('img', { src: 'https://www.newton.ac.uk/files/covers/968361.jpg' })
+	                'section',
+	                { id: 'rijeemak-section', className: 'page bg-style1' },
+	                _react2['default'].createElement(_SectionHeaderJsx2['default'], { header: 'Rijeemak Online', subtitle: 'This is the generation of services and convenience. So why set an appointment to go to have a conversation, when you can do it at your own convenience?' }),
+	                _react2['default'].createElement(
+	                    'div',
+	                    { className: 'rotate-box-1-wrapper' },
+	                    _react2['default'].createElement(
+	                        'div',
+	                        { className: 'container' },
+	                        _react2['default'].createElement(
+	                            'div',
+	                            { className: 'row' },
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'col-md-6 col-sm-6' },
+	                                _react2['default'].createElement(
+	                                    'a',
+	                                    { className: 'rotate-box-1 square-icon wow zoomIn', 'data-wow-delay': '0' },
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'rotate-box-icon' },
+	                                        _react2['default'].createElement('i', { className: 'fa fa-users' })
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'div',
+	                                        { className: 'rotate-box-info' },
+	                                        _react2['default'].createElement(
+	                                            'h4',
+	                                            null,
+	                                            'Who We Are?'
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'p',
+	                                            null,
+	                                            'Our small team wants to help our community to be better as a whole. A small start in respecting each other and helping each other move forward, will definetely make a difference. More confidence in one\'s health and lifestyle, brings more confidence and ambition in one\'s state of mind and thoughts. We as a team see that we can achieve that.'
+	                                        )
+	                                    )
+	                                )
+	                            ),
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'col-md-6 col-sm-6' },
+	                                _react2['default'].createElement(
+	                                    'a',
+	                                    { className: 'rotate-box-1 square-icon wow zoomIn', 'data-wow-delay': '0.4s' },
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'rotate-box-icon' },
+	                                        _react2['default'].createElement('i', { className: 'fa fa-heart' })
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'div',
+	                                        { className: 'rotate-box-info' },
+	                                        _react2['default'].createElement(
+	                                            'h4',
+	                                            null,
+	                                            'Why We Do It?'
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'p',
+	                                            null,
+	                                            'We want people to get into better shape. Our own team member, and the creator of this idea, Raghad Sukhtian, said "It makes me sad when I see someone who is being hurt because of his wight. I just want to help them." Now with the Raghad\'s great soul, we ',
+	                                            _react2['default'].createElement(
+	                                                'strong',
+	                                                null,
+	                                                'WILL'
+	                                            ),
+	                                            ' help them.'
+	                                        )
+	                                    )
+	                                )
+	                            ),
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'col-md-12' },
+	                                _react2['default'].createElement(
+	                                    'a',
+	                                    { className: 'rotate-box-1 square-icon wow zoomIn', 'data-wow-delay': '0.2s' },
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'rotate-box-icon' },
+	                                        _react2['default'].createElement('i', { className: 'fa fa-diamond' })
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'div',
+	                                        { className: 'rotate-box-info' },
+	                                        _react2['default'].createElement(
+	                                            'h4',
+	                                            null,
+	                                            'What We Do?'
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'p',
+	                                            null,
+	                                            _react2['default'].createElement(
+	                                                'strong',
+	                                                null,
+	                                                'Rijeemak'
+	                                            ),
+	                                            ' gives you the possibility of texting, calling, or whatever communication method you choose with your specialist, to get help with your diet and plan to ',
+	                                            _react2['default'].createElement(
+	                                                'strong',
+	                                                null,
+	                                                'lose weight'
+	                                            ),
+	                                            ', or reach the form you are wanting. You will be able to get in touch with our specialists at anytime, well till they sleep. You do not feel like eating chicken? You really want to eat chocolate?? ',
+	                                            _react2['default'].createElement(
+	                                                'strong',
+	                                                null,
+	                                                'WHO DOESN\'T!'
+	                                            ),
+	                                            ' Our experts will make sure you get what you want but with the right doses. Calories is a scary word, so instead of thinking how many calories did I just eat, let us think how much weight have I lost already!'
+	                                        )
+	                                    )
+	                                )
+	                            )
+	                        )
+	                    )
+	                )
 	            );
 	        }
 	    }]);
 	
-	    return ImageSlider;
+	    return RijeemakSection;
 	})(_react2['default'].Component);
 	
-	exports['default'] = ImageSlider;
+	exports['default'] = RijeemakSection;
 	module.exports = exports['default'];
 
 /***/ },
 /* 179 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 	
-	var Carousel = __webpack_require__(180);
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
 	
-	module.exports = Carousel;
-
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var SectionHeader = (function (_React$Component) {
+	    _inherits(SectionHeader, _React$Component);
+	
+	    function SectionHeader() {
+	        _classCallCheck(this, SectionHeader);
+	
+	        _get(Object.getPrototypeOf(SectionHeader.prototype), "constructor", this).apply(this, arguments);
+	    }
+	
+	    _createClass(SectionHeader, [{
+	        key: "render",
+	        value: function render() {
+	            return _react2["default"].createElement(
+	                "div",
+	                { className: "page-header-wrapper" },
+	                _react2["default"].createElement(
+	                    "div",
+	                    { className: "container" },
+	                    _react2["default"].createElement(
+	                        "div",
+	                        { className: "page-header text-center wow fadeInUp", "data-wow-delay": "0.3s" },
+	                        _react2["default"].createElement(
+	                            "h2",
+	                            null,
+	                            this.props.header
+	                        ),
+	                        _react2["default"].createElement("div", { className: "devider" }),
+	                        _react2["default"].createElement(
+	                            "p",
+	                            { className: "subtitle" },
+	                            this.props.subtitle
+	                        )
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return SectionHeader;
+	})(_react2["default"].Component);
+	
+	exports["default"] = SectionHeader;
+	module.exports = exports["default"];
 
 /***/ },
 /* 180 */
@@ -21943,1694 +22163,379 @@
 	'use strict';
 	
 	Object.defineProperty(exports, '__esModule', {
-	  value: true
+	    value: true
 	});
 	
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var _react = __webpack_require__(1);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reactDom = __webpack_require__(34);
+	var _SectionHeaderJsx = __webpack_require__(179);
 	
-	var _reactDom2 = _interopRequireDefault(_reactDom);
+	var _SectionHeaderJsx2 = _interopRequireDefault(_SectionHeaderJsx);
 	
-	var _kwReactTweenState = __webpack_require__(181);
+	var CounterSection = (function (_React$Component) {
+	    _inherits(CounterSection, _React$Component);
 	
-	var _kwReactTweenState2 = _interopRequireDefault(_kwReactTweenState);
+	    function CounterSection() {
+	        _classCallCheck(this, CounterSection);
 	
-	var _decorators = __webpack_require__(182);
-	
-	var _decorators2 = _interopRequireDefault(_decorators);
-	
-	var _objectAssign = __webpack_require__(183);
-	
-	var _objectAssign2 = _interopRequireDefault(_objectAssign);
-	
-	var _exenv = __webpack_require__(184);
-	
-	var _exenv2 = _interopRequireDefault(_exenv);
-	
-	var addEvent = function addEvent(elem, type, eventHandle) {
-	  if (elem === null || typeof elem === 'undefined') {
-	    return;
-	  }
-	  if (elem.addEventListener) {
-	    elem.addEventListener(type, eventHandle, false);
-	  } else if (elem.attachEvent) {
-	    elem.attachEvent('on' + type, eventHandle);
-	  } else {
-	    elem['on' + type] = eventHandle;
-	  }
-	};
-	
-	var removeEvent = function removeEvent(elem, type, eventHandle) {
-	  if (elem === null || typeof elem === 'undefined') {
-	    return;
-	  }
-	  if (elem.removeEventListener) {
-	    elem.removeEventListener(type, eventHandle, false);
-	  } else if (elem.detachEvent) {
-	    elem.detachEvent('on' + type, eventHandle);
-	  } else {
-	    elem['on' + type] = null;
-	  }
-	};
-	
-	var Carousel = _react2['default'].createClass({
-	  displayName: 'Carousel',
-	
-	  mixins: [_kwReactTweenState2['default'].Mixin],
-	
-	  propTypes: {
-	    afterSlide: _react2['default'].PropTypes.func,
-	    autoplay: _react2['default'].PropTypes.bool,
-	    autoplayInterval: _react2['default'].PropTypes.number,
-	    beforeSlide: _react2['default'].PropTypes.func,
-	    cellAlign: _react2['default'].PropTypes.oneOf(['left', 'center', 'right']),
-	    cellSpacing: _react2['default'].PropTypes.number,
-	    data: _react2['default'].PropTypes.func,
-	    decorators: _react2['default'].PropTypes.arrayOf(_react2['default'].PropTypes.shape({
-	      component: _react2['default'].PropTypes.func,
-	      position: _react2['default'].PropTypes.oneOf(['TopLeft', 'TopCenter', 'TopRight', 'CenterLeft', 'CenterCenter', 'CenterRight', 'BottomLeft', 'BottomCenter', 'BottomRight']),
-	      style: _react2['default'].PropTypes.object
-	    })),
-	    dragging: _react2['default'].PropTypes.bool,
-	    easing: _react2['default'].PropTypes.string,
-	    edgeEasing: _react2['default'].PropTypes.string,
-	    framePadding: _react2['default'].PropTypes.string,
-	    frameOverflow: _react2['default'].PropTypes.string,
-	    initialSlideHeight: _react2['default'].PropTypes.number,
-	    initialSlideWidth: _react2['default'].PropTypes.number,
-	    slideIndex: _react2['default'].PropTypes.number,
-	    slidesToShow: _react2['default'].PropTypes.number,
-	    slidesToScroll: _react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.number, _react2['default'].PropTypes.oneOf(['auto'])]),
-	    slideWidth: _react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.string, _react2['default'].PropTypes.number]),
-	    speed: _react2['default'].PropTypes.number,
-	    vertical: _react2['default'].PropTypes.bool,
-	    width: _react2['default'].PropTypes.string,
-	    wrapAround: _react2['default'].PropTypes.bool
-	  },
-	
-	  getDefaultProps: function getDefaultProps() {
-	    return {
-	      afterSlide: function afterSlide() {},
-	      autoplay: false,
-	      autoplayInterval: 3000,
-	      beforeSlide: function beforeSlide() {},
-	      cellAlign: 'left',
-	      cellSpacing: 0,
-	      data: function data() {},
-	      decorators: _decorators2['default'],
-	      dragging: true,
-	      easing: 'easeOutCirc',
-	      edgeEasing: 'easeOutElastic',
-	      framePadding: '0px',
-	      frameOverflow: 'hidden',
-	      slideIndex: 0,
-	      slidesToScroll: 1,
-	      slidesToShow: 1,
-	      slideWidth: 1,
-	      speed: 500,
-	      vertical: false,
-	      width: '100%',
-	      wrapAround: false
-	    };
-	  },
-	
-	  getInitialState: function getInitialState() {
-	    return {
-	      currentSlide: this.props.slideIndex,
-	      dragging: false,
-	      frameWidth: 0,
-	      left: 0,
-	      slideCount: 0,
-	      slidesToScroll: this.props.slidesToScroll,
-	      slideWidth: 0,
-	      top: 0
-	    };
-	  },
-	
-	  componentWillMount: function componentWillMount() {
-	    this.setInitialDimensions();
-	  },
-	
-	  componentDidMount: function componentDidMount() {
-	    this.setDimensions();
-	    this.bindEvents();
-	    this.setExternalData();
-	    if (this.props.autoplay) {
-	      this.startAutoplay();
+	        _get(Object.getPrototypeOf(CounterSection.prototype), 'constructor', this).apply(this, arguments);
 	    }
-	  },
 	
-	  componentWillReceiveProps: function componentWillReceiveProps(nextProps) {
-	    this.setState({
-	      slideCount: nextProps.children.length
-	    });
-	    this.setDimensions(nextProps);
-	    if (this.props.slideIndex !== nextProps.slideIndex && nextProps.slideIndex !== this.state.currentSlide) {
-	      this.goToSlide(nextProps.slideIndex);
-	    }
-	    if (this.props.autoplay !== nextProps.autoplay) {
-	      if (nextProps.autoplay) {
-	        this.startAutoplay();
-	      } else {
-	        this.stopAutoplay();
-	      }
-	    }
-	  },
+	    _createClass(CounterSection, [{
+	        key: 'render',
+	        value: function render() {
 	
-	  componentWillUnmount: function componentWillUnmount() {
-	    this.unbindEvents();
-	    this.stopAutoplay();
-	  },
+	            var counterUpStyle = {
+	                backgroundImage: 'url(img/counter-bg.jpg)'
+	            };
 	
-	  render: function render() {
-	    var self = this;
-	    var children = _react2['default'].Children.count(this.props.children) > 1 ? this.formatChildren(this.props.children) : this.props.children;
-	    return _react2['default'].createElement(
-	      'div',
-	      { className: ['slider', this.props.className || ''].join(' '), ref: 'slider', style: (0, _objectAssign2['default'])(this.getSliderStyles(), this.props.style || {}) },
-	      _react2['default'].createElement(
-	        'div',
-	        _extends({ className: 'slider-frame',
-	          ref: 'frame',
-	          style: this.getFrameStyles()
-	        }, this.getTouchEvents(), this.getMouseEvents(), {
-	          onClick: this.handleClick }),
-	        _react2['default'].createElement(
-	          'ul',
-	          { className: 'slider-list', ref: 'list', style: this.getListStyles() },
-	          children
-	        )
-	      ),
-	      this.props.decorators ? this.props.decorators.map(function (Decorator, index) {
-	        return _react2['default'].createElement(
-	          'div',
-	          {
-	            style: (0, _objectAssign2['default'])(self.getDecoratorStyles(Decorator.position), Decorator.style || {}),
-	            className: 'slider-decorator-' + index,
-	            key: index },
-	          _react2['default'].createElement(Decorator.component, {
-	            currentSlide: self.state.currentSlide,
-	            slideCount: self.state.slideCount,
-	            frameWidth: self.state.frameWidth,
-	            slideWidth: self.state.slideWidth,
-	            slidesToScroll: self.state.slidesToScroll,
-	            cellSpacing: self.props.cellSpacing,
-	            slidesToShow: self.props.slidesToShow,
-	            wrapAround: self.props.wrapAround,
-	            nextSlide: self.nextSlide,
-	            previousSlide: self.previousSlide,
-	            goToSlide: self.goToSlide })
-	        );
-	      }) : null,
-	      _react2['default'].createElement('style', { type: 'text/css', dangerouslySetInnerHTML: { __html: self.getStyleTagStyles() } })
-	    );
-	  },
-	
-	  // Touch Events
-	
-	  touchObject: {},
-	
-	  getTouchEvents: function getTouchEvents() {
-	    var self = this;
-	
-	    return {
-	      onTouchStart: function onTouchStart(e) {
-	        self.touchObject = {
-	          startX: e.touches[0].pageX,
-	          startY: e.touches[0].pageY
-	        };
-	        self.handleMouseOver();
-	      },
-	      onTouchMove: function onTouchMove(e) {
-	        var direction = self.swipeDirection(self.touchObject.startX, e.touches[0].pageX, self.touchObject.startY, e.touches[0].pageY);
-	
-	        if (direction !== 0) {
-	          e.preventDefault();
+	            return _react2['default'].createElement(
+	                'section',
+	                { id: 'counter-section' },
+	                _react2['default'].createElement(
+	                    'div',
+	                    { id: 'counter-up-trigger', className: 'counter-up text-white parallax', 'data-stellar-background-ratio': '0.5', style: counterUpStyle },
+	                    _react2['default'].createElement('div', { className: 'cover' }),
+	                    _react2['default'].createElement(_SectionHeaderJsx2['default'], { header: 'Our Nutritionist Secrets', subtitle: 'Pssst! Yes we know what we do!' }),
+	                    _react2['default'].createElement(
+	                        'div',
+	                        { className: 'container' },
+	                        _react2['default'].createElement(
+	                            'div',
+	                            { className: 'row' },
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'fact text-center col-md-4 col-sm-6' },
+	                                _react2['default'].createElement(
+	                                    'div',
+	                                    { className: 'fact-inner' },
+	                                    _react2['default'].createElement('i', { className: 'fa fa-medkit fa-3x' }),
+	                                    _react2['default'].createElement('div', { className: 'extra-space-l' }),
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'counter' },
+	                                        '100'
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'counter-add' },
+	                                        '+'
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'p',
+	                                        { className: 'lead' },
+	                                        'Patients Helped a Month'
+	                                    )
+	                                )
+	                            ),
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'fact text-center col-md-4 col-sm-6' },
+	                                _react2['default'].createElement(
+	                                    'div',
+	                                    { className: 'fact-inner' },
+	                                    _react2['default'].createElement('i', { className: 'fa fa-flask fa-3x' }),
+	                                    _react2['default'].createElement('div', { className: 'extra-space-l' }),
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'counter' },
+	                                        '10'
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'counter-add' },
+	                                        '+'
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'p',
+	                                        { className: 'lead' },
+	                                        'Years of Experience'
+	                                    )
+	                                )
+	                            ),
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'fact text-center col-md-4 col-sm-6' },
+	                                _react2['default'].createElement(
+	                                    'div',
+	                                    { className: 'fact-inner' },
+	                                    _react2['default'].createElement('i', { className: 'fa fa-trophy fa-3x' }),
+	                                    _react2['default'].createElement('div', { className: 'extra-space-l' }),
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'counter' },
+	                                        '15'
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'counter-add' },
+	                                        '+'
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'p',
+	                                        { className: 'lead' },
+	                                        'Certificates and Accomplishments'
+	                                    )
+	                                )
+	                            )
+	                        )
+	                    )
+	                )
+	            );
 	        }
+	    }]);
 	
-	        var length = self.props.vertical ? Math.round(Math.sqrt(Math.pow(e.touches[0].pageY - self.touchObject.startY, 2))) : Math.round(Math.sqrt(Math.pow(e.touches[0].pageX - self.touchObject.startX, 2)));
+	    return CounterSection;
+	})(_react2['default'].Component);
 	
-	        self.touchObject = {
-	          startX: self.touchObject.startX,
-	          startY: self.touchObject.startY,
-	          endX: e.touches[0].pageX,
-	          endY: e.touches[0].pageY,
-	          length: length,
-	          direction: direction
-	        };
-	
-	        self.setState({
-	          left: self.props.vertical ? 0 : self.getTargetLeft(self.touchObject.length * self.touchObject.direction),
-	          top: self.props.vertical ? self.getTargetLeft(self.touchObject.length * self.touchObject.direction) : 0
-	        });
-	      },
-	      onTouchEnd: function onTouchEnd(e) {
-	        self.handleSwipe(e);
-	        self.handleMouseOut();
-	      },
-	      onTouchCancel: function onTouchCancel(e) {
-	        self.handleSwipe(e);
-	      }
-	    };
-	  },
-	
-	  clickSafe: true,
-	
-	  getMouseEvents: function getMouseEvents() {
-	    var self = this;
-	
-	    if (this.props.dragging === false) {
-	      return null;
-	    }
-	
-	    return {
-	      onMouseOver: function onMouseOver() {
-	        self.handleMouseOver();
-	      },
-	      onMouseOut: function onMouseOut() {
-	        self.handleMouseOut();
-	      },
-	      onMouseDown: function onMouseDown(e) {
-	        self.touchObject = {
-	          startX: e.clientX,
-	          startY: e.clientY
-	        };
-	
-	        self.setState({
-	          dragging: true
-	        });
-	      },
-	      onMouseMove: function onMouseMove(e) {
-	        if (!self.state.dragging) {
-	          return;
-	        }
-	
-	        var direction = self.swipeDirection(self.touchObject.startX, e.clientX, self.touchObject.startY, e.clientY);
-	
-	        if (direction !== 0) {
-	          e.preventDefault();
-	        }
-	
-	        var length = self.props.vertical ? Math.round(Math.sqrt(Math.pow(e.clientY - self.touchObject.startY, 2))) : Math.round(Math.sqrt(Math.pow(e.clientX - self.touchObject.startX, 2)));
-	
-	        self.touchObject = {
-	          startX: self.touchObject.startX,
-	          startY: self.touchObject.startY,
-	          endX: e.clientX,
-	          endY: e.clientY,
-	          length: length,
-	          direction: direction
-	        };
-	
-	        self.setState({
-	          left: self.props.vertical ? 0 : self.getTargetLeft(self.touchObject.length * self.touchObject.direction),
-	          top: self.props.vertical ? self.getTargetLeft(self.touchObject.length * self.touchObject.direction) : 0
-	        });
-	      },
-	      onMouseUp: function onMouseUp(e) {
-	        if (!self.state.dragging) {
-	          return;
-	        }
-	
-	        self.handleSwipe(e);
-	      },
-	      onMouseLeave: function onMouseLeave(e) {
-	        if (!self.state.dragging) {
-	          return;
-	        }
-	
-	        self.handleSwipe(e);
-	      }
-	    };
-	  },
-	
-	  handleMouseOver: function handleMouseOver() {
-	    if (this.props.autoplay) {
-	      this.autoplayPaused = true;
-	      this.stopAutoplay();
-	    }
-	  },
-	
-	  handleMouseOut: function handleMouseOut() {
-	    if (this.props.autoplay && this.autoplayPaused) {
-	      this.startAutoplay();
-	      this.autoplayPaused = null;
-	    }
-	  },
-	
-	  handleClick: function handleClick(e) {
-	    if (this.clickSafe === true) {
-	      e.preventDefault();
-	      e.stopPropagation();
-	
-	      if (e.nativeEvent) {
-	        e.nativeEvent.stopPropagation();
-	      }
-	    }
-	  },
-	
-	  handleSwipe: function handleSwipe(e) {
-	    if (typeof this.touchObject.length !== 'undefined' && this.touchObject.length > 44) {
-	      this.clickSafe = true;
-	    } else {
-	      this.clickSafe = false;
-	    }
-	
-	    var slidesToShow = this.props.slidesToShow;
-	    if (this.props.slidesToScroll === 'auto') {
-	      slidesToShow = this.state.slidesToScroll;
-	    }
-	
-	    if (this.touchObject.length > this.state.slideWidth / slidesToShow / 5) {
-	      if (this.touchObject.direction === 1) {
-	        if (this.state.currentSlide >= _react2['default'].Children.count(this.props.children) - slidesToShow && !this.props.wrapAround) {
-	          this.animateSlide(_kwReactTweenState2['default'].easingTypes[this.props.edgeEasing]);
-	        } else {
-	          this.nextSlide();
-	        }
-	      } else if (this.touchObject.direction === -1) {
-	        if (this.state.currentSlide <= 0 && !this.props.wrapAround) {
-	          this.animateSlide(_kwReactTweenState2['default'].easingTypes[this.props.edgeEasing]);
-	        } else {
-	          this.previousSlide();
-	        }
-	      }
-	    } else {
-	      this.goToSlide(this.state.currentSlide);
-	    }
-	
-	    this.touchObject = {};
-	
-	    this.setState({
-	      dragging: false
-	    });
-	  },
-	
-	  swipeDirection: function swipeDirection(x1, x2, y1, y2) {
-	
-	    var xDist, yDist, r, swipeAngle;
-	
-	    xDist = x1 - x2;
-	    yDist = y1 - y2;
-	    r = Math.atan2(yDist, xDist);
-	
-	    swipeAngle = Math.round(r * 180 / Math.PI);
-	    if (swipeAngle < 0) {
-	      swipeAngle = 360 - Math.abs(swipeAngle);
-	    }
-	    if (swipeAngle <= 45 && swipeAngle >= 0) {
-	      return 1;
-	    }
-	    if (swipeAngle <= 360 && swipeAngle >= 315) {
-	      return 1;
-	    }
-	    if (swipeAngle >= 135 && swipeAngle <= 225) {
-	      return -1;
-	    }
-	    if (this.props.vertical === true) {
-	      if (swipeAngle >= 35 && swipeAngle <= 135) {
-	        return 1;
-	      } else {
-	        return -1;
-	      }
-	    }
-	    return 0;
-	  },
-	
-	  autoplayIterator: function autoplayIterator() {
-	    if (this.props.wrapAround) {
-	      return this.nextSlide();
-	    }
-	    if (this.state.currentSlide !== this.state.slideCount - this.state.slidesToShow) {
-	      this.nextSlide();
-	    } else {
-	      this.stopAutoplay();
-	    }
-	  },
-	
-	  startAutoplay: function startAutoplay() {
-	    this.autoplayID = setInterval(this.autoplayIterator, this.props.autoplayInterval);
-	  },
-	
-	  resetAutoplay: function resetAutoplay() {
-	    if (this.props.autoplay && !this.autoplayPaused) {
-	      this.stopAutoplay();
-	      this.startAutoplay();
-	    }
-	  },
-	
-	  stopAutoplay: function stopAutoplay() {
-	    this.autoplayID && clearInterval(this.autoplayID);
-	  },
-	
-	  // Action Methods
-	
-	  goToSlide: function goToSlide(index) {
-	    var self = this;
-	    if (index >= _react2['default'].Children.count(this.props.children) || index < 0) {
-	      if (!this.props.wrapAround) {
-	        return;
-	      };
-	      if (index >= _react2['default'].Children.count(this.props.children)) {
-	        this.props.beforeSlide(this.state.currentSlide, 0);
-	        return this.setState({
-	          currentSlide: 0
-	        }, function () {
-	          self.animateSlide(null, null, self.getTargetLeft(null, index), function () {
-	            self.animateSlide(null, 0.01);
-	            self.props.afterSlide(0);
-	            self.resetAutoplay();
-	            self.setExternalData();
-	          });
-	        });
-	      } else {
-	        var endSlide = _react2['default'].Children.count(this.props.children) - this.state.slidesToScroll;
-	        this.props.beforeSlide(this.state.currentSlide, endSlide);
-	        return this.setState({
-	          currentSlide: endSlide
-	        }, function () {
-	          self.animateSlide(null, null, self.getTargetLeft(null, index), function () {
-	            self.animateSlide(null, 0.01);
-	            self.props.afterSlide(endSlide);
-	            self.resetAutoplay();
-	            self.setExternalData();
-	          });
-	        });
-	      }
-	    }
-	
-	    this.props.beforeSlide(this.state.currentSlide, index);
-	
-	    this.setState({
-	      currentSlide: index
-	    }, function () {
-	      self.animateSlide();
-	      this.props.afterSlide(index);
-	      self.resetAutoplay();
-	      self.setExternalData();
-	    });
-	  },
-	
-	  nextSlide: function nextSlide() {
-	    var childrenCount = _react2['default'].Children.count(this.props.children);
-	    var slidesToShow = this.props.slidesToShow;
-	    if (this.props.slidesToScroll === 'auto') {
-	      slidesToShow = this.state.slidesToScroll;
-	    }
-	    if (this.state.currentSlide >= childrenCount - slidesToShow && !this.props.wrapAround) {
-	      return;
-	    }
-	
-	    if (this.props.wrapAround) {
-	      this.goToSlide(this.state.currentSlide + this.state.slidesToScroll);
-	    } else {
-	      if (this.props.slideWidth !== 1) {
-	        return this.goToSlide(this.state.currentSlide + this.state.slidesToScroll);
-	      }
-	      this.goToSlide(Math.min(this.state.currentSlide + this.state.slidesToScroll, childrenCount - slidesToShow));
-	    }
-	  },
-	
-	  previousSlide: function previousSlide() {
-	    if (this.state.currentSlide <= 0 && !this.props.wrapAround) {
-	      return;
-	    }
-	
-	    if (this.props.wrapAround) {
-	      this.goToSlide(this.state.currentSlide - this.state.slidesToScroll);
-	    } else {
-	      this.goToSlide(Math.max(0, this.state.currentSlide - this.state.slidesToScroll));
-	    }
-	  },
-	
-	  // Animation
-	
-	  animateSlide: function animateSlide(easing, duration, endValue, callback) {
-	    this.tweenState(this.props.vertical ? 'top' : 'left', {
-	      easing: easing || _kwReactTweenState2['default'].easingTypes[this.props.easing],
-	      duration: duration || this.props.speed,
-	      endValue: endValue || this.getTargetLeft(),
-	      onEnd: callback || null
-	    });
-	  },
-	
-	  getTargetLeft: function getTargetLeft(touchOffset, slide) {
-	    var offset;
-	    var target = slide || this.state.currentSlide;
-	    switch (this.props.cellAlign) {
-	      case 'left':
-	        {
-	          offset = 0;
-	          offset -= this.props.cellSpacing * target;
-	          break;
-	        }
-	      case 'center':
-	        {
-	          offset = (this.state.frameWidth - this.state.slideWidth) / 2;
-	          offset -= this.props.cellSpacing * target;
-	          break;
-	        }
-	      case 'right':
-	        {
-	          offset = this.state.frameWidth - this.state.slideWidth;
-	          offset -= this.props.cellSpacing * target;
-	          break;
-	        }
-	    }
-	
-	    var left = this.state.slideWidth * target;
-	
-	    var lastSlide = this.state.currentSlide > 0 && target + this.state.slidesToScroll >= this.state.slideCount;
-	
-	    if (lastSlide && this.props.slideWidth !== 1 && !this.props.wrapAround && this.props.slidesToScroll === 'auto') {
-	      left = this.state.slideWidth * this.state.slideCount - this.state.frameWidth;
-	      offset = 0;
-	      offset -= this.props.cellSpacing * (this.state.slideCount - 1);
-	    }
-	
-	    offset -= touchOffset || 0;
-	
-	    return (left - offset) * -1;
-	  },
-	
-	  // Bootstrapping
-	
-	  bindEvents: function bindEvents() {
-	    var self = this;
-	    if (_exenv2['default'].canUseDOM) {
-	      addEvent(window, 'resize', self.onResize);
-	      addEvent(document, 'readystatechange', self.onReadyStateChange);
-	    }
-	  },
-	
-	  onResize: function onResize() {
-	    this.setDimensions();
-	  },
-	
-	  onReadyStateChange: function onReadyStateChange() {
-	    this.setDimensions();
-	  },
-	
-	  unbindEvents: function unbindEvents() {
-	    var self = this;
-	    if (_exenv2['default'].canUseDOM) {
-	      removeEvent(window, 'resize', self.onResize);
-	      removeEvent(document, 'readystatechange', self.onReadyStateChange);
-	    }
-	  },
-	
-	  formatChildren: function formatChildren(children) {
-	    var self = this;
-	    var positionValue = this.props.vertical ? this.getTweeningValue('top') : this.getTweeningValue('left');
-	    return _react2['default'].Children.map(children, function (child, index) {
-	      return _react2['default'].createElement(
-	        'li',
-	        { className: 'slider-slide', style: self.getSlideStyles(index, positionValue), key: index },
-	        child
-	      );
-	    });
-	  },
-	
-	  setInitialDimensions: function setInitialDimensions() {
-	    var self = this,
-	        slideWidth,
-	        frameHeight,
-	        slideHeight;
-	
-	    slideWidth = this.props.vertical ? this.props.initialSlideHeight || 0 : this.props.initialSlideWidth || 0;
-	    slideHeight = this.props.initialSlideHeight ? this.props.initialSlideHeight * this.props.slidesToShow : 0;
-	
-	    frameHeight = slideHeight + this.props.cellSpacing * (this.props.slidesToShow - 1);
-	
-	    this.setState({
-	      slideHeight: slideHeight,
-	      frameWidth: this.props.vertical ? frameHeight : '100%',
-	      slideCount: _react2['default'].Children.count(this.props.children),
-	      slideWidth: slideWidth
-	    }, function () {
-	      self.setLeft();
-	      self.setExternalData();
-	    });
-	  },
-	
-	  setDimensions: function setDimensions(props) {
-	    props = props || this.props;
-	
-	    var self = this,
-	        slideWidth,
-	        slidesToScroll,
-	        firstSlide,
-	        frame,
-	        frameWidth,
-	        frameHeight,
-	        slideHeight;
-	
-	    slidesToScroll = props.slidesToScroll;
-	    frame = this.refs.frame;
-	    firstSlide = frame.childNodes[0].childNodes[0];
-	    if (firstSlide) {
-	      firstSlide.style.height = 'auto';
-	      slideHeight = this.props.vertical ? firstSlide.offsetHeight * props.slidesToShow : firstSlide.offsetHeight;
-	    } else {
-	      slideHeight = 100;
-	    }
-	
-	    if (typeof props.slideWidth !== 'number') {
-	      slideWidth = parseInt(props.slideWidth);
-	    } else {
-	      if (props.vertical) {
-	        slideWidth = slideHeight / props.slidesToShow * props.slideWidth;
-	      } else {
-	        slideWidth = frame.offsetWidth / props.slidesToShow * props.slideWidth;
-	      }
-	    }
-	
-	    if (!props.vertical) {
-	      slideWidth -= props.cellSpacing * ((100 - 100 / props.slidesToShow) / 100);
-	    }
-	
-	    frameHeight = slideHeight + props.cellSpacing * (props.slidesToShow - 1);
-	    frameWidth = props.vertical ? frameHeight : frame.offsetWidth;
-	
-	    if (props.slidesToScroll === 'auto') {
-	      slidesToScroll = Math.floor(frameWidth / (slideWidth + props.cellSpacing));
-	    }
-	
-	    this.setState({
-	      slideHeight: slideHeight,
-	      frameWidth: frameWidth,
-	      slideWidth: slideWidth,
-	      slidesToScroll: slidesToScroll,
-	      left: props.vertical ? 0 : this.getTargetLeft(),
-	      top: props.vertical ? this.getTargetLeft() : 0
-	    }, function () {
-	      self.setLeft();
-	    });
-	  },
-	
-	  setLeft: function setLeft() {
-	    this.setState({
-	      left: this.props.vertical ? 0 : this.getTargetLeft(),
-	      top: this.props.vertical ? this.getTargetLeft() : 0
-	    });
-	  },
-	
-	  // Data
-	
-	  setExternalData: function setExternalData() {
-	    if (this.props.data) {
-	      this.props.data();
-	    }
-	  },
-	
-	  // Styles
-	
-	  getListStyles: function getListStyles() {
-	    var listWidth = this.state.slideWidth * _react2['default'].Children.count(this.props.children);
-	    var spacingOffset = this.props.cellSpacing * _react2['default'].Children.count(this.props.children);
-	    var transform = 'translate3d(' + this.getTweeningValue('left') + 'px, ' + this.getTweeningValue('top') + 'px, 0)';
-	    return {
-	      transform: transform,
-	      WebkitTransform: transform,
-	      msTransform: 'translate(' + this.getTweeningValue('left') + 'px, ' + this.getTweeningValue('top') + 'px)',
-	      position: 'relative',
-	      display: 'block',
-	      margin: this.props.vertical ? this.props.cellSpacing / 2 * -1 + 'px 0px' : '0px ' + this.props.cellSpacing / 2 * -1 + 'px',
-	      padding: 0,
-	      height: this.props.vertical ? listWidth + spacingOffset : this.state.slideHeight,
-	      width: this.props.vertical ? 'auto' : listWidth + spacingOffset,
-	      cursor: this.state.dragging === true ? 'pointer' : 'inherit',
-	      boxSizing: 'border-box',
-	      MozBoxSizing: 'border-box'
-	    };
-	  },
-	
-	  getFrameStyles: function getFrameStyles() {
-	    return {
-	      position: 'relative',
-	      display: 'block',
-	      overflow: this.props.frameOverflow,
-	      height: this.props.vertical ? this.state.frameWidth || 'initial' : 'auto',
-	      margin: this.props.framePadding,
-	      padding: 0,
-	      transform: 'translate3d(0, 0, 0)',
-	      WebkitTransform: 'translate3d(0, 0, 0)',
-	      msTransform: 'translate(0, 0)',
-	      boxSizing: 'border-box',
-	      MozBoxSizing: 'border-box'
-	    };
-	  },
-	
-	  getSlideStyles: function getSlideStyles(index, positionValue) {
-	    var targetPosition = this.getSlideTargetPosition(index, positionValue);
-	    return {
-	      position: 'absolute',
-	      left: this.props.vertical ? 0 : targetPosition,
-	      top: this.props.vertical ? targetPosition : 0,
-	      display: this.props.vertical ? 'block' : 'inline-block',
-	      listStyleType: 'none',
-	      verticalAlign: 'top',
-	      width: this.props.vertical ? '100%' : this.state.slideWidth,
-	      height: 'auto',
-	      boxSizing: 'border-box',
-	      MozBoxSizing: 'border-box',
-	      marginLeft: this.props.vertical ? 'auto' : this.props.cellSpacing / 2,
-	      marginRight: this.props.vertical ? 'auto' : this.props.cellSpacing / 2,
-	      marginTop: this.props.vertical ? this.props.cellSpacing / 2 : 'auto',
-	      marginBottom: this.props.vertical ? this.props.cellSpacing / 2 : 'auto'
-	    };
-	  },
-	
-	  getSlideTargetPosition: function getSlideTargetPosition(index, positionValue) {
-	    var slidesToShow = this.state.frameWidth / this.state.slideWidth;
-	    var targetPosition = (this.state.slideWidth + this.props.cellSpacing) * index;
-	    var end = (this.state.slideWidth + this.props.cellSpacing) * slidesToShow * -1;
-	
-	    if (this.props.wrapAround) {
-	      var slidesBefore = Math.ceil(positionValue / this.state.slideWidth);
-	      if (this.state.slideCount - slidesBefore <= index) {
-	        return (this.state.slideWidth + this.props.cellSpacing) * (this.state.slideCount - index) * -1;
-	      }
-	
-	      var slidesAfter = Math.ceil((Math.abs(positionValue) - Math.abs(end)) / this.state.slideWidth);
-	
-	      if (this.state.slideWidth !== 1) {
-	        slidesAfter = Math.ceil((Math.abs(positionValue) - this.state.slideWidth) / this.state.slideWidth);
-	      }
-	
-	      if (index <= slidesAfter - 1) {
-	        return (this.state.slideWidth + this.props.cellSpacing) * (this.state.slideCount + index);
-	      }
-	    }
-	
-	    return targetPosition;
-	  },
-	
-	  getSliderStyles: function getSliderStyles() {
-	    return {
-	      position: 'relative',
-	      display: 'block',
-	      width: this.props.width,
-	      height: 'auto',
-	      boxSizing: 'border-box',
-	      MozBoxSizing: 'border-box',
-	      visibility: this.state.slideWidth ? 'visible' : 'hidden'
-	    };
-	  },
-	
-	  getStyleTagStyles: function getStyleTagStyles() {
-	    return '.slider-slide > img {width: 100%; display: block;}';
-	  },
-	
-	  getDecoratorStyles: function getDecoratorStyles(position) {
-	    switch (position) {
-	      case 'TopLeft':
-	        {
-	          return {
-	            position: 'absolute',
-	            top: 0,
-	            left: 0
-	          };
-	        }
-	      case 'TopCenter':
-	        {
-	          return {
-	            position: 'absolute',
-	            top: 0,
-	            left: '50%',
-	            transform: 'translateX(-50%)',
-	            WebkitTransform: 'translateX(-50%)',
-	            msTransform: 'translateX(-50%)'
-	          };
-	        }
-	      case 'TopRight':
-	        {
-	          return {
-	            position: 'absolute',
-	            top: 0,
-	            right: 0
-	          };
-	        }
-	      case 'CenterLeft':
-	        {
-	          return {
-	            position: 'absolute',
-	            top: '50%',
-	            left: 0,
-	            transform: 'translateY(-50%)',
-	            WebkitTransform: 'translateY(-50%)',
-	            msTransform: 'translateY(-50%)'
-	          };
-	        }
-	      case 'CenterCenter':
-	        {
-	          return {
-	            position: 'absolute',
-	            top: '50%',
-	            left: '50%',
-	            transform: 'translate(-50%,-50%)',
-	            WebkitTransform: 'translate(-50%, -50%)',
-	            msTransform: 'translate(-50%, -50%)'
-	          };
-	        }
-	      case 'CenterRight':
-	        {
-	          return {
-	            position: 'absolute',
-	            top: '50%',
-	            right: 0,
-	            transform: 'translateY(-50%)',
-	            WebkitTransform: 'translateY(-50%)',
-	            msTransform: 'translateY(-50%)'
-	          };
-	        }
-	      case 'BottomLeft':
-	        {
-	          return {
-	            position: 'absolute',
-	            bottom: 0,
-	            left: 0
-	          };
-	        }
-	      case 'BottomCenter':
-	        {
-	          return {
-	            position: 'absolute',
-	            bottom: 0,
-	            left: '50%',
-	            transform: 'translateX(-50%)',
-	            WebkitTransform: 'translateX(-50%)',
-	            msTransform: 'translateX(-50%)'
-	          };
-	        }
-	      case 'BottomRight':
-	        {
-	          return {
-	            position: 'absolute',
-	            bottom: 0,
-	            right: 0
-	          };
-	        }
-	      default:
-	        {
-	          return {
-	            position: 'absolute',
-	            top: 0,
-	            left: 0
-	          };
-	        }
-	    }
-	  }
-	
-	});
-	
-	Carousel.ControllerMixin = {
-	  getInitialState: function getInitialState() {
-	    return {
-	      carousels: {}
-	    };
-	  },
-	  setCarouselData: function setCarouselData(carousel) {
-	    var data = this.state.carousels;
-	    data[carousel] = this.refs[carousel];
-	    this.setState({
-	      carousels: data
-	    });
-	  }
-	};
-	
-	exports['default'] = Carousel;
+	exports['default'] = CounterSection;
 	module.exports = exports['default'];
 
 /***/ },
 /* 181 */
 /***/ function(module, exports, __webpack_require__) {
 
-	(function webpackUniversalModuleDefinition(root, factory) {
-		if(true)
-			module.exports = factory();
-		else if(typeof define === 'function' && define.amd)
-			define([], factory);
-		else if(typeof exports === 'object')
-			exports["tweenState"] = factory();
-		else
-			root["tweenState"] = factory();
-	})(this, function() {
-	return /******/ (function(modules) { // webpackBootstrap
-	/******/ 	// The module cache
-	/******/ 	var installedModules = {};
-	/******/
-	/******/ 	// The require function
-	/******/ 	function __webpack_require__(moduleId) {
-	/******/
-	/******/ 		// Check if module is in cache
-	/******/ 		if(installedModules[moduleId])
-	/******/ 			return installedModules[moduleId].exports;
-	/******/
-	/******/ 		// Create a new module (and put it into the cache)
-	/******/ 		var module = installedModules[moduleId] = {
-	/******/ 			exports: {},
-	/******/ 			id: moduleId,
-	/******/ 			loaded: false
-	/******/ 		};
-	/******/
-	/******/ 		// Execute the module function
-	/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-	/******/
-	/******/ 		// Flag the module as loaded
-	/******/ 		module.loaded = true;
-	/******/
-	/******/ 		// Return the exports of the module
-	/******/ 		return module.exports;
-	/******/ 	}
-	/******/
-	/******/
-	/******/ 	// expose the modules object (__webpack_modules__)
-	/******/ 	__webpack_require__.m = modules;
-	/******/
-	/******/ 	// expose the module cache
-	/******/ 	__webpack_require__.c = installedModules;
-	/******/
-	/******/ 	// __webpack_public_path__
-	/******/ 	__webpack_require__.p = "";
-	/******/
-	/******/ 	// Load entry module and return exports
-	/******/ 	return __webpack_require__(0);
-	/******/ })
-	/************************************************************************/
-	/******/ ({
+	'use strict';
 	
-	/***/ 0:
-	/*!*****************!*\
-	  !*** multi lib ***!
-	  \*****************/
-	/***/ function(module, exports, __webpack_require__) {
-	
-		module.exports = __webpack_require__(/*! ./index.js */169);
-	
-	
-	/***/ },
-	
-	/***/ 5:
-	/*!******************************!*\
-	  !*** ./~/process/browser.js ***!
-	  \******************************/
-	/***/ function(module, exports) {
-	
-		// shim for using process in browser
-		
-		var process = module.exports = {};
-		var queue = [];
-		var draining = false;
-		var currentQueue;
-		var queueIndex = -1;
-		
-		function cleanUpNextTick() {
-		    draining = false;
-		    if (currentQueue.length) {
-		        queue = currentQueue.concat(queue);
-		    } else {
-		        queueIndex = -1;
-		    }
-		    if (queue.length) {
-		        drainQueue();
-		    }
-		}
-		
-		function drainQueue() {
-		    if (draining) {
-		        return;
-		    }
-		    var timeout = setTimeout(cleanUpNextTick);
-		    draining = true;
-		
-		    var len = queue.length;
-		    while(len) {
-		        currentQueue = queue;
-		        queue = [];
-		        while (++queueIndex < len) {
-		            if (currentQueue) {
-		                currentQueue[queueIndex].run();
-		            }
-		        }
-		        queueIndex = -1;
-		        len = queue.length;
-		    }
-		    currentQueue = null;
-		    draining = false;
-		    clearTimeout(timeout);
-		}
-		
-		process.nextTick = function (fun) {
-		    var args = new Array(arguments.length - 1);
-		    if (arguments.length > 1) {
-		        for (var i = 1; i < arguments.length; i++) {
-		            args[i - 1] = arguments[i];
-		        }
-		    }
-		    queue.push(new Item(fun, args));
-		    if (queue.length === 1 && !draining) {
-		        setTimeout(drainQueue, 0);
-		    }
-		};
-		
-		// v8 likes predictible objects
-		function Item(fun, array) {
-		    this.fun = fun;
-		    this.array = array;
-		}
-		Item.prototype.run = function () {
-		    this.fun.apply(null, this.array);
-		};
-		process.title = 'browser';
-		process.browser = true;
-		process.env = {};
-		process.argv = [];
-		process.version = ''; // empty string to avoid regexp issues
-		process.versions = {};
-		
-		function noop() {}
-		
-		process.on = noop;
-		process.addListener = noop;
-		process.once = noop;
-		process.off = noop;
-		process.removeListener = noop;
-		process.removeAllListeners = noop;
-		process.emit = noop;
-		
-		process.binding = function (name) {
-		    throw new Error('process.binding is not supported');
-		};
-		
-		process.cwd = function () { return '/' };
-		process.chdir = function (dir) {
-		    throw new Error('process.chdir is not supported');
-		};
-		process.umask = function() { return 0; };
-	
-	
-	/***/ },
-	
-	/***/ 169:
-	/*!******************!*\
-	  !*** ./index.js ***!
-	  \******************/
-	/***/ function(module, exports, __webpack_require__) {
-	
-		'use strict';
-		
-		Object.defineProperty(exports, '__esModule', {
-		  value: true
-		});
-		
-		function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-		
-		var _tweenFunctions = __webpack_require__(/*! tween-functions */ 170);
-		
-		var _tweenFunctions2 = _interopRequireDefault(_tweenFunctions);
-		
-		var _raf = __webpack_require__(/*! raf */ 171);
-		
-		var _raf2 = _interopRequireDefault(_raf);
-		
-		// additive is the new iOS 8 default. In most cases it simulates a physics-
-		// looking overshoot behavior (especially with easeInOut. You can test that in
-		// the example
-		var DEFAULT_STACK_BEHAVIOR = 'ADDITIVE';
-		var DEFAULT_EASING = _tweenFunctions.easeInOutQuad;
-		var DEFAULT_DURATION = 300;
-		var DEFAULT_DELAY = 0;
-		
-		var stackBehavior = {
-		  ADDITIVE: 'ADDITIVE',
-		  DESTRUCTIVE: 'DESTRUCTIVE'
-		};
-		
-		var Mixin = {
-		  _rafID: null,
-		
-		  getInitialState: function getInitialState() {
-		    return {
-		      tweenQueue: []
-		    };
-		  },
-		
-		  componentWillUnmount: function componentWillUnmount() {
-		    _raf2['default'].cancel(this._rafID);
-		    this._rafID = -1;
-		  },
-		
-		  tweenState: function tweenState(path, _ref) {
-		    var _this = this;
-		
-		    var easing = _ref.easing;
-		    var duration = _ref.duration;
-		    var delay = _ref.delay;
-		    var beginValue = _ref.beginValue;
-		    var endValue = _ref.endValue;
-		    var onEnd = _ref.onEnd;
-		    var configSB = _ref.stackBehavior;
-		
-		    this.setState(function (state) {
-		      var cursor = state;
-		      var stateName = undefined;
-		      // see comment below on pash hash
-		      var pathHash = undefined;
-		      if (typeof path === 'string') {
-		        stateName = path;
-		        pathHash = path;
-		      } else {
-		        for (var i = 0; i < path.length - 1; i++) {
-		          cursor = cursor[path[i]];
-		        }
-		        stateName = path[path.length - 1];
-		        pathHash = path.join('|');
-		      }
-		      // see the reasoning for these defaults at the top of file
-		      var newConfig = {
-		        easing: easing || DEFAULT_EASING,
-		        duration: duration == null ? DEFAULT_DURATION : duration,
-		        delay: delay == null ? DEFAULT_DELAY : delay,
-		        beginValue: beginValue == null ? cursor[stateName] : beginValue,
-		        endValue: endValue,
-		        onEnd: onEnd,
-		        stackBehavior: configSB || DEFAULT_STACK_BEHAVIOR
-		      };
-		
-		      var newTweenQueue = state.tweenQueue;
-		      if (newConfig.stackBehavior === stackBehavior.DESTRUCTIVE) {
-		        newTweenQueue = state.tweenQueue.filter(function (item) {
-		          return item.pathHash !== pathHash;
-		        });
-		      }
-		
-		      // we store path hash, so that during value retrieval we can use hash
-		      // comparison to find the path. See the kind of shitty thing you have to
-		      // do when you don't have value comparison for collections?
-		      newTweenQueue.push({
-		        pathHash: pathHash,
-		        config: newConfig,
-		        initTime: Date.now() + newConfig.delay
-		      });
-		
-		      // sorry for mutating. For perf reasons we don't want to deep clone.
-		      // guys, can we please all start using persistent collections so that
-		      // we can stop worrying about nonesense like this
-		      cursor[stateName] = newConfig.endValue;
-		      if (newTweenQueue.length === 1) {
-		        _this._rafID = (0, _raf2['default'])(_this._rafCb);
-		      }
-		
-		      // this will also include the above mutated update
-		      return { tweenQueue: newTweenQueue };
-		    });
-		  },
-		
-		  getTweeningValue: function getTweeningValue(path) {
-		    var state = this.state;
-		
-		    var tweeningValue = undefined;
-		    var pathHash = undefined;
-		    if (typeof path === 'string') {
-		      tweeningValue = state[path];
-		      pathHash = path;
-		    } else {
-		      tweeningValue = state;
-		      for (var i = 0; i < path.length; i++) {
-		        tweeningValue = tweeningValue[path[i]];
-		      }
-		      pathHash = path.join('|');
-		    }
-		    var now = Date.now();
-		
-		    for (var i = 0; i < state.tweenQueue.length; i++) {
-		      var _state$tweenQueue$i = state.tweenQueue[i];
-		      var itemPathHash = _state$tweenQueue$i.pathHash;
-		      var initTime = _state$tweenQueue$i.initTime;
-		      var config = _state$tweenQueue$i.config;
-		
-		      if (itemPathHash !== pathHash) {
-		        continue;
-		      }
-		
-		      var progressTime = now - initTime > config.duration ? config.duration : Math.max(0, now - initTime);
-		      // `now - initTime` can be negative if initTime is scheduled in the
-		      // future by a delay. In this case we take 0
-		
-		      // if duration is 0, consider that as jumping to endValue directly. This
-		      // is needed because the easing functino might have undefined behavior for
-		      // duration = 0
-		      var easeValue = config.duration === 0 ? config.endValue : config.easing(progressTime, config.beginValue, config.endValue, config.duration);
-		
-		      // TODO: some funcs accept a 5th param
-		      var contrib = easeValue - config.endValue;
-		      tweeningValue += contrib;
-		    }
-		
-		    return tweeningValue;
-		  },
-		
-		  _rafCb: function _rafCb() {
-		    var state = this.state;
-		    if (state.tweenQueue.length === 0) {
-		      return;
-		    }
-		
-		    var now = Date.now();
-		    var newTweenQueue = [];
-		
-		    for (var i = 0; i < state.tweenQueue.length; i++) {
-		      var item = state.tweenQueue[i];
-		      var initTime = item.initTime;
-		      var config = item.config;
-		
-		      if (now - initTime < config.duration) {
-		        newTweenQueue.push(item);
-		      } else {
-		        config.onEnd && config.onEnd();
-		      }
-		    }
-		
-		    // onEnd might trigger a parent callback that removes this component
-		    // -1 means we've canceled it in componentWillUnmount
-		    if (this._rafID === -1) {
-		      return;
-		    }
-		
-		    this.setState({
-		      tweenQueue: newTweenQueue
-		    });
-		
-		    this._rafID = (0, _raf2['default'])(this._rafCb);
-		  }
-		};
-		
-		exports['default'] = {
-		  Mixin: Mixin,
-		  easingTypes: _tweenFunctions2['default'],
-		  stackBehavior: stackBehavior
-		};
-		module.exports = exports['default'];
-	
-	/***/ },
-	
-	/***/ 170:
-	/*!************************************!*\
-	  !*** ./~/tween-functions/index.js ***!
-	  \************************************/
-	/***/ function(module, exports) {
-	
-		'use strict';
-		
-		// t: current time, b: beginning value, _c: final value, d: total duration
-		var tweenFunctions = {
-		  linear: function(t, b, _c, d) {
-		    var c = _c - b;
-		    return c * t / d + b;
-		  },
-		  easeInQuad: function(t, b, _c, d) {
-		    var c = _c - b;
-		    return c * (t /= d) * t + b;
-		  },
-		  easeOutQuad: function(t, b, _c, d) {
-		    var c = _c - b;
-		    return -c * (t /= d) * (t - 2) + b;
-		  },
-		  easeInOutQuad: function(t, b, _c, d) {
-		    var c = _c - b;
-		    if ((t /= d / 2) < 1) {
-		      return c / 2 * t * t + b;
-		    } else {
-		      return -c / 2 * ((--t) * (t - 2) - 1) + b;
-		    }
-		  },
-		  easeInCubic: function(t, b, _c, d) {
-		    var c = _c - b;
-		    return c * (t /= d) * t * t + b;
-		  },
-		  easeOutCubic: function(t, b, _c, d) {
-		    var c = _c - b;
-		    return c * ((t = t / d - 1) * t * t + 1) + b;
-		  },
-		  easeInOutCubic: function(t, b, _c, d) {
-		    var c = _c - b;
-		    if ((t /= d / 2) < 1) {
-		      return c / 2 * t * t * t + b;
-		    } else {
-		      return c / 2 * ((t -= 2) * t * t + 2) + b;
-		    }
-		  },
-		  easeInQuart: function(t, b, _c, d) {
-		    var c = _c - b;
-		    return c * (t /= d) * t * t * t + b;
-		  },
-		  easeOutQuart: function(t, b, _c, d) {
-		    var c = _c - b;
-		    return -c * ((t = t / d - 1) * t * t * t - 1) + b;
-		  },
-		  easeInOutQuart: function(t, b, _c, d) {
-		    var c = _c - b;
-		    if ((t /= d / 2) < 1) {
-		      return c / 2 * t * t * t * t + b;
-		    } else {
-		      return -c / 2 * ((t -= 2) * t * t * t - 2) + b;
-		    }
-		  },
-		  easeInQuint: function(t, b, _c, d) {
-		    var c = _c - b;
-		    return c * (t /= d) * t * t * t * t + b;
-		  },
-		  easeOutQuint: function(t, b, _c, d) {
-		    var c = _c - b;
-		    return c * ((t = t / d - 1) * t * t * t * t + 1) + b;
-		  },
-		  easeInOutQuint: function(t, b, _c, d) {
-		    var c = _c - b;
-		    if ((t /= d / 2) < 1) {
-		      return c / 2 * t * t * t * t * t + b;
-		    } else {
-		      return c / 2 * ((t -= 2) * t * t * t * t + 2) + b;
-		    }
-		  },
-		  easeInSine: function(t, b, _c, d) {
-		    var c = _c - b;
-		    return -c * Math.cos(t / d * (Math.PI / 2)) + c + b;
-		  },
-		  easeOutSine: function(t, b, _c, d) {
-		    var c = _c - b;
-		    return c * Math.sin(t / d * (Math.PI / 2)) + b;
-		  },
-		  easeInOutSine: function(t, b, _c, d) {
-		    var c = _c - b;
-		    return -c / 2 * (Math.cos(Math.PI * t / d) - 1) + b;
-		  },
-		  easeInExpo: function(t, b, _c, d) {
-		    var c = _c - b;
-		    return (t==0) ? b : c * Math.pow(2, 10 * (t/d - 1)) + b;
-		  },
-		  easeOutExpo: function(t, b, _c, d) {
-		    var c = _c - b;
-		    return (t==d) ? b+c : c * (-Math.pow(2, -10 * t/d) + 1) + b;
-		  },
-		  easeInOutExpo: function(t, b, _c, d) {
-		    var c = _c - b;
-		    if (t === 0) {
-		      return b;
-		    }
-		    if (t === d) {
-		      return b + c;
-		    }
-		    if ((t /= d / 2) < 1) {
-		      return c / 2 * Math.pow(2, 10 * (t - 1)) + b;
-		    } else {
-		      return c / 2 * (-Math.pow(2, -10 * --t) + 2) + b;
-		    }
-		  },
-		  easeInCirc: function(t, b, _c, d) {
-		    var c = _c - b;
-		    return -c * (Math.sqrt(1 - (t /= d) * t) - 1) + b;
-		  },
-		  easeOutCirc: function(t, b, _c, d) {
-		    var c = _c - b;
-		    return c * Math.sqrt(1 - (t = t / d - 1) * t) + b;
-		  },
-		  easeInOutCirc: function(t, b, _c, d) {
-		    var c = _c - b;
-		    if ((t /= d / 2) < 1) {
-		      return -c / 2 * (Math.sqrt(1 - t * t) - 1) + b;
-		    } else {
-		      return c / 2 * (Math.sqrt(1 - (t -= 2) * t) + 1) + b;
-		    }
-		  },
-		  easeInElastic: function(t, b, _c, d) {
-		    var c = _c - b;
-		    var a, p, s;
-		    s = 1.70158;
-		    p = 0;
-		    a = c;
-		    if (t === 0) {
-		      return b;
-		    } else if ((t /= d) === 1) {
-		      return b + c;
-		    }
-		    if (!p) {
-		      p = d * 0.3;
-		    }
-		    if (a < Math.abs(c)) {
-		      a = c;
-		      s = p / 4;
-		    } else {
-		      s = p / (2 * Math.PI) * Math.asin(c / a);
-		    }
-		    return -(a * Math.pow(2, 10 * (t -= 1)) * Math.sin((t * d - s) * (2 * Math.PI) / p)) + b;
-		  },
-		  easeOutElastic: function(t, b, _c, d) {
-		    var c = _c - b;
-		    var a, p, s;
-		    s = 1.70158;
-		    p = 0;
-		    a = c;
-		    if (t === 0) {
-		      return b;
-		    } else if ((t /= d) === 1) {
-		      return b + c;
-		    }
-		    if (!p) {
-		      p = d * 0.3;
-		    }
-		    if (a < Math.abs(c)) {
-		      a = c;
-		      s = p / 4;
-		    } else {
-		      s = p / (2 * Math.PI) * Math.asin(c / a);
-		    }
-		    return a * Math.pow(2, -10 * t) * Math.sin((t * d - s) * (2 * Math.PI) / p) + c + b;
-		  },
-		  easeInOutElastic: function(t, b, _c, d) {
-		    var c = _c - b;
-		    var a, p, s;
-		    s = 1.70158;
-		    p = 0;
-		    a = c;
-		    if (t === 0) {
-		      return b;
-		    } else if ((t /= d / 2) === 2) {
-		      return b + c;
-		    }
-		    if (!p) {
-		      p = d * (0.3 * 1.5);
-		    }
-		    if (a < Math.abs(c)) {
-		      a = c;
-		      s = p / 4;
-		    } else {
-		      s = p / (2 * Math.PI) * Math.asin(c / a);
-		    }
-		    if (t < 1) {
-		      return -0.5 * (a * Math.pow(2, 10 * (t -= 1)) * Math.sin((t * d - s) * (2 * Math.PI) / p)) + b;
-		    } else {
-		      return a * Math.pow(2, -10 * (t -= 1)) * Math.sin((t * d - s) * (2 * Math.PI) / p) * 0.5 + c + b;
-		    }
-		  },
-		  easeInBack: function(t, b, _c, d, s) {
-		    var c = _c - b;
-		    if (s === void 0) {
-		      s = 1.70158;
-		    }
-		    return c * (t /= d) * t * ((s + 1) * t - s) + b;
-		  },
-		  easeOutBack: function(t, b, _c, d, s) {
-		    var c = _c - b;
-		    if (s === void 0) {
-		      s = 1.70158;
-		    }
-		    return c * ((t = t / d - 1) * t * ((s + 1) * t + s) + 1) + b;
-		  },
-		  easeInOutBack: function(t, b, _c, d, s) {
-		    var c = _c - b;
-		    if (s === void 0) {
-		      s = 1.70158;
-		    }
-		    if ((t /= d / 2) < 1) {
-		      return c / 2 * (t * t * (((s *= 1.525) + 1) * t - s)) + b;
-		    } else {
-		      return c / 2 * ((t -= 2) * t * (((s *= 1.525) + 1) * t + s) + 2) + b;
-		    }
-		  },
-		  easeInBounce: function(t, b, _c, d) {
-		    var c = _c - b;
-		    var v;
-		    v = tweenFunctions.easeOutBounce(d - t, 0, c, d);
-		    return c - v + b;
-		  },
-		  easeOutBounce: function(t, b, _c, d) {
-		    var c = _c - b;
-		    if ((t /= d) < 1 / 2.75) {
-		      return c * (7.5625 * t * t) + b;
-		    } else if (t < 2 / 2.75) {
-		      return c * (7.5625 * (t -= 1.5 / 2.75) * t + 0.75) + b;
-		    } else if (t < 2.5 / 2.75) {
-		      return c * (7.5625 * (t -= 2.25 / 2.75) * t + 0.9375) + b;
-		    } else {
-		      return c * (7.5625 * (t -= 2.625 / 2.75) * t + 0.984375) + b;
-		    }
-		  },
-		  easeInOutBounce: function(t, b, _c, d) {
-		    var c = _c - b;
-		    var v;
-		    if (t < d / 2) {
-		      v = tweenFunctions.easeInBounce(t * 2, 0, c, d);
-		      return v * 0.5 + b;
-		    } else {
-		      v = tweenFunctions.easeOutBounce(t * 2 - d, 0, c, d);
-		      return v * 0.5 + c * 0.5 + b;
-		    }
-		  }
-		};
-		
-		module.exports = tweenFunctions;
-	
-	
-	/***/ },
-	
-	/***/ 171:
-	/*!************************!*\
-	  !*** ./~/raf/index.js ***!
-	  \************************/
-	/***/ function(module, exports, __webpack_require__) {
-	
-		/* WEBPACK VAR INJECTION */(function(global) {var now = __webpack_require__(/*! performance-now */ 172)
-		  , root = typeof window === 'undefined' ? global : window
-		  , vendors = ['moz', 'webkit']
-		  , suffix = 'AnimationFrame'
-		  , raf = root['request' + suffix]
-		  , caf = root['cancel' + suffix] || root['cancelRequest' + suffix]
-		
-		for(var i = 0; !raf && i < vendors.length; i++) {
-		  raf = root[vendors[i] + 'Request' + suffix]
-		  caf = root[vendors[i] + 'Cancel' + suffix]
-		      || root[vendors[i] + 'CancelRequest' + suffix]
-		}
-		
-		// Some versions of FF have rAF but not cAF
-		if(!raf || !caf) {
-		  var last = 0
-		    , id = 0
-		    , queue = []
-		    , frameDuration = 1000 / 60
-		
-		  raf = function(callback) {
-		    if(queue.length === 0) {
-		      var _now = now()
-		        , next = Math.max(0, frameDuration - (_now - last))
-		      last = next + _now
-		      setTimeout(function() {
-		        var cp = queue.slice(0)
-		        // Clear queue here to prevent
-		        // callbacks from appending listeners
-		        // to the current frame's queue
-		        queue.length = 0
-		        for(var i = 0; i < cp.length; i++) {
-		          if(!cp[i].cancelled) {
-		            try{
-		              cp[i].callback(last)
-		            } catch(e) {
-		              setTimeout(function() { throw e }, 0)
-		            }
-		          }
-		        }
-		      }, Math.round(next))
-		    }
-		    queue.push({
-		      handle: ++id,
-		      callback: callback,
-		      cancelled: false
-		    })
-		    return id
-		  }
-		
-		  caf = function(handle) {
-		    for(var i = 0; i < queue.length; i++) {
-		      if(queue[i].handle === handle) {
-		        queue[i].cancelled = true
-		      }
-		    }
-		  }
-		}
-		
-		module.exports = function(fn) {
-		  // Wrap in a new function to prevent
-		  // `cancel` potentially being assigned
-		  // to the native rAF function
-		  return raf.call(root, fn)
-		}
-		module.exports.cancel = function() {
-		  caf.apply(root, arguments)
-		}
-		module.exports.polyfill = function() {
-		  root.requestAnimationFrame = raf
-		  root.cancelAnimationFrame = caf
-		}
-		
-		/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
-	
-	/***/ },
-	
-	/***/ 172:
-	/*!**************************************************!*\
-	  !*** ./~/performance-now/lib/performance-now.js ***!
-	  \**************************************************/
-	/***/ function(module, exports, __webpack_require__) {
-	
-		/* WEBPACK VAR INJECTION */(function(process) {// Generated by CoffeeScript 1.7.1
-		(function() {
-		  var getNanoSeconds, hrtime, loadTime;
-		
-		  if ((typeof performance !== "undefined" && performance !== null) && performance.now) {
-		    module.exports = function() {
-		      return performance.now();
-		    };
-		  } else if ((typeof process !== "undefined" && process !== null) && process.hrtime) {
-		    module.exports = function() {
-		      return (getNanoSeconds() - loadTime) / 1e6;
-		    };
-		    hrtime = process.hrtime;
-		    getNanoSeconds = function() {
-		      var hr;
-		      hr = hrtime();
-		      return hr[0] * 1e9 + hr[1];
-		    };
-		    loadTime = getNanoSeconds();
-		  } else if (Date.now) {
-		    module.exports = function() {
-		      return Date.now() - loadTime;
-		    };
-		    loadTime = Date.now();
-		  } else {
-		    module.exports = function() {
-		      return new Date().getTime() - loadTime;
-		    };
-		    loadTime = new Date().getTime();
-		  }
-		
-		}).call(this);
-		
-		/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 5)))
-	
-	/***/ }
-	
-	/******/ })
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
 	});
-	;
-	//# sourceMappingURL=index.js.map
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _SectionHeaderJsx = __webpack_require__(179);
+	
+	var _SectionHeaderJsx2 = _interopRequireDefault(_SectionHeaderJsx);
+	
+	var ServicesSection = (function (_React$Component) {
+	    _inherits(ServicesSection, _React$Component);
+	
+	    function ServicesSection() {
+	        _classCallCheck(this, ServicesSection);
+	
+	        _get(Object.getPrototypeOf(ServicesSection.prototype), 'constructor', this).apply(this, arguments);
+	    }
+	
+	    _createClass(ServicesSection, [{
+	        key: 'render',
+	        value: function render() {
+	
+	            var whatsAppStyle = {
+	                width: '30px'
+	            };
+	
+	            return _react2['default'].createElement(
+	                'section',
+	                { id: 'services-section', className: 'page text-center' },
+	                _react2['default'].createElement(_SectionHeaderJsx2['default'], { header: 'Services', subtitle: 'All of this for you!' }),
+	                _react2['default'].createElement(
+	                    'div',
+	                    { className: 'rotate-box-2-wrapper' },
+	                    _react2['default'].createElement(
+	                        'div',
+	                        { className: 'container' },
+	                        _react2['default'].createElement(
+	                            'div',
+	                            { className: 'row' },
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'col-md-3 col-sm-6' },
+	                                _react2['default'].createElement(
+	                                    'a',
+	                                    { className: 'rotate-box-2 square-icon text-center wow zoomIn', 'data-wow-delay': '0' },
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'rotate-box-icon' },
+	                                        _react2['default'].createElement('i', { className: 'fa fa-heart' })
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'div',
+	                                        { className: 'rotate-box-info' },
+	                                        _react2['default'].createElement(
+	                                            'h4',
+	                                            null,
+	                                            'Love'
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'p',
+	                                            null,
+	                                            _react2['default'].createElement(
+	                                                'strong',
+	                                                null,
+	                                                'Love'
+	                                            ),
+	                                            ' yourself, just like we ',
+	                                            _react2['default'].createElement(
+	                                                'strong',
+	                                                null,
+	                                                'Love you'
+	                                            ),
+	                                            '. Let\'s become ',
+	                                            _react2['default'].createElement(
+	                                                'strong',
+	                                                null,
+	                                                'better together'
+	                                            )
+	                                        )
+	                                    )
+	                                )
+	                            ),
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'col-md-3 col-sm-6' },
+	                                _react2['default'].createElement(
+	                                    'a',
+	                                    { className: 'rotate-box-2 square-icon text-center wow zoomIn', 'data-wow-delay': '0.2s' },
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'rotate-box-icon' },
+	                                        _react2['default'].createElement('i', { className: 'fa fa-book' })
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'div',
+	                                        { className: 'rotate-box-info' },
+	                                        _react2['default'].createElement(
+	                                            'h4',
+	                                            null,
+	                                            'Experts'
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'p',
+	                                            null,
+	                                            'Your ',
+	                                            _react2['default'].createElement(
+	                                                'strong',
+	                                                null,
+	                                                'Request'
+	                                            ),
+	                                            ' is their ',
+	                                            _react2['default'].createElement(
+	                                                'strong',
+	                                                null,
+	                                                'Promise'
+	                                            ),
+	                                            '. They read the book, mastered the trait, and ',
+	                                            _react2['default'].createElement(
+	                                                'strong',
+	                                                null,
+	                                                'WILL'
+	                                            ),
+	                                            ' succeed.'
+	                                        )
+	                                    )
+	                                )
+	                            ),
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'col-md-3 col-sm-6' },
+	                                _react2['default'].createElement(
+	                                    'a',
+	                                    { className: 'rotate-box-2 square-icon text-center wow zoomIn', 'data-wow-delay': '0.4s' },
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'rotate-box-icon' },
+	                                        _react2['default'].createElement('i', { className: 'fa fa-mobile' })
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'div',
+	                                        { className: 'rotate-box-info' },
+	                                        _react2['default'].createElement(
+	                                            'h4',
+	                                            null,
+	                                            'Convenience'
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'p',
+	                                            null,
+	                                            'Get your coffee break and ',
+	                                            _react2['default'].createElement('img', { src: 'img/icons/whatsapp.png', style: whatsAppStyle, alt: 'WhatsApp' }),
+	                                            ' with us.'
+	                                        )
+	                                    )
+	                                )
+	                            ),
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'col-md-3 col-sm-6' },
+	                                _react2['default'].createElement(
+	                                    'a',
+	                                    { className: 'rotate-box-2 square-icon text-center wow zoomIn', 'data-wow-delay': '0.6s' },
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'rotate-box-icon' },
+	                                        _react2['default'].createElement('i', { className: 'fa fa-pagelines' })
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'div',
+	                                        { className: 'rotate-box-info' },
+	                                        _react2['default'].createElement(
+	                                            'h4',
+	                                            null,
+	                                            'Eco Friendly'
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'p',
+	                                            null,
+	                                            _react2['default'].createElement(
+	                                                'strong',
+	                                                null,
+	                                                'Papreless!'
+	                                            ),
+	                                            ' Saving the trees by refusing to handle applications with papers.'
+	                                        )
+	                                    )
+	                                )
+	                            )
+	                        )
+	                    ),
+	                    _react2['default'].createElement(
+	                        'div',
+	                        { className: 'container' },
+	                        _react2['default'].createElement('div', { className: 'extra-space-l' }),
+	                        _react2['default'].createElement(
+	                            'div',
+	                            { className: 'text-center' },
+	                            _react2['default'].createElement(
+	                                'a',
+	                                { className: 'btn btn-default btn-lg-xl page-scroll', href: '#prices-section' },
+	                                'Apply Now!'
+	                            )
+	                        )
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return ServicesSection;
+	})(_react2['default'].Component);
+	
+	exports['default'] = ServicesSection;
+	module.exports = exports['default'];
 
 /***/ },
 /* 182 */
@@ -23639,274 +22544,1230 @@
 	'use strict';
 	
 	Object.defineProperty(exports, '__esModule', {
-	  value: true
+	    value: true
 	});
 	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var _react = __webpack_require__(1);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var DefaultDecorators = [{
-	  component: _react2['default'].createClass({
-	    displayName: 'component',
+	var _SectionHeaderJsx = __webpack_require__(179);
 	
-	    render: function render() {
-	      return _react2['default'].createElement(
-	        'button',
-	        {
-	          style: this.getButtonStyles(this.props.currentSlide === 0 && !this.props.wrapAround),
-	          onClick: this.handleClick },
-	        'PREV'
-	      );
-	    },
-	    handleClick: function handleClick(e) {
-	      e.preventDefault();
-	      this.props.previousSlide();
-	    },
-	    getButtonStyles: function getButtonStyles(disabled) {
-	      return {
-	        border: 0,
-	        background: 'rgba(0,0,0,0.4)',
-	        color: 'white',
-	        padding: 10,
-	        outline: 0,
-	        opacity: disabled ? 0.3 : 1,
-	        cursor: 'pointer'
-	      };
+	var _SectionHeaderJsx2 = _interopRequireDefault(_SectionHeaderJsx);
+	
+	var TestimonialsSection = (function (_React$Component) {
+	    _inherits(TestimonialsSection, _React$Component);
+	
+	    function TestimonialsSection() {
+	        _classCallCheck(this, TestimonialsSection);
+	
+	        _get(Object.getPrototypeOf(TestimonialsSection.prototype), 'constructor', this).apply(this, arguments);
 	    }
-	  }),
-	  position: 'CenterLeft'
-	}, {
-	  component: _react2['default'].createClass({
-	    displayName: 'component',
 	
-	    render: function render() {
-	      return _react2['default'].createElement(
-	        'button',
-	        {
-	          style: this.getButtonStyles(this.props.currentSlide + this.props.slidesToScroll >= this.props.slideCount && !this.props.wrapAround),
-	          onClick: this.handleClick },
-	        'NEXT'
-	      );
-	    },
-	    handleClick: function handleClick(e) {
-	      e.preventDefault();
-	      this.props.nextSlide();
-	    },
-	    getButtonStyles: function getButtonStyles(disabled) {
-	      return {
-	        border: 0,
-	        background: 'rgba(0,0,0,0.4)',
-	        color: 'white',
-	        padding: 10,
-	        outline: 0,
-	        opacity: disabled ? 0.3 : 1,
-	        cursor: 'pointer'
-	      };
-	    }
-	  }),
-	  position: 'CenterRight'
-	}, {
-	  component: _react2['default'].createClass({
-	    displayName: 'component',
+	    _createClass(TestimonialsSection, [{
+	        key: 'render',
+	        value: function render() {
 	
-	    render: function render() {
-	      var self = this;
-	      var indexes = this.getIndexes(self.props.slideCount, self.props.slidesToScroll);
-	      return _react2['default'].createElement(
-	        'ul',
-	        { style: self.getListStyles() },
-	        indexes.map(function (index) {
-	          return _react2['default'].createElement(
-	            'li',
-	            { style: self.getListItemStyles(), key: index },
-	            _react2['default'].createElement(
-	              'button',
-	              {
-	                style: self.getButtonStyles(self.props.currentSlide === index),
-	                onClick: self.props.goToSlide.bind(null, index) },
-	              '•'
-	            )
-	          );
-	        })
-	      );
-	    },
-	    getIndexes: function getIndexes(count, inc) {
-	      var arr = [];
-	      for (var i = 0; i < count; i += inc) {
-	        arr.push(i);
-	      }
-	      return arr;
-	    },
-	    getListStyles: function getListStyles() {
-	      return {
-	        position: 'relative',
-	        margin: 0,
-	        top: -10,
-	        padding: 0
-	      };
-	    },
-	    getListItemStyles: function getListItemStyles() {
-	      return {
-	        listStyleType: 'none',
-	        display: 'inline-block'
-	      };
-	    },
-	    getButtonStyles: function getButtonStyles(active) {
-	      return {
-	        border: 0,
-	        background: 'transparent',
-	        color: 'black',
-	        cursor: 'pointer',
-	        padding: 10,
-	        outline: 0,
-	        fontSize: 24,
-	        opacity: active ? 1 : 0.5
-	      };
-	    }
-	  }),
-	  position: 'BottomCenter'
-	}];
+	            var triggerStyle = {
+	                backgroundImage: 'url(img/testimonial-bg.jpg)'
+	            };
 	
-	exports['default'] = DefaultDecorators;
+	            return _react2['default'].createElement(
+	                'section',
+	                { id: 'testimonial-section' },
+	                _react2['default'].createElement(
+	                    'div',
+	                    { id: 'testimonial-trigger', className: 'testimonial text-white parallax', 'data-stellar-background-ratio': '0.5', style: triggerStyle },
+	                    _react2['default'].createElement('div', { className: 'cover' }),
+	                    _react2['default'].createElement(_SectionHeaderJsx2['default'], { header: 'Reviews', subtitle: 'What people say about us' }),
+	                    _react2['default'].createElement(
+	                        'div',
+	                        { className: 'container' },
+	                        _react2['default'].createElement(
+	                            'div',
+	                            { className: 'testimonial-inner center-block text-center' },
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { id: 'owl-testimonial', className: 'owl-carousel' },
+	                                _react2['default'].createElement(
+	                                    'div',
+	                                    { className: 'item' },
+	                                    _react2['default'].createElement(
+	                                        'blockquote',
+	                                        null,
+	                                        _react2['default'].createElement(
+	                                            'p',
+	                                            null,
+	                                            '"This was my first experience with that team and outperformed my expectation! They know there stuff and I highly recommend them! A+++".'
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'footer',
+	                                            null,
+	                                            _react2['default'].createElement(
+	                                                'cite',
+	                                                { title: 'Source Title' },
+	                                                'Daryl Hodgeman'
+	                                            )
+	                                        )
+	                                    )
+	                                ),
+	                                _react2['default'].createElement(
+	                                    'div',
+	                                    { className: 'item' },
+	                                    _react2['default'].createElement(
+	                                        'blockquote',
+	                                        null,
+	                                        _react2['default'].createElement(
+	                                            'p',
+	                                            null,
+	                                            '"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."'
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'footer',
+	                                            null,
+	                                            _react2['default'].createElement(
+	                                                'cite',
+	                                                { title: 'Source Title' },
+	                                                'John Doe'
+	                                            )
+	                                        )
+	                                    )
+	                                ),
+	                                _react2['default'].createElement(
+	                                    'div',
+	                                    { className: 'item' },
+	                                    _react2['default'].createElement(
+	                                        'blockquote',
+	                                        null,
+	                                        _react2['default'].createElement(
+	                                            'p',
+	                                            null,
+	                                            '"Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit".'
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'footer',
+	                                            null,
+	                                            _react2['default'].createElement(
+	                                                'cite',
+	                                                { title: 'Source Title' },
+	                                                'John Doe'
+	                                            )
+	                                        )
+	                                    )
+	                                )
+	                            )
+	                        )
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return TestimonialsSection;
+	})(_react2['default'].Component);
+	
+	exports['default'] = TestimonialsSection;
 	module.exports = exports['default'];
 
 /***/ },
 /* 183 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	/* eslint-disable no-unused-vars */
-	var hasOwnProperty = Object.prototype.hasOwnProperty;
-	var propIsEnumerable = Object.prototype.propertyIsEnumerable;
 	
-	function toObject(val) {
-		if (val === null || val === undefined) {
-			throw new TypeError('Object.assign cannot be called with null or undefined');
-		}
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
 	
-		return Object(val);
-	}
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 	
-	function shouldUseNative() {
-		try {
-			if (!Object.assign) {
-				return false;
-			}
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
 	
-			// Detect buggy property enumeration order in older V8 versions.
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-			// https://bugs.chromium.org/p/v8/issues/detail?id=4118
-			var test1 = new String('abc');  // eslint-disable-line
-			test1[5] = 'de';
-			if (Object.getOwnPropertyNames(test1)[0] === '5') {
-				return false;
-			}
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 	
-			// https://bugs.chromium.org/p/v8/issues/detail?id=3056
-			var test2 = {};
-			for (var i = 0; i < 10; i++) {
-				test2['_' + String.fromCharCode(i)] = i;
-			}
-			var order2 = Object.getOwnPropertyNames(test2).map(function (n) {
-				return test2[n];
-			});
-			if (order2.join('') !== '0123456789') {
-				return false;
-			}
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-			// https://bugs.chromium.org/p/v8/issues/detail?id=3056
-			var test3 = {};
-			'abcdefghijklmnopqrst'.split('').forEach(function (letter) {
-				test3[letter] = letter;
-			});
-			if (Object.keys(Object.assign({}, test3)).join('') !==
-					'abcdefghijklmnopqrst') {
-				return false;
-			}
+	var _react = __webpack_require__(1);
 	
-			return true;
-		} catch (e) {
-			// We don't expect any of the above to throw, but better to be safe.
-			return false;
-		}
-	}
+	var _react2 = _interopRequireDefault(_react);
 	
-	module.exports = shouldUseNative() ? Object.assign : function (target, source) {
-		var from;
-		var to = toObject(target);
-		var symbols;
+	var _SectionHeaderJsx = __webpack_require__(179);
 	
-		for (var s = 1; s < arguments.length; s++) {
-			from = Object(arguments[s]);
+	var _SectionHeaderJsx2 = _interopRequireDefault(_SectionHeaderJsx);
 	
-			for (var key in from) {
-				if (hasOwnProperty.call(from, key)) {
-					to[key] = from[key];
-				}
-			}
+	var PricesSection = (function (_React$Component) {
+	    _inherits(PricesSection, _React$Component);
 	
-			if (Object.getOwnPropertySymbols) {
-				symbols = Object.getOwnPropertySymbols(from);
-				for (var i = 0; i < symbols.length; i++) {
-					if (propIsEnumerable.call(from, symbols[i])) {
-						to[symbols[i]] = from[symbols[i]];
-					}
-				}
-			}
-		}
+	    function PricesSection() {
+	        _classCallCheck(this, PricesSection);
 	
-		return to;
-	};
-
+	        _get(Object.getPrototypeOf(PricesSection.prototype), 'constructor', this).apply(this, arguments);
+	    }
+	
+	    _createClass(PricesSection, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2['default'].createElement(
+	                'section',
+	                { id: 'prices-section', className: 'page' },
+	                _react2['default'].createElement(_SectionHeaderJsx2['default'], { header: 'Prices', subtitle: 'Cheaper While Still Convenient' }),
+	                _react2['default'].createElement('div', { className: 'extra-space-l' }),
+	                _react2['default'].createElement(
+	                    'div',
+	                    { className: 'prices' },
+	                    _react2['default'].createElement(
+	                        'div',
+	                        { className: 'container' },
+	                        _react2['default'].createElement(
+	                            'div',
+	                            { className: 'row' },
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'price-box col-sm-6 col-md-4 wow flipInY', 'data-wow-delay': '0.3s' },
+	                                _react2['default'].createElement(
+	                                    'div',
+	                                    { className: 'panel panel-default' },
+	                                    _react2['default'].createElement(
+	                                        'div',
+	                                        { className: 'panel-heading text-center' },
+	                                        _react2['default'].createElement('i', { className: 'fa fa-plug fa-2x' }),
+	                                        _react2['default'].createElement(
+	                                            'h3',
+	                                            null,
+	                                            'Basic'
+	                                        )
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'div',
+	                                        { className: 'panel-body text-center' },
+	                                        _react2['default'].createElement(
+	                                            'p',
+	                                            { className: 'lead' },
+	                                            _react2['default'].createElement(
+	                                                'strong',
+	                                                null,
+	                                                _react2['default'].createElement('i', { className: 'fa fa-ils' }),
+	                                                '100'
+	                                            )
+	                                        )
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'ul',
+	                                        { className: 'list-group text-center' },
+	                                        _react2['default'].createElement(
+	                                            'li',
+	                                            { className: 'list-group-item' },
+	                                            'Text on Viber'
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'li',
+	                                            { className: 'list-group-item' },
+	                                            '3 projects'
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'li',
+	                                            { className: 'list-group-item' },
+	                                            '1 GB Disk'
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'li',
+	                                            { className: 'list-group-item' },
+	                                            'Custom Domain'
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'li',
+	                                            { className: 'list-group-item' },
+	                                            '24/7 Support'
+	                                        )
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'div',
+	                                        { className: 'panel-footer text-center' },
+	                                        _react2['default'].createElement(
+	                                            'a',
+	                                            { className: 'btn btn-default', href: '#' },
+	                                            'Apply Now!'
+	                                        )
+	                                    )
+	                                )
+	                            ),
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'price-box col-sm-6 col-md-4 wow flipInY', 'data-wow-delay': '0.5s' },
+	                                _react2['default'].createElement(
+	                                    'div',
+	                                    { className: 'panel panel-default' },
+	                                    _react2['default'].createElement(
+	                                        'div',
+	                                        { className: 'panel-heading text-center' },
+	                                        _react2['default'].createElement('i', { className: 'fa fa-cog fa-2x' }),
+	                                        _react2['default'].createElement(
+	                                            'h3',
+	                                            null,
+	                                            'Motivated'
+	                                        )
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'div',
+	                                        { className: 'panel-body text-center' },
+	                                        _react2['default'].createElement(
+	                                            'p',
+	                                            { className: 'lead' },
+	                                            _react2['default'].createElement(
+	                                                'strong',
+	                                                null,
+	                                                _react2['default'].createElement('i', { className: 'fa fa-ils' }),
+	                                                '275'
+	                                            )
+	                                        )
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'ul',
+	                                        { className: 'list-group text-center' },
+	                                        _react2['default'].createElement(
+	                                            'li',
+	                                            { className: 'list-group-item' },
+	                                            'Text/Call on Viber and Skype'
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'li',
+	                                            { className: 'list-group-item' },
+	                                            '5 projects'
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'li',
+	                                            { className: 'list-group-item' },
+	                                            '5 GB Disk'
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'li',
+	                                            { className: 'list-group-item' },
+	                                            'Custom Domain'
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'li',
+	                                            { className: 'list-group-item' },
+	                                            '24/7 Support'
+	                                        )
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'div',
+	                                        { className: 'panel-footer text-center' },
+	                                        _react2['default'].createElement(
+	                                            'a',
+	                                            { className: 'btn btn-default', href: '#' },
+	                                            'Apply Now!'
+	                                        )
+	                                    )
+	                                )
+	                            ),
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'price-box col-sm-6 price-box-featured col-md-4 wow flipInY', 'data-wow-delay': '0.7s' },
+	                                _react2['default'].createElement(
+	                                    'div',
+	                                    { className: 'panel panel-default' },
+	                                    _react2['default'].createElement(
+	                                        'div',
+	                                        { className: 'panel-heading text-center' },
+	                                        _react2['default'].createElement('i', { className: 'fa fa-star fa-2x' }),
+	                                        _react2['default'].createElement(
+	                                            'h3',
+	                                            null,
+	                                            'Dedicated'
+	                                        )
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'div',
+	                                        { className: 'panel-body text-center' },
+	                                        _react2['default'].createElement(
+	                                            'p',
+	                                            { className: 'lead' },
+	                                            _react2['default'].createElement(
+	                                                'strong',
+	                                                null,
+	                                                _react2['default'].createElement('i', { className: 'fa fa-ils' }),
+	                                                '520'
+	                                            )
+	                                        )
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'ul',
+	                                        { className: 'list-group text-center' },
+	                                        _react2['default'].createElement(
+	                                            'li',
+	                                            { className: 'list-group-item' },
+	                                            'Personal Use'
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'li',
+	                                            { className: 'list-group-item' },
+	                                            '20 Projects'
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'li',
+	                                            { className: 'list-group-item' },
+	                                            '20 GB Disk'
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'li',
+	                                            { className: 'list-group-item' },
+	                                            'Custom Domain'
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'li',
+	                                            { className: 'list-group-item' },
+	                                            '24/7 Support'
+	                                        )
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'div',
+	                                        { className: 'panel-footer text-center' },
+	                                        _react2['default'].createElement(
+	                                            'a',
+	                                            { className: 'btn btn-default', href: '#' },
+	                                            'Apply Now!'
+	                                        )
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'div',
+	                                        { className: 'price-box-ribbon' },
+	                                        _react2['default'].createElement(
+	                                            'strong',
+	                                            null,
+	                                            'Best Offer!'
+	                                        )
+	                                    )
+	                                )
+	                            )
+	                        )
+	                    )
+	                ),
+	                _react2['default'].createElement('div', { className: 'extra-space-l' })
+	            );
+	        }
+	    }]);
+	
+	    return PricesSection;
+	})(_react2['default'].Component);
+	
+	exports['default'] = PricesSection;
+	module.exports = exports['default'];
 
 /***/ },
 /* 184 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_RESULT__;/*!
-	  Copyright (c) 2015 Jed Watson.
-	  Based on code that is Copyright 2013-2015, Facebook, Inc.
-	  All rights reserved.
-	*/
-	/* global define */
+	'use strict';
 	
-	(function () {
-		'use strict';
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
 	
-		var canUseDOM = !!(
-			typeof window !== 'undefined' &&
-			window.document &&
-			window.document.createElement
-		);
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 	
-		var ExecutionEnvironment = {
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
 	
-			canUseDOM: canUseDOM,
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-			canUseWorkers: typeof Worker !== 'undefined',
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 	
-			canUseEventListeners:
-				canUseDOM && !!(window.addEventListener || window.attachEvent),
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-			canUseViewport: canUseDOM && !!window.screen
+	var _react = __webpack_require__(1);
 	
-		};
+	var _react2 = _interopRequireDefault(_react);
 	
-		if (true) {
-			!(__WEBPACK_AMD_DEFINE_RESULT__ = function () {
-				return ExecutionEnvironment;
-			}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-		} else if (typeof module !== 'undefined' && module.exports) {
-			module.exports = ExecutionEnvironment;
-		} else {
-			window.ExecutionEnvironment = ExecutionEnvironment;
-		}
+	var _SectionHeaderJsx = __webpack_require__(179);
 	
-	}());
+	var _SectionHeaderJsx2 = _interopRequireDefault(_SectionHeaderJsx);
+	
+	var TeamSection = (function (_React$Component) {
+	  _inherits(TeamSection, _React$Component);
+	
+	  function TeamSection() {
+	    _classCallCheck(this, TeamSection);
+	
+	    _get(Object.getPrototypeOf(TeamSection.prototype), 'constructor', this).apply(this, arguments);
+	  }
+	
+	  _createClass(TeamSection, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2['default'].createElement(
+	        'section',
+	        { id: 'team-section', className: 'page' },
+	        _react2['default'].createElement(_SectionHeaderJsx2['default'], { header: 'Our Team', subtitle: 'Meat our experts' }),
+	        _react2['default'].createElement(
+	          'div',
+	          { className: 'container' },
+	          _react2['default'].createElement(
+	            'div',
+	            { className: 'team-members' },
+	            _react2['default'].createElement(
+	              'div',
+	              { className: 'row' },
+	              _react2['default'].createElement(
+	                'div',
+	                { className: 'col-sm-2 col-sm-offset-1' },
+	                _react2['default'].createElement(
+	                  'div',
+	                  { className: 'team-member wow flipInY', 'data-wow-duration': '1000ms', 'data-wow-delay': '300ms' },
+	                  _react2['default'].createElement(
+	                    'div',
+	                    { className: 'member-image' },
+	                    _react2['default'].createElement('img', { className: 'img-responsive', src: 'img/team/SariSabouh.jpg', alt: '' })
+	                  ),
+	                  _react2['default'].createElement(
+	                    'div',
+	                    { className: 'member-info' },
+	                    _react2['default'].createElement(
+	                      'h3',
+	                      null,
+	                      'Sari Sabouh'
+	                    ),
+	                    _react2['default'].createElement(
+	                      'h4',
+	                      null,
+	                      'Software Engineer & Co-Founder'
+	                    ),
+	                    _react2['default'].createElement(
+	                      'p',
+	                      null,
+	                      'A software engineer that co-started ',
+	                      _react2['default'].createElement(
+	                        'a',
+	                        { href: 'http://www.paliup.wordpress.com', target: '_blank' },
+	                        'PaliUp'
+	                      ),
+	                      ' to help the people. When Raghad suggested this idea to him, Sari was on board before she even finished.'
+	                    )
+	                  ),
+	                  _react2['default'].createElement(
+	                    'div',
+	                    { className: 'social-icons' },
+	                    _react2['default'].createElement(
+	                      'ul',
+	                      null,
+	                      _react2['default'].createElement(
+	                        'li',
+	                        null,
+	                        _react2['default'].createElement(
+	                          'a',
+	                          { className: 'facebook', href: '#' },
+	                          _react2['default'].createElement('i', { className: 'fa fa-facebook' })
+	                        )
+	                      ),
+	                      _react2['default'].createElement(
+	                        'li',
+	                        null,
+	                        _react2['default'].createElement(
+	                          'a',
+	                          { className: 'twitter', href: '#' },
+	                          _react2['default'].createElement('i', { className: 'fa fa-twitter' })
+	                        )
+	                      ),
+	                      _react2['default'].createElement(
+	                        'li',
+	                        null,
+	                        _react2['default'].createElement(
+	                          'a',
+	                          { className: 'linkedin', href: '#' },
+	                          _react2['default'].createElement('i', { className: 'fa fa-linkedin' })
+	                        )
+	                      )
+	                    )
+	                  )
+	                )
+	              ),
+	              _react2['default'].createElement(
+	                'div',
+	                { className: 'col-sm-2' },
+	                _react2['default'].createElement(
+	                  'div',
+	                  { className: 'team-member wow flipInY', 'data-wow-duration': '1000ms', 'data-wow-delay': '500ms' },
+	                  _react2['default'].createElement(
+	                    'div',
+	                    { className: 'member-image' },
+	                    _react2['default'].createElement('img', { className: 'img-responsive', src: 'img/team/SariSabouh.jpg', alt: '' })
+	                  ),
+	                  _react2['default'].createElement(
+	                    'div',
+	                    { className: 'member-info' },
+	                    _react2['default'].createElement(
+	                      'h3',
+	                      null,
+	                      'Tima Pina'
+	                    ),
+	                    _react2['default'].createElement(
+	                      'h4',
+	                      null,
+	                      'Nutritionist'
+	                    ),
+	                    _react2['default'].createElement(
+	                      'p',
+	                      null,
+	                      'Need description!!!!!!!!!!!!!'
+	                    )
+	                  ),
+	                  _react2['default'].createElement(
+	                    'div',
+	                    { className: 'social-icons' },
+	                    _react2['default'].createElement(
+	                      'ul',
+	                      null,
+	                      _react2['default'].createElement(
+	                        'li',
+	                        null,
+	                        _react2['default'].createElement(
+	                          'a',
+	                          { className: 'facebook', href: '#' },
+	                          _react2['default'].createElement('i', { className: 'fa fa-facebook' })
+	                        )
+	                      ),
+	                      _react2['default'].createElement(
+	                        'li',
+	                        null,
+	                        _react2['default'].createElement(
+	                          'a',
+	                          { className: 'twitter', href: '#' },
+	                          _react2['default'].createElement('i', { className: 'fa fa-twitter' })
+	                        )
+	                      ),
+	                      _react2['default'].createElement(
+	                        'li',
+	                        null,
+	                        _react2['default'].createElement(
+	                          'a',
+	                          { className: 'linkedin', href: '#' },
+	                          _react2['default'].createElement('i', { className: 'fa fa-linkedin' })
+	                        )
+	                      )
+	                    )
+	                  )
+	                )
+	              ),
+	              _react2['default'].createElement(
+	                'div',
+	                { className: 'col-sm-2' },
+	                _react2['default'].createElement(
+	                  'div',
+	                  { className: 'team-member wow flipInY', 'data-wow-duration': '1000ms', 'data-wow-delay': '800ms' },
+	                  _react2['default'].createElement(
+	                    'div',
+	                    { className: 'member-image' },
+	                    _react2['default'].createElement('img', { className: 'img-responsive', src: 'img/team/SariSabouh.jpg', alt: '' })
+	                  ),
+	                  _react2['default'].createElement(
+	                    'div',
+	                    { className: 'member-info' },
+	                    _react2['default'].createElement(
+	                      'h3',
+	                      null,
+	                      'Raghad Sukhtian'
+	                    ),
+	                    _react2['default'].createElement(
+	                      'h4',
+	                      null,
+	                      'Founder'
+	                    ),
+	                    _react2['default'].createElement(
+	                      'p',
+	                      null,
+	                      'Public relations student at Al-Najah University in Nablus. An honest spirit that came up with this very great idea that is focused for the people and only the people.'
+	                    )
+	                  ),
+	                  _react2['default'].createElement(
+	                    'div',
+	                    { className: 'social-icons' },
+	                    _react2['default'].createElement(
+	                      'ul',
+	                      null,
+	                      _react2['default'].createElement(
+	                        'li',
+	                        null,
+	                        _react2['default'].createElement(
+	                          'a',
+	                          { className: 'facebook', href: '#' },
+	                          _react2['default'].createElement('i', { className: 'fa fa-facebook' })
+	                        )
+	                      ),
+	                      _react2['default'].createElement(
+	                        'li',
+	                        null,
+	                        _react2['default'].createElement(
+	                          'a',
+	                          { className: 'twitter', href: '#' },
+	                          _react2['default'].createElement('i', { className: 'fa fa-twitter' })
+	                        )
+	                      ),
+	                      _react2['default'].createElement(
+	                        'li',
+	                        null,
+	                        _react2['default'].createElement(
+	                          'a',
+	                          { className: 'linkedin', href: '#' },
+	                          _react2['default'].createElement('i', { className: 'fa fa-linkedin' })
+	                        )
+	                      )
+	                    )
+	                  )
+	                )
+	              ),
+	              _react2['default'].createElement(
+	                'div',
+	                { className: 'col-sm-2' },
+	                _react2['default'].createElement(
+	                  'div',
+	                  { className: 'team-member wow flipInY', 'data-wow-duration': '1000ms', 'data-wow-delay': '1100ms' },
+	                  _react2['default'].createElement(
+	                    'div',
+	                    { className: 'member-image' },
+	                    _react2['default'].createElement('img', { className: 'img-responsive', src: 'img/team/SariSabouh.jpg', alt: '' })
+	                  ),
+	                  _react2['default'].createElement(
+	                    'div',
+	                    { className: 'member-info' },
+	                    _react2['default'].createElement(
+	                      'h3',
+	                      null,
+	                      'Abeer Sharaf'
+	                    ),
+	                    _react2['default'].createElement(
+	                      'h4',
+	                      null,
+	                      'Co-Founder'
+	                    ),
+	                    _react2['default'].createElement(
+	                      'p',
+	                      null,
+	                      'Foudner and CEO of the successful company ',
+	                      _react2['default'].createElement(
+	                        'a',
+	                        { href: 'http://www.waysinternational.com', target: '_blank' },
+	                        'Ways International'
+	                      ),
+	                      '. Practiced trainer and great leader of the team.'
+	                    )
+	                  ),
+	                  _react2['default'].createElement(
+	                    'div',
+	                    { className: 'social-icons' },
+	                    _react2['default'].createElement(
+	                      'ul',
+	                      null,
+	                      _react2['default'].createElement(
+	                        'li',
+	                        null,
+	                        _react2['default'].createElement(
+	                          'a',
+	                          { className: 'facebook', href: '#' },
+	                          _react2['default'].createElement('i', { className: 'fa fa-facebook' })
+	                        )
+	                      ),
+	                      _react2['default'].createElement(
+	                        'li',
+	                        null,
+	                        _react2['default'].createElement(
+	                          'a',
+	                          { className: 'twitter', href: '#' },
+	                          _react2['default'].createElement('i', { className: 'fa fa-twitter' })
+	                        )
+	                      ),
+	                      _react2['default'].createElement(
+	                        'li',
+	                        null,
+	                        _react2['default'].createElement(
+	                          'a',
+	                          { className: 'linkedin', href: '#' },
+	                          _react2['default'].createElement('i', { className: 'fa fa-linkedin' })
+	                        )
+	                      )
+	                    )
+	                  )
+	                )
+	              ),
+	              _react2['default'].createElement(
+	                'div',
+	                { className: 'col-sm-2' },
+	                _react2['default'].createElement(
+	                  'div',
+	                  { className: 'team-member wow flipInY', 'data-wow-duration': '1000ms', 'data-wow-delay': '1100ms' },
+	                  _react2['default'].createElement(
+	                    'div',
+	                    { className: 'member-image' },
+	                    _react2['default'].createElement('img', { className: 'img-responsive', src: 'img/team/SariSabouh.jpg', alt: '' })
+	                  ),
+	                  _react2['default'].createElement(
+	                    'div',
+	                    { className: 'member-info' },
+	                    _react2['default'].createElement(
+	                      'h3',
+	                      null,
+	                      'Maysara Odeh'
+	                    ),
+	                    _react2['default'].createElement(
+	                      'h4',
+	                      null,
+	                      'Software Engineer'
+	                    ),
+	                    _react2['default'].createElement(
+	                      'p',
+	                      null,
+	                      'Need description!!!!!!!!'
+	                    )
+	                  ),
+	                  _react2['default'].createElement(
+	                    'div',
+	                    { className: 'social-icons' },
+	                    _react2['default'].createElement(
+	                      'ul',
+	                      null,
+	                      _react2['default'].createElement(
+	                        'li',
+	                        null,
+	                        _react2['default'].createElement(
+	                          'a',
+	                          { className: 'facebook', href: '#' },
+	                          _react2['default'].createElement('i', { className: 'fa fa-facebook' })
+	                        )
+	                      ),
+	                      _react2['default'].createElement(
+	                        'li',
+	                        null,
+	                        _react2['default'].createElement(
+	                          'a',
+	                          { className: 'twitter', href: '#' },
+	                          _react2['default'].createElement('i', { className: 'fa fa-twitter' })
+	                        )
+	                      ),
+	                      _react2['default'].createElement(
+	                        'li',
+	                        null,
+	                        _react2['default'].createElement(
+	                          'a',
+	                          { className: 'linkedin', href: '#' },
+	                          _react2['default'].createElement('i', { className: 'fa fa-linkedin' })
+	                        )
+	                      )
+	                    )
+	                  )
+	                )
+	              )
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return TeamSection;
+	})(_react2['default'].Component);
+	
+	exports['default'] = TeamSection;
+	module.exports = exports['default'];
 
+/***/ },
+/* 185 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _SectionHeaderJsx = __webpack_require__(179);
+	
+	var _SectionHeaderJsx2 = _interopRequireDefault(_SectionHeaderJsx);
+	
+	var PartnersSection = (function (_React$Component) {
+	    _inherits(PartnersSection, _React$Component);
+	
+	    function PartnersSection() {
+	        _classCallCheck(this, PartnersSection);
+	
+	        _get(Object.getPrototypeOf(PartnersSection.prototype), 'constructor', this).apply(this, arguments);
+	    }
+	
+	    _createClass(PartnersSection, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2['default'].createElement(
+	                'section',
+	                { id: 'partners-section' },
+	                _react2['default'].createElement(_SectionHeaderJsx2['default'], { header: 'Our Partners', subtitle: 'Together, Success is Inevitable' }),
+	                _react2['default'].createElement(
+	                    'div',
+	                    { className: 'container' },
+	                    _react2['default'].createElement(
+	                        'div',
+	                        { id: 'owl-partners', className: 'owl-carousel' },
+	                        _react2['default'].createElement(
+	                            'a',
+	                            { href: 'http://www.abeersharaf.com', target: '_blank' },
+	                            _react2['default'].createElement('img', { className: 'partners-logo', src: 'img/partners/AbeerSharaf.png', alt: 'Abeer Sharaf' })
+	                        ),
+	                        _react2['default'].createElement(
+	                            'a',
+	                            { href: 'http://www.paliup.com', target: '_blank' },
+	                            _react2['default'].createElement('img', { className: 'partners-logo', src: 'img/partners/PaliUp.png', alt: 'PaliUp' })
+	                        ),
+	                        _react2['default'].createElement(
+	                            'a',
+	                            { href: 'http://www.waysinternational.com', target: '_blank' },
+	                            _react2['default'].createElement('img', { className: 'partners-logo', src: 'img/partners/WaysLogo.png', alt: 'Ways International' })
+	                        )
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return PartnersSection;
+	})(_react2['default'].Component);
+	
+	exports['default'] = PartnersSection;
+	module.exports = exports['default'];
+
+/***/ },
+/* 186 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _SectionHeaderJsx = __webpack_require__(179);
+	
+	var _SectionHeaderJsx2 = _interopRequireDefault(_SectionHeaderJsx);
+	
+	var SocialSection = (function (_React$Component) {
+	    _inherits(SocialSection, _React$Component);
+	
+	    function SocialSection() {
+	        _classCallCheck(this, SocialSection);
+	
+	        _get(Object.getPrototypeOf(SocialSection.prototype), 'constructor', this).apply(this, arguments);
+	    }
+	
+	    _createClass(SocialSection, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2['default'].createElement(
+	                'section',
+	                { id: 'social-section' },
+	                _react2['default'].createElement(_SectionHeaderJsx2['default'], { header: 'Join Us', subtitle: 'Follow us on social networks' }),
+	                _react2['default'].createElement(
+	                    'div',
+	                    { className: 'container' },
+	                    _react2['default'].createElement(
+	                        'ul',
+	                        { className: 'social-list' },
+	                        _react2['default'].createElement(
+	                            'li',
+	                            null,
+	                            ' ',
+	                            _react2['default'].createElement(
+	                                'a',
+	                                { className: 'rotate-box-1 square-icon text-center wow zoomIn', 'data-wow-delay': '0.3s' },
+	                                _react2['default'].createElement(
+	                                    'span',
+	                                    { className: 'rotate-box-icon' },
+	                                    _react2['default'].createElement('i', { className: 'fa fa-facebook' })
+	                                )
+	                            )
+	                        ),
+	                        _react2['default'].createElement(
+	                            'li',
+	                            null,
+	                            ' ',
+	                            _react2['default'].createElement(
+	                                'a',
+	                                { className: 'rotate-box-1 square-icon text-center wow zoomIn', 'data-wow-delay': '0.4s' },
+	                                _react2['default'].createElement(
+	                                    'span',
+	                                    { className: 'rotate-box-icon' },
+	                                    _react2['default'].createElement('i', { className: 'fa fa-twitter' })
+	                                )
+	                            )
+	                        ),
+	                        _react2['default'].createElement(
+	                            'li',
+	                            null,
+	                            ' ',
+	                            _react2['default'].createElement(
+	                                'a',
+	                                { className: 'rotate-box-1 square-icon text-center wow zoomIn', 'data-wow-delay': '0.5s' },
+	                                _react2['default'].createElement(
+	                                    'span',
+	                                    { className: 'rotate-box-icon' },
+	                                    _react2['default'].createElement('i', { className: 'fa fa-google-plus' })
+	                                )
+	                            )
+	                        ),
+	                        _react2['default'].createElement(
+	                            'li',
+	                            null,
+	                            ' ',
+	                            _react2['default'].createElement(
+	                                'a',
+	                                { className: 'rotate-box-1 square-icon text-center wow zoomIn', 'data-wow-delay': '0.6s' },
+	                                _react2['default'].createElement(
+	                                    'span',
+	                                    { className: 'rotate-box-icon' },
+	                                    _react2['default'].createElement('i', { className: 'fa fa-pinterest-p' })
+	                                )
+	                            )
+	                        ),
+	                        _react2['default'].createElement(
+	                            'li',
+	                            null,
+	                            ' ',
+	                            _react2['default'].createElement(
+	                                'a',
+	                                { className: 'rotate-box-1 square-icon text-center wow zoomIn', 'data-wow-delay': '0.7s' },
+	                                _react2['default'].createElement(
+	                                    'span',
+	                                    { className: 'rotate-box-icon' },
+	                                    _react2['default'].createElement('i', { className: 'fa fa-tumblr' })
+	                                )
+	                            )
+	                        ),
+	                        _react2['default'].createElement(
+	                            'li',
+	                            null,
+	                            ' ',
+	                            _react2['default'].createElement(
+	                                'a',
+	                                { className: 'rotate-box-1 square-icon text-center wow zoomIn', 'data-wow-delay': '0.8s' },
+	                                _react2['default'].createElement(
+	                                    'span',
+	                                    { className: 'rotate-box-icon' },
+	                                    _react2['default'].createElement('i', { className: 'fa fa-dribbble' })
+	                                )
+	                            )
+	                        )
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return SocialSection;
+	})(_react2['default'].Component);
+	
+	exports['default'] = SocialSection;
+	module.exports = exports['default'];
+
+/***/ },
+/* 187 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _SectionHeaderJsx = __webpack_require__(179);
+	
+	var _SectionHeaderJsx2 = _interopRequireDefault(_SectionHeaderJsx);
+	
+	var ContactSection = (function (_React$Component) {
+	    _inherits(ContactSection, _React$Component);
+	
+	    function ContactSection() {
+	        _classCallCheck(this, ContactSection);
+	
+	        _get(Object.getPrototypeOf(ContactSection.prototype), 'constructor', this).apply(this, arguments);
+	    }
+	
+	    _createClass(ContactSection, [{
+	        key: 'render',
+	        value: function render() {
+	
+	            var contactStyle = {
+	                backgroundImage: 'url(img/map-bg.jpg)'
+	            };
+	
+	            return _react2['default'].createElement(
+	                'section',
+	                { id: 'contact-section', className: 'page text-white parallax', 'data-stellar-background-ratio': '0.5', style: contactStyle },
+	                _react2['default'].createElement('div', { className: 'cover' }),
+	                _react2['default'].createElement(_SectionHeaderJsx2['default'], { header: 'Contacts', subtitle: 'Reach Out!' }),
+	                _react2['default'].createElement(
+	                    'div',
+	                    { className: 'contact wow bounceInRight', 'data-wow-delay': '0.4s' },
+	                    _react2['default'].createElement(
+	                        'div',
+	                        { className: 'container' },
+	                        _react2['default'].createElement(
+	                            'div',
+	                            { className: 'row' },
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'col-sm-6' },
+	                                _react2['default'].createElement(
+	                                    'div',
+	                                    { className: 'contact-info' },
+	                                    _react2['default'].createElement(
+	                                        'h4',
+	                                        null,
+	                                        'Our Info'
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'ul',
+	                                        { className: 'contact-address' },
+	                                        _react2['default'].createElement(
+	                                            'li',
+	                                            null,
+	                                            _react2['default'].createElement('i', { className: 'fa fa-map-marker fa-lg' }),
+	                                            '  Nablus/Ramallah ,',
+	                                            _react2['default'].createElement('br', null),
+	                                            _react2['default'].createElement('br', null),
+	                                            '        West Bank, Palestine'
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'li',
+	                                            null,
+	                                            _react2['default'].createElement('i', { className: 'fa fa-map-marker fa-lg' }),
+	                                            '  332 Cahaba River Parc ,',
+	                                            _react2['default'].createElement('br', null),
+	                                            _react2['default'].createElement('br', null),
+	                                            '        Birmingham, AL, 35243'
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'li',
+	                                            null,
+	                                            _react2['default'].createElement('i', { className: 'fa fa-phone' }),
+	                                            '  +972 -599 -361614'
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'li',
+	                                            null,
+	                                            _react2['default'].createElement('i', { className: 'fa fa-phone' }),
+	                                            '  +1 -256 -658 -7168'
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'li',
+	                                            null,
+	                                            _react2['default'].createElement('i', { className: 'fa fa-envelope' }),
+	                                            ' sari.sbouh@gmail.com'
+	                                        )
+	                                    )
+	                                )
+	                            ),
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'col-sm-6' },
+	                                _react2['default'].createElement(
+	                                    'div',
+	                                    { className: 'contact-form' },
+	                                    _react2['default'].createElement(
+	                                        'h4',
+	                                        null,
+	                                        'Write to us'
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'form',
+	                                        { role: 'form' },
+	                                        _react2['default'].createElement(
+	                                            'div',
+	                                            { className: 'form-group' },
+	                                            _react2['default'].createElement('input', { type: 'text', className: 'form-control input-lg', placeholder: 'Your Name', required: true })
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'div',
+	                                            { className: 'form-group' },
+	                                            _react2['default'].createElement('input', { type: 'email', className: 'form-control input-lg', placeholder: 'E-mail', required: true })
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'div',
+	                                            { className: 'form-group' },
+	                                            _react2['default'].createElement('input', { type: 'text', className: 'form-control input-lg', placeholder: 'Subject', required: true })
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'div',
+	                                            { className: 'form-group' },
+	                                            _react2['default'].createElement('textarea', { className: 'form-control input-lg', rows: '5', placeholder: 'Message', required: true })
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'button',
+	                                            { type: 'submit', className: 'btn wow bounceInRight', 'data-wow-delay': '0.8s' },
+	                                            'Send'
+	                                        )
+	                                    )
+	                                )
+	                            )
+	                        )
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return ContactSection;
+	})(_react2['default'].Component);
+	
+	exports['default'] = ContactSection;
+	module.exports = exports['default'];
 
 /***/ }
 /******/ ]);
