@@ -5,14 +5,14 @@ import NavTabs from './NavTabs.jsx';
 export default class NavigationBar extends React.Component {
     render() {
         return (
-            <div>
-                <nav className="navbar navbar-default navbar-fixed-top">
-                    <div className="container">
-                        <NavLogo />
-                        <NavTabs />
-                    </div>
+            <header id="header" className="header-main">
+                <nav id="main-navbar" className="navbar navbar-default navbar-fixed-top" role="navigation">
+                  <div className="container">
+                    <NavLogo />
+                    <NavTabs />
+                  </div>
                 </nav>
-            </div>
+            </header>
         )
     }
 }
