@@ -22111,7 +22111,7 @@
 	'use strict';
 	
 	Object.defineProperty(exports, '__esModule', {
-	    value: true
+	  value: true
 	});
 	
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
@@ -22133,45 +22133,45 @@
 	var _CarouselItemJsx2 = _interopRequireDefault(_CarouselItemJsx);
 	
 	var Carousel = (function (_React$Component) {
-	    _inherits(Carousel, _React$Component);
+	  _inherits(Carousel, _React$Component);
 	
-	    function Carousel() {
-	        _classCallCheck(this, Carousel);
+	  function Carousel() {
+	    _classCallCheck(this, Carousel);
 	
-	        _get(Object.getPrototypeOf(Carousel.prototype), 'constructor', this).apply(this, arguments);
+	    _get(Object.getPrototypeOf(Carousel.prototype), 'constructor', this).apply(this, arguments);
+	  }
+	
+	  _createClass(Carousel, [{
+	    key: 'render',
+	    value: function render() {
+	
+	      var carouselStyle = {
+	        backgroundImage: 'url(img/slider-bg.jpg)'
+	      };
+	
+	      return _react2['default'].createElement(
+	        'section',
+	        { id: 'text-carousel-intro-section', className: 'parallax', 'data-stellar-background-ratio': '0.5', style: carouselStyle },
+	        _react2['default'].createElement(
+	          'div',
+	          { className: 'container' },
+	          _react2['default'].createElement(
+	            'div',
+	            { className: 'caption text-center text-white', 'data-stellar-ratio': '0.7' },
+	            _react2['default'].createElement(
+	              'div',
+	              { id: 'owl-intro-text', className: 'owl-carousel' },
+	              _react2['default'].createElement(_CarouselItemJsx2['default'], { header: 'Rijeemak Online', subHeader: 'Your Diet, At Your Comfort', href: '#rijeemak-section', hrefText: 'Learn More!' }),
+	              _react2['default'].createElement(_CarouselItemJsx2['default'], { header: 'IT\'S ALL ABOUT YOU', subHeader: 'Love, Care and a great health program', href: '#services-section', hrefText: 'Learn More!' }),
+	              _react2['default'].createElement(_CarouselItemJsx2['default'], { header: 'Best Prices', subHeader: 'Cheaper than going to an actual appointment? WHAAAAT?!?', href: '#prices-section', hrefText: 'Learn More!' })
+	            )
+	          )
+	        )
+	      );
 	    }
+	  }]);
 	
-	    _createClass(Carousel, [{
-	        key: 'render',
-	        value: function render() {
-	
-	            var carouselStyle = {
-	                backgroundImage: 'url(img/slider-bg.jpg)'
-	            };
-	
-	            return _react2['default'].createElement(
-	                'section',
-	                { id: 'text-carousel-intro-section', className: 'parallax', 'data-stellar-background-ratio': '0.5', style: carouselStyle },
-	                _react2['default'].createElement(
-	                    'div',
-	                    { className: 'container' },
-	                    _react2['default'].createElement(
-	                        'div',
-	                        { className: 'caption text-center text-white', 'data-stellar-ratio': '0.7' },
-	                        _react2['default'].createElement(
-	                            'div',
-	                            { id: 'owl-intro-text', className: 'owl-carousel' },
-	                            _react2['default'].createElement(_CarouselItemJsx2['default'], { header: 'Rijeemak Online', subHeader: 'Your Diet, At Your Comfort', href: '#rijeemak-section', hrefText: 'Learn More!' }),
-	                            _react2['default'].createElement(_CarouselItemJsx2['default'], { header: 'IT\'S ALL ABOUT YOU', subHeader: 'Love, Care and a great health program', href: '#services-section', hrefText: 'Learn More!' }),
-	                            _react2['default'].createElement(_CarouselItemJsx2['default'], { header: 'Best Prices', subHeader: 'Cheaper than going to an actual appointment? WHAAAAT?!?', href: '#prices-section', hrefText: 'Learn More!' })
-	                        )
-	                    )
-	                )
-	            );
-	        }
-	    }]);
-	
-	    return Carousel;
+	  return Carousel;
 	})(_react2['default'].Component);
 	
 	exports['default'] = Carousel;
@@ -23093,27 +23093,21 @@
 	                                        _react2['default'].createElement(
 	                                            'li',
 	                                            { className: 'list-group-item' },
+	                                            '1 Month'
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'li',
+	                                            { className: 'list-group-item' },
 	                                            'Text on Viber'
 	                                        ),
 	                                        _react2['default'].createElement(
 	                                            'li',
 	                                            { className: 'list-group-item' },
-	                                            '3 projects'
-	                                        ),
-	                                        _react2['default'].createElement(
-	                                            'li',
-	                                            { className: 'list-group-item' },
-	                                            '1 GB Disk'
-	                                        ),
-	                                        _react2['default'].createElement(
-	                                            'li',
-	                                            { className: 'list-group-item' },
-	                                            'Custom Domain'
-	                                        ),
-	                                        _react2['default'].createElement(
-	                                            'li',
-	                                            { className: 'list-group-item' },
-	                                            '24/7 Support'
+	                                            _react2['default'].createElement(
+	                                                'del',
+	                                                null,
+	                                                'Access to Private Blog by Nutritionist'
+	                                            )
 	                                        )
 	                                    ),
 	                                    _react2['default'].createElement(
@@ -23163,27 +23157,17 @@
 	                                        _react2['default'].createElement(
 	                                            'li',
 	                                            { className: 'list-group-item' },
+	                                            '3 Months'
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'li',
+	                                            { className: 'list-group-item' },
 	                                            'Text/Call on Viber and Skype'
 	                                        ),
 	                                        _react2['default'].createElement(
 	                                            'li',
 	                                            { className: 'list-group-item' },
-	                                            '5 projects'
-	                                        ),
-	                                        _react2['default'].createElement(
-	                                            'li',
-	                                            { className: 'list-group-item' },
-	                                            '5 GB Disk'
-	                                        ),
-	                                        _react2['default'].createElement(
-	                                            'li',
-	                                            { className: 'list-group-item' },
-	                                            'Custom Domain'
-	                                        ),
-	                                        _react2['default'].createElement(
-	                                            'li',
-	                                            { className: 'list-group-item' },
-	                                            '24/7 Support'
+	                                            'Access to Private Blog by Nutritionist'
 	                                        )
 	                                    ),
 	                                    _react2['default'].createElement(
@@ -23233,27 +23217,17 @@
 	                                        _react2['default'].createElement(
 	                                            'li',
 	                                            { className: 'list-group-item' },
-	                                            'Personal Use'
+	                                            '6 Months'
 	                                        ),
 	                                        _react2['default'].createElement(
 	                                            'li',
 	                                            { className: 'list-group-item' },
-	                                            '20 Projects'
+	                                            'Text/Call on Viber, Skype and email'
 	                                        ),
 	                                        _react2['default'].createElement(
 	                                            'li',
 	                                            { className: 'list-group-item' },
-	                                            '20 GB Disk'
-	                                        ),
-	                                        _react2['default'].createElement(
-	                                            'li',
-	                                            { className: 'list-group-item' },
-	                                            'Custom Domain'
-	                                        ),
-	                                        _react2['default'].createElement(
-	                                            'li',
-	                                            { className: 'list-group-item' },
-	                                            '24/7 Support'
+	                                            'Access to Private Blog by Nutritionist'
 	                                        )
 	                                    ),
 	                                    _react2['default'].createElement(

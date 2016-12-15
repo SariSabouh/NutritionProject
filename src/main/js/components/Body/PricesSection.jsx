@@ -22,11 +22,9 @@ export default class PricesSection extends React.Component {
                                         <p className="lead"><strong><i className="fa fa-ils"></i>100</strong></p>
                                     </div>
                                     <ul className="list-group text-center">
+                                        <li className="list-group-item">1 Month</li>
                                         <li className="list-group-item">Text on Viber</li>
-                                        <li className="list-group-item">3 projects</li>
-                                        <li className="list-group-item">1 GB Disk</li>
-                                        <li className="list-group-item">Custom Domain</li>
-                                        <li className="list-group-item">24/7 Support</li>
+                                        <li className="list-group-item"><del>Access to Private Blog by Nutritionist</del></li>
                                     </ul>
                                     <div className="panel-footer text-center">
                                         <a className="btn btn-default" href="#">Apply Now!</a>
@@ -44,11 +42,9 @@ export default class PricesSection extends React.Component {
                                         <p className="lead"><strong><i className="fa fa-ils"></i>275</strong></p>
                                     </div>
                                     <ul className="list-group text-center">
+                                        <li className="list-group-item">3 Months</li>
                                         <li className="list-group-item">Text/Call on Viber and Skype</li>
-                                        <li className="list-group-item">5 projects</li>
-                                        <li className="list-group-item">5 GB Disk</li>
-                                        <li className="list-group-item">Custom Domain</li>
-                                        <li className="list-group-item">24/7 Support</li>
+                                        <li className="list-group-item">Access to Private Blog by Nutritionist</li>
                                     </ul>
                                     <div className="panel-footer text-center">
                                         <a className="btn btn-default" href="#">Apply Now!</a>
@@ -66,11 +62,9 @@ export default class PricesSection extends React.Component {
                                         <p className="lead"><strong><i className="fa fa-ils"></i>520</strong></p>
                                     </div>
                                     <ul className="list-group text-center">
-                                        <li className="list-group-item">Personal Use</li>
-                                        <li className="list-group-item">20 Projects</li>
-                                        <li className="list-group-item">20 GB Disk</li>
-                                        <li className="list-group-item">Custom Domain</li>
-                                        <li className="list-group-item">24/7 Support</li>
+                                        <li className="list-group-item">6 Months</li>
+                                        <li className="list-group-item">Text/Call on Viber, Skype and email</li>
+                                        <li className="list-group-item">Access to Private Blog by Nutritionist</li>
                                     </ul>
                                     <div className="panel-footer text-center">
                                         <a className="btn btn-default" href="#">Apply Now!</a>
