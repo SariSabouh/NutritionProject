@@ -22285,7 +22285,7 @@
 	            return _react2['default'].createElement(
 	                'section',
 	                { id: 'rijeemak-section', className: 'page bg-style1' },
-	                _react2['default'].createElement(_SectionHeaderJsx2['default'], { header: 'Rijeemak Online', subtitle: 'This is the generation of services and convenience. So why set an appointment to go to have a conversation, when you can do it at your own convenience?' }),
+	                _react2['default'].createElement(_SectionHeaderJsx2['default'], { header: 'Rijeemak Online', subtitle: 'This is the generation of convenient services. So why set an appointment to go to have a conversation, when you can get excellent services at your own convenience?' }),
 	                _react2['default'].createElement(
 	                    'div',
 	                    { className: 'rotate-box-1-wrapper' },
@@ -22317,7 +22317,7 @@
 	                                        _react2['default'].createElement(
 	                                            'p',
 	                                            null,
-	                                            'Our small team wants to help our community to be better as a whole. A small start in respecting each other and helping each other move forward, will definetely make a difference. More confidence in one\'s health and lifestyle, brings more confidence and ambition in one\'s state of mind and thoughts. We as a team see that we can achieve that.'
+	                                            'Our small team wants to help human beings be better as a whole. A small start in respecting each other and helping each other move forward, will definetely make a difference. More confidence in one\'s health and lifestyle, brings more confidence and ambition in one\'s state of mind and thoughts. We as a team see that we can achieve that.'
 	                                        )
 	                                    )
 	                                )
@@ -22344,7 +22344,7 @@
 	                                        _react2['default'].createElement(
 	                                            'p',
 	                                            null,
-	                                            'We want people to get into better shape. Our own team member, and the creator of this idea, Raghad Sukhtian, said "It makes me sad when I see someone who is being hurt because of his wight. I just want to help them." Now with the Raghad\'s great soul, we ',
+	                                            'We want people to get into better health & shape. Our own team member, and the creator of this idea, Raghad Sukhtian, said "It makes me sad when I see someone who is being hurt because of his shape. I just want to help them." Now with the Raghad\'s great soul, we ',
 	                                            _react2['default'].createElement(
 	                                                'strong',
 	                                                null,
@@ -23222,7 +23222,7 @@
 	                                        _react2['default'].createElement(
 	                                            'li',
 	                                            { className: 'list-group-item' },
-	                                            'Text/Call on Viber, Skype and email'
+	                                            'Text/Call on Viber, Skype, Facebook Messenger, WhatsApp and email'
 	                                        ),
 	                                        _react2['default'].createElement(
 	                                            'li',
@@ -23307,7 +23307,7 @@
 	      return _react2['default'].createElement(
 	        'section',
 	        { id: 'team-section', className: 'page' },
-	        _react2['default'].createElement(_SectionHeaderJsx2['default'], { header: 'Our Team', subtitle: 'Meat our experts' }),
+	        _react2['default'].createElement(_SectionHeaderJsx2['default'], { header: 'Our Team', subtitle: 'Meet our experts' }),
 	        _react2['default'].createElement(
 	          'div',
 	          { className: 'container' },
@@ -23557,7 +23557,7 @@
 	                        { href: 'http://www.waysinternational.com', target: '_blank' },
 	                        'Ways International'
 	                      ),
-	                      '. Practiced trainer and great leader of the team.'
+	                      '. Practiced business trainer and great leader of this team.'
 	                    )
 	                  ),
 	                  _react2['default'].createElement(
@@ -23581,7 +23581,7 @@
 	                        _react2['default'].createElement(
 	                          'a',
 	                          { className: 'twitter', href: '#' },
-	                          _react2['default'].createElement('i', { className: 'fa fa-twitter' })
+	                          _react2['default'].createElement('i', { className: 'fa fa-youtube-play' })
 	                        )
 	                      ),
 	                      _react2['default'].createElement(
