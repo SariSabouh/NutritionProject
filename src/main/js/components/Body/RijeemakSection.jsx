@@ -5,7 +5,7 @@ export default class RijeemakSection extends React.Component {
     render() {
         return (
             <section id="rijeemak-section" className="page bg-style1">
-                <SectionHeader header="Rijeemak Online" subtitle="This is the generation of services and convenience. So why set an appointment to go to have a conversation, when you can do it at your own convenience?" />
+                <SectionHeader header="Rijeemak Online" subtitle="This is the generation of convenient services. So why set an appointment to go to have a conversation, when you can get excellent services at your own convenience?" />
                 <div className="rotate-box-1-wrapper">
                     <div className="container">
                         <div className="row">
@@ -14,7 +14,7 @@ export default class RijeemakSection extends React.Component {
                                     <span className="rotate-box-icon"><i className="fa fa-users"></i></span>
                                     <div className="rotate-box-info">
                                         <h4>Who We Are?</h4>
-                                        <p>Our small team wants to help our community to be better as a whole. A small start in respecting each other and helping each other move forward, will definetely make a difference. More confidence in one's health and lifestyle, brings more confidence and ambition in one's state of mind and thoughts. We as a team see that we can achieve that.</p>
+                                        <p>Our small team wants to help human beings be better as a whole. A small start in respecting each other and helping each other move forward, will definetely make a difference. More confidence in one's health and lifestyle, brings more confidence and ambition in one's state of mind and thoughts. We as a team see that we can achieve that.</p>
                                     </div>
                                 </a>
                             </div>
@@ -24,7 +24,7 @@ export default class RijeemakSection extends React.Component {
                                     <span className="rotate-box-icon"><i className="fa fa-heart"></i></span>
                                     <div className="rotate-box-info">
                                         <h4>Why We Do It?</h4>
-                                        <p>We want people to get into better shape. Our own team member, and the creator of this idea, Raghad Sukhtian, said "It makes me sad when I see someone who is being hurt because of his wight. I just want to help them." Now with the Raghad's great soul, we <strong>WILL</strong> help them.</p>
+                                        <p>We want people to get into better health & shape. Our own team member, and the creator of this idea, Raghad Sukhtian, said "It makes me sad when I see someone who is being hurt because of his shape. I just want to help them." Now with the Raghad's great soul, we <strong>WILL</strong> help them.</p>
                                     </div>
                                 </a>
                             </div>

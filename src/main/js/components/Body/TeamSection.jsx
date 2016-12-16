@@ -6,7 +6,7 @@ export default class TeamSection extends React.Component {
     render() {
         return (
             <section id="team-section" className="page">
-                <SectionHeader header="Our Team" subtitle="Meat our experts" />
+                <SectionHeader header="Our Team" subtitle="Meet our experts" />
                 <div className="container">
                     <div className="team-members">
                         <div className="row">
@@ -75,12 +75,12 @@ export default class TeamSection extends React.Component {
                               <div className="member-info">
                                 <h3>Abeer Sharaf</h3>
                                 <h4>Co-Founder</h4>
-                                <p>Foudner and CEO of the successful company <a href="http://www.waysinternational.com" target="_blank">Ways International</a>. Practiced trainer and great leader of the team.</p>
+                                <p>Foudner and CEO of the successful company <a href="http://www.waysinternational.com" target="_blank">Ways International</a>. Practiced business trainer and great leader of this team.</p>
                               </div>
                               <div className="social-icons">
                                 <ul>
                                   <li><a className="facebook" href="#"><i className="fa fa-facebook"></i></a></li>
-                                  <li><a className="twitter" href="#"><i className="fa fa-twitter"></i></a></li>
+                                  <li><a className="twitter" href="#"><i className="fa fa-youtube-play"></i></a></li>
                                   <li><a className="linkedin" href="#"><i className="fa fa-linkedin"></i></a></li>
                                 </ul>
                               </div>
