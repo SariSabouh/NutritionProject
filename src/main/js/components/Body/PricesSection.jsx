@@ -63,7 +63,7 @@ export default class PricesSection extends React.Component {
                                     </div>
                                     <ul className="list-group text-center">
                                         <li className="list-group-item">6 Months</li>
-                                        <li className="list-group-item">Text/Call on Viber, Skype, Facebook Messenger, WhatsApp and email</li>
+                                        <li className="list-group-item">Text/Call on Viber, Skype and email</li>
                                         <li className="list-group-item">Access to Private Blog by Nutritionist</li>
                                     </ul>
                                     <div className="panel-footer text-center">
