@@ -22092,6 +22092,15 @@
 	                            { className: "page-scroll", href: "#contact-section" },
 	                            "Contact"
 	                        )
+	                    ),
+	                    _react2["default"].createElement(
+	                        "li",
+	                        null,
+	                        _react2["default"].createElement(
+	                            "a",
+	                            { className: "page-scroll", href: "/login" },
+	                            "Login"
+	                        )
 	                    )
 	                )
 	            );
