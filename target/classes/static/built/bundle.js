@@ -22098,7 +22098,7 @@
 	                        null,
 	                        _react2["default"].createElement(
 	                            "a",
-	                            { className: "page-scroll" },
+	                            { href: "/login" },
 	                            "Login"
 	                        )
 	                    )
@@ -23057,7 +23057,7 @@
 	                                        _react2['default'].createElement(
 	                                            'li',
 	                                            { className: 'list-group-item' },
-	                                            'Text on Viber'
+	                                            'Text on Viber and Skype'
 	                                        )
 	                                    ),
 	                                    _react2['default'].createElement(
