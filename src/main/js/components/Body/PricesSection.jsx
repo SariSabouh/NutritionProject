@@ -1,6 +1,7 @@
 import React from 'react';
 
 import SectionHeader from './SectionHeader.jsx';
+import MoreInfoModal from './MoreInfoModal.jsx';
 
 export default class PricesSection extends React.Component {
     render() {
@@ -23,8 +24,7 @@ export default class PricesSection extends React.Component {
                                     </div>
                                     <ul className="list-group text-center">
                                         <li className="list-group-item">1 Month</li>
-                                        <li className="list-group-item">Text on Viber</li>
-                                        <li className="list-group-item"><del>Access to Private Blog by Nutritionist</del></li>
+                                        <li className="list-group-item">Text on Viber and Skype</li>
                                     </ul>
                                     <div className="panel-footer text-center">
                                         <a className="btn btn-default" href="#">Apply Now!</a>
@@ -65,6 +65,7 @@ export default class PricesSection extends React.Component {
                                         <li className="list-group-item">6 Months</li>
                                         <li className="list-group-item">Text/Call on Viber, Skype, Facebook Messenger, WhatsApp and email</li>
                                         <li className="list-group-item">Access to Private Blog by Nutritionist</li>
+                                        <li className="list-group-item">Premium Nutrition Services (Weight management, Cancer, arthritic and collagen disorders, Hematology: anemia and blood disorders... and More) <MoreInfoModal modalText="Click Here To Learn More"/></li>
                                     </ul>
                                     <div className="panel-footer text-center">
                                         <a className="btn btn-default" href="#">Apply Now!</a>

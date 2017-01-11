@@ -1,14 +1,24 @@
 package com.paliup.nutrition.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class HomeController {
-
-	@GetMapping("/")
-	public String index(){
+	
+	@RequestMapping({"/", "/index", "home"})
+	public String root() {
 		return "index";
+	}
+
+	@RequestMapping("/user/loggedIn")
+	public String userIndex() {
+		return "user/loggedIn";
+	}
+
+	@RequestMapping(value = "/login")
+	public String login() {
+		return "login";
 	}
 	
 }

@@ -37,7 +37,7 @@ export default class TeamSection extends React.Component {
                               <div className="member-info">
                                 <h3>Tima Pina</h3>
                                 <h4>Nutritionist</h4>
-                                <p>Need description!!!!!!!!!!!!!</p>
+                                <p>Licensed and registered dietitian, specialized in diabetes and endocrinology nutrition, certified weight management expert.</p>
                               </div>
                               <div className="social-icons">
                                 <ul>

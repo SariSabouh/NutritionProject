@@ -20,7 +20,7 @@ export default class ServicesSection extends React.Component {
                                     <span className="rotate-box-icon"><i className="fa fa-heart"></i></span>
                                     <div className="rotate-box-info">
                                         <h4>Love</h4>
-                                        <p><strong>Love</strong> yourself, just like we <strong>Love you</strong>. Let's become <strong>better together</strong></p>
+                                        <p>We will help you learn to love and care for your wellbeing.</p>
                                     </div>
                                 </a>
                             </div>
@@ -30,7 +30,7 @@ export default class ServicesSection extends React.Component {
                                     <span className="rotate-box-icon"><i className="fa fa-book"></i></span>
                                     <div className="rotate-box-info">
                                         <h4>Experts</h4>
-                                        <p>Your <strong>Request</strong> is their <strong>Promise</strong>. They read the book, mastered the trait, and <strong>WILL</strong> succeed.</p>
+                                        <p>Our team is highly skilled and nationally renowned in the human nutrition and wellbeing field.</p>
                                     </div>
                                 </a>
                             </div>
@@ -39,8 +39,8 @@ export default class ServicesSection extends React.Component {
                                 <a className="rotate-box-2 square-icon text-center wow zoomIn" data-wow-delay="0.4s">
                                     <span className="rotate-box-icon"><i className="fa fa-mobile"></i></span>
                                     <div className="rotate-box-info">
-                                        <h4>Convenience</h4>
-                                        <p>Get your coffee break and <img src="img/icons/whatsapp.png" style={whatsAppStyle} alt="WhatsApp"/> with us.</p>
+                                        <h4>Success</h4>
+                                        <p>We do not believe in fad diets, or quick fix, we will guide to achieve a healthy lifestyle that you can enjoy and live with for the rest of your life.</p>
                                     </div>
                                 </a>
                             </div>

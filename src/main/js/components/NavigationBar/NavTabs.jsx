@@ -11,6 +11,7 @@ export default class NavTabs extends React.Component {
                     <li><a className="page-scroll" href="#prices-section">Prices</a></li>
                     <li><a className="page-scroll" href="#team-section">Team</a></li>                            
                     <li><a className="page-scroll" href="#contact-section">Contact</a></li>
+                    <li><a href="/login">Login</a></li>
                 </ul>
             </div>
         )
