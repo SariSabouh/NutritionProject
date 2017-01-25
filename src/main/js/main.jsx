@@ -1,7 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App.jsx';
-import Login from'./components/Login/login.jsx';
+import LoginManager from './login/LoginManager.jsx';
 
-ReactDOM.render(<App />, document.getElementById('app'));
-ReactDom.render(<Login />,document.getElementById('Login'));
+if (window.location.pathname == "/login") {
+    ReactDOM.render(<LoginManager />, document.getElementById('Login'));
+}
+else{
+    ReactDOM.render(<App />, document.getElementById('app'));
+}
