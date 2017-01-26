@@ -167,18 +167,21 @@ section {
 	-o-transition: all 0.2s ease-in-out;
 	-ms-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
+	
 }
+
+
 .navbar-default .navbar-brand {
 	background-image: url(../img/logo.png);
 }
 .navbar-shrink .navbar-brand {
-	background-image: url(../img/logo.png);
+	background-image: url(../img/logos.png);
 }
 .navbar-transparent .navbar-brand {
-	background-image: url(../img/logo.png);
+	background-image: url(../img/logos.png);
 }
 .navbar-inverse .navbar-brand {
-	background-image: url(../img/logo.jpg);
+	background-image: url(../img/logos.png);
 }
 
 /* Navbar links */
