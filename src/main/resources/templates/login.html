@@ -4,19 +4,21 @@
     <head>
         <title>Login page</title>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="/css/main.css" th:href="@{/css/main.css}" />
+        
+   <!-- <link rel="stylesheet" href="css/main.css" th:href="css/main.css" />-->
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'></link>
+   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" ></link>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"></link>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+   <link rel="stylesheet" href="css/login.css" ></link>
+   <link rel="stylesheet" href="css/skin/fresh-lime.css" ></link>
+	
 	</head>
-    <body>
-        <h1>Login page</h1>
-        <p>Example user: user / password</p>
-        <p th:if="${loginError}" class="error">Wrong user or password</p>
-        <form th:action="@{/login}" method="post">
-            <label for="username">Username</label>:
-            <input type="text" id="username" name="username" autofocus="autofocus" /> <br />
-            <label for="password">Password</label>:
-            <input type="password" id="password" name="password" /> <br />
-            <input type="submit" value="Log in" />
-        </form>
-        <p><a href="/index" th:href="@{/index}">Back to home page</a></p>
-    </body>
+ 	
+   <body>
+
+<div id="Login"></div>
+<script src="inc/login.js"></script>
+
+   </body>
 </html>
