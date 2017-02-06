@@ -167,18 +167,29 @@ section {
 	-o-transition: all 0.2s ease-in-out;
 	-ms-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
+	
 }
+
+
 .navbar-default .navbar-brand {
 	background-image: url(../img/logo.jpg);
 }
 .navbar-shrink .navbar-brand {
+<<<<<<< HEAD
 	background-image: url(../img/logo.jpg);
+=======
+	background-image: url(../img/logos.png);
+>>>>>>> branch 'dev' of https://github.com/SariSabouh/NutritionProject.git
 }
 .navbar-transparent .navbar-brand {
+<<<<<<< HEAD
 	background-image: url(../img/logo.jpg);
+=======
+	background-image: url(../img/logos.png);
+>>>>>>> branch 'dev' of https://github.com/SariSabouh/NutritionProject.git
 }
 .navbar-inverse .navbar-brand {
-	background-image: url(../img/logo.jpg);
+	background-image: url(../img/logos.png);
 }
 
 /* Navbar links */
