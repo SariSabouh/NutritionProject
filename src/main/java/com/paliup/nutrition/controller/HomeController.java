@@ -21,4 +21,9 @@ public class HomeController {
 		return "login";
 	}
 	
+	@RequestMapping(value = "/login-error")
+	public String loginError() {
+		return "login-error";
+	}
+	
 }

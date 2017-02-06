@@ -154,8 +154,8 @@ section {
 	background-repeat: no-repeat;
 	background-position: left center;
 	position:absolute;
-	width: 150px;
-	height: 60px;
+	width: 100%;
+	height: auto;
 	padding: 24px 0;
 	text-indent: -99999px;
 	font-size: 20px;
@@ -169,13 +169,13 @@ section {
 	transition: all 0.2s ease-in-out;
 }
 .navbar-default .navbar-brand {
-	background-image: url(../img/logo.png);
+	background-image: url(../img/logo.jpg);
 }
 .navbar-shrink .navbar-brand {
-	background-image: url(../img/logo.png);
+	background-image: url(../img/logo.jpg);
 }
 .navbar-transparent .navbar-brand {
-	background-image: url(../img/logo.png);
+	background-image: url(../img/logo.jpg);
 }
 .navbar-inverse .navbar-brand {
 	background-image: url(../img/logo.jpg);
