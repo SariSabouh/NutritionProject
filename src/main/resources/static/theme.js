@@ -183,3 +183,4 @@ $('.modalButton').click(function() {
 		$('.body').prepend($('.modal-backdrop'));
 	}
 });
+

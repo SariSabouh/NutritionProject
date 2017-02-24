@@ -1,0 +1,38 @@
+
+/* General sizing */
+ul.dropdown-lr {
+  width: 300px;
+}
+
+/* mobile fix */
+@media (max-width: 768px) {
+	.dropdown-lr h3 {
+		color: #eee;
+	}
+	.dropdown-lr label {
+		color: #eee;
+	}
+}
+
+.colorrijeemk{
+	
+	background-color: #72a602;
+}
+#btnregister{
+
+    
+    width: 270px;
+    background-color: #72a602;
+    color: #fff;
+    margin-bottom: -23px;
+height: 45px;
+
+}
+#remembermargin{
+	margin-left: 2px;
+}
+
+#modalheadercolor{
+	background-color: #72a602;
+}
+

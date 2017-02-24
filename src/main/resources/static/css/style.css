@@ -172,13 +172,13 @@ section {
 
 
 .navbar-default .navbar-brand {
-	background-image: url(../img/logo.jpg);
+	background-image: ;
 }
 .navbar-shrink .navbar-brand {
 <<<<<<< HEAD
-	background-image: url(../img/logo.jpg);
+	background-image: ;
 =======
-	background-image: url(../img/logos.png);
+	background-image: ;
 >>>>>>> branch 'dev' of https://github.com/SariSabouh/NutritionProject.git
 }
 .navbar-transparent .navbar-brand {

@@ -89,7 +89,7 @@ export default class TeamSection extends React.Component {
                           <div className="col-sm-2">
                             <div className="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="1100ms">
                               <div className="member-image">
-                                <img className="img-responsive" src="img/team/SariSabouh.jpg" alt="" />
+                                <img className="img-responsive" src="img/team/MAYSARA.jpg" alt="" />
                               </div>
                               <div className="member-info">
                                 <h3>Maysara Odeh</h3>

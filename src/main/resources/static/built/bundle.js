@@ -60,7 +60,7 @@
 	
 	var _AppJsx2 = _interopRequireDefault(_AppJsx);
 	
-	var _LoginLoginManagerJsx = __webpack_require__(271);
+	var _LoginLoginManagerJsx = __webpack_require__(272);
 	
 	var _LoginLoginManagerJsx2 = _interopRequireDefault(_LoginLoginManagerJsx);
 	
@@ -21789,43 +21789,43 @@
 	
 	var _componentsNavigationBarNavigationBarJsx2 = _interopRequireDefault(_componentsNavigationBarNavigationBarJsx);
 	
-	var _componentsCarouselCarouselJsx = __webpack_require__(187);
+	var _componentsCarouselCarouselJsx = __webpack_require__(259);
 	
 	var _componentsCarouselCarouselJsx2 = _interopRequireDefault(_componentsCarouselCarouselJsx);
 	
-	var _componentsBodyRijeemakSectionJsx = __webpack_require__(189);
+	var _componentsBodyRijeemakSectionJsx = __webpack_require__(261);
 	
 	var _componentsBodyRijeemakSectionJsx2 = _interopRequireDefault(_componentsBodyRijeemakSectionJsx);
 	
-	var _componentsBodyCounterSectionJsx = __webpack_require__(191);
+	var _componentsBodyCounterSectionJsx = __webpack_require__(263);
 	
 	var _componentsBodyCounterSectionJsx2 = _interopRequireDefault(_componentsBodyCounterSectionJsx);
 	
-	var _componentsBodyServicesSectionJsx = __webpack_require__(192);
+	var _componentsBodyServicesSectionJsx = __webpack_require__(264);
 	
 	var _componentsBodyServicesSectionJsx2 = _interopRequireDefault(_componentsBodyServicesSectionJsx);
 	
-	var _componentsBodyTestimonialsSectionJsx = __webpack_require__(193);
+	var _componentsBodyTestimonialsSectionJsx = __webpack_require__(265);
 	
 	var _componentsBodyTestimonialsSectionJsx2 = _interopRequireDefault(_componentsBodyTestimonialsSectionJsx);
 	
-	var _componentsBodyPricesSectionJsx = __webpack_require__(194);
+	var _componentsBodyPricesSectionJsx = __webpack_require__(266);
 	
 	var _componentsBodyPricesSectionJsx2 = _interopRequireDefault(_componentsBodyPricesSectionJsx);
 	
-	var _componentsBodyTeamSectionJsx = __webpack_require__(267);
+	var _componentsBodyTeamSectionJsx = __webpack_require__(268);
 	
 	var _componentsBodyTeamSectionJsx2 = _interopRequireDefault(_componentsBodyTeamSectionJsx);
 	
-	var _componentsBodyPartnersSectionJsx = __webpack_require__(268);
+	var _componentsBodyPartnersSectionJsx = __webpack_require__(269);
 	
 	var _componentsBodyPartnersSectionJsx2 = _interopRequireDefault(_componentsBodyPartnersSectionJsx);
 	
-	var _componentsBodySocialSectionJsx = __webpack_require__(269);
+	var _componentsBodySocialSectionJsx = __webpack_require__(270);
 	
 	var _componentsBodySocialSectionJsx2 = _interopRequireDefault(_componentsBodySocialSectionJsx);
 	
-	var _componentsBodyContactSectionJsx = __webpack_require__(270);
+	var _componentsBodyContactSectionJsx = __webpack_require__(271);
 	
 	var _componentsBodyContactSectionJsx2 = _interopRequireDefault(_componentsBodyContactSectionJsx);
 	
@@ -21962,6 +21962,8 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
+	var homeButton = "body";
+	
 	var NavLogo = (function (_React$Component) {
 	    _inherits(NavLogo, _React$Component);
 	
@@ -21974,6 +21976,10 @@
 	    _createClass(NavLogo, [{
 	        key: "render",
 	        value: function render() {
+	
+	            if (window.location.pathname == "/login") {
+	                homeButton = "/";
+	            }
 	            // Actual logo set in CSS
 	            return _react2["default"].createElement(
 	                "div",
@@ -22009,25 +22015,29 @@
 /* 186 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 	
-	Object.defineProperty(exports, "__esModule", {
+	Object.defineProperty(exports, '__esModule', {
 	    value: true
 	});
 	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 	
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
 	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var _react = __webpack_require__(1);
 	
 	var _react2 = _interopRequireDefault(_react);
+	
+	var _RegisterModalJsx = __webpack_require__(187);
+	
+	var _RegisterModalJsx2 = _interopRequireDefault(_RegisterModalJsx);
 	
 	var NavTabs = (function (_React$Component) {
 	    _inherits(NavTabs, _React$Component);
@@ -22035,79 +22045,176 @@
 	    function NavTabs() {
 	        _classCallCheck(this, NavTabs);
 	
-	        _get(Object.getPrototypeOf(NavTabs.prototype), "constructor", this).apply(this, arguments);
+	        _get(Object.getPrototypeOf(NavTabs.prototype), 'constructor', this).apply(this, arguments);
 	    }
 	
 	    _createClass(NavTabs, [{
-	        key: "render",
+	        key: 'render',
 	        value: function render() {
-	            return _react2["default"].createElement(
-	                "div",
-	                { className: "collapse navbar-collapse", id: "bs-example-navbar-collapse-1" },
-	                _react2["default"].createElement(
-	                    "ul",
-	                    { className: "nav navbar-nav navbar-right" },
-	                    _react2["default"].createElement(
-	                        "li",
-	                        null,
-	                        _react2["default"].createElement(
-	                            "a",
-	                            { className: "page-scroll", href: "body" },
-	                            "Home"
-	                        )
-	                    ),
-	                    _react2["default"].createElement(
-	                        "li",
-	                        null,
-	                        _react2["default"].createElement(
-	                            "a",
-	                            { className: "page-scroll", href: "#rijeemak-section" },
-	                            "Rijeemak"
-	                        )
-	                    ),
-	                    _react2["default"].createElement(
-	                        "li",
-	                        null,
-	                        _react2["default"].createElement(
-	                            "a",
-	                            { className: "page-scroll", href: "#services-section" },
-	                            "Services"
-	                        )
-	                    ),
-	                    _react2["default"].createElement(
-	                        "li",
-	                        null,
-	                        _react2["default"].createElement(
-	                            "a",
-	                            { className: "page-scroll", href: "#prices-section" },
-	                            "Prices"
-	                        )
-	                    ),
-	                    _react2["default"].createElement(
-	                        "li",
-	                        null,
-	                        _react2["default"].createElement(
-	                            "a",
-	                            { className: "page-scroll", href: "#team-section" },
-	                            "Team"
-	                        )
-	                    ),
-	                    _react2["default"].createElement(
-	                        "li",
-	                        null,
-	                        _react2["default"].createElement(
-	                            "a",
-	                            { className: "page-scroll", href: "#contact-section" },
-	                            "Contact"
-	                        )
-	                    ),
-	                    _react2["default"].createElement(
-	                        "li",
-	                        null,
-	                        _react2["default"].createElement(
-	                            "a",
-	                            { href: "/login" },
-	                            "Login/Register"
+	
+	            return _react2['default'].createElement(
+	                'div',
+	                null,
+	                _react2['default'].createElement(
+	                    'div',
+	                    { className: 'collapse navbar-collapse', id: 'bs-example-navbar-collapse-1' },
+	                    _react2['default'].createElement(
+	                        'ul',
+	                        { className: 'nav navbar-nav navbar-right' },
+	                        _react2['default'].createElement(
+	                            'li',
+	                            null,
+	                            _react2['default'].createElement(
+	                                'a',
+	                                { className: 'page-scroll', href: 'body' },
+	                                'Home'
+	                            )
+	                        ),
+	                        _react2['default'].createElement(
+	                            'li',
+	                            null,
+	                            _react2['default'].createElement(
+	                                'a',
+	                                { className: 'page-scroll', href: '#rijeemak-section' },
+	                                'Rijeemak'
+	                            )
+	                        ),
+	                        _react2['default'].createElement(
+	                            'li',
+	                            null,
+	                            _react2['default'].createElement(
+	                                'a',
+	                                { className: 'page-scroll', href: '#services-section' },
+	                                'Services'
+	                            )
+	                        ),
+	                        _react2['default'].createElement(
+	                            'li',
+	                            null,
+	                            _react2['default'].createElement(
+	                                'a',
+	                                { className: 'page-scroll', href: '#prices-section' },
+	                                'Prices'
+	                            )
+	                        ),
+	                        _react2['default'].createElement(
+	                            'li',
+	                            null,
+	                            _react2['default'].createElement(
+	                                'a',
+	                                { className: 'page-scroll', href: '#team-section' },
+	                                'Team'
+	                            )
+	                        ),
+	                        _react2['default'].createElement(
+	                            'li',
+	                            null,
+	                            _react2['default'].createElement(
+	                                'a',
+	                                { className: 'page-scroll', href: '#contact-section' },
+	                                'Contact'
+	                            )
+	                        ),
+	                        _react2['default'].createElement(
+	                            'li',
+	                            { className: 'dropdown' },
+	                            _react2['default'].createElement(
+	                                'a',
+	                                { 'class': 'dropdown-toggle', 'data-toggle': 'dropdown' },
+	                                'Log In | Register ',
+	                                _react2['default'].createElement('span', { className: 'caret' })
+	                            ),
+	                            _react2['default'].createElement(
+	                                'ul',
+	                                { className: 'dropdown-menu dropdown-lr animated lightSpeedIn', role: 'menu' },
+	                                _react2['default'].createElement(
+	                                    'div',
+	                                    { className: 'col-lg-12' },
+	                                    _react2['default'].createElement(
+	                                        'div',
+	                                        { className: 'text-center' },
+	                                        _react2['default'].createElement(
+	                                            'h3',
+	                                            null,
+	                                            _react2['default'].createElement(
+	                                                'b',
+	                                                null,
+	                                                'Log In'
+	                                            )
+	                                        )
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'form',
+	                                        null,
+	                                        _react2['default'].createElement(
+	                                            'div',
+	                                            { className: 'form-group' },
+	                                            _react2['default'].createElement(
+	                                                'label',
+	                                                { 'for': 'Email' },
+	                                                'Email'
+	                                            ),
+	                                            _react2['default'].createElement('input', { type: 'Email', name: 'Email', id: 'Email', tabindex: '2', className: 'form-control', placeholder: 'Email', autocomplete: 'off' })
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'div',
+	                                            { className: 'form-group' },
+	                                            _react2['default'].createElement(
+	                                                'label',
+	                                                { 'for': 'password' },
+	                                                'Password'
+	                                            ),
+	                                            _react2['default'].createElement('input', { type: '', name: '', id: 'Email', tabindex: '2', className: 'form-control', placeholder: 'Password', autocomplete: 'off' })
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'div',
+	                                            { className: 'form-group' },
+	                                            _react2['default'].createElement(
+	                                                'div',
+	                                                { className: 'row' },
+	                                                _react2['default'].createElement(
+	                                                    'div',
+	                                                    { className: 'col-xs-7' },
+	                                                    _react2['default'].createElement('input', { type: 'checkbox', tabindex: '3', name: 'remember', id: 'remember' }),
+	                                                    _react2['default'].createElement(
+	                                                        'label',
+	                                                        { 'for': 'remember', id: 'remembermargin' },
+	                                                        'Remember Me'
+	                                                    )
+	                                                ),
+	                                                _react2['default'].createElement(
+	                                                    'div',
+	                                                    { className: 'col-xs-5 pull-right' },
+	                                                    _react2['default'].createElement('input', { type: 'submit', name: 'login-submit', id: 'login-submit', tabindex: '4', className: 'form-control btn btn-success', value: 'Log In' })
+	                                                )
+	                                            )
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'div',
+	                                            { className: 'form-group' },
+	                                            _react2['default'].createElement(
+	                                                'div',
+	                                                { className: 'row' },
+	                                                _react2['default'].createElement(
+	                                                    'div',
+	                                                    { className: 'col-lg-12' },
+	                                                    _react2['default'].createElement(
+	                                                        'div',
+	                                                        { className: 'text-center' },
+	                                                        _react2['default'].createElement(
+	                                                            'a',
+	                                                            { tabindex: '5', className: 'forgot-password' },
+	                                                            'Forgot Password?'
+	                                                        )
+	                                                    )
+	                                                )
+	                                            )
+	                                        ),
+	                                        _react2['default'].createElement('input', { type: 'hidden', className: 'hide', name: 'token', id: 'token', value: 'a465a2791ae0bae853cf4bf485dbe1b6' })
+	                                    ),
+	                                    _react2['default'].createElement(_RegisterModalJsx2['default'], { modalText: 'Register', id: 'btnregister' })
+	                                )
+	                            )
 	                        )
 	                    )
 	                )
@@ -22116,10 +22223,10 @@
 	    }]);
 	
 	    return NavTabs;
-	})(_react2["default"].Component);
+	})(_react2['default'].Component);
 	
-	exports["default"] = NavTabs;
-	module.exports = exports["default"];
+	exports['default'] = NavTabs;
+	module.exports = exports['default'];
 
 /***/ },
 /* 187 */
@@ -22128,144 +22235,6 @@
 	'use strict';
 	
 	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-	
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _CarouselItemJsx = __webpack_require__(188);
-	
-	var _CarouselItemJsx2 = _interopRequireDefault(_CarouselItemJsx);
-	
-	var Carousel = (function (_React$Component) {
-	  _inherits(Carousel, _React$Component);
-	
-	  function Carousel() {
-	    _classCallCheck(this, Carousel);
-	
-	    _get(Object.getPrototypeOf(Carousel.prototype), 'constructor', this).apply(this, arguments);
-	  }
-	
-	  _createClass(Carousel, [{
-	    key: 'render',
-	    value: function render() {
-	
-	      var carouselStyle = {
-	        backgroundImage: 'url(img/slider-bg.jpg)'
-	      };
-	
-	      return _react2['default'].createElement(
-	        'section',
-	        { id: 'text-carousel-intro-section', className: 'parallax', 'data-stellar-background-ratio': '0.5', style: carouselStyle },
-	        _react2['default'].createElement(
-	          'div',
-	          { className: 'container' },
-	          _react2['default'].createElement(
-	            'div',
-	            { className: 'caption text-center text-white', 'data-stellar-ratio': '0.7' },
-	            _react2['default'].createElement(
-	              'div',
-	              { id: 'owl-intro-text', className: 'owl-carousel' },
-	              _react2['default'].createElement(_CarouselItemJsx2['default'], { header: 'Rijeemak Online', subHeader: 'Your Diet, At Your Comfort', href: '#rijeemak-section', hrefText: 'Learn More!' }),
-	              _react2['default'].createElement(_CarouselItemJsx2['default'], { header: 'IT\'S ALL ABOUT YOU', subHeader: 'Love, Care and a great health program', href: '#services-section', hrefText: 'Learn More!' }),
-	              _react2['default'].createElement(_CarouselItemJsx2['default'], { header: 'Best Prices', subHeader: 'Cheaper than going to an actual appointment? WHAAAAT?!?', href: '#prices-section', hrefText: 'Learn More!' })
-	            )
-	          )
-	        )
-	      );
-	    }
-	  }]);
-	
-	  return Carousel;
-	})(_react2['default'].Component);
-	
-	exports['default'] = Carousel;
-	module.exports = exports['default'];
-
-/***/ },
-/* 188 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-	
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var CarouselItem = (function (_React$Component) {
-	    _inherits(CarouselItem, _React$Component);
-	
-	    function CarouselItem() {
-	        _classCallCheck(this, CarouselItem);
-	
-	        _get(Object.getPrototypeOf(CarouselItem.prototype), "constructor", this).apply(this, arguments);
-	    }
-	
-	    _createClass(CarouselItem, [{
-	        key: "render",
-	        value: function render() {
-	            return _react2["default"].createElement(
-	                "div",
-	                { className: "item carousel-text" },
-	                _react2["default"].createElement(
-	                    "h1",
-	                    null,
-	                    this.props.header
-	                ),
-	                _react2["default"].createElement(
-	                    "p",
-	                    null,
-	                    this.props.subHeader
-	                ),
-	                _react2["default"].createElement("div", { className: "extra-space-l" }),
-	                _react2["default"].createElement(
-	                    "a",
-	                    { className: "btn btn-blank page-scroll", href: this.props.href },
-	                    this.props.hrefText
-	                )
-	            );
-	        }
-	    }]);
-	
-	    return CarouselItem;
-	})(_react2["default"].Component);
-	
-	exports["default"] = CarouselItem;
-	module.exports = exports["default"];
-
-/***/ },
-/* 189 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, '__esModule', {
 	    value: true
 	});
 	
@@ -22283,990 +22252,21 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _SectionHeaderJsx = __webpack_require__(190);
+	var _reactModalBootstrap = __webpack_require__(188);
 	
-	var _SectionHeaderJsx2 = _interopRequireDefault(_SectionHeaderJsx);
+	var RegisterModal = (function (_React$Component) {
+	    _inherits(RegisterModal, _React$Component);
 	
-	var RijeemakSection = (function (_React$Component) {
-	    _inherits(RijeemakSection, _React$Component);
+	    function RegisterModal(props) {
+	        _classCallCheck(this, RegisterModal);
 	
-	    function RijeemakSection() {
-	        _classCallCheck(this, RijeemakSection);
-	
-	        _get(Object.getPrototypeOf(RijeemakSection.prototype), 'constructor', this).apply(this, arguments);
-	    }
-	
-	    _createClass(RijeemakSection, [{
-	        key: 'render',
-	        value: function render() {
-	            return _react2['default'].createElement(
-	                'section',
-	                { id: 'rijeemak-section', className: 'page bg-style1' },
-	                _react2['default'].createElement(_SectionHeaderJsx2['default'], { header: 'Rijeemak Online', subtitle: 'This is the generation of convenient services. So why set an appointment to go to have a conversation, when you can get excellent services at your own convenience?' }),
-	                _react2['default'].createElement(
-	                    'div',
-	                    { className: 'rotate-box-1-wrapper' },
-	                    _react2['default'].createElement(
-	                        'div',
-	                        { className: 'container' },
-	                        _react2['default'].createElement(
-	                            'div',
-	                            { className: 'row' },
-	                            _react2['default'].createElement(
-	                                'div',
-	                                { className: 'col-md-6 col-sm-6' },
-	                                _react2['default'].createElement(
-	                                    'a',
-	                                    { className: 'rotate-box-1 square-icon wow zoomIn', 'data-wow-delay': '0' },
-	                                    _react2['default'].createElement(
-	                                        'span',
-	                                        { className: 'rotate-box-icon' },
-	                                        _react2['default'].createElement('i', { className: 'fa fa-users' })
-	                                    ),
-	                                    _react2['default'].createElement(
-	                                        'div',
-	                                        { className: 'rotate-box-info' },
-	                                        _react2['default'].createElement(
-	                                            'h4',
-	                                            null,
-	                                            'Who We Are?'
-	                                        ),
-	                                        _react2['default'].createElement(
-	                                            'p',
-	                                            null,
-	                                            'Our humble team understands the struggle of compromised health and wellbeing. We wants to help you heal and become be better as a whole. We believe in small steps to achieve the greater goal of wellbeing and we will provide you with the support and guidance every step of the way.. More confidence in one\'s health and lifestyle brings more confidence and ambition in one\'s state of mind and thoughts.'
-	                                        )
-	                                    )
-	                                )
-	                            ),
-	                            _react2['default'].createElement(
-	                                'div',
-	                                { className: 'col-md-6 col-sm-6' },
-	                                _react2['default'].createElement(
-	                                    'a',
-	                                    { className: 'rotate-box-1 square-icon wow zoomIn', 'data-wow-delay': '0.4s' },
-	                                    _react2['default'].createElement(
-	                                        'span',
-	                                        { className: 'rotate-box-icon' },
-	                                        _react2['default'].createElement('i', { className: 'fa fa-heart' })
-	                                    ),
-	                                    _react2['default'].createElement(
-	                                        'div',
-	                                        { className: 'rotate-box-info' },
-	                                        _react2['default'].createElement(
-	                                            'h4',
-	                                            null,
-	                                            'Why We Do It?'
-	                                        ),
-	                                        _react2['default'].createElement(
-	                                            'p',
-	                                            null,
-	                                            'We want you to get into better health. Raghad Sukhtian, our team member, and the creator of this idea said "It makes me sad when I see someone who is being hurt because of their weight. I just want to help them.” Now with the Raghad\'s great soul powering our mission, we will help you overcome all the excuses you  are using to avoid change, help you find your will power to proudly take charge of your own wellness and achieve your goal!'
-	                                        )
-	                                    )
-	                                )
-	                            ),
-	                            _react2['default'].createElement(
-	                                'div',
-	                                { className: 'col-md-12' },
-	                                _react2['default'].createElement(
-	                                    'a',
-	                                    { className: 'rotate-box-1 square-icon wow zoomIn', 'data-wow-delay': '0.2s' },
-	                                    _react2['default'].createElement(
-	                                        'span',
-	                                        { className: 'rotate-box-icon' },
-	                                        _react2['default'].createElement('i', { className: 'fa fa-diamond' })
-	                                    ),
-	                                    _react2['default'].createElement(
-	                                        'div',
-	                                        { className: 'rotate-box-info' },
-	                                        _react2['default'].createElement(
-	                                            'h4',
-	                                            null,
-	                                            'What We Do?'
-	                                        ),
-	                                        _react2['default'].createElement(
-	                                            'p',
-	                                            null,
-	                                            _react2['default'].createElement(
-	                                                'strong',
-	                                                null,
-	                                                'Rijeemak'
-	                                            ),
-	                                            ' gives you the possibility to reach out to your support team anytime you choose via texting, calling, or any other communication method you choose with your specialist.  We will provide you with nutrition consult to address your health concern, design meal plans specific for your lifestyle and food preference, workout plans, recipes and recipe audit with full support at your own convenience.'
-	                                        )
-	                                    )
-	                                )
-	                            )
-	                        )
-	                    )
-	                )
-	            );
-	        }
-	    }]);
-	
-	    return RijeemakSection;
-	})(_react2['default'].Component);
-	
-	exports['default'] = RijeemakSection;
-	module.exports = exports['default'];
-
-/***/ },
-/* 190 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-	
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var SectionHeader = (function (_React$Component) {
-	    _inherits(SectionHeader, _React$Component);
-	
-	    function SectionHeader() {
-	        _classCallCheck(this, SectionHeader);
-	
-	        _get(Object.getPrototypeOf(SectionHeader.prototype), "constructor", this).apply(this, arguments);
-	    }
-	
-	    _createClass(SectionHeader, [{
-	        key: "render",
-	        value: function render() {
-	            return _react2["default"].createElement(
-	                "div",
-	                { className: "page-header-wrapper" },
-	                _react2["default"].createElement(
-	                    "div",
-	                    { className: "container" },
-	                    _react2["default"].createElement(
-	                        "div",
-	                        { className: "page-header text-center wow fadeInUp", "data-wow-delay": "0.3s" },
-	                        _react2["default"].createElement(
-	                            "h2",
-	                            null,
-	                            this.props.header
-	                        ),
-	                        _react2["default"].createElement("div", { className: "devider" }),
-	                        _react2["default"].createElement(
-	                            "p",
-	                            { className: "subtitle" },
-	                            this.props.subtitle
-	                        )
-	                    )
-	                )
-	            );
-	        }
-	    }]);
-	
-	    return SectionHeader;
-	})(_react2["default"].Component);
-	
-	exports["default"] = SectionHeader;
-	module.exports = exports["default"];
-
-/***/ },
-/* 191 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, '__esModule', {
-	    value: true
-	});
-	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-	
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _SectionHeaderJsx = __webpack_require__(190);
-	
-	var _SectionHeaderJsx2 = _interopRequireDefault(_SectionHeaderJsx);
-	
-	var CounterSection = (function (_React$Component) {
-	    _inherits(CounterSection, _React$Component);
-	
-	    function CounterSection() {
-	        _classCallCheck(this, CounterSection);
-	
-	        _get(Object.getPrototypeOf(CounterSection.prototype), 'constructor', this).apply(this, arguments);
-	    }
-	
-	    _createClass(CounterSection, [{
-	        key: 'render',
-	        value: function render() {
-	
-	            var counterUpStyle = {
-	                backgroundImage: 'url(img/counter-bg.jpg)'
-	            };
-	
-	            return _react2['default'].createElement(
-	                'section',
-	                { id: 'counter-section' },
-	                _react2['default'].createElement(
-	                    'div',
-	                    { id: 'counter-up-trigger', className: 'counter-up text-white parallax', 'data-stellar-background-ratio': '0.5', style: counterUpStyle },
-	                    _react2['default'].createElement('div', { className: 'cover' }),
-	                    _react2['default'].createElement(_SectionHeaderJsx2['default'], { header: 'Our Nutritionist Secrets', subtitle: 'Pssst! Yes we know what we do!' }),
-	                    _react2['default'].createElement(
-	                        'div',
-	                        { className: 'container' },
-	                        _react2['default'].createElement(
-	                            'div',
-	                            { className: 'row' },
-	                            _react2['default'].createElement(
-	                                'div',
-	                                { className: 'fact text-center col-md-4 col-sm-6' },
-	                                _react2['default'].createElement(
-	                                    'div',
-	                                    { className: 'fact-inner' },
-	                                    _react2['default'].createElement('i', { className: 'fa fa-medkit fa-3x' }),
-	                                    _react2['default'].createElement('div', { className: 'extra-space-l' }),
-	                                    _react2['default'].createElement(
-	                                        'span',
-	                                        { className: 'counter' },
-	                                        '100'
-	                                    ),
-	                                    _react2['default'].createElement(
-	                                        'span',
-	                                        { className: 'counter-add' },
-	                                        '+'
-	                                    ),
-	                                    _react2['default'].createElement(
-	                                        'p',
-	                                        { className: 'lead' },
-	                                        'Patients Helped a Month'
-	                                    )
-	                                )
-	                            ),
-	                            _react2['default'].createElement(
-	                                'div',
-	                                { className: 'fact text-center col-md-4 col-sm-6' },
-	                                _react2['default'].createElement(
-	                                    'div',
-	                                    { className: 'fact-inner' },
-	                                    _react2['default'].createElement('i', { className: 'fa fa-flask fa-3x' }),
-	                                    _react2['default'].createElement('div', { className: 'extra-space-l' }),
-	                                    _react2['default'].createElement(
-	                                        'span',
-	                                        { className: 'counter' },
-	                                        '10'
-	                                    ),
-	                                    _react2['default'].createElement(
-	                                        'span',
-	                                        { className: 'counter-add' },
-	                                        '+'
-	                                    ),
-	                                    _react2['default'].createElement(
-	                                        'p',
-	                                        { className: 'lead' },
-	                                        'Years of Experience'
-	                                    )
-	                                )
-	                            ),
-	                            _react2['default'].createElement(
-	                                'div',
-	                                { className: 'fact text-center col-md-4 col-sm-6' },
-	                                _react2['default'].createElement(
-	                                    'div',
-	                                    { className: 'fact-inner' },
-	                                    _react2['default'].createElement('i', { className: 'fa fa-trophy fa-3x' }),
-	                                    _react2['default'].createElement('div', { className: 'extra-space-l' }),
-	                                    _react2['default'].createElement(
-	                                        'span',
-	                                        { className: 'counter' },
-	                                        '15'
-	                                    ),
-	                                    _react2['default'].createElement(
-	                                        'span',
-	                                        { className: 'counter-add' },
-	                                        '+'
-	                                    ),
-	                                    _react2['default'].createElement(
-	                                        'p',
-	                                        { className: 'lead' },
-	                                        'Certificates and Accomplishments'
-	                                    )
-	                                )
-	                            )
-	                        )
-	                    )
-	                )
-	            );
-	        }
-	    }]);
-	
-	    return CounterSection;
-	})(_react2['default'].Component);
-	
-	exports['default'] = CounterSection;
-	module.exports = exports['default'];
-
-/***/ },
-/* 192 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, '__esModule', {
-	    value: true
-	});
-	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-	
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _SectionHeaderJsx = __webpack_require__(190);
-	
-	var _SectionHeaderJsx2 = _interopRequireDefault(_SectionHeaderJsx);
-	
-	var ServicesSection = (function (_React$Component) {
-	    _inherits(ServicesSection, _React$Component);
-	
-	    function ServicesSection() {
-	        _classCallCheck(this, ServicesSection);
-	
-	        _get(Object.getPrototypeOf(ServicesSection.prototype), 'constructor', this).apply(this, arguments);
-	    }
-	
-	    _createClass(ServicesSection, [{
-	        key: 'render',
-	        value: function render() {
-	
-	            var whatsAppStyle = {
-	                width: '30px'
-	            };
-	
-	            return _react2['default'].createElement(
-	                'section',
-	                { id: 'services-section', className: 'page text-center' },
-	                _react2['default'].createElement(_SectionHeaderJsx2['default'], { header: 'Services', subtitle: 'All of this for you!' }),
-	                _react2['default'].createElement(
-	                    'div',
-	                    { className: 'rotate-box-2-wrapper' },
-	                    _react2['default'].createElement(
-	                        'div',
-	                        { className: 'container' },
-	                        _react2['default'].createElement(
-	                            'div',
-	                            { className: 'row' },
-	                            _react2['default'].createElement(
-	                                'div',
-	                                { className: 'col-md-3 col-sm-6' },
-	                                _react2['default'].createElement(
-	                                    'a',
-	                                    { className: 'rotate-box-2 square-icon text-center wow zoomIn', 'data-wow-delay': '0' },
-	                                    _react2['default'].createElement(
-	                                        'span',
-	                                        { className: 'rotate-box-icon' },
-	                                        _react2['default'].createElement('i', { className: 'fa fa-heart' })
-	                                    ),
-	                                    _react2['default'].createElement(
-	                                        'div',
-	                                        { className: 'rotate-box-info' },
-	                                        _react2['default'].createElement(
-	                                            'h4',
-	                                            null,
-	                                            'Love'
-	                                        ),
-	                                        _react2['default'].createElement(
-	                                            'p',
-	                                            null,
-	                                            'We will help you learn to love and care for your wellbeing.'
-	                                        )
-	                                    )
-	                                )
-	                            ),
-	                            _react2['default'].createElement(
-	                                'div',
-	                                { className: 'col-md-3 col-sm-6' },
-	                                _react2['default'].createElement(
-	                                    'a',
-	                                    { className: 'rotate-box-2 square-icon text-center wow zoomIn', 'data-wow-delay': '0.2s' },
-	                                    _react2['default'].createElement(
-	                                        'span',
-	                                        { className: 'rotate-box-icon' },
-	                                        _react2['default'].createElement('i', { className: 'fa fa-book' })
-	                                    ),
-	                                    _react2['default'].createElement(
-	                                        'div',
-	                                        { className: 'rotate-box-info' },
-	                                        _react2['default'].createElement(
-	                                            'h4',
-	                                            null,
-	                                            'Experts'
-	                                        ),
-	                                        _react2['default'].createElement(
-	                                            'p',
-	                                            null,
-	                                            'Our team is highly skilled and nationally renowned in the human nutrition and wellbeing field.'
-	                                        )
-	                                    )
-	                                )
-	                            ),
-	                            _react2['default'].createElement(
-	                                'div',
-	                                { className: 'col-md-3 col-sm-6' },
-	                                _react2['default'].createElement(
-	                                    'a',
-	                                    { className: 'rotate-box-2 square-icon text-center wow zoomIn', 'data-wow-delay': '0.4s' },
-	                                    _react2['default'].createElement(
-	                                        'span',
-	                                        { className: 'rotate-box-icon' },
-	                                        _react2['default'].createElement('i', { className: 'fa fa-mobile' })
-	                                    ),
-	                                    _react2['default'].createElement(
-	                                        'div',
-	                                        { className: 'rotate-box-info' },
-	                                        _react2['default'].createElement(
-	                                            'h4',
-	                                            null,
-	                                            'Success'
-	                                        ),
-	                                        _react2['default'].createElement(
-	                                            'p',
-	                                            null,
-	                                            'We do not believe in fad diets, or quick fix, we will guide to achieve a healthy lifestyle that you can enjoy and live with for the rest of your life.'
-	                                        )
-	                                    )
-	                                )
-	                            ),
-	                            _react2['default'].createElement(
-	                                'div',
-	                                { className: 'col-md-3 col-sm-6' },
-	                                _react2['default'].createElement(
-	                                    'a',
-	                                    { className: 'rotate-box-2 square-icon text-center wow zoomIn', 'data-wow-delay': '0.6s' },
-	                                    _react2['default'].createElement(
-	                                        'span',
-	                                        { className: 'rotate-box-icon' },
-	                                        _react2['default'].createElement('i', { className: 'fa fa-pagelines' })
-	                                    ),
-	                                    _react2['default'].createElement(
-	                                        'div',
-	                                        { className: 'rotate-box-info' },
-	                                        _react2['default'].createElement(
-	                                            'h4',
-	                                            null,
-	                                            'Eco Friendly'
-	                                        ),
-	                                        _react2['default'].createElement(
-	                                            'p',
-	                                            null,
-	                                            _react2['default'].createElement(
-	                                                'strong',
-	                                                null,
-	                                                'Papreless!'
-	                                            ),
-	                                            ' Saving the trees by refusing to handle applications with papers.'
-	                                        )
-	                                    )
-	                                )
-	                            )
-	                        )
-	                    ),
-	                    _react2['default'].createElement(
-	                        'div',
-	                        { className: 'container' },
-	                        _react2['default'].createElement('div', { className: 'extra-space-l' }),
-	                        _react2['default'].createElement(
-	                            'div',
-	                            { className: 'text-center' },
-	                            _react2['default'].createElement(
-	                                'a',
-	                                { className: 'btn btn-default btn-lg-xl page-scroll', href: '#prices-section' },
-	                                'Apply Now!'
-	                            )
-	                        )
-	                    )
-	                )
-	            );
-	        }
-	    }]);
-	
-	    return ServicesSection;
-	})(_react2['default'].Component);
-	
-	exports['default'] = ServicesSection;
-	module.exports = exports['default'];
-
-/***/ },
-/* 193 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, '__esModule', {
-	    value: true
-	});
-	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-	
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _SectionHeaderJsx = __webpack_require__(190);
-	
-	var _SectionHeaderJsx2 = _interopRequireDefault(_SectionHeaderJsx);
-	
-	var TestimonialsSection = (function (_React$Component) {
-	    _inherits(TestimonialsSection, _React$Component);
-	
-	    function TestimonialsSection() {
-	        _classCallCheck(this, TestimonialsSection);
-	
-	        _get(Object.getPrototypeOf(TestimonialsSection.prototype), 'constructor', this).apply(this, arguments);
-	    }
-	
-	    _createClass(TestimonialsSection, [{
-	        key: 'render',
-	        value: function render() {
-	
-	            var triggerStyle = {
-	                backgroundImage: 'url(img/testimonial-bg.jpg)'
-	            };
-	
-	            return _react2['default'].createElement(
-	                'section',
-	                { id: 'testimonial-section' },
-	                _react2['default'].createElement(
-	                    'div',
-	                    { id: 'testimonial-trigger', className: 'testimonial text-white parallax', 'data-stellar-background-ratio': '0.5', style: triggerStyle },
-	                    _react2['default'].createElement('div', { className: 'cover' }),
-	                    _react2['default'].createElement(_SectionHeaderJsx2['default'], { header: 'Reviews', subtitle: 'What people say about us' }),
-	                    _react2['default'].createElement(
-	                        'div',
-	                        { className: 'container' },
-	                        _react2['default'].createElement(
-	                            'div',
-	                            { className: 'testimonial-inner center-block text-center' },
-	                            _react2['default'].createElement(
-	                                'div',
-	                                { id: 'owl-testimonial', className: 'owl-carousel' },
-	                                _react2['default'].createElement(
-	                                    'div',
-	                                    { className: 'item' },
-	                                    _react2['default'].createElement(
-	                                        'blockquote',
-	                                        null,
-	                                        _react2['default'].createElement(
-	                                            'p',
-	                                            null,
-	                                            '"This was my first experience with that team and outperformed my expectation! They know there stuff and I highly recommend them! A+++".'
-	                                        ),
-	                                        _react2['default'].createElement(
-	                                            'footer',
-	                                            null,
-	                                            _react2['default'].createElement(
-	                                                'cite',
-	                                                { title: 'Source Title' },
-	                                                'Daryl Hodgeman'
-	                                            )
-	                                        )
-	                                    )
-	                                ),
-	                                _react2['default'].createElement(
-	                                    'div',
-	                                    { className: 'item' },
-	                                    _react2['default'].createElement(
-	                                        'blockquote',
-	                                        null,
-	                                        _react2['default'].createElement(
-	                                            'p',
-	                                            null,
-	                                            '"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."'
-	                                        ),
-	                                        _react2['default'].createElement(
-	                                            'footer',
-	                                            null,
-	                                            _react2['default'].createElement(
-	                                                'cite',
-	                                                { title: 'Source Title' },
-	                                                'John Doe'
-	                                            )
-	                                        )
-	                                    )
-	                                ),
-	                                _react2['default'].createElement(
-	                                    'div',
-	                                    { className: 'item' },
-	                                    _react2['default'].createElement(
-	                                        'blockquote',
-	                                        null,
-	                                        _react2['default'].createElement(
-	                                            'p',
-	                                            null,
-	                                            '"Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit".'
-	                                        ),
-	                                        _react2['default'].createElement(
-	                                            'footer',
-	                                            null,
-	                                            _react2['default'].createElement(
-	                                                'cite',
-	                                                { title: 'Source Title' },
-	                                                'John Doe'
-	                                            )
-	                                        )
-	                                    )
-	                                )
-	                            )
-	                        )
-	                    )
-	                )
-	            );
-	        }
-	    }]);
-	
-	    return TestimonialsSection;
-	})(_react2['default'].Component);
-	
-	exports['default'] = TestimonialsSection;
-	module.exports = exports['default'];
-
-/***/ },
-/* 194 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, '__esModule', {
-	    value: true
-	});
-	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-	
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _SectionHeaderJsx = __webpack_require__(190);
-	
-	var _SectionHeaderJsx2 = _interopRequireDefault(_SectionHeaderJsx);
-	
-	var _MoreInfoModalJsx = __webpack_require__(195);
-	
-	var _MoreInfoModalJsx2 = _interopRequireDefault(_MoreInfoModalJsx);
-	
-	var PricesSection = (function (_React$Component) {
-	    _inherits(PricesSection, _React$Component);
-	
-	    function PricesSection() {
-	        _classCallCheck(this, PricesSection);
-	
-	        _get(Object.getPrototypeOf(PricesSection.prototype), 'constructor', this).apply(this, arguments);
-	    }
-	
-	    _createClass(PricesSection, [{
-	        key: 'render',
-	        value: function render() {
-	            return _react2['default'].createElement(
-	                'section',
-	                { id: 'prices-section', className: 'page' },
-	                _react2['default'].createElement(_SectionHeaderJsx2['default'], { header: 'Prices', subtitle: 'Cheaper While Still Convenient' }),
-	                _react2['default'].createElement('div', { className: 'extra-space-l' }),
-	                _react2['default'].createElement(
-	                    'div',
-	                    { className: 'prices' },
-	                    _react2['default'].createElement(
-	                        'div',
-	                        { className: 'container' },
-	                        _react2['default'].createElement(
-	                            'div',
-	                            { className: 'row' },
-	                            _react2['default'].createElement(
-	                                'div',
-	                                { className: 'price-box col-sm-6 col-md-4 wow flipInY', 'data-wow-delay': '0.3s' },
-	                                _react2['default'].createElement(
-	                                    'div',
-	                                    { className: 'panel panel-default' },
-	                                    _react2['default'].createElement(
-	                                        'div',
-	                                        { className: 'panel-heading text-center' },
-	                                        _react2['default'].createElement('i', { className: 'fa fa-plug fa-2x' }),
-	                                        _react2['default'].createElement(
-	                                            'h3',
-	                                            null,
-	                                            'Basic'
-	                                        )
-	                                    ),
-	                                    _react2['default'].createElement(
-	                                        'div',
-	                                        { className: 'panel-body text-center' },
-	                                        _react2['default'].createElement(
-	                                            'p',
-	                                            { className: 'lead' },
-	                                            _react2['default'].createElement(
-	                                                'strong',
-	                                                null,
-	                                                _react2['default'].createElement('i', { className: 'fa fa-ils' }),
-	                                                '100'
-	                                            )
-	                                        )
-	                                    ),
-	                                    _react2['default'].createElement(
-	                                        'ul',
-	                                        { className: 'list-group text-center' },
-	                                        _react2['default'].createElement(
-	                                            'li',
-	                                            { className: 'list-group-item' },
-	                                            '1 Month'
-	                                        ),
-	                                        _react2['default'].createElement(
-	                                            'li',
-	                                            { className: 'list-group-item' },
-	                                            'Text on Viber and Skype'
-	                                        )
-	                                    ),
-	                                    _react2['default'].createElement(
-	                                        'div',
-	                                        { className: 'panel-footer text-center' },
-	                                        _react2['default'].createElement(
-	                                            'a',
-	                                            { className: 'btn btn-default', href: '#' },
-	                                            'Apply Now!'
-	                                        )
-	                                    )
-	                                )
-	                            ),
-	                            _react2['default'].createElement(
-	                                'div',
-	                                { className: 'price-box col-sm-6 col-md-4 wow flipInY', 'data-wow-delay': '0.5s' },
-	                                _react2['default'].createElement(
-	                                    'div',
-	                                    { className: 'panel panel-default' },
-	                                    _react2['default'].createElement(
-	                                        'div',
-	                                        { className: 'panel-heading text-center' },
-	                                        _react2['default'].createElement('i', { className: 'fa fa-cog fa-2x' }),
-	                                        _react2['default'].createElement(
-	                                            'h3',
-	                                            null,
-	                                            'Motivated'
-	                                        )
-	                                    ),
-	                                    _react2['default'].createElement(
-	                                        'div',
-	                                        { className: 'panel-body text-center' },
-	                                        _react2['default'].createElement(
-	                                            'p',
-	                                            { className: 'lead' },
-	                                            _react2['default'].createElement(
-	                                                'strong',
-	                                                null,
-	                                                _react2['default'].createElement('i', { className: 'fa fa-ils' }),
-	                                                '275'
-	                                            )
-	                                        )
-	                                    ),
-	                                    _react2['default'].createElement(
-	                                        'ul',
-	                                        { className: 'list-group text-center' },
-	                                        _react2['default'].createElement(
-	                                            'li',
-	                                            { className: 'list-group-item' },
-	                                            '3 Months'
-	                                        ),
-	                                        _react2['default'].createElement(
-	                                            'li',
-	                                            { className: 'list-group-item' },
-	                                            'Text/Call on Viber and Skype'
-	                                        ),
-	                                        _react2['default'].createElement(
-	                                            'li',
-	                                            { className: 'list-group-item' },
-	                                            'Access to Private Blog by Nutritionist'
-	                                        )
-	                                    ),
-	                                    _react2['default'].createElement(
-	                                        'div',
-	                                        { className: 'panel-footer text-center' },
-	                                        _react2['default'].createElement(
-	                                            'a',
-	                                            { className: 'btn btn-default', href: '#' },
-	                                            'Apply Now!'
-	                                        )
-	                                    )
-	                                )
-	                            ),
-	                            _react2['default'].createElement(
-	                                'div',
-	                                { className: 'price-box col-sm-6 price-box-featured col-md-4 wow flipInY', 'data-wow-delay': '0.7s' },
-	                                _react2['default'].createElement(
-	                                    'div',
-	                                    { className: 'panel panel-default' },
-	                                    _react2['default'].createElement(
-	                                        'div',
-	                                        { className: 'panel-heading text-center' },
-	                                        _react2['default'].createElement('i', { className: 'fa fa-star fa-2x' }),
-	                                        _react2['default'].createElement(
-	                                            'h3',
-	                                            null,
-	                                            'Dedicated'
-	                                        )
-	                                    ),
-	                                    _react2['default'].createElement(
-	                                        'div',
-	                                        { className: 'panel-body text-center' },
-	                                        _react2['default'].createElement(
-	                                            'p',
-	                                            { className: 'lead' },
-	                                            _react2['default'].createElement(
-	                                                'strong',
-	                                                null,
-	                                                _react2['default'].createElement('i', { className: 'fa fa-ils' }),
-	                                                '520'
-	                                            )
-	                                        )
-	                                    ),
-	                                    _react2['default'].createElement(
-	                                        'ul',
-	                                        { className: 'list-group text-center' },
-	                                        _react2['default'].createElement(
-	                                            'li',
-	                                            { className: 'list-group-item' },
-	                                            '6 Months'
-	                                        ),
-	                                        _react2['default'].createElement(
-	                                            'li',
-	                                            { className: 'list-group-item' },
-	                                            'Text/Call on Viber, Skype, Facebook Messenger, WhatsApp and email'
-	                                        ),
-	                                        _react2['default'].createElement(
-	                                            'li',
-	                                            { className: 'list-group-item' },
-	                                            'Access to Private Blog by Nutritionist'
-	                                        ),
-	                                        _react2['default'].createElement(
-	                                            'li',
-	                                            { className: 'list-group-item' },
-	                                            'Premium Nutrition Services (Weight management, Cancer, arthritic and collagen disorders, Hematology: anemia and blood disorders... and More) ',
-	                                            _react2['default'].createElement(_MoreInfoModalJsx2['default'], { modalText: 'Click Here To Learn More' })
-	                                        )
-	                                    ),
-	                                    _react2['default'].createElement(
-	                                        'div',
-	                                        { className: 'panel-footer text-center' },
-	                                        _react2['default'].createElement(
-	                                            'a',
-	                                            { className: 'btn btn-default', href: '#' },
-	                                            'Apply Now!'
-	                                        )
-	                                    ),
-	                                    _react2['default'].createElement(
-	                                        'div',
-	                                        { className: 'price-box-ribbon' },
-	                                        _react2['default'].createElement(
-	                                            'strong',
-	                                            null,
-	                                            'Best Offer!'
-	                                        )
-	                                    )
-	                                )
-	                            )
-	                        )
-	                    )
-	                ),
-	                _react2['default'].createElement('div', { className: 'extra-space-l' })
-	            );
-	        }
-	    }]);
-	
-	    return PricesSection;
-	})(_react2['default'].Component);
-	
-	exports['default'] = PricesSection;
-	module.exports = exports['default'];
-
-/***/ },
-/* 195 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, '__esModule', {
-	    value: true
-	});
-	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-	
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _reactModalBootstrap = __webpack_require__(196);
-	
-	var ModalInfoModal = (function (_React$Component) {
-	    _inherits(ModalInfoModal, _React$Component);
-	
-	    function ModalInfoModal(props) {
-	        _classCallCheck(this, ModalInfoModal);
-	
-	        _get(Object.getPrototypeOf(ModalInfoModal.prototype), 'constructor', this).call(this, props);
+	        _get(Object.getPrototypeOf(RegisterModal.prototype), 'constructor', this).call(this, props);
 	        this.state = {
 	            isOpen: false
 	        };
 	    }
 	
-	    _createClass(ModalInfoModal, [{
+	    _createClass(RegisterModal, [{
 	        key: 'openModal',
 	        value: function openModal() {
 	            this.setState({
@@ -23320,7 +22320,7 @@
 	                        null,
 	                        _react2['default'].createElement(
 	                            'button',
-	                            { className: 'btn btn-primary modalButton', onClick: this.openModal.bind(this) },
+	                            { className: 'btn btn-primary modalButton', id: 'btnregister', onClick: this.openModal.bind(this) },
 	                            this.props.modalText
 	                        ),
 	                        _react2['default'].createElement(
@@ -23333,121 +22333,75 @@
 	                                _react2['default'].createElement(
 	                                    _reactModalBootstrap.ModalTitle,
 	                                    null,
-	                                    'Premium Nutrition Services'
+	                                    'Register'
 	                                )
 	                            ),
 	                            _react2['default'].createElement(
 	                                _reactModalBootstrap.ModalBody,
 	                                null,
 	                                _react2['default'].createElement(
-	                                    'p',
+	                                    'form',
 	                                    null,
 	                                    _react2['default'].createElement(
-	                                        'strong',
-	                                        null,
-	                                        'Weight management and malnutrition:'
+	                                        'div',
+	                                        { className: 'form-group' },
+	                                        _react2['default'].createElement(
+	                                            'label',
+	                                            { 'for': 'Email' },
+	                                            'Email'
+	                                        ),
+	                                        _react2['default'].createElement('input', { type: 'Email', name: 'Email', id: 'Email', tabindex: '2', className: 'form-control', placeholder: 'Email', autocomplete: 'off' })
 	                                    ),
-	                                    ' Some Descritpion'
-	                                ),
-	                                _react2['default'].createElement('hr', null),
-	                                _react2['default'].createElement(
-	                                    'p',
-	                                    null,
 	                                    _react2['default'].createElement(
-	                                        'strong',
-	                                        null,
-	                                        'Endocrine disorders:'
+	                                        'div',
+	                                        { className: 'form-group' },
+	                                        _react2['default'].createElement(
+	                                            'label',
+	                                            { 'for': 'password' },
+	                                            'Password'
+	                                        ),
+	                                        _react2['default'].createElement('input', { type: '', name: '', id: 'Email', tabindex: '2', className: 'form-control', placeholder: 'Password', autocomplete: 'off' })
 	                                    ),
-	                                    ' '
-	                                ),
-	                                _react2['default'].createElement('hr', null),
-	                                _react2['default'].createElement(
-	                                    'p',
-	                                    null,
 	                                    _react2['default'].createElement(
-	                                        'strong',
-	                                        null,
-	                                        'Cardiovascular disorders:'
+	                                        'div',
+	                                        { className: 'form-group' },
+	                                        _react2['default'].createElement(
+	                                            'label',
+	                                            null,
+	                                            'FirstName'
+	                                        ),
+	                                        _react2['default'].createElement('input', { type: '', name: '', id: '', tabindex: '2', className: 'form-control', placeholder: 'FirstName', autocomplete: 'off' })
 	                                    ),
-	                                    ' '
-	                                ),
-	                                _react2['default'].createElement('hr', null),
-	                                _react2['default'].createElement(
-	                                    'p',
-	                                    null,
 	                                    _react2['default'].createElement(
-	                                        'strong',
-	                                        null,
-	                                        'Gastrointestinal disorders:'
+	                                        'div',
+	                                        { className: 'form-group' },
+	                                        _react2['default'].createElement(
+	                                            'label',
+	                                            null,
+	                                            'LastName'
+	                                        ),
+	                                        _react2['default'].createElement('input', { type: '', name: '', id: '', tabindex: '2', className: 'form-control', placeholder: 'LastName', autocomplete: 'off' })
 	                                    ),
-	                                    ' '
-	                                ),
-	                                _react2['default'].createElement('hr', null),
-	                                _react2['default'].createElement(
-	                                    'p',
-	                                    null,
 	                                    _react2['default'].createElement(
-	                                        'strong',
-	                                        null,
-	                                        'Hepatic, pancreatic and biliary disorders:'
+	                                        'div',
+	                                        { className: 'form-group' },
+	                                        _react2['default'].createElement(
+	                                            'label',
+	                                            null,
+	                                            'Medical'
+	                                        ),
+	                                        _react2['default'].createElement('input', { type: '', name: '', id: '', tabindex: '2', className: 'form-control', placeholder: 'medical', autocomplete: 'off' })
 	                                    ),
-	                                    ' '
-	                                ),
-	                                _react2['default'].createElement('hr', null),
-	                                _react2['default'].createElement(
-	                                    'p',
-	                                    null,
 	                                    _react2['default'].createElement(
-	                                        'strong',
-	                                        null,
-	                                        'Cancer:'
-	                                    ),
-	                                    ' '
-	                                ),
-	                                _react2['default'].createElement('hr', null),
-	                                _react2['default'].createElement(
-	                                    'p',
-	                                    null,
-	                                    _react2['default'].createElement(
-	                                        'strong',
-	                                        null,
-	                                        'Musculoskeletal, arthritic and collagen disorders:'
-	                                    ),
-	                                    ' '
-	                                ),
-	                                _react2['default'].createElement('hr', null),
-	                                _react2['default'].createElement(
-	                                    'p',
-	                                    null,
-	                                    _react2['default'].createElement(
-	                                        'strong',
-	                                        null,
-	                                        'Hematology: anemia and blood disorders:'
-	                                    ),
-	                                    ' '
-	                                ),
-	                                _react2['default'].createElement('hr', null),
-	                                _react2['default'].createElement(
-	                                    'p',
-	                                    null,
-	                                    _react2['default'].createElement(
-	                                        'strong',
-	                                        null,
-	                                        'Renal disorder:'
-	                                    ),
-	                                    ' '
-	                                ),
-	                                _react2['default'].createElement('hr', null),
-	                                _react2['default'].createElement(
-	                                    'p',
-	                                    null,
-	                                    'These require a ',
-	                                    _react2['default'].createElement(
-	                                        'strong',
-	                                        null,
-	                                        'dedicated'
-	                                    ),
-	                                    ' experience of 6 months or more. If you have any of the above we highly recommend you choosing this package'
+	                                        'div',
+	                                        { className: 'form-group' },
+	                                        _react2['default'].createElement(
+	                                            'label',
+	                                            null,
+	                                            'Age'
+	                                        ),
+	                                        _react2['default'].createElement('input', { type: '', name: '', id: '', tabindex: '2', className: 'form-control', placeholder: 'Age', autocomplete: 'off' })
+	                                    )
 	                                )
 	                            ),
 	                            _react2['default'].createElement(
@@ -23466,14 +22420,14 @@
 	        }
 	    }]);
 	
-	    return ModalInfoModal;
+	    return RegisterModal;
 	})(_react2['default'].Component);
 	
-	exports['default'] = ModalInfoModal;
+	exports['default'] = RegisterModal;
 	module.exports = exports['default'];
 
 /***/ },
-/* 196 */
+/* 188 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23484,44 +22438,44 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _Modal2 = __webpack_require__(197);
+	var _Modal2 = __webpack_require__(189);
 	
 	var _Modal3 = _interopRequireDefault(_Modal2);
 	
 	exports.Modal = _Modal3['default'];
 	
-	var _ModalHeader2 = __webpack_require__(262);
+	var _ModalHeader2 = __webpack_require__(254);
 	
 	var _ModalHeader3 = _interopRequireDefault(_ModalHeader2);
 	
 	exports.ModalHeader = _ModalHeader3['default'];
 	
-	var _ModalClose2 = __webpack_require__(263);
+	var _ModalClose2 = __webpack_require__(255);
 	
 	var _ModalClose3 = _interopRequireDefault(_ModalClose2);
 	
 	exports.ModalClose = _ModalClose3['default'];
 	
-	var _ModalTitle2 = __webpack_require__(264);
+	var _ModalTitle2 = __webpack_require__(256);
 	
 	var _ModalTitle3 = _interopRequireDefault(_ModalTitle2);
 	
 	exports.ModalTitle = _ModalTitle3['default'];
 	
-	var _ModalBody2 = __webpack_require__(265);
+	var _ModalBody2 = __webpack_require__(257);
 	
 	var _ModalBody3 = _interopRequireDefault(_ModalBody2);
 	
 	exports.ModalBody = _ModalBody3['default'];
 	
-	var _ModalFooter2 = __webpack_require__(266);
+	var _ModalFooter2 = __webpack_require__(258);
 	
 	var _ModalFooter3 = _interopRequireDefault(_ModalFooter2);
 	
 	exports.ModalFooter = _ModalFooter3['default'];
 
 /***/ },
-/* 197 */
+/* 189 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23548,15 +22502,15 @@
 	
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 	
-	var _classnames = __webpack_require__(198);
+	var _classnames = __webpack_require__(190);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _radium = __webpack_require__(199);
+	var _radium = __webpack_require__(191);
 	
 	var _radium2 = _interopRequireDefault(_radium);
 	
-	var _lodashAssign = __webpack_require__(261);
+	var _lodashAssign = __webpack_require__(253);
 	
 	var _lodashAssign2 = _interopRequireDefault(_lodashAssign);
 	
@@ -23754,7 +22708,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 198 */
+/* 190 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -23808,7 +22762,7 @@
 
 
 /***/ },
-/* 199 */
+/* 191 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -23817,31 +22771,31 @@
 	  value: true
 	});
 	
-	var _enhancer = __webpack_require__(200);
+	var _enhancer = __webpack_require__(192);
 	
 	var _enhancer2 = _interopRequireDefault(_enhancer);
 	
-	var _plugins = __webpack_require__(246);
+	var _plugins = __webpack_require__(238);
 	
 	var _plugins2 = _interopRequireDefault(_plugins);
 	
-	var _style = __webpack_require__(257);
+	var _style = __webpack_require__(249);
 	
 	var _style2 = _interopRequireDefault(_style);
 	
-	var _styleRoot = __webpack_require__(258);
+	var _styleRoot = __webpack_require__(250);
 	
 	var _styleRoot2 = _interopRequireDefault(_styleRoot);
 	
-	var _getState = __webpack_require__(242);
+	var _getState = __webpack_require__(234);
 	
 	var _getState2 = _interopRequireDefault(_getState);
 	
-	var _keyframes = __webpack_require__(260);
+	var _keyframes = __webpack_require__(252);
 	
 	var _keyframes2 = _interopRequireDefault(_keyframes);
 	
-	var _resolveStyles = __webpack_require__(202);
+	var _resolveStyles = __webpack_require__(194);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -23868,7 +22822,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 200 */
+/* 192 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -23885,11 +22839,11 @@
 	
 	var _react = __webpack_require__(1);
 	
-	var _styleKeeper = __webpack_require__(201);
+	var _styleKeeper = __webpack_require__(193);
 	
 	var _styleKeeper2 = _interopRequireDefault(_styleKeeper);
 	
-	var _resolveStyles = __webpack_require__(202);
+	var _resolveStyles = __webpack_require__(194);
 	
 	var _resolveStyles2 = _interopRequireDefault(_resolveStyles);
 	
@@ -24057,7 +23011,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 201 */
+/* 193 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -24129,7 +23083,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 202 */
+/* 194 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -24142,33 +23096,33 @@
 	
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
 	
-	var _appendImportantToEachValue = __webpack_require__(203);
+	var _appendImportantToEachValue = __webpack_require__(195);
 	
 	var _appendImportantToEachValue2 = _interopRequireDefault(_appendImportantToEachValue);
 	
-	var _cssRuleSetToString = __webpack_require__(206);
+	var _cssRuleSetToString = __webpack_require__(198);
 	
 	var _cssRuleSetToString2 = _interopRequireDefault(_cssRuleSetToString);
 	
-	var _getState = __webpack_require__(242);
+	var _getState = __webpack_require__(234);
 	
 	var _getState2 = _interopRequireDefault(_getState);
 	
-	var _getStateKey = __webpack_require__(243);
+	var _getStateKey = __webpack_require__(235);
 	
 	var _getStateKey2 = _interopRequireDefault(_getStateKey);
 	
-	var _hash = __webpack_require__(244);
+	var _hash = __webpack_require__(236);
 	
 	var _hash2 = _interopRequireDefault(_hash);
 	
-	var _mergeStyles = __webpack_require__(245);
+	var _mergeStyles = __webpack_require__(237);
 	
-	var _plugins = __webpack_require__(246);
+	var _plugins = __webpack_require__(238);
 	
 	var _plugins2 = _interopRequireDefault(_plugins);
 	
-	var _exenv = __webpack_require__(256);
+	var _exenv = __webpack_require__(248);
 	
 	var _exenv2 = _interopRequireDefault(_exenv);
 	
@@ -24491,7 +23445,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 203 */
+/* 195 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24501,11 +23455,11 @@
 	});
 	exports.default = appendImportantToEachValue;
 	
-	var _appendPxIfNeeded = __webpack_require__(204);
+	var _appendPxIfNeeded = __webpack_require__(196);
 	
 	var _appendPxIfNeeded2 = _interopRequireDefault(_appendPxIfNeeded);
 	
-	var _mapObject = __webpack_require__(205);
+	var _mapObject = __webpack_require__(197);
 	
 	var _mapObject2 = _interopRequireDefault(_mapObject);
 	
@@ -24519,7 +23473,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 204 */
+/* 196 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -24573,7 +23527,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 205 */
+/* 197 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -24591,7 +23545,7 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 206 */
+/* 198 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24601,19 +23555,19 @@
 	});
 	exports.default = cssRuleSetToString;
 	
-	var _appendPxIfNeeded = __webpack_require__(204);
+	var _appendPxIfNeeded = __webpack_require__(196);
 	
 	var _appendPxIfNeeded2 = _interopRequireDefault(_appendPxIfNeeded);
 	
-	var _camelCasePropsToDashCase = __webpack_require__(207);
+	var _camelCasePropsToDashCase = __webpack_require__(199);
 	
 	var _camelCasePropsToDashCase2 = _interopRequireDefault(_camelCasePropsToDashCase);
 	
-	var _mapObject = __webpack_require__(205);
+	var _mapObject = __webpack_require__(197);
 	
 	var _mapObject2 = _interopRequireDefault(_mapObject);
 	
-	var _prefixer = __webpack_require__(208);
+	var _prefixer = __webpack_require__(200);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -24640,7 +23594,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 207 */
+/* 199 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -24680,7 +23634,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 208 */
+/* 200 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global, process) {'use strict';
@@ -24699,7 +23653,7 @@
 	exports.getPrefixedKeyframes = getPrefixedKeyframes;
 	exports.getPrefixedStyle = getPrefixedStyle;
 	
-	var _inlineStylePrefixer = __webpack_require__(209);
+	var _inlineStylePrefixer = __webpack_require__(201);
 	
 	var _inlineStylePrefixer2 = _interopRequireDefault(_inlineStylePrefixer);
 	
@@ -24764,7 +23718,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(3)))
 
 /***/ },
-/* 209 */
+/* 201 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24779,61 +23733,61 @@
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 	
-	var _inlineStylePrefixAll = __webpack_require__(210);
+	var _inlineStylePrefixAll = __webpack_require__(202);
 	
 	var _inlineStylePrefixAll2 = _interopRequireDefault(_inlineStylePrefixAll);
 	
-	var _utilsGetBrowserInformation = __webpack_require__(225);
+	var _utilsGetBrowserInformation = __webpack_require__(217);
 	
 	var _utilsGetBrowserInformation2 = _interopRequireDefault(_utilsGetBrowserInformation);
 	
-	var _utilsGetPrefixedKeyframes = __webpack_require__(228);
+	var _utilsGetPrefixedKeyframes = __webpack_require__(220);
 	
 	var _utilsGetPrefixedKeyframes2 = _interopRequireDefault(_utilsGetPrefixedKeyframes);
 	
-	var _utilsCapitalizeString = __webpack_require__(229);
+	var _utilsCapitalizeString = __webpack_require__(221);
 	
 	var _utilsCapitalizeString2 = _interopRequireDefault(_utilsCapitalizeString);
 	
-	var _utilsAssign = __webpack_require__(230);
+	var _utilsAssign = __webpack_require__(222);
 	
 	var _utilsAssign2 = _interopRequireDefault(_utilsAssign);
 	
-	var _prefixProps = __webpack_require__(231);
+	var _prefixProps = __webpack_require__(223);
 	
 	var _prefixProps2 = _interopRequireDefault(_prefixProps);
 	
-	var _pluginsCalc = __webpack_require__(232);
+	var _pluginsCalc = __webpack_require__(224);
 	
 	var _pluginsCalc2 = _interopRequireDefault(_pluginsCalc);
 	
-	var _pluginsCursor = __webpack_require__(234);
+	var _pluginsCursor = __webpack_require__(226);
 	
 	var _pluginsCursor2 = _interopRequireDefault(_pluginsCursor);
 	
-	var _pluginsFlex = __webpack_require__(235);
+	var _pluginsFlex = __webpack_require__(227);
 	
 	var _pluginsFlex2 = _interopRequireDefault(_pluginsFlex);
 	
-	var _pluginsSizing = __webpack_require__(236);
+	var _pluginsSizing = __webpack_require__(228);
 	
 	var _pluginsSizing2 = _interopRequireDefault(_pluginsSizing);
 	
-	var _pluginsGradient = __webpack_require__(237);
+	var _pluginsGradient = __webpack_require__(229);
 	
 	var _pluginsGradient2 = _interopRequireDefault(_pluginsGradient);
 	
-	var _pluginsTransition = __webpack_require__(238);
+	var _pluginsTransition = __webpack_require__(230);
 	
 	var _pluginsTransition2 = _interopRequireDefault(_pluginsTransition);
 	
 	// special flexbox specifications
 	
-	var _pluginsFlexboxIE = __webpack_require__(240);
+	var _pluginsFlexboxIE = __webpack_require__(232);
 	
 	var _pluginsFlexboxIE2 = _interopRequireDefault(_pluginsFlexboxIE);
 	
-	var _pluginsFlexboxOld = __webpack_require__(241);
+	var _pluginsFlexboxOld = __webpack_require__(233);
 	
 	var _pluginsFlexboxOld2 = _interopRequireDefault(_pluginsFlexboxOld);
 	
@@ -24967,7 +23921,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 210 */
+/* 202 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24979,49 +23933,49 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _prefixProps = __webpack_require__(211);
+	var _prefixProps = __webpack_require__(203);
 	
 	var _prefixProps2 = _interopRequireDefault(_prefixProps);
 	
-	var _utilsCapitalizeString = __webpack_require__(212);
+	var _utilsCapitalizeString = __webpack_require__(204);
 	
 	var _utilsCapitalizeString2 = _interopRequireDefault(_utilsCapitalizeString);
 	
-	var _utilsAssign = __webpack_require__(213);
+	var _utilsAssign = __webpack_require__(205);
 	
 	var _utilsAssign2 = _interopRequireDefault(_utilsAssign);
 	
-	var _pluginsCalc = __webpack_require__(214);
+	var _pluginsCalc = __webpack_require__(206);
 	
 	var _pluginsCalc2 = _interopRequireDefault(_pluginsCalc);
 	
-	var _pluginsCursor = __webpack_require__(218);
+	var _pluginsCursor = __webpack_require__(210);
 	
 	var _pluginsCursor2 = _interopRequireDefault(_pluginsCursor);
 	
-	var _pluginsFlex = __webpack_require__(219);
+	var _pluginsFlex = __webpack_require__(211);
 	
 	var _pluginsFlex2 = _interopRequireDefault(_pluginsFlex);
 	
-	var _pluginsSizing = __webpack_require__(220);
+	var _pluginsSizing = __webpack_require__(212);
 	
 	var _pluginsSizing2 = _interopRequireDefault(_pluginsSizing);
 	
-	var _pluginsGradient = __webpack_require__(221);
+	var _pluginsGradient = __webpack_require__(213);
 	
 	var _pluginsGradient2 = _interopRequireDefault(_pluginsGradient);
 	
-	var _pluginsTransition = __webpack_require__(222);
+	var _pluginsTransition = __webpack_require__(214);
 	
 	var _pluginsTransition2 = _interopRequireDefault(_pluginsTransition);
 	
 	// special flexbox specifications
 	
-	var _pluginsFlexboxIE = __webpack_require__(223);
+	var _pluginsFlexboxIE = __webpack_require__(215);
 	
 	var _pluginsFlexboxIE2 = _interopRequireDefault(_pluginsFlexboxIE);
 	
-	var _pluginsFlexboxOld = __webpack_require__(224);
+	var _pluginsFlexboxOld = __webpack_require__(216);
 	
 	var _pluginsFlexboxOld2 = _interopRequireDefault(_pluginsFlexboxOld);
 	
@@ -25061,7 +24015,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 211 */
+/* 203 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -25073,7 +24027,7 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 212 */
+/* 204 */
 /***/ function(module, exports) {
 
 	// helper to capitalize strings
@@ -25090,7 +24044,7 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 213 */
+/* 205 */
 /***/ function(module, exports) {
 
 	// leight polyfill for Object.assign
@@ -25111,7 +24065,7 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 214 */
+/* 206 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25123,11 +24077,11 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _utilsJoinPrefixedRules = __webpack_require__(215);
+	var _utilsJoinPrefixedRules = __webpack_require__(207);
 	
 	var _utilsJoinPrefixedRules2 = _interopRequireDefault(_utilsJoinPrefixedRules);
 	
-	var _utilsIsPrefixedValue = __webpack_require__(217);
+	var _utilsIsPrefixedValue = __webpack_require__(209);
 	
 	var _utilsIsPrefixedValue2 = _interopRequireDefault(_utilsIsPrefixedValue);
 	
@@ -25144,7 +24098,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 215 */
+/* 207 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25157,7 +24111,7 @@
 	
 	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 	
-	var _camelToDashCase = __webpack_require__(216);
+	var _camelToDashCase = __webpack_require__(208);
 	
 	var _camelToDashCase2 = _interopRequireDefault(_camelToDashCase);
 	
@@ -25177,7 +24131,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 216 */
+/* 208 */
 /***/ function(module, exports) {
 
 	/**
@@ -25199,7 +24153,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 217 */
+/* 209 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -25217,7 +24171,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 218 */
+/* 210 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25229,7 +24183,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _utilsJoinPrefixedRules = __webpack_require__(215);
+	var _utilsJoinPrefixedRules = __webpack_require__(207);
 	
 	var _utilsJoinPrefixedRules2 = _interopRequireDefault(_utilsJoinPrefixedRules);
 	
@@ -25249,7 +24203,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 219 */
+/* 211 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25261,7 +24215,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _utilsCamelToDashCase = __webpack_require__(216);
+	var _utilsCamelToDashCase = __webpack_require__(208);
 	
 	var _utilsCamelToDashCase2 = _interopRequireDefault(_utilsCamelToDashCase);
 	
@@ -25278,7 +24232,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 220 */
+/* 212 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25290,7 +24244,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _utilsJoinPrefixedRules = __webpack_require__(215);
+	var _utilsJoinPrefixedRules = __webpack_require__(207);
 	
 	var _utilsJoinPrefixedRules2 = _interopRequireDefault(_utilsJoinPrefixedRules);
 	
@@ -25320,7 +24274,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 221 */
+/* 213 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25332,11 +24286,11 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _utilsJoinPrefixedRules = __webpack_require__(215);
+	var _utilsJoinPrefixedRules = __webpack_require__(207);
 	
 	var _utilsJoinPrefixedRules2 = _interopRequireDefault(_utilsJoinPrefixedRules);
 	
-	var _utilsIsPrefixedValue = __webpack_require__(217);
+	var _utilsIsPrefixedValue = __webpack_require__(209);
 	
 	var _utilsIsPrefixedValue2 = _interopRequireDefault(_utilsIsPrefixedValue);
 	
@@ -25353,7 +24307,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 222 */
+/* 214 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25367,19 +24321,19 @@
 	
 	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 	
-	var _utilsCamelToDashCase = __webpack_require__(216);
+	var _utilsCamelToDashCase = __webpack_require__(208);
 	
 	var _utilsCamelToDashCase2 = _interopRequireDefault(_utilsCamelToDashCase);
 	
-	var _utilsCapitalizeString = __webpack_require__(212);
+	var _utilsCapitalizeString = __webpack_require__(204);
 	
 	var _utilsCapitalizeString2 = _interopRequireDefault(_utilsCapitalizeString);
 	
-	var _utilsIsPrefixedValue = __webpack_require__(217);
+	var _utilsIsPrefixedValue = __webpack_require__(209);
 	
 	var _utilsIsPrefixedValue2 = _interopRequireDefault(_utilsIsPrefixedValue);
 	
-	var _prefixProps = __webpack_require__(211);
+	var _prefixProps = __webpack_require__(203);
 	
 	var _prefixProps2 = _interopRequireDefault(_prefixProps);
 	
@@ -25440,7 +24394,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 223 */
+/* 215 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -25478,7 +24432,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 224 */
+/* 216 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25492,7 +24446,7 @@
 	
 	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 	
-	var _utilsCamelToDashCase = __webpack_require__(216);
+	var _utilsCamelToDashCase = __webpack_require__(208);
 	
 	var _utilsCamelToDashCase2 = _interopRequireDefault(_utilsCamelToDashCase);
 	
@@ -25526,7 +24480,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 225 */
+/* 217 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25537,7 +24491,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _bowser = __webpack_require__(226);
+	var _bowser = __webpack_require__(218);
 	
 	var _bowser2 = _interopRequireDefault(_bowser);
 	
@@ -25624,7 +24578,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 226 */
+/* 218 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*!
@@ -25635,7 +24589,7 @@
 	
 	!function (root, name, definition) {
 	  if (typeof module != 'undefined' && module.exports) module.exports = definition()
-	  else if (true) __webpack_require__(227)(name, definition)
+	  else if (true) __webpack_require__(219)(name, definition)
 	  else root[name] = definition()
 	}(this, 'bowser', function () {
 	  /**
@@ -26210,14 +25164,14 @@
 
 
 /***/ },
-/* 227 */
+/* 219 */
 /***/ function(module, exports) {
 
 	module.exports = function() { throw new Error("define cannot be used indirect"); };
 
 
 /***/ },
-/* 228 */
+/* 220 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -26242,7 +25196,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 229 */
+/* 221 */
 /***/ function(module, exports) {
 
 	// helper to capitalize strings
@@ -26259,7 +25213,7 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 230 */
+/* 222 */
 /***/ function(module, exports) {
 
 	// leight polyfill for Object.assign
@@ -26281,7 +25235,7 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 231 */
+/* 223 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -26293,7 +25247,7 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 232 */
+/* 224 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26307,7 +25261,7 @@
 	
 	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 	
-	var _utilsCamelToDashCase = __webpack_require__(233);
+	var _utilsCamelToDashCase = __webpack_require__(225);
 	
 	var _utilsCamelToDashCase2 = _interopRequireDefault(_utilsCamelToDashCase);
 	
@@ -26328,7 +25282,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 233 */
+/* 225 */
 /***/ function(module, exports) {
 
 	/**
@@ -26350,7 +25304,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 234 */
+/* 226 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26362,7 +25316,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _utilsCamelToDashCase = __webpack_require__(233);
+	var _utilsCamelToDashCase = __webpack_require__(225);
 	
 	var _utilsCamelToDashCase2 = _interopRequireDefault(_utilsCamelToDashCase);
 	
@@ -26392,7 +25346,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 235 */
+/* 227 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26404,7 +25358,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _utilsCamelToDashCase = __webpack_require__(233);
+	var _utilsCamelToDashCase = __webpack_require__(225);
 	
 	var _utilsCamelToDashCase2 = _interopRequireDefault(_utilsCamelToDashCase);
 	
@@ -26432,7 +25386,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 236 */
+/* 228 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26446,7 +25400,7 @@
 	
 	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 	
-	var _utilsCamelToDashCase = __webpack_require__(233);
+	var _utilsCamelToDashCase = __webpack_require__(225);
 	
 	var _utilsCamelToDashCase2 = _interopRequireDefault(_utilsCamelToDashCase);
 	
@@ -26483,7 +25437,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 237 */
+/* 229 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26497,7 +25451,7 @@
 	
 	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 	
-	var _utilsCamelToDashCase = __webpack_require__(233);
+	var _utilsCamelToDashCase = __webpack_require__(225);
 	
 	var _utilsCamelToDashCase2 = _interopRequireDefault(_utilsCamelToDashCase);
 	
@@ -26520,7 +25474,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 238 */
+/* 230 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26534,15 +25488,15 @@
 	
 	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 	
-	var _utilsCamelToDashCase = __webpack_require__(233);
+	var _utilsCamelToDashCase = __webpack_require__(225);
 	
 	var _utilsCamelToDashCase2 = _interopRequireDefault(_utilsCamelToDashCase);
 	
-	var _utilsCapitalizeString = __webpack_require__(229);
+	var _utilsCapitalizeString = __webpack_require__(221);
 	
 	var _utilsCapitalizeString2 = _interopRequireDefault(_utilsCapitalizeString);
 	
-	var _utilsUnprefixProperty = __webpack_require__(239);
+	var _utilsUnprefixProperty = __webpack_require__(231);
 	
 	var _utilsUnprefixProperty2 = _interopRequireDefault(_utilsUnprefixProperty);
 	
@@ -26586,7 +25540,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 239 */
+/* 231 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -26603,7 +25557,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 240 */
+/* 232 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26617,7 +25571,7 @@
 	
 	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 	
-	var _utilsCamelToDashCase = __webpack_require__(233);
+	var _utilsCamelToDashCase = __webpack_require__(225);
 	
 	var _utilsCamelToDashCase2 = _interopRequireDefault(_utilsCamelToDashCase);
 	
@@ -26673,7 +25627,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 241 */
+/* 233 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26687,7 +25641,7 @@
 	
 	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 	
-	var _utilsCamelToDashCase = __webpack_require__(233);
+	var _utilsCamelToDashCase = __webpack_require__(225);
 	
 	var _utilsCamelToDashCase2 = _interopRequireDefault(_utilsCamelToDashCase);
 	
@@ -26749,7 +25703,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 242 */
+/* 234 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26758,7 +25712,7 @@
 	  value: true
 	});
 	
-	var _getStateKey = __webpack_require__(243);
+	var _getStateKey = __webpack_require__(235);
 	
 	var _getStateKey2 = _interopRequireDefault(_getStateKey);
 	
@@ -26774,7 +25728,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 243 */
+/* 235 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -26792,7 +25746,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 244 */
+/* 236 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -26824,7 +25778,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 245 */
+/* 237 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -26888,7 +25842,7 @@
 	}
 
 /***/ },
-/* 246 */
+/* 238 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26897,35 +25851,35 @@
 	  value: true
 	});
 	
-	var _checkPropsPlugin = __webpack_require__(247);
+	var _checkPropsPlugin = __webpack_require__(239);
 	
 	var _checkPropsPlugin2 = _interopRequireDefault(_checkPropsPlugin);
 	
-	var _keyframesPlugin = __webpack_require__(248);
+	var _keyframesPlugin = __webpack_require__(240);
 	
 	var _keyframesPlugin2 = _interopRequireDefault(_keyframesPlugin);
 	
-	var _mergeStyleArrayPlugin = __webpack_require__(249);
+	var _mergeStyleArrayPlugin = __webpack_require__(241);
 	
 	var _mergeStyleArrayPlugin2 = _interopRequireDefault(_mergeStyleArrayPlugin);
 	
-	var _prefixPlugin = __webpack_require__(250);
+	var _prefixPlugin = __webpack_require__(242);
 	
 	var _prefixPlugin2 = _interopRequireDefault(_prefixPlugin);
 	
-	var _removeNestedStylesPlugin = __webpack_require__(251);
+	var _removeNestedStylesPlugin = __webpack_require__(243);
 	
 	var _removeNestedStylesPlugin2 = _interopRequireDefault(_removeNestedStylesPlugin);
 	
-	var _resolveInteractionStylesPlugin = __webpack_require__(252);
+	var _resolveInteractionStylesPlugin = __webpack_require__(244);
 	
 	var _resolveInteractionStylesPlugin2 = _interopRequireDefault(_resolveInteractionStylesPlugin);
 	
-	var _resolveMediaQueriesPlugin = __webpack_require__(254);
+	var _resolveMediaQueriesPlugin = __webpack_require__(246);
 	
 	var _resolveMediaQueriesPlugin2 = _interopRequireDefault(_resolveMediaQueriesPlugin);
 	
-	var _visitedPlugin = __webpack_require__(255);
+	var _visitedPlugin = __webpack_require__(247);
 	
 	var _visitedPlugin2 = _interopRequireDefault(_visitedPlugin);
 	
@@ -26946,7 +25900,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 247 */
+/* 239 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -27013,7 +25967,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 248 */
+/* 240 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -27050,7 +26004,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 249 */
+/* 241 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -27074,7 +26028,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 250 */
+/* 242 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27084,7 +26038,7 @@
 	});
 	exports.default = prefixPlugin;
 	
-	var _prefixer = __webpack_require__(208);
+	var _prefixer = __webpack_require__(200);
 	
 	function prefixPlugin(_ref // eslint-disable-line no-shadow
 	) {
@@ -27097,7 +26051,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 251 */
+/* 243 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -27125,7 +26079,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 252 */
+/* 244 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27134,7 +26088,7 @@
 	  value: true
 	});
 	
-	var _mouseUpListener = __webpack_require__(253);
+	var _mouseUpListener = __webpack_require__(245);
 	
 	var _mouseUpListener2 = _interopRequireDefault(_mouseUpListener);
 	
@@ -27258,7 +26212,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 253 */
+/* 245 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -27307,7 +26261,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 254 */
+/* 246 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -27488,7 +26442,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 255 */
+/* 247 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -27533,7 +26487,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 256 */
+/* 248 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -27579,7 +26533,7 @@
 
 
 /***/ },
-/* 257 */
+/* 249 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27590,7 +26544,7 @@
 	
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
 	
-	var _cssRuleSetToString = __webpack_require__(206);
+	var _cssRuleSetToString = __webpack_require__(198);
 	
 	var _cssRuleSetToString2 = _interopRequireDefault(_cssRuleSetToString);
 	
@@ -27676,7 +26630,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 258 */
+/* 250 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27689,15 +26643,15 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _enhancer = __webpack_require__(200);
+	var _enhancer = __webpack_require__(192);
 	
 	var _enhancer2 = _interopRequireDefault(_enhancer);
 	
-	var _styleKeeper = __webpack_require__(201);
+	var _styleKeeper = __webpack_require__(193);
 	
 	var _styleKeeper2 = _interopRequireDefault(_styleKeeper);
 	
-	var _styleSheet = __webpack_require__(259);
+	var _styleSheet = __webpack_require__(251);
 	
 	var _styleSheet2 = _interopRequireDefault(_styleSheet);
 	
@@ -27771,7 +26725,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 259 */
+/* 251 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27787,7 +26741,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _styleKeeper = __webpack_require__(201);
+	var _styleKeeper = __webpack_require__(193);
 	
 	var _styleKeeper2 = _interopRequireDefault(_styleKeeper);
 	
@@ -27850,7 +26804,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 260 */
+/* 252 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27860,15 +26814,15 @@
 	});
 	exports.default = keyframes;
 	
-	var _cssRuleSetToString = __webpack_require__(206);
+	var _cssRuleSetToString = __webpack_require__(198);
 	
 	var _cssRuleSetToString2 = _interopRequireDefault(_cssRuleSetToString);
 	
-	var _hash = __webpack_require__(244);
+	var _hash = __webpack_require__(236);
 	
 	var _hash2 = _interopRequireDefault(_hash);
 	
-	var _prefixer = __webpack_require__(208);
+	var _prefixer = __webpack_require__(200);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -27889,7 +26843,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 261 */
+/* 253 */
 /***/ function(module, exports) {
 
 	/**
@@ -28532,7 +27486,7 @@
 
 
 /***/ },
-/* 262 */
+/* 254 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -28590,7 +27544,7 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 263 */
+/* 255 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -28657,7 +27611,7 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 264 */
+/* 256 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -28715,7 +27669,7 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 265 */
+/* 257 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -28773,7 +27727,7 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 266 */
+/* 258 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -28831,7 +27785,7 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 267 */
+/* 259 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28854,7 +27808,1358 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _SectionHeaderJsx = __webpack_require__(190);
+	var _CarouselItemJsx = __webpack_require__(260);
+	
+	var _CarouselItemJsx2 = _interopRequireDefault(_CarouselItemJsx);
+	
+	var Carousel = (function (_React$Component) {
+	  _inherits(Carousel, _React$Component);
+	
+	  function Carousel() {
+	    _classCallCheck(this, Carousel);
+	
+	    _get(Object.getPrototypeOf(Carousel.prototype), 'constructor', this).apply(this, arguments);
+	  }
+	
+	  _createClass(Carousel, [{
+	    key: 'render',
+	    value: function render() {
+	
+	      var carouselStyle = {
+	        backgroundImage: 'url(img/slider-bg.jpg)'
+	      };
+	
+	      return _react2['default'].createElement(
+	        'section',
+	        { id: 'text-carousel-intro-section', className: 'parallax', 'data-stellar-background-ratio': '0.5', style: carouselStyle },
+	        _react2['default'].createElement(
+	          'div',
+	          { className: 'container' },
+	          _react2['default'].createElement(
+	            'div',
+	            { className: 'caption text-center text-white', 'data-stellar-ratio': '0.7' },
+	            _react2['default'].createElement(
+	              'div',
+	              { id: 'owl-intro-text', className: 'owl-carousel' },
+	              _react2['default'].createElement(_CarouselItemJsx2['default'], { header: 'Rijeemak Online', subHeader: 'Your Diet, At Your Comfort', href: '#rijeemak-section', hrefText: 'Learn More!' }),
+	              _react2['default'].createElement(_CarouselItemJsx2['default'], { header: 'IT\'S ALL ABOUT YOU', subHeader: 'Love, Care and a great health program', href: '#services-section', hrefText: 'Learn More!' }),
+	              _react2['default'].createElement(_CarouselItemJsx2['default'], { header: 'Best Prices', subHeader: 'Cheaper than going to an actual appointment? WHAAAAT?!?', href: '#prices-section', hrefText: 'Learn More!' })
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return Carousel;
+	})(_react2['default'].Component);
+	
+	exports['default'] = Carousel;
+	module.exports = exports['default'];
+
+/***/ },
+/* 260 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var CarouselItem = (function (_React$Component) {
+	    _inherits(CarouselItem, _React$Component);
+	
+	    function CarouselItem() {
+	        _classCallCheck(this, CarouselItem);
+	
+	        _get(Object.getPrototypeOf(CarouselItem.prototype), "constructor", this).apply(this, arguments);
+	    }
+	
+	    _createClass(CarouselItem, [{
+	        key: "render",
+	        value: function render() {
+	            return _react2["default"].createElement(
+	                "div",
+	                { className: "item carousel-text" },
+	                _react2["default"].createElement(
+	                    "h1",
+	                    null,
+	                    this.props.header
+	                ),
+	                _react2["default"].createElement(
+	                    "p",
+	                    null,
+	                    this.props.subHeader
+	                ),
+	                _react2["default"].createElement("div", { className: "extra-space-l" }),
+	                _react2["default"].createElement(
+	                    "a",
+	                    { className: "btn btn-blank page-scroll", href: this.props.href },
+	                    this.props.hrefText
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return CarouselItem;
+	})(_react2["default"].Component);
+	
+	exports["default"] = CarouselItem;
+	module.exports = exports["default"];
+
+/***/ },
+/* 261 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _SectionHeaderJsx = __webpack_require__(262);
+	
+	var _SectionHeaderJsx2 = _interopRequireDefault(_SectionHeaderJsx);
+	
+	var RijeemakSection = (function (_React$Component) {
+	    _inherits(RijeemakSection, _React$Component);
+	
+	    function RijeemakSection() {
+	        _classCallCheck(this, RijeemakSection);
+	
+	        _get(Object.getPrototypeOf(RijeemakSection.prototype), 'constructor', this).apply(this, arguments);
+	    }
+	
+	    _createClass(RijeemakSection, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2['default'].createElement(
+	                'section',
+	                { id: 'rijeemak-section', className: 'page bg-style1' },
+	                _react2['default'].createElement(_SectionHeaderJsx2['default'], { header: 'Rijeemak Online', subtitle: 'This is the generation of convenient services. So why set an appointment to go to have a conversation, when you can get excellent services at your own convenience?' }),
+	                _react2['default'].createElement(
+	                    'div',
+	                    { className: 'rotate-box-1-wrapper' },
+	                    _react2['default'].createElement(
+	                        'div',
+	                        { className: 'container' },
+	                        _react2['default'].createElement(
+	                            'div',
+	                            { className: 'row' },
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'col-md-6 col-sm-6' },
+	                                _react2['default'].createElement(
+	                                    'a',
+	                                    { className: 'rotate-box-1 square-icon wow zoomIn', 'data-wow-delay': '0' },
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'rotate-box-icon' },
+	                                        _react2['default'].createElement('i', { className: 'fa fa-users' })
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'div',
+	                                        { className: 'rotate-box-info' },
+	                                        _react2['default'].createElement(
+	                                            'h4',
+	                                            null,
+	                                            'Who We Are?'
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'p',
+	                                            null,
+	                                            'Our humble team understands the struggle of compromised health and wellbeing. We wants to help you heal and become be better as a whole. We believe in small steps to achieve the greater goal of wellbeing and we will provide you with the support and guidance every step of the way.. More confidence in one\'s health and lifestyle brings more confidence and ambition in one\'s state of mind and thoughts.'
+	                                        )
+	                                    )
+	                                )
+	                            ),
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'col-md-6 col-sm-6' },
+	                                _react2['default'].createElement(
+	                                    'a',
+	                                    { className: 'rotate-box-1 square-icon wow zoomIn', 'data-wow-delay': '0.4s' },
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'rotate-box-icon' },
+	                                        _react2['default'].createElement('i', { className: 'fa fa-heart' })
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'div',
+	                                        { className: 'rotate-box-info' },
+	                                        _react2['default'].createElement(
+	                                            'h4',
+	                                            null,
+	                                            'Why We Do It?'
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'p',
+	                                            null,
+	                                            'We want you to get into better health. Raghad Sukhtian, our team member, and the creator of this idea said "It makes me sad when I see someone who is being hurt because of their weight. I just want to help them.” Now with the Raghad\'s great soul powering our mission, we will help you overcome all the excuses you  are using to avoid change, help you find your will power to proudly take charge of your own wellness and achieve your goal!'
+	                                        )
+	                                    )
+	                                )
+	                            ),
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'col-md-12' },
+	                                _react2['default'].createElement(
+	                                    'a',
+	                                    { className: 'rotate-box-1 square-icon wow zoomIn', 'data-wow-delay': '0.2s' },
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'rotate-box-icon' },
+	                                        _react2['default'].createElement('i', { className: 'fa fa-diamond' })
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'div',
+	                                        { className: 'rotate-box-info' },
+	                                        _react2['default'].createElement(
+	                                            'h4',
+	                                            null,
+	                                            'What We Do?'
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'p',
+	                                            null,
+	                                            _react2['default'].createElement(
+	                                                'strong',
+	                                                null,
+	                                                'Rijeemak'
+	                                            ),
+	                                            ' gives you the possibility to reach out to your support team anytime you choose via texting, calling, or any other communication method you choose with your specialist.  We will provide you with nutrition consult to address your health concern, design meal plans specific for your lifestyle and food preference, workout plans, recipes and recipe audit with full support at your own convenience.'
+	                                        )
+	                                    )
+	                                )
+	                            )
+	                        )
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return RijeemakSection;
+	})(_react2['default'].Component);
+	
+	exports['default'] = RijeemakSection;
+	module.exports = exports['default'];
+
+/***/ },
+/* 262 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var SectionHeader = (function (_React$Component) {
+	    _inherits(SectionHeader, _React$Component);
+	
+	    function SectionHeader() {
+	        _classCallCheck(this, SectionHeader);
+	
+	        _get(Object.getPrototypeOf(SectionHeader.prototype), "constructor", this).apply(this, arguments);
+	    }
+	
+	    _createClass(SectionHeader, [{
+	        key: "render",
+	        value: function render() {
+	            return _react2["default"].createElement(
+	                "div",
+	                { className: "page-header-wrapper" },
+	                _react2["default"].createElement(
+	                    "div",
+	                    { className: "container" },
+	                    _react2["default"].createElement(
+	                        "div",
+	                        { className: "page-header text-center wow fadeInUp", "data-wow-delay": "0.3s" },
+	                        _react2["default"].createElement(
+	                            "h2",
+	                            null,
+	                            this.props.header
+	                        ),
+	                        _react2["default"].createElement("div", { className: "devider" }),
+	                        _react2["default"].createElement(
+	                            "p",
+	                            { className: "subtitle" },
+	                            this.props.subtitle
+	                        )
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return SectionHeader;
+	})(_react2["default"].Component);
+	
+	exports["default"] = SectionHeader;
+	module.exports = exports["default"];
+
+/***/ },
+/* 263 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _SectionHeaderJsx = __webpack_require__(262);
+	
+	var _SectionHeaderJsx2 = _interopRequireDefault(_SectionHeaderJsx);
+	
+	var CounterSection = (function (_React$Component) {
+	    _inherits(CounterSection, _React$Component);
+	
+	    function CounterSection() {
+	        _classCallCheck(this, CounterSection);
+	
+	        _get(Object.getPrototypeOf(CounterSection.prototype), 'constructor', this).apply(this, arguments);
+	    }
+	
+	    _createClass(CounterSection, [{
+	        key: 'render',
+	        value: function render() {
+	
+	            var counterUpStyle = {
+	                backgroundImage: 'url(img/counter-bg.jpg)'
+	            };
+	
+	            return _react2['default'].createElement(
+	                'section',
+	                { id: 'counter-section' },
+	                _react2['default'].createElement(
+	                    'div',
+	                    { id: 'counter-up-trigger', className: 'counter-up text-white parallax', 'data-stellar-background-ratio': '0.5', style: counterUpStyle },
+	                    _react2['default'].createElement('div', { className: 'cover' }),
+	                    _react2['default'].createElement(_SectionHeaderJsx2['default'], { header: 'Our Nutritionist Secrets', subtitle: 'Pssst! Yes we know what we do!' }),
+	                    _react2['default'].createElement(
+	                        'div',
+	                        { className: 'container' },
+	                        _react2['default'].createElement(
+	                            'div',
+	                            { className: 'row' },
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'fact text-center col-md-4 col-sm-6' },
+	                                _react2['default'].createElement(
+	                                    'div',
+	                                    { className: 'fact-inner' },
+	                                    _react2['default'].createElement('i', { className: 'fa fa-medkit fa-3x' }),
+	                                    _react2['default'].createElement('div', { className: 'extra-space-l' }),
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'counter' },
+	                                        '100'
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'counter-add' },
+	                                        '+'
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'p',
+	                                        { className: 'lead' },
+	                                        'Patients Helped a Month'
+	                                    )
+	                                )
+	                            ),
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'fact text-center col-md-4 col-sm-6' },
+	                                _react2['default'].createElement(
+	                                    'div',
+	                                    { className: 'fact-inner' },
+	                                    _react2['default'].createElement('i', { className: 'fa fa-flask fa-3x' }),
+	                                    _react2['default'].createElement('div', { className: 'extra-space-l' }),
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'counter' },
+	                                        '10'
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'counter-add' },
+	                                        '+'
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'p',
+	                                        { className: 'lead' },
+	                                        'Years of Experience'
+	                                    )
+	                                )
+	                            ),
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'fact text-center col-md-4 col-sm-6' },
+	                                _react2['default'].createElement(
+	                                    'div',
+	                                    { className: 'fact-inner' },
+	                                    _react2['default'].createElement('i', { className: 'fa fa-trophy fa-3x' }),
+	                                    _react2['default'].createElement('div', { className: 'extra-space-l' }),
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'counter' },
+	                                        '15'
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'counter-add' },
+	                                        '+'
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'p',
+	                                        { className: 'lead' },
+	                                        'Certificates and Accomplishments'
+	                                    )
+	                                )
+	                            )
+	                        )
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return CounterSection;
+	})(_react2['default'].Component);
+	
+	exports['default'] = CounterSection;
+	module.exports = exports['default'];
+
+/***/ },
+/* 264 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _SectionHeaderJsx = __webpack_require__(262);
+	
+	var _SectionHeaderJsx2 = _interopRequireDefault(_SectionHeaderJsx);
+	
+	var ServicesSection = (function (_React$Component) {
+	    _inherits(ServicesSection, _React$Component);
+	
+	    function ServicesSection() {
+	        _classCallCheck(this, ServicesSection);
+	
+	        _get(Object.getPrototypeOf(ServicesSection.prototype), 'constructor', this).apply(this, arguments);
+	    }
+	
+	    _createClass(ServicesSection, [{
+	        key: 'render',
+	        value: function render() {
+	
+	            var whatsAppStyle = {
+	                width: '30px'
+	            };
+	
+	            return _react2['default'].createElement(
+	                'section',
+	                { id: 'services-section', className: 'page text-center' },
+	                _react2['default'].createElement(_SectionHeaderJsx2['default'], { header: 'Services', subtitle: 'All of this for you!' }),
+	                _react2['default'].createElement(
+	                    'div',
+	                    { className: 'rotate-box-2-wrapper' },
+	                    _react2['default'].createElement(
+	                        'div',
+	                        { className: 'container' },
+	                        _react2['default'].createElement(
+	                            'div',
+	                            { className: 'row' },
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'col-md-3 col-sm-6' },
+	                                _react2['default'].createElement(
+	                                    'a',
+	                                    { className: 'rotate-box-2 square-icon text-center wow zoomIn', 'data-wow-delay': '0' },
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'rotate-box-icon' },
+	                                        _react2['default'].createElement('i', { className: 'fa fa-heart' })
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'div',
+	                                        { className: 'rotate-box-info' },
+	                                        _react2['default'].createElement(
+	                                            'h4',
+	                                            null,
+	                                            'Love'
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'p',
+	                                            null,
+	                                            'We will help you learn to love and care for your wellbeing.'
+	                                        )
+	                                    )
+	                                )
+	                            ),
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'col-md-3 col-sm-6' },
+	                                _react2['default'].createElement(
+	                                    'a',
+	                                    { className: 'rotate-box-2 square-icon text-center wow zoomIn', 'data-wow-delay': '0.2s' },
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'rotate-box-icon' },
+	                                        _react2['default'].createElement('i', { className: 'fa fa-book' })
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'div',
+	                                        { className: 'rotate-box-info' },
+	                                        _react2['default'].createElement(
+	                                            'h4',
+	                                            null,
+	                                            'Experts'
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'p',
+	                                            null,
+	                                            'Our team is highly skilled and nationally renowned in the human nutrition and wellbeing field.'
+	                                        )
+	                                    )
+	                                )
+	                            ),
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'col-md-3 col-sm-6' },
+	                                _react2['default'].createElement(
+	                                    'a',
+	                                    { className: 'rotate-box-2 square-icon text-center wow zoomIn', 'data-wow-delay': '0.4s' },
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'rotate-box-icon' },
+	                                        _react2['default'].createElement('i', { className: 'fa fa-mobile' })
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'div',
+	                                        { className: 'rotate-box-info' },
+	                                        _react2['default'].createElement(
+	                                            'h4',
+	                                            null,
+	                                            'Success'
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'p',
+	                                            null,
+	                                            'We do not believe in fad diets, or quick fix, we will guide to achieve a healthy lifestyle that you can enjoy and live with for the rest of your life.'
+	                                        )
+	                                    )
+	                                )
+	                            ),
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'col-md-3 col-sm-6' },
+	                                _react2['default'].createElement(
+	                                    'a',
+	                                    { className: 'rotate-box-2 square-icon text-center wow zoomIn', 'data-wow-delay': '0.6s' },
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'rotate-box-icon' },
+	                                        _react2['default'].createElement('i', { className: 'fa fa-pagelines' })
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'div',
+	                                        { className: 'rotate-box-info' },
+	                                        _react2['default'].createElement(
+	                                            'h4',
+	                                            null,
+	                                            'Eco Friendly'
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'p',
+	                                            null,
+	                                            _react2['default'].createElement(
+	                                                'strong',
+	                                                null,
+	                                                'Papreless!'
+	                                            ),
+	                                            ' Saving the trees by refusing to handle applications with papers.'
+	                                        )
+	                                    )
+	                                )
+	                            )
+	                        )
+	                    ),
+	                    _react2['default'].createElement(
+	                        'div',
+	                        { className: 'container' },
+	                        _react2['default'].createElement('div', { className: 'extra-space-l' }),
+	                        _react2['default'].createElement(
+	                            'div',
+	                            { className: 'text-center' },
+	                            _react2['default'].createElement(
+	                                'a',
+	                                { className: 'btn btn-default btn-lg-xl page-scroll', href: '#prices-section' },
+	                                'Apply Now!'
+	                            )
+	                        )
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return ServicesSection;
+	})(_react2['default'].Component);
+	
+	exports['default'] = ServicesSection;
+	module.exports = exports['default'];
+
+/***/ },
+/* 265 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _SectionHeaderJsx = __webpack_require__(262);
+	
+	var _SectionHeaderJsx2 = _interopRequireDefault(_SectionHeaderJsx);
+	
+	var TestimonialsSection = (function (_React$Component) {
+	    _inherits(TestimonialsSection, _React$Component);
+	
+	    function TestimonialsSection() {
+	        _classCallCheck(this, TestimonialsSection);
+	
+	        _get(Object.getPrototypeOf(TestimonialsSection.prototype), 'constructor', this).apply(this, arguments);
+	    }
+	
+	    _createClass(TestimonialsSection, [{
+	        key: 'render',
+	        value: function render() {
+	
+	            var triggerStyle = {
+	                backgroundImage: 'url(img/testimonial-bg.jpg)'
+	            };
+	
+	            return _react2['default'].createElement(
+	                'section',
+	                { id: 'testimonial-section' },
+	                _react2['default'].createElement(
+	                    'div',
+	                    { id: 'testimonial-trigger', className: 'testimonial text-white parallax', 'data-stellar-background-ratio': '0.5', style: triggerStyle },
+	                    _react2['default'].createElement('div', { className: 'cover' }),
+	                    _react2['default'].createElement(_SectionHeaderJsx2['default'], { header: 'Reviews', subtitle: 'What people say about us' }),
+	                    _react2['default'].createElement(
+	                        'div',
+	                        { className: 'container' },
+	                        _react2['default'].createElement(
+	                            'div',
+	                            { className: 'testimonial-inner center-block text-center' },
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { id: 'owl-testimonial', className: 'owl-carousel' },
+	                                _react2['default'].createElement(
+	                                    'div',
+	                                    { className: 'item' },
+	                                    _react2['default'].createElement(
+	                                        'blockquote',
+	                                        null,
+	                                        _react2['default'].createElement(
+	                                            'p',
+	                                            null,
+	                                            '"This was my first experience with that team and outperformed my expectation! They know there stuff and I highly recommend them! A+++".'
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'footer',
+	                                            null,
+	                                            _react2['default'].createElement(
+	                                                'cite',
+	                                                { title: 'Source Title' },
+	                                                'Daryl Hodgeman'
+	                                            )
+	                                        )
+	                                    )
+	                                ),
+	                                _react2['default'].createElement(
+	                                    'div',
+	                                    { className: 'item' },
+	                                    _react2['default'].createElement(
+	                                        'blockquote',
+	                                        null,
+	                                        _react2['default'].createElement(
+	                                            'p',
+	                                            null,
+	                                            '"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."'
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'footer',
+	                                            null,
+	                                            _react2['default'].createElement(
+	                                                'cite',
+	                                                { title: 'Source Title' },
+	                                                'John Doe'
+	                                            )
+	                                        )
+	                                    )
+	                                ),
+	                                _react2['default'].createElement(
+	                                    'div',
+	                                    { className: 'item' },
+	                                    _react2['default'].createElement(
+	                                        'blockquote',
+	                                        null,
+	                                        _react2['default'].createElement(
+	                                            'p',
+	                                            null,
+	                                            '"Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit".'
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'footer',
+	                                            null,
+	                                            _react2['default'].createElement(
+	                                                'cite',
+	                                                { title: 'Source Title' },
+	                                                'John Doe'
+	                                            )
+	                                        )
+	                                    )
+	                                )
+	                            )
+	                        )
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return TestimonialsSection;
+	})(_react2['default'].Component);
+	
+	exports['default'] = TestimonialsSection;
+	module.exports = exports['default'];
+
+/***/ },
+/* 266 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _SectionHeaderJsx = __webpack_require__(262);
+	
+	var _SectionHeaderJsx2 = _interopRequireDefault(_SectionHeaderJsx);
+	
+	var _MoreInfoModalJsx = __webpack_require__(267);
+	
+	var _MoreInfoModalJsx2 = _interopRequireDefault(_MoreInfoModalJsx);
+	
+	var PricesSection = (function (_React$Component) {
+	    _inherits(PricesSection, _React$Component);
+	
+	    function PricesSection() {
+	        _classCallCheck(this, PricesSection);
+	
+	        _get(Object.getPrototypeOf(PricesSection.prototype), 'constructor', this).apply(this, arguments);
+	    }
+	
+	    _createClass(PricesSection, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2['default'].createElement(
+	                'section',
+	                { id: 'prices-section', className: 'page' },
+	                _react2['default'].createElement(_SectionHeaderJsx2['default'], { header: 'Prices', subtitle: 'Cheaper While Still Convenient' }),
+	                _react2['default'].createElement('div', { className: 'extra-space-l' }),
+	                _react2['default'].createElement(
+	                    'div',
+	                    { className: 'prices' },
+	                    _react2['default'].createElement(
+	                        'div',
+	                        { className: 'container' },
+	                        _react2['default'].createElement(
+	                            'div',
+	                            { className: 'row' },
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'price-box col-sm-6 col-md-4 wow flipInY', 'data-wow-delay': '0.3s' },
+	                                _react2['default'].createElement(
+	                                    'div',
+	                                    { className: 'panel panel-default' },
+	                                    _react2['default'].createElement(
+	                                        'div',
+	                                        { className: 'panel-heading text-center' },
+	                                        _react2['default'].createElement('i', { className: 'fa fa-plug fa-2x' }),
+	                                        _react2['default'].createElement(
+	                                            'h3',
+	                                            null,
+	                                            'Basic'
+	                                        )
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'div',
+	                                        { className: 'panel-body text-center' },
+	                                        _react2['default'].createElement(
+	                                            'p',
+	                                            { className: 'lead' },
+	                                            _react2['default'].createElement(
+	                                                'strong',
+	                                                null,
+	                                                _react2['default'].createElement('i', { className: 'fa fa-ils' }),
+	                                                '100'
+	                                            )
+	                                        )
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'ul',
+	                                        { className: 'list-group text-center' },
+	                                        _react2['default'].createElement(
+	                                            'li',
+	                                            { className: 'list-group-item' },
+	                                            '1 Month'
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'li',
+	                                            { className: 'list-group-item' },
+	                                            'Text on Viber and Skype'
+	                                        )
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'div',
+	                                        { className: 'panel-footer text-center' },
+	                                        _react2['default'].createElement(
+	                                            'a',
+	                                            { className: 'btn btn-default', href: '#' },
+	                                            'Apply Now!'
+	                                        )
+	                                    )
+	                                )
+	                            ),
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'price-box col-sm-6 col-md-4 wow flipInY', 'data-wow-delay': '0.5s' },
+	                                _react2['default'].createElement(
+	                                    'div',
+	                                    { className: 'panel panel-default' },
+	                                    _react2['default'].createElement(
+	                                        'div',
+	                                        { className: 'panel-heading text-center' },
+	                                        _react2['default'].createElement('i', { className: 'fa fa-cog fa-2x' }),
+	                                        _react2['default'].createElement(
+	                                            'h3',
+	                                            null,
+	                                            'Motivated'
+	                                        )
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'div',
+	                                        { className: 'panel-body text-center' },
+	                                        _react2['default'].createElement(
+	                                            'p',
+	                                            { className: 'lead' },
+	                                            _react2['default'].createElement(
+	                                                'strong',
+	                                                null,
+	                                                _react2['default'].createElement('i', { className: 'fa fa-ils' }),
+	                                                '275'
+	                                            )
+	                                        )
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'ul',
+	                                        { className: 'list-group text-center' },
+	                                        _react2['default'].createElement(
+	                                            'li',
+	                                            { className: 'list-group-item' },
+	                                            '3 Months'
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'li',
+	                                            { className: 'list-group-item' },
+	                                            'Text/Call on Viber and Skype'
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'li',
+	                                            { className: 'list-group-item' },
+	                                            'Access to Private Blog by Nutritionist'
+	                                        )
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'div',
+	                                        { className: 'panel-footer text-center' },
+	                                        _react2['default'].createElement(
+	                                            'a',
+	                                            { className: 'btn btn-default', href: '#' },
+	                                            'Apply Now!'
+	                                        )
+	                                    )
+	                                )
+	                            ),
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'price-box col-sm-6 price-box-featured col-md-4 wow flipInY', 'data-wow-delay': '0.7s' },
+	                                _react2['default'].createElement(
+	                                    'div',
+	                                    { className: 'panel panel-default' },
+	                                    _react2['default'].createElement(
+	                                        'div',
+	                                        { className: 'panel-heading text-center' },
+	                                        _react2['default'].createElement('i', { className: 'fa fa-star fa-2x' }),
+	                                        _react2['default'].createElement(
+	                                            'h3',
+	                                            null,
+	                                            'Dedicated'
+	                                        )
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'div',
+	                                        { className: 'panel-body text-center' },
+	                                        _react2['default'].createElement(
+	                                            'p',
+	                                            { className: 'lead' },
+	                                            _react2['default'].createElement(
+	                                                'strong',
+	                                                null,
+	                                                _react2['default'].createElement('i', { className: 'fa fa-ils' }),
+	                                                '520'
+	                                            )
+	                                        )
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'ul',
+	                                        { className: 'list-group text-center' },
+	                                        _react2['default'].createElement(
+	                                            'li',
+	                                            { className: 'list-group-item' },
+	                                            '6 Months'
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'li',
+	                                            { className: 'list-group-item' },
+	                                            'Text/Call on Viber, Skype, Facebook Messenger, WhatsApp and email'
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'li',
+	                                            { className: 'list-group-item' },
+	                                            'Access to Private Blog by Nutritionist'
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'li',
+	                                            { className: 'list-group-item' },
+	                                            'Premium Nutrition Services (Weight management, Cancer, arthritic and collagen disorders, Hematology: anemia and blood disorders... and More) ',
+	                                            _react2['default'].createElement(_MoreInfoModalJsx2['default'], { modalText: 'Click Here To Learn More' })
+	                                        )
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'div',
+	                                        { className: 'panel-footer text-center' },
+	                                        _react2['default'].createElement(
+	                                            'a',
+	                                            { className: 'btn btn-default', href: '#' },
+	                                            'Apply Now!'
+	                                        )
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'div',
+	                                        { className: 'price-box-ribbon' },
+	                                        _react2['default'].createElement(
+	                                            'strong',
+	                                            null,
+	                                            'Best Offer!'
+	                                        )
+	                                    )
+	                                )
+	                            )
+	                        )
+	                    )
+	                ),
+	                _react2['default'].createElement('div', { className: 'extra-space-l' })
+	            );
+	        }
+	    }]);
+	
+	    return PricesSection;
+	})(_react2['default'].Component);
+	
+	exports['default'] = PricesSection;
+	module.exports = exports['default'];
+
+/***/ },
+/* 267 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactModalBootstrap = __webpack_require__(188);
+	
+	var ModalInfoModal = (function (_React$Component) {
+	    _inherits(ModalInfoModal, _React$Component);
+	
+	    function ModalInfoModal(props) {
+	        _classCallCheck(this, ModalInfoModal);
+	
+	        _get(Object.getPrototypeOf(ModalInfoModal.prototype), 'constructor', this).call(this, props);
+	        this.state = {
+	            isOpen: false
+	        };
+	    }
+	
+	    _createClass(ModalInfoModal, [{
+	        key: 'openModal',
+	        value: function openModal() {
+	            this.setState({
+	                isOpen: true
+	            });
+	        }
+	    }, {
+	        key: 'hideModal',
+	        value: function hideModal() {
+	            this.setState({
+	                isOpen: false
+	            });
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            var layoutStyle = {
+	                padding: "30px 0"
+	            };
+	
+	            var buttonStyle = {
+	                display: "inline"
+	            };
+	
+	            var backdropStyles = {
+	                base: {
+	                    background: 'rgba(0, 0, 0, .7)',
+	                    opacity: 0,
+	                    visibility: 'hidden',
+	                    transition: 'all 0.4s',
+	                    overflowX: 'hidden',
+	                    overflowY: 'auto',
+	                    zIndex: '999999',
+	                    position: 'fixed',
+	                    width: '100%',
+	                    height: '100%'
+	                },
+	                open: {
+	                    opacity: 1,
+	                    visibility: 'visible'
+	                }
+	            };
+	            return _react2['default'].createElement(
+	                'div',
+	                { className: 'layout-page' },
+	                _react2['default'].createElement(
+	                    'main',
+	                    { className: 'layout-main', style: layoutStyle },
+	                    _react2['default'].createElement(
+	                        'div',
+	                        null,
+	                        _react2['default'].createElement(
+	                            'button',
+	                            { className: 'btn btn-primary modalButton', onClick: this.openModal.bind(this) },
+	                            this.props.modalText
+	                        ),
+	                        _react2['default'].createElement(
+	                            _reactModalBootstrap.Modal,
+	                            { isOpen: this.state.isOpen, backdropStyles: backdropStyles, size: 'modal-lg', onRequestHide: this.hideModal.bind(this) },
+	                            _react2['default'].createElement(
+	                                _reactModalBootstrap.ModalHeader,
+	                                null,
+	                                _react2['default'].createElement(_reactModalBootstrap.ModalClose, { onClick: this.hideModal.bind(this) }),
+	                                _react2['default'].createElement(
+	                                    _reactModalBootstrap.ModalTitle,
+	                                    null,
+	                                    'Premium Nutrition Services'
+	                                )
+	                            ),
+	                            _react2['default'].createElement(
+	                                _reactModalBootstrap.ModalBody,
+	                                null,
+	                                _react2['default'].createElement(
+	                                    'p',
+	                                    null,
+	                                    _react2['default'].createElement(
+	                                        'strong',
+	                                        null,
+	                                        'Weight management and malnutrition:'
+	                                    ),
+	                                    ' Some Descritpion'
+	                                ),
+	                                _react2['default'].createElement('hr', null),
+	                                _react2['default'].createElement(
+	                                    'p',
+	                                    null,
+	                                    _react2['default'].createElement(
+	                                        'strong',
+	                                        null,
+	                                        'Endocrine disorders:'
+	                                    ),
+	                                    ' '
+	                                ),
+	                                _react2['default'].createElement('hr', null),
+	                                _react2['default'].createElement(
+	                                    'p',
+	                                    null,
+	                                    _react2['default'].createElement(
+	                                        'strong',
+	                                        null,
+	                                        'Cardiovascular disorders:'
+	                                    ),
+	                                    ' '
+	                                ),
+	                                _react2['default'].createElement('hr', null),
+	                                _react2['default'].createElement(
+	                                    'p',
+	                                    null,
+	                                    _react2['default'].createElement(
+	                                        'strong',
+	                                        null,
+	                                        'Gastrointestinal disorders:'
+	                                    ),
+	                                    ' '
+	                                ),
+	                                _react2['default'].createElement('hr', null),
+	                                _react2['default'].createElement(
+	                                    'p',
+	                                    null,
+	                                    _react2['default'].createElement(
+	                                        'strong',
+	                                        null,
+	                                        'Hepatic, pancreatic and biliary disorders:'
+	                                    ),
+	                                    ' '
+	                                ),
+	                                _react2['default'].createElement('hr', null),
+	                                _react2['default'].createElement(
+	                                    'p',
+	                                    null,
+	                                    _react2['default'].createElement(
+	                                        'strong',
+	                                        null,
+	                                        'Cancer:'
+	                                    ),
+	                                    ' '
+	                                ),
+	                                _react2['default'].createElement('hr', null),
+	                                _react2['default'].createElement(
+	                                    'p',
+	                                    null,
+	                                    _react2['default'].createElement(
+	                                        'strong',
+	                                        null,
+	                                        'Musculoskeletal, arthritic and collagen disorders:'
+	                                    ),
+	                                    ' '
+	                                ),
+	                                _react2['default'].createElement('hr', null),
+	                                _react2['default'].createElement(
+	                                    'p',
+	                                    null,
+	                                    _react2['default'].createElement(
+	                                        'strong',
+	                                        null,
+	                                        'Hematology: anemia and blood disorders:'
+	                                    ),
+	                                    ' '
+	                                ),
+	                                _react2['default'].createElement('hr', null),
+	                                _react2['default'].createElement(
+	                                    'p',
+	                                    null,
+	                                    _react2['default'].createElement(
+	                                        'strong',
+	                                        null,
+	                                        'Renal disorder:'
+	                                    ),
+	                                    ' '
+	                                ),
+	                                _react2['default'].createElement('hr', null),
+	                                _react2['default'].createElement(
+	                                    'p',
+	                                    null,
+	                                    'These require a ',
+	                                    _react2['default'].createElement(
+	                                        'strong',
+	                                        null,
+	                                        'dedicated'
+	                                    ),
+	                                    ' experience of 6 months or more. If you have any of the above we highly recommend you choosing this package'
+	                                )
+	                            ),
+	                            _react2['default'].createElement(
+	                                _reactModalBootstrap.ModalFooter,
+	                                null,
+	                                _react2['default'].createElement(
+	                                    'button',
+	                                    { className: 'btn btn-default', onClick: this.hideModal.bind(this) },
+	                                    'Close'
+	                                )
+	                            )
+	                        )
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return ModalInfoModal;
+	})(_react2['default'].Component);
+	
+	exports['default'] = ModalInfoModal;
+	module.exports = exports['default'];
+
+/***/ },
+/* 268 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _SectionHeaderJsx = __webpack_require__(262);
 	
 	var _SectionHeaderJsx2 = _interopRequireDefault(_SectionHeaderJsx);
 	
@@ -29172,7 +29477,7 @@
 	                  _react2['default'].createElement(
 	                    'div',
 	                    { className: 'member-image' },
-	                    _react2['default'].createElement('img', { className: 'img-responsive', src: 'img/team/SariSabouh.jpg', alt: '' })
+	                    _react2['default'].createElement('img', { className: 'img-responsive', src: 'img/team/MAYSARA.jpg', alt: '' })
 	                  ),
 	                  _react2['default'].createElement(
 	                    'div',
@@ -29244,7 +29549,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 268 */
+/* 269 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29267,7 +29572,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _SectionHeaderJsx = __webpack_require__(190);
+	var _SectionHeaderJsx = __webpack_require__(262);
 	
 	var _SectionHeaderJsx2 = _interopRequireDefault(_SectionHeaderJsx);
 	
@@ -29321,7 +29626,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 269 */
+/* 270 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29344,7 +29649,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _SectionHeaderJsx = __webpack_require__(190);
+	var _SectionHeaderJsx = __webpack_require__(262);
 	
 	var _SectionHeaderJsx2 = _interopRequireDefault(_SectionHeaderJsx);
 	
@@ -29411,7 +29716,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 270 */
+/* 271 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29434,7 +29739,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _SectionHeaderJsx = __webpack_require__(190);
+	var _SectionHeaderJsx = __webpack_require__(262);
 	
 	var _SectionHeaderJsx2 = _interopRequireDefault(_SectionHeaderJsx);
 	
@@ -29578,78 +29883,6 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 271 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, '__esModule', {
-	    value: true
-	});
-	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-	
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _LoginJsx = __webpack_require__(272);
-	
-	var _LoginJsx2 = _interopRequireDefault(_LoginJsx);
-	
-	var _RegisterJsx = __webpack_require__(273);
-	
-	var _RegisterJsx2 = _interopRequireDefault(_RegisterJsx);
-	
-	var loginView = undefined;
-	
-	var LoginManager = (function (_React$Component) {
-	    _inherits(LoginManager, _React$Component);
-	
-	    function LoginManager(props) {
-	        _classCallCheck(this, LoginManager);
-	
-	        _get(Object.getPrototypeOf(LoginManager.prototype), 'constructor', this).call(this, props);
-	        this.setLoginView = this.setLoginView.bind(this);
-	        loginView = _react2['default'].createElement(_LoginJsx2['default'], { setLoginView: this.setLoginView });
-	    }
-	
-	    _createClass(LoginManager, [{
-	        key: 'setLoginView',
-	        value: function setLoginView(buttonPressed) {
-	            if (buttonPressed == "register") {
-	                loginView = _react2['default'].createElement(_RegisterJsx2['default'], { setLoginView: this.setLoginView });
-	            } else {
-	                loginView = _react2['default'].createElement(_LoginJsx2['default'], { setLoginView: this.setLoginView });
-	            }
-	            this.forceUpdate();
-	        }
-	    }, {
-	        key: 'render',
-	        value: function render() {
-	            return _react2['default'].createElement(
-	                'div',
-	                null,
-	                loginView
-	            );
-	        }
-	    }]);
-	
-	    return LoginManager;
-	})(_react2['default'].Component);
-	
-	exports['default'] = LoginManager;
-	module.exports = exports['default'];
-
-/***/ },
 /* 272 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -29673,84 +29906,39 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reactDom = __webpack_require__(32);
+	var _LoginJsx = __webpack_require__(273);
 	
-	var _reactDom2 = _interopRequireDefault(_reactDom);
+	var _LoginJsx2 = _interopRequireDefault(_LoginJsx);
 	
 	var _componentsNavigationBarNavigationBarJsx = __webpack_require__(184);
 	
 	var _componentsNavigationBarNavigationBarJsx2 = _interopRequireDefault(_componentsNavigationBarNavigationBarJsx);
 	
-	var Login = (function (_React$Component) {
-	    _inherits(Login, _React$Component);
+	var LoginManager = (function (_React$Component) {
+	    _inherits(LoginManager, _React$Component);
 	
-	    function Login() {
-	        _classCallCheck(this, Login);
+	    function LoginManager() {
+	        _classCallCheck(this, LoginManager);
 	
-	        _get(Object.getPrototypeOf(Login.prototype), 'constructor', this).apply(this, arguments);
+	        _get(Object.getPrototypeOf(LoginManager.prototype), 'constructor', this).apply(this, arguments);
 	    }
 	
-	    _createClass(Login, [{
+	    _createClass(LoginManager, [{
 	        key: 'render',
 	        value: function render() {
 	
-	            $('#test').click(function () {
-	                console.log('#email'.val());
-	            });
-	
 	            return _react2['default'].createElement(
 	                'div',
-	                null,
-	                _react2['default'].createElement(_componentsNavigationBarNavigationBarJsx2['default'], null),
-	                _react2['default'].createElement(
-	                    'div',
-	                    { className: 'wrapper' },
-	                    _react2['default'].createElement(
-	                        'form',
-	                        { action: '/login', method: 'post', className: 'login' },
-	                        _react2['default'].createElement(
-	                            'p',
-	                            { className: 'title' },
-	                            'Log in'
-	                        ),
-	                        _react2['default'].createElement('input', { className: 'form-control', type: 'email', placeholder: 'Email address', id: 'email', name: 'email', autoFocus: 'autofocus', required: true }),
-	                        _react2['default'].createElement('i', { className: 'fa fa-user' }),
-	                        _react2['default'].createElement('input', { className: 'form-control', type: 'password', placeholder: 'Password', id: 'password', name: 'password', required: true }),
-	                        _react2['default'].createElement('i', { className: 'fa fa-key' }),
-	                        _react2['default'].createElement(
-	                            'a',
-	                            { href: '#' },
-	                            'Forgot your password?'
-	                        ),
-	                        _react2['default'].createElement(
-	                            'button',
-	                            { id: 'test', type: 'submit' },
-	                            _react2['default'].createElement('i', { className: 'spinner' }),
-	                            _react2['default'].createElement(
-	                                'span',
-	                                { className: 'state' },
-	                                'Log in'
-	                            )
-	                        )
-	                    ),
-	                    _react2['default'].createElement(
-	                        'p',
-	                        null,
-	                        _react2['default'].createElement(
-	                            'a',
-	                            { href: '/index', href: '/index' },
-	                            'Back to home page'
-	                        )
-	                    )
-	                )
+	                { id: 'Login' },
+	                _react2['default'].createElement(_componentsNavigationBarNavigationBarJsx2['default'], null)
 	            );
 	        }
 	    }]);
 	
-	    return Login;
+	    return LoginManager;
 	})(_react2['default'].Component);
 	
-	exports['default'] = Login;
+	exports['default'] = LoginManager;
 	module.exports = exports['default'];
 
 /***/ },
@@ -29777,5157 +29965,105 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _follow = __webpack_require__(274);
+	var _reactDom = __webpack_require__(32);
 	
-	var _follow2 = _interopRequireDefault(_follow);
+	var _reactDom2 = _interopRequireDefault(_reactDom);
 	
-	var _client = __webpack_require__(275);
+	var Login = (function (_React$Component) {
+	    _inherits(Login, _React$Component);
 	
-	var _client2 = _interopRequireDefault(_client);
+	    function Login() {
+	        _classCallCheck(this, Login);
 	
-	var Register = (function (_React$Component) {
-	    _inherits(Register, _React$Component);
-	
-	    function Register(props) {
-	        _classCallCheck(this, Register);
-	
-	        _get(Object.getPrototypeOf(Register.prototype), 'constructor', this).call(this, props);
-	        this.createAccount = this.createAccount.bind(this);
+	        _get(Object.getPrototypeOf(Login.prototype), 'constructor', this).apply(this, arguments);
 	    }
 	
-	    _createClass(Register, [{
+	    _createClass(Login, [{
 	        key: 'render',
 	        value: function render() {
-	            var _this = this;
-	
-	            $(document).ready(function () {
-	                $("#registrationForm").submit(function (e) {
-	                    e.preventDefault();
-	                });
-	            });
-	
 	            return _react2['default'].createElement(
 	                'div',
-	                null,
+	                { className: 'top-content' },
 	                _react2['default'].createElement(
-	                    'form',
-	                    { id: 'registrationForm' },
+	                    'div',
+	                    { className: 'inner-bg' },
 	                    _react2['default'].createElement(
 	                        'div',
-	                        { className: 'form-group' },
+	                        { className: 'container' },
 	                        _react2['default'].createElement(
-	                            'label',
-	                            { htmlFor: 'username' },
-	                            'Username:'
-	                        ),
-	                        _react2['default'].createElement('input', { type: 'text', className: 'form-control', id: 'username', placeholder: 'Enter username', required: true })
-	                    ),
-	                    _react2['default'].createElement(
-	                        'div',
-	                        { className: 'form-group' },
-	                        _react2['default'].createElement(
-	                            'label',
-	                            { htmlFor: 'password' },
-	                            'Password:'
-	                        ),
-	                        _react2['default'].createElement('input', { type: 'password', className: 'form-control', id: 'password', placeholder: 'Enter password', required: true })
-	                    ),
-	                    _react2['default'].createElement(
-	                        'div',
-	                        { className: 'form-group' },
-	                        _react2['default'].createElement(
-	                            'label',
-	                            { htmlFor: 'email' },
-	                            'Email:'
-	                        ),
-	                        _react2['default'].createElement('input', { type: 'email', className: 'form-control', id: 'email', placeholder: 'Enter email', required: true })
-	                    ),
-	                    _react2['default'].createElement(
-	                        'div',
-	                        { className: 'form-group' },
-	                        _react2['default'].createElement(
-	                            'label',
-	                            { htmlFor: 'firstName' },
-	                            'First Name:'
-	                        ),
-	                        _react2['default'].createElement('input', { type: 'text', className: 'form-control', id: 'firstName', placeholder: 'Enter first name', required: true })
-	                    ),
-	                    _react2['default'].createElement(
-	                        'div',
-	                        { className: 'form-group' },
-	                        _react2['default'].createElement(
-	                            'label',
-	                            { htmlFor: 'lastName' },
-	                            'Last Name:'
-	                        ),
-	                        _react2['default'].createElement('input', { type: 'text', className: 'form-control', id: 'lastName', placeholder: 'Enter last name', required: true })
-	                    ),
-	                    _react2['default'].createElement(
-	                        'button',
-	                        { type: 'submit', onClick: function () {
-	                                _this.createAccount();
-	                            }, className: 'btn btn-success' },
-	                        'Create Account'
-	                    ),
-	                    _react2['default'].createElement(
-	                        'button',
-	                        { type: 'button', onClick: function () {
-	                                _this.props.setLoginView("login");
-	                            }, className: 'btn btn-warning' },
-	                        'Already have an account? Login!'
+	                            'div',
+	                            { className: 'row' },
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'col-sm-5' },
+	                                _react2['default'].createElement(
+	                                    'div',
+	                                    { className: 'form-box' },
+	                                    _react2['default'].createElement(
+	                                        'div',
+	                                        { className: 'form-top' },
+	                                        _react2['default'].createElement(
+	                                            'div',
+	                                            { className: 'form-top-left' },
+	                                            _react2['default'].createElement(
+	                                                'h3',
+	                                                null,
+	                                                'Login to our site'
+	                                            )
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'div',
+	                                            { className: 'form-top-right' },
+	                                            _react2['default'].createElement('i', { className: 'fa fa-key' })
+	                                        )
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'div',
+	                                        { className: 'form-bottom' },
+	                                        _react2['default'].createElement(
+	                                            'form',
+	                                            { className: 'login-form' },
+	                                            _react2['default'].createElement(
+	                                                'div',
+	                                                { className: 'form-group' },
+	                                                _react2['default'].createElement(
+	                                                    'label',
+	                                                    { className: 'sr-only' },
+	                                                    'Username'
+	                                                ),
+	                                                _react2['default'].createElement('input', { type: 'text', placeholder: 'Username...', className: 'form-username form-control' })
+	                                            ),
+	                                            _react2['default'].createElement(
+	                                                'div',
+	                                                { className: 'form-group' },
+	                                                _react2['default'].createElement(
+	                                                    'label',
+	                                                    { className: 'sr-only' },
+	                                                    'Password'
+	                                                ),
+	                                                _react2['default'].createElement('input', { type: 'password', placeholder: 'Password...', className: 'form-password form-control' })
+	                                            ),
+	                                            _react2['default'].createElement(
+	                                                'button',
+	                                                { type: 'submit', className: 'btn' },
+	                                                'Sign in!'
+	                                            )
+	                                        )
+	                                    )
+	                                )
+	                            )
+	                        )
 	                    )
 	                )
 	            );
 	        }
-	    }, {
-	        key: 'createAccount',
-	        value: function createAccount() {
-	            var _this2 = this;
-	
-	            if ($('#firstName').val().length > 0 && $('#lastName').val().length > 0 && $('#username').val().length > 0 && $('#password').val().length > 0 && $('#email').val().length > 0) {
-	                (function () {
-	                    var newAccount = { username: $("#username").val(), password: $("#password").val(), email: $("#email").val(), firstName: $("#firstName").val(), lastName: $("#lastName").val() };
-	                    (0, _follow2['default'])(_client2['default'], '/api', ['accounts']).then(function (reminderCollection) {
-	                        return (0, _client2['default'])({
-	                            method: 'POST',
-	                            path: reminderCollection.entity._links.self.href,
-	                            entity: newAccount,
-	                            headers: { 'Content-Type': 'application/json' }
-	                        });
-	                    });
-	                    _this2.props.setStatus(true);
-	                    _this2.props.setLoginView("login");
-	                })();
-	            }
-	        }
 	    }]);
 	
-	    return Register;
+	    return Login;
 	})(_react2['default'].Component);
 	
-	exports['default'] = Register;
+	exports['default'] = Login;
 	module.exports = exports['default'];
-
-/***/ },
-/* 274 */
-/***/ function(module, exports) {
-
-	'use strict';
-	
-	module.exports = function follow(api, rootPath, relArray) {
-		var root = api({
-			method: 'GET',
-			path: rootPath
-		});
-	
-		return relArray.reduce(function (root, arrayItem) {
-			var rel = typeof arrayItem === 'string' ? arrayItem : arrayItem.rel;
-			return traverseNext(root, rel, arrayItem);
-		}, root);
-	
-		function traverseNext(root, rel, arrayItem) {
-			return root.then(function (response) {
-				if (hasEmbeddedRel(response.entity, rel)) {
-					return response.entity._embedded[rel];
-				}
-	
-				if (!response.entity._links) {
-					return [];
-				}
-	
-				if (typeof arrayItem === 'string') {
-					return api({
-						method: 'GET',
-						path: response.entity._links[rel].href
-					});
-				} else {
-					return api({
-						method: 'GET',
-						path: response.entity._links[rel].href,
-						params: arrayItem.params
-					});
-				}
-			});
-		}
-	
-		function hasEmbeddedRel(entity, rel) {
-			return entity._embedded && entity._embedded.hasOwnProperty(rel);
-		}
-	};
-
-/***/ },
-/* 275 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	var rest = __webpack_require__(276);
-	var defaultRequest = __webpack_require__(303);
-	var mime = __webpack_require__(305);
-	var uriTemplateInterceptor = __webpack_require__(319);
-	var errorCode = __webpack_require__(320);
-	var baseRegistry = __webpack_require__(307);
-	
-	var registry = baseRegistry.child();
-	
-	registry.register('text/uri-list', __webpack_require__(321));
-	registry.register('application/hal+json', __webpack_require__(308));
-	
-	module.exports = rest.wrap(mime, { registry: registry }).wrap(uriTemplateInterceptor).wrap(errorCode).wrap(defaultRequest, { headers: { 'Accept': 'application/hal+json' } });
-
-/***/ },
-/* 276 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;/*
-	 * Copyright 2014 the original author or authors
-	 * @license MIT, see LICENSE.txt for details
-	 *
-	 * @author Scott Andrews
-	 */
-	
-	(function (define) {
-		'use strict';
-	
-		!(__WEBPACK_AMD_DEFINE_RESULT__ = function (require) {
-	
-			var rest = __webpack_require__(277),
-			    browser = __webpack_require__(279);
-	
-			rest.setPlatformDefaultClient(browser);
-	
-			return rest;
-	
-		}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	
-	}(
-		__webpack_require__(227)
-		// Boilerplate for AMD and Node
-	));
-
-
-/***/ },
-/* 277 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;/*
-	 * Copyright 2014 the original author or authors
-	 * @license MIT, see LICENSE.txt for details
-	 *
-	 * @author Scott Andrews
-	 */
-	
-	(function (define) {
-		'use strict';
-	
-		var undef;
-	
-		!(__WEBPACK_AMD_DEFINE_RESULT__ = function (require) {
-	
-			/**
-			 * Plain JS Object containing properties that represent an HTTP request.
-			 *
-			 * Depending on the capabilities of the underlying client, a request
-			 * may be cancelable. If a request may be canceled, the client will add
-			 * a canceled flag and cancel function to the request object. Canceling
-			 * the request will put the response into an error state.
-			 *
-			 * @field {string} [method='GET'] HTTP method, commonly GET, POST, PUT, DELETE or HEAD
-			 * @field {string|UrlBuilder} [path=''] path template with optional path variables
-			 * @field {Object} [params] parameters for the path template and query string
-			 * @field {Object} [headers] custom HTTP headers to send, in addition to the clients default headers
-			 * @field [entity] the HTTP entity, common for POST or PUT requests
-			 * @field {boolean} [canceled] true if the request has been canceled, set by the client
-			 * @field {Function} [cancel] cancels the request if invoked, provided by the client
-			 * @field {Client} [originator] the client that first handled this request, provided by the interceptor
-			 *
-			 * @class Request
-			 */
-	
-			/**
-			 * Plain JS Object containing properties that represent an HTTP response
-			 *
-			 * @field {Object} [request] the request object as received by the root client
-			 * @field {Object} [raw] the underlying request object, like XmlHttpRequest in a browser
-			 * @field {number} [status.code] status code of the response (i.e. 200, 404)
-			 * @field {string} [status.text] status phrase of the response
-			 * @field {Object] [headers] response headers hash of normalized name, value pairs
-			 * @field [entity] the response body
-			 *
-			 * @class Response
-			 */
-	
-			/**
-			 * HTTP client particularly suited for RESTful operations.
-			 *
-			 * @field {function} wrap wraps this client with a new interceptor returning the wrapped client
-			 *
-			 * @param {Request} the HTTP request
-			 * @returns {ResponsePromise<Response>} a promise the resolves to the HTTP response
-			 *
-			 * @class Client
-			 */
-	
-			 /**
-			  * Extended when.js Promises/A+ promise with HTTP specific helpers
-			  *q
-			  * @method entity promise for the HTTP entity
-			  * @method status promise for the HTTP status code
-			  * @method headers promise for the HTTP response headers
-			  * @method header promise for a specific HTTP response header
-			  *
-			  * @class ResponsePromise
-			  * @extends Promise
-			  */
-	
-			var client, target, platformDefault;
-	
-			client = __webpack_require__(278);
-	
-			/**
-			 * Make a request with the default client
-			 * @param {Request} the HTTP request
-			 * @returns {Promise<Response>} a promise the resolves to the HTTP response
-			 */
-			function defaultClient() {
-				return target.apply(undef, arguments);
-			}
-	
-			/**
-			 * Change the default client
-			 * @param {Client} client the new default client
-			 */
-			defaultClient.setDefaultClient = function setDefaultClient(client) {
-				target = client;
-			};
-	
-			/**
-			 * Obtain a direct reference to the current default client
-			 * @returns {Client} the default client
-			 */
-			defaultClient.getDefaultClient = function getDefaultClient() {
-				return target;
-			};
-	
-			/**
-			 * Reset the default client to the platform default
-			 */
-			defaultClient.resetDefaultClient = function resetDefaultClient() {
-				target = platformDefault;
-			};
-	
-			/**
-			 * @private
-			 */
-			defaultClient.setPlatformDefaultClient = function setPlatformDefaultClient(client) {
-				if (platformDefault) {
-					throw new Error('Unable to redefine platformDefaultClient');
-				}
-				target = platformDefault = client;
-			};
-	
-			return client(defaultClient);
-	
-		}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	
-	}(
-		__webpack_require__(227)
-		// Boilerplate for AMD and Node
-	));
-
-
-/***/ },
-/* 278 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;/*
-	 * Copyright 2014 the original author or authors
-	 * @license MIT, see LICENSE.txt for details
-	 *
-	 * @author Scott Andrews
-	 */
-	
-	(function (define) {
-		'use strict';
-	
-		!(__WEBPACK_AMD_DEFINE_RESULT__ = function (/* require */) {
-	
-			/**
-			 * Add common helper methods to a client impl
-			 *
-			 * @param {function} impl the client implementation
-			 * @param {Client} [target] target of this client, used when wrapping other clients
-			 * @returns {Client} the client impl with additional methods
-			 */
-			return function client(impl, target) {
-	
-				if (target) {
-	
-					/**
-					 * @returns {Client} the target client
-					 */
-					impl.skip = function skip() {
-						return target;
-					};
-	
-				}
-	
-				/**
-				 * Allow a client to easily be wrapped by an interceptor
-				 *
-				 * @param {Interceptor} interceptor the interceptor to wrap this client with
-				 * @param [config] configuration for the interceptor
-				 * @returns {Client} the newly wrapped client
-				 */
-				impl.wrap = function wrap(interceptor, config) {
-					return interceptor(impl, config);
-				};
-	
-				/**
-				 * @deprecated
-				 */
-				impl.chain = function chain() {
-					if (typeof console !== 'undefined') {
-						console.log('rest.js: client.chain() is deprecated, use client.wrap() instead');
-					}
-	
-					return impl.wrap.apply(this, arguments);
-				};
-	
-				return impl;
-	
-			};
-	
-		}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	
-	}(
-		__webpack_require__(227)
-		// Boilerplate for AMD and Node
-	));
-
-
-/***/ },
-/* 279 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;/*
-	 * Copyright 2012-2014 the original author or authors
-	 * @license MIT, see LICENSE.txt for details
-	 *
-	 * @author Scott Andrews
-	 */
-	
-	(function (define, global) {
-		'use strict';
-	
-		!(__WEBPACK_AMD_DEFINE_RESULT__ = function (require) {
-	
-			var when, UrlBuilder, normalizeHeaderName, responsePromise, client, headerSplitRE;
-	
-			when = __webpack_require__(280);
-			UrlBuilder = __webpack_require__(299);
-			normalizeHeaderName = __webpack_require__(301);
-			responsePromise = __webpack_require__(302);
-			client = __webpack_require__(278);
-	
-			// according to the spec, the line break is '\r\n', but doesn't hold true in practice
-			headerSplitRE = /[\r|\n]+/;
-	
-			function parseHeaders(raw) {
-				// Note: Set-Cookie will be removed by the browser
-				var headers = {};
-	
-				if (!raw) { return headers; }
-	
-				raw.trim().split(headerSplitRE).forEach(function (header) {
-					var boundary, name, value;
-					boundary = header.indexOf(':');
-					name = normalizeHeaderName(header.substring(0, boundary).trim());
-					value = header.substring(boundary + 1).trim();
-					if (headers[name]) {
-						if (Array.isArray(headers[name])) {
-							// add to an existing array
-							headers[name].push(value);
-						}
-						else {
-							// convert single value to array
-							headers[name] = [headers[name], value];
-						}
-					}
-					else {
-						// new, single value
-						headers[name] = value;
-					}
-				});
-	
-				return headers;
-			}
-	
-			function safeMixin(target, source) {
-				Object.keys(source || {}).forEach(function (prop) {
-					// make sure the property already exists as
-					// IE 6 will blow up if we add a new prop
-					if (source.hasOwnProperty(prop) && prop in target) {
-						try {
-							target[prop] = source[prop];
-						}
-						catch (e) {
-							// ignore, expected for some properties at some points in the request lifecycle
-						}
-					}
-				});
-	
-				return target;
-			}
-	
-			return client(function xhr(request) {
-				return responsePromise.promise(function (resolve, reject) {
-					/*jshint maxcomplexity:20 */
-	
-					var client, method, url, headers, entity, headerName, response, XMLHttpRequest;
-	
-					request = typeof request === 'string' ? { path: request } : request || {};
-					response = { request: request };
-	
-					if (request.canceled) {
-						response.error = 'precanceled';
-						reject(response);
-						return;
-					}
-	
-					entity = request.entity;
-					request.method = request.method || (entity ? 'POST' : 'GET');
-					method = request.method;
-					url = response.url = new UrlBuilder(request.path || '', request.params).build();
-	
-					XMLHttpRequest = request.engine || global.XMLHttpRequest;
-					if (!XMLHttpRequest) {
-						reject({ request: request, url: url, error: 'xhr-not-available' });
-						return;
-					}
-	
-					try {
-						client = response.raw = new XMLHttpRequest();
-	
-						// mixin extra request properties before and after opening the request as some properties require being set at different phases of the request
-						safeMixin(client, request.mixin);
-						client.open(method, url, true);
-						safeMixin(client, request.mixin);
-	
-						headers = request.headers;
-						for (headerName in headers) {
-							/*jshint forin:false */
-							if (headerName === 'Content-Type' && headers[headerName] === 'multipart/form-data') {
-								// XMLHttpRequest generates its own Content-Type header with the
-								// appropriate multipart boundary when sending multipart/form-data.
-								continue;
-							}
-	
-							client.setRequestHeader(headerName, headers[headerName]);
-						}
-	
-						request.canceled = false;
-						request.cancel = function cancel() {
-							request.canceled = true;
-							client.abort();
-							reject(response);
-						};
-	
-						client.onreadystatechange = function (/* e */) {
-							if (request.canceled) { return; }
-							if (client.readyState === (XMLHttpRequest.DONE || 4)) {
-								response.status = {
-									code: client.status,
-									text: client.statusText
-								};
-								response.headers = parseHeaders(client.getAllResponseHeaders());
-								response.entity = client.responseText;
-	
-								if (response.status.code > 0) {
-									// check status code as readystatechange fires before error event
-									resolve(response);
-								}
-								else {
-									// give the error callback a chance to fire before resolving
-									// requests for file:// URLs do not have a status code
-									setTimeout(function () {
-										resolve(response);
-									}, 0);
-								}
-							}
-						};
-	
-						try {
-							client.onerror = function (/* e */) {
-								response.error = 'loaderror';
-								reject(response);
-							};
-						}
-						catch (e) {
-							// IE 6 will not support error handling
-						}
-	
-						client.send(entity);
-					}
-					catch (e) {
-						response.error = 'loaderror';
-						reject(response);
-					}
-	
-				});
-			});
-	
-		}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	
-	}(
-		__webpack_require__(227),
-		typeof window !== 'undefined' ? window : void 0
-		// Boilerplate for AMD and Node
-	));
-
-
-/***/ },
-/* 280 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;/** @license MIT License (c) copyright 2010-2014 original author or authors */
-	
-	/**
-	 * Promises/A+ and when() implementation
-	 * when is part of the cujoJS family of libraries (http://cujojs.com/)
-	 * @author Brian Cavalier
-	 * @author John Hann
-	 */
-	(function(define) { 'use strict';
-	!(__WEBPACK_AMD_DEFINE_RESULT__ = function (require) {
-	
-		var timed = __webpack_require__(281);
-		var array = __webpack_require__(285);
-		var flow = __webpack_require__(288);
-		var fold = __webpack_require__(289);
-		var inspect = __webpack_require__(290);
-		var generate = __webpack_require__(291);
-		var progress = __webpack_require__(292);
-		var withThis = __webpack_require__(293);
-		var unhandledRejection = __webpack_require__(294);
-		var TimeoutError = __webpack_require__(284);
-	
-		var Promise = [array, flow, fold, generate, progress,
-			inspect, withThis, timed, unhandledRejection]
-			.reduce(function(Promise, feature) {
-				return feature(Promise);
-			}, __webpack_require__(296));
-	
-		var apply = __webpack_require__(287)(Promise);
-	
-		// Public API
-	
-		when.promise     = promise;              // Create a pending promise
-		when.resolve     = Promise.resolve;      // Create a resolved promise
-		when.reject      = Promise.reject;       // Create a rejected promise
-	
-		when.lift        = lift;                 // lift a function to return promises
-		when['try']      = attempt;              // call a function and return a promise
-		when.attempt     = attempt;              // alias for when.try
-	
-		when.iterate     = Promise.iterate;      // DEPRECATED (use cujojs/most streams) Generate a stream of promises
-		when.unfold      = Promise.unfold;       // DEPRECATED (use cujojs/most streams) Generate a stream of promises
-	
-		when.join        = join;                 // Join 2 or more promises
-	
-		when.all         = all;                  // Resolve a list of promises
-		when.settle      = settle;               // Settle a list of promises
-	
-		when.any         = lift(Promise.any);    // One-winner race
-		when.some        = lift(Promise.some);   // Multi-winner race
-		when.race        = lift(Promise.race);   // First-to-settle race
-	
-		when.map         = map;                  // Array.map() for promises
-		when.filter      = filter;               // Array.filter() for promises
-		when.reduce      = lift(Promise.reduce);       // Array.reduce() for promises
-		when.reduceRight = lift(Promise.reduceRight);  // Array.reduceRight() for promises
-	
-		when.isPromiseLike = isPromiseLike;      // Is something promise-like, aka thenable
-	
-		when.Promise     = Promise;              // Promise constructor
-		when.defer       = defer;                // Create a {promise, resolve, reject} tuple
-	
-		// Error types
-	
-		when.TimeoutError = TimeoutError;
-	
-		/**
-		 * Get a trusted promise for x, or by transforming x with onFulfilled
-		 *
-		 * @param {*} x
-		 * @param {function?} onFulfilled callback to be called when x is
-		 *   successfully fulfilled.  If promiseOrValue is an immediate value, callback
-		 *   will be invoked immediately.
-		 * @param {function?} onRejected callback to be called when x is
-		 *   rejected.
-		 * @param {function?} onProgress callback to be called when progress updates
-		 *   are issued for x. @deprecated
-		 * @returns {Promise} a new promise that will fulfill with the return
-		 *   value of callback or errback or the completion value of promiseOrValue if
-		 *   callback and/or errback is not supplied.
-		 */
-		function when(x, onFulfilled, onRejected, onProgress) {
-			var p = Promise.resolve(x);
-			if (arguments.length < 2) {
-				return p;
-			}
-	
-			return p.then(onFulfilled, onRejected, onProgress);
-		}
-	
-		/**
-		 * Creates a new promise whose fate is determined by resolver.
-		 * @param {function} resolver function(resolve, reject, notify)
-		 * @returns {Promise} promise whose fate is determine by resolver
-		 */
-		function promise(resolver) {
-			return new Promise(resolver);
-		}
-	
-		/**
-		 * Lift the supplied function, creating a version of f that returns
-		 * promises, and accepts promises as arguments.
-		 * @param {function} f
-		 * @returns {Function} version of f that returns promises
-		 */
-		function lift(f) {
-			return function() {
-				for(var i=0, l=arguments.length, a=new Array(l); i<l; ++i) {
-					a[i] = arguments[i];
-				}
-				return apply(f, this, a);
-			};
-		}
-	
-		/**
-		 * Call f in a future turn, with the supplied args, and return a promise
-		 * for the result.
-		 * @param {function} f
-		 * @returns {Promise}
-		 */
-		function attempt(f /*, args... */) {
-			/*jshint validthis:true */
-			for(var i=0, l=arguments.length-1, a=new Array(l); i<l; ++i) {
-				a[i] = arguments[i+1];
-			}
-			return apply(f, this, a);
-		}
-	
-		/**
-		 * Creates a {promise, resolver} pair, either or both of which
-		 * may be given out safely to consumers.
-		 * @return {{promise: Promise, resolve: function, reject: function, notify: function}}
-		 */
-		function defer() {
-			return new Deferred();
-		}
-	
-		function Deferred() {
-			var p = Promise._defer();
-	
-			function resolve(x) { p._handler.resolve(x); }
-			function reject(x) { p._handler.reject(x); }
-			function notify(x) { p._handler.notify(x); }
-	
-			this.promise = p;
-			this.resolve = resolve;
-			this.reject = reject;
-			this.notify = notify;
-			this.resolver = { resolve: resolve, reject: reject, notify: notify };
-		}
-	
-		/**
-		 * Determines if x is promise-like, i.e. a thenable object
-		 * NOTE: Will return true for *any thenable object*, and isn't truly
-		 * safe, since it may attempt to access the `then` property of x (i.e.
-		 *  clever/malicious getters may do weird things)
-		 * @param {*} x anything
-		 * @returns {boolean} true if x is promise-like
-		 */
-		function isPromiseLike(x) {
-			return x && typeof x.then === 'function';
-		}
-	
-		/**
-		 * Return a promise that will resolve only once all the supplied arguments
-		 * have resolved. The resolution value of the returned promise will be an array
-		 * containing the resolution values of each of the arguments.
-		 * @param {...*} arguments may be a mix of promises and values
-		 * @returns {Promise}
-		 */
-		function join(/* ...promises */) {
-			return Promise.all(arguments);
-		}
-	
-		/**
-		 * Return a promise that will fulfill once all input promises have
-		 * fulfilled, or reject when any one input promise rejects.
-		 * @param {array|Promise} promises array (or promise for an array) of promises
-		 * @returns {Promise}
-		 */
-		function all(promises) {
-			return when(promises, Promise.all);
-		}
-	
-		/**
-		 * Return a promise that will always fulfill with an array containing
-		 * the outcome states of all input promises.  The returned promise
-		 * will only reject if `promises` itself is a rejected promise.
-		 * @param {array|Promise} promises array (or promise for an array) of promises
-		 * @returns {Promise} promise for array of settled state descriptors
-		 */
-		function settle(promises) {
-			return when(promises, Promise.settle);
-		}
-	
-		/**
-		 * Promise-aware array map function, similar to `Array.prototype.map()`,
-		 * but input array may contain promises or values.
-		 * @param {Array|Promise} promises array of anything, may contain promises and values
-		 * @param {function(x:*, index:Number):*} mapFunc map function which may
-		 *  return a promise or value
-		 * @returns {Promise} promise that will fulfill with an array of mapped values
-		 *  or reject if any input promise rejects.
-		 */
-		function map(promises, mapFunc) {
-			return when(promises, function(promises) {
-				return Promise.map(promises, mapFunc);
-			});
-		}
-	
-		/**
-		 * Filter the provided array of promises using the provided predicate.  Input may
-		 * contain promises and values
-		 * @param {Array|Promise} promises array of promises and values
-		 * @param {function(x:*, index:Number):boolean} predicate filtering predicate.
-		 *  Must return truthy (or promise for truthy) for items to retain.
-		 * @returns {Promise} promise that will fulfill with an array containing all items
-		 *  for which predicate returned truthy.
-		 */
-		function filter(promises, predicate) {
-			return when(promises, function(promises) {
-				return Promise.filter(promises, predicate);
-			});
-		}
-	
-		return when;
-	}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	})(__webpack_require__(227));
-
-
-/***/ },
-/* 281 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;/** @license MIT License (c) copyright 2010-2014 original author or authors */
-	/** @author Brian Cavalier */
-	/** @author John Hann */
-	
-	(function(define) { 'use strict';
-	!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require) {
-	
-		var env = __webpack_require__(282);
-		var TimeoutError = __webpack_require__(284);
-	
-		function setTimeout(f, ms, x, y) {
-			return env.setTimer(function() {
-				f(x, y, ms);
-			}, ms);
-		}
-	
-		return function timed(Promise) {
-			/**
-			 * Return a new promise whose fulfillment value is revealed only
-			 * after ms milliseconds
-			 * @param {number} ms milliseconds
-			 * @returns {Promise}
-			 */
-			Promise.prototype.delay = function(ms) {
-				var p = this._beget();
-				this._handler.fold(handleDelay, ms, void 0, p._handler);
-				return p;
-			};
-	
-			function handleDelay(ms, x, h) {
-				setTimeout(resolveDelay, ms, x, h);
-			}
-	
-			function resolveDelay(x, h) {
-				h.resolve(x);
-			}
-	
-			/**
-			 * Return a new promise that rejects after ms milliseconds unless
-			 * this promise fulfills earlier, in which case the returned promise
-			 * fulfills with the same value.
-			 * @param {number} ms milliseconds
-			 * @param {Error|*=} reason optional rejection reason to use, defaults
-			 *   to a TimeoutError if not provided
-			 * @returns {Promise}
-			 */
-			Promise.prototype.timeout = function(ms, reason) {
-				var p = this._beget();
-				var h = p._handler;
-	
-				var t = setTimeout(onTimeout, ms, reason, p._handler);
-	
-				this._handler.visit(h,
-					function onFulfill(x) {
-						env.clearTimer(t);
-						this.resolve(x); // this = h
-					},
-					function onReject(x) {
-						env.clearTimer(t);
-						this.reject(x); // this = h
-					},
-					h.notify);
-	
-				return p;
-			};
-	
-			function onTimeout(reason, h, ms) {
-				var e = typeof reason === 'undefined'
-					? new TimeoutError('timed out after ' + ms + 'ms')
-					: reason;
-				h.reject(e);
-			}
-	
-			return Promise;
-		};
-	
-	}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	}(__webpack_require__(227)));
-
-
-/***/ },
-/* 282 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;var require;/* WEBPACK VAR INJECTION */(function(process) {/** @license MIT License (c) copyright 2010-2014 original author or authors */
-	/** @author Brian Cavalier */
-	/** @author John Hann */
-	
-	/*global process,document,setTimeout,clearTimeout,MutationObserver,WebKitMutationObserver*/
-	(function(define) { 'use strict';
-	!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require) {
-		/*jshint maxcomplexity:6*/
-	
-		// Sniff "best" async scheduling option
-		// Prefer process.nextTick or MutationObserver, then check for
-		// setTimeout, and finally vertx, since its the only env that doesn't
-		// have setTimeout
-	
-		var MutationObs;
-		var capturedSetTimeout = typeof setTimeout !== 'undefined' && setTimeout;
-	
-		// Default env
-		var setTimer = function(f, ms) { return setTimeout(f, ms); };
-		var clearTimer = function(t) { return clearTimeout(t); };
-		var asap = function (f) { return capturedSetTimeout(f, 0); };
-	
-		// Detect specific env
-		if (isNode()) { // Node
-			asap = function (f) { return process.nextTick(f); };
-	
-		} else if (MutationObs = hasMutationObserver()) { // Modern browser
-			asap = initMutationObserver(MutationObs);
-	
-		} else if (!capturedSetTimeout) { // vert.x
-			var vertxRequire = require;
-			var vertx = __webpack_require__(283);
-			setTimer = function (f, ms) { return vertx.setTimer(ms, f); };
-			clearTimer = vertx.cancelTimer;
-			asap = vertx.runOnLoop || vertx.runOnContext;
-		}
-	
-		return {
-			setTimer: setTimer,
-			clearTimer: clearTimer,
-			asap: asap
-		};
-	
-		function isNode () {
-			return typeof process !== 'undefined' &&
-				Object.prototype.toString.call(process) === '[object process]';
-		}
-	
-		function hasMutationObserver () {
-			return (typeof MutationObserver === 'function' && MutationObserver) ||
-				(typeof WebKitMutationObserver === 'function' && WebKitMutationObserver);
-		}
-	
-		function initMutationObserver(MutationObserver) {
-			var scheduled;
-			var node = document.createTextNode('');
-			var o = new MutationObserver(run);
-			o.observe(node, { characterData: true });
-	
-			function run() {
-				var f = scheduled;
-				scheduled = void 0;
-				f();
-			}
-	
-			var i = 0;
-			return function (f) {
-				scheduled = f;
-				node.data = (i ^= 1);
-			};
-		}
-	}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	}(__webpack_require__(227)));
-	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
-
-/***/ },
-/* 283 */
-/***/ function(module, exports) {
-
-	/* (ignored) */
-
-/***/ },
-/* 284 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;/** @license MIT License (c) copyright 2010-2014 original author or authors */
-	/** @author Brian Cavalier */
-	/** @author John Hann */
-	
-	(function(define) { 'use strict';
-	!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
-	
-		/**
-		 * Custom error type for promises rejected by promise.timeout
-		 * @param {string} message
-		 * @constructor
-		 */
-		function TimeoutError (message) {
-			Error.call(this);
-			this.message = message;
-			this.name = TimeoutError.name;
-			if (typeof Error.captureStackTrace === 'function') {
-				Error.captureStackTrace(this, TimeoutError);
-			}
-		}
-	
-		TimeoutError.prototype = Object.create(Error.prototype);
-		TimeoutError.prototype.constructor = TimeoutError;
-	
-		return TimeoutError;
-	}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	}(__webpack_require__(227)));
-
-/***/ },
-/* 285 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;/** @license MIT License (c) copyright 2010-2014 original author or authors */
-	/** @author Brian Cavalier */
-	/** @author John Hann */
-	
-	(function(define) { 'use strict';
-	!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require) {
-	
-		var state = __webpack_require__(286);
-		var applier = __webpack_require__(287);
-	
-		return function array(Promise) {
-	
-			var applyFold = applier(Promise);
-			var toPromise = Promise.resolve;
-			var all = Promise.all;
-	
-			var ar = Array.prototype.reduce;
-			var arr = Array.prototype.reduceRight;
-			var slice = Array.prototype.slice;
-	
-			// Additional array combinators
-	
-			Promise.any = any;
-			Promise.some = some;
-			Promise.settle = settle;
-	
-			Promise.map = map;
-			Promise.filter = filter;
-			Promise.reduce = reduce;
-			Promise.reduceRight = reduceRight;
-	
-			/**
-			 * When this promise fulfills with an array, do
-			 * onFulfilled.apply(void 0, array)
-			 * @param {function} onFulfilled function to apply
-			 * @returns {Promise} promise for the result of applying onFulfilled
-			 */
-			Promise.prototype.spread = function(onFulfilled) {
-				return this.then(all).then(function(array) {
-					return onFulfilled.apply(this, array);
-				});
-			};
-	
-			return Promise;
-	
-			/**
-			 * One-winner competitive race.
-			 * Return a promise that will fulfill when one of the promises
-			 * in the input array fulfills, or will reject when all promises
-			 * have rejected.
-			 * @param {array} promises
-			 * @returns {Promise} promise for the first fulfilled value
-			 */
-			function any(promises) {
-				var p = Promise._defer();
-				var resolver = p._handler;
-				var l = promises.length>>>0;
-	
-				var pending = l;
-				var errors = [];
-	
-				for (var h, x, i = 0; i < l; ++i) {
-					x = promises[i];
-					if(x === void 0 && !(i in promises)) {
-						--pending;
-						continue;
-					}
-	
-					h = Promise._handler(x);
-					if(h.state() > 0) {
-						resolver.become(h);
-						Promise._visitRemaining(promises, i, h);
-						break;
-					} else {
-						h.visit(resolver, handleFulfill, handleReject);
-					}
-				}
-	
-				if(pending === 0) {
-					resolver.reject(new RangeError('any(): array must not be empty'));
-				}
-	
-				return p;
-	
-				function handleFulfill(x) {
-					/*jshint validthis:true*/
-					errors = null;
-					this.resolve(x); // this === resolver
-				}
-	
-				function handleReject(e) {
-					/*jshint validthis:true*/
-					if(this.resolved) { // this === resolver
-						return;
-					}
-	
-					errors.push(e);
-					if(--pending === 0) {
-						this.reject(errors);
-					}
-				}
-			}
-	
-			/**
-			 * N-winner competitive race
-			 * Return a promise that will fulfill when n input promises have
-			 * fulfilled, or will reject when it becomes impossible for n
-			 * input promises to fulfill (ie when promises.length - n + 1
-			 * have rejected)
-			 * @param {array} promises
-			 * @param {number} n
-			 * @returns {Promise} promise for the earliest n fulfillment values
-			 *
-			 * @deprecated
-			 */
-			function some(promises, n) {
-				/*jshint maxcomplexity:7*/
-				var p = Promise._defer();
-				var resolver = p._handler;
-	
-				var results = [];
-				var errors = [];
-	
-				var l = promises.length>>>0;
-				var nFulfill = 0;
-				var nReject;
-				var x, i; // reused in both for() loops
-	
-				// First pass: count actual array items
-				for(i=0; i<l; ++i) {
-					x = promises[i];
-					if(x === void 0 && !(i in promises)) {
-						continue;
-					}
-					++nFulfill;
-				}
-	
-				// Compute actual goals
-				n = Math.max(n, 0);
-				nReject = (nFulfill - n + 1);
-				nFulfill = Math.min(n, nFulfill);
-	
-				if(n > nFulfill) {
-					resolver.reject(new RangeError('some(): array must contain at least '
-					+ n + ' item(s), but had ' + nFulfill));
-				} else if(nFulfill === 0) {
-					resolver.resolve(results);
-				}
-	
-				// Second pass: observe each array item, make progress toward goals
-				for(i=0; i<l; ++i) {
-					x = promises[i];
-					if(x === void 0 && !(i in promises)) {
-						continue;
-					}
-	
-					Promise._handler(x).visit(resolver, fulfill, reject, resolver.notify);
-				}
-	
-				return p;
-	
-				function fulfill(x) {
-					/*jshint validthis:true*/
-					if(this.resolved) { // this === resolver
-						return;
-					}
-	
-					results.push(x);
-					if(--nFulfill === 0) {
-						errors = null;
-						this.resolve(results);
-					}
-				}
-	
-				function reject(e) {
-					/*jshint validthis:true*/
-					if(this.resolved) { // this === resolver
-						return;
-					}
-	
-					errors.push(e);
-					if(--nReject === 0) {
-						results = null;
-						this.reject(errors);
-					}
-				}
-			}
-	
-			/**
-			 * Apply f to the value of each promise in a list of promises
-			 * and return a new list containing the results.
-			 * @param {array} promises
-			 * @param {function(x:*, index:Number):*} f mapping function
-			 * @returns {Promise}
-			 */
-			function map(promises, f) {
-				return Promise._traverse(f, promises);
-			}
-	
-			/**
-			 * Filter the provided array of promises using the provided predicate.  Input may
-			 * contain promises and values
-			 * @param {Array} promises array of promises and values
-			 * @param {function(x:*, index:Number):boolean} predicate filtering predicate.
-			 *  Must return truthy (or promise for truthy) for items to retain.
-			 * @returns {Promise} promise that will fulfill with an array containing all items
-			 *  for which predicate returned truthy.
-			 */
-			function filter(promises, predicate) {
-				var a = slice.call(promises);
-				return Promise._traverse(predicate, a).then(function(keep) {
-					return filterSync(a, keep);
-				});
-			}
-	
-			function filterSync(promises, keep) {
-				// Safe because we know all promises have fulfilled if we've made it this far
-				var l = keep.length;
-				var filtered = new Array(l);
-				for(var i=0, j=0; i<l; ++i) {
-					if(keep[i]) {
-						filtered[j++] = Promise._handler(promises[i]).value;
-					}
-				}
-				filtered.length = j;
-				return filtered;
-	
-			}
-	
-			/**
-			 * Return a promise that will always fulfill with an array containing
-			 * the outcome states of all input promises.  The returned promise
-			 * will never reject.
-			 * @param {Array} promises
-			 * @returns {Promise} promise for array of settled state descriptors
-			 */
-			function settle(promises) {
-				return all(promises.map(settleOne));
-			}
-	
-			function settleOne(p) {
-				var h = Promise._handler(p);
-				if(h.state() === 0) {
-					return toPromise(p).then(state.fulfilled, state.rejected);
-				}
-	
-				h._unreport();
-				return state.inspect(h);
-			}
-	
-			/**
-			 * Traditional reduce function, similar to `Array.prototype.reduce()`, but
-			 * input may contain promises and/or values, and reduceFunc
-			 * may return either a value or a promise, *and* initialValue may
-			 * be a promise for the starting value.
-			 * @param {Array|Promise} promises array or promise for an array of anything,
-			 *      may contain a mix of promises and values.
-			 * @param {function(accumulated:*, x:*, index:Number):*} f reduce function
-			 * @returns {Promise} that will resolve to the final reduced value
-			 */
-			function reduce(promises, f /*, initialValue */) {
-				return arguments.length > 2 ? ar.call(promises, liftCombine(f), arguments[2])
-						: ar.call(promises, liftCombine(f));
-			}
-	
-			/**
-			 * Traditional reduce function, similar to `Array.prototype.reduceRight()`, but
-			 * input may contain promises and/or values, and reduceFunc
-			 * may return either a value or a promise, *and* initialValue may
-			 * be a promise for the starting value.
-			 * @param {Array|Promise} promises array or promise for an array of anything,
-			 *      may contain a mix of promises and values.
-			 * @param {function(accumulated:*, x:*, index:Number):*} f reduce function
-			 * @returns {Promise} that will resolve to the final reduced value
-			 */
-			function reduceRight(promises, f /*, initialValue */) {
-				return arguments.length > 2 ? arr.call(promises, liftCombine(f), arguments[2])
-						: arr.call(promises, liftCombine(f));
-			}
-	
-			function liftCombine(f) {
-				return function(z, x, i) {
-					return applyFold(f, void 0, [z,x,i]);
-				};
-			}
-		};
-	
-	}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	}(__webpack_require__(227)));
-
-
-/***/ },
-/* 286 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;/** @license MIT License (c) copyright 2010-2014 original author or authors */
-	/** @author Brian Cavalier */
-	/** @author John Hann */
-	
-	(function(define) { 'use strict';
-	!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
-	
-		return {
-			pending: toPendingState,
-			fulfilled: toFulfilledState,
-			rejected: toRejectedState,
-			inspect: inspect
-		};
-	
-		function toPendingState() {
-			return { state: 'pending' };
-		}
-	
-		function toRejectedState(e) {
-			return { state: 'rejected', reason: e };
-		}
-	
-		function toFulfilledState(x) {
-			return { state: 'fulfilled', value: x };
-		}
-	
-		function inspect(handler) {
-			var state = handler.state();
-			return state === 0 ? toPendingState()
-				 : state > 0   ? toFulfilledState(handler.value)
-				               : toRejectedState(handler.value);
-		}
-	
-	}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	}(__webpack_require__(227)));
-
-
-/***/ },
-/* 287 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;/** @license MIT License (c) copyright 2010-2014 original author or authors */
-	/** @author Brian Cavalier */
-	/** @author John Hann */
-	
-	(function(define) { 'use strict';
-	!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
-	
-		makeApply.tryCatchResolve = tryCatchResolve;
-	
-		return makeApply;
-	
-		function makeApply(Promise, call) {
-			if(arguments.length < 2) {
-				call = tryCatchResolve;
-			}
-	
-			return apply;
-	
-			function apply(f, thisArg, args) {
-				var p = Promise._defer();
-				var l = args.length;
-				var params = new Array(l);
-				callAndResolve({ f:f, thisArg:thisArg, args:args, params:params, i:l-1, call:call }, p._handler);
-	
-				return p;
-			}
-	
-			function callAndResolve(c, h) {
-				if(c.i < 0) {
-					return call(c.f, c.thisArg, c.params, h);
-				}
-	
-				var handler = Promise._handler(c.args[c.i]);
-				handler.fold(callAndResolveNext, c, void 0, h);
-			}
-	
-			function callAndResolveNext(c, x, h) {
-				c.params[c.i] = x;
-				c.i -= 1;
-				callAndResolve(c, h);
-			}
-		}
-	
-		function tryCatchResolve(f, thisArg, args, resolver) {
-			try {
-				resolver.resolve(f.apply(thisArg, args));
-			} catch(e) {
-				resolver.reject(e);
-			}
-		}
-	
-	}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	}(__webpack_require__(227)));
-	
-	
-
-
-/***/ },
-/* 288 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;/** @license MIT License (c) copyright 2010-2014 original author or authors */
-	/** @author Brian Cavalier */
-	/** @author John Hann */
-	
-	(function(define) { 'use strict';
-	!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
-	
-		return function flow(Promise) {
-	
-			var resolve = Promise.resolve;
-			var reject = Promise.reject;
-			var origCatch = Promise.prototype['catch'];
-	
-			/**
-			 * Handle the ultimate fulfillment value or rejection reason, and assume
-			 * responsibility for all errors.  If an error propagates out of result
-			 * or handleFatalError, it will be rethrown to the host, resulting in a
-			 * loud stack track on most platforms and a crash on some.
-			 * @param {function?} onResult
-			 * @param {function?} onError
-			 * @returns {undefined}
-			 */
-			Promise.prototype.done = function(onResult, onError) {
-				this._handler.visit(this._handler.receiver, onResult, onError);
-			};
-	
-			/**
-			 * Add Error-type and predicate matching to catch.  Examples:
-			 * promise.catch(TypeError, handleTypeError)
-			 *   .catch(predicate, handleMatchedErrors)
-			 *   .catch(handleRemainingErrors)
-			 * @param onRejected
-			 * @returns {*}
-			 */
-			Promise.prototype['catch'] = Promise.prototype.otherwise = function(onRejected) {
-				if (arguments.length < 2) {
-					return origCatch.call(this, onRejected);
-				}
-	
-				if(typeof onRejected !== 'function') {
-					return this.ensure(rejectInvalidPredicate);
-				}
-	
-				return origCatch.call(this, createCatchFilter(arguments[1], onRejected));
-			};
-	
-			/**
-			 * Wraps the provided catch handler, so that it will only be called
-			 * if the predicate evaluates truthy
-			 * @param {?function} handler
-			 * @param {function} predicate
-			 * @returns {function} conditional catch handler
-			 */
-			function createCatchFilter(handler, predicate) {
-				return function(e) {
-					return evaluatePredicate(e, predicate)
-						? handler.call(this, e)
-						: reject(e);
-				};
-			}
-	
-			/**
-			 * Ensures that onFulfilledOrRejected will be called regardless of whether
-			 * this promise is fulfilled or rejected.  onFulfilledOrRejected WILL NOT
-			 * receive the promises' value or reason.  Any returned value will be disregarded.
-			 * onFulfilledOrRejected may throw or return a rejected promise to signal
-			 * an additional error.
-			 * @param {function} handler handler to be called regardless of
-			 *  fulfillment or rejection
-			 * @returns {Promise}
-			 */
-			Promise.prototype['finally'] = Promise.prototype.ensure = function(handler) {
-				if(typeof handler !== 'function') {
-					return this;
-				}
-	
-				return this.then(function(x) {
-					return runSideEffect(handler, this, identity, x);
-				}, function(e) {
-					return runSideEffect(handler, this, reject, e);
-				});
-			};
-	
-			function runSideEffect (handler, thisArg, propagate, value) {
-				var result = handler.call(thisArg);
-				return maybeThenable(result)
-					? propagateValue(result, propagate, value)
-					: propagate(value);
-			}
-	
-			function propagateValue (result, propagate, x) {
-				return resolve(result).then(function () {
-					return propagate(x);
-				});
-			}
-	
-			/**
-			 * Recover from a failure by returning a defaultValue.  If defaultValue
-			 * is a promise, it's fulfillment value will be used.  If defaultValue is
-			 * a promise that rejects, the returned promise will reject with the
-			 * same reason.
-			 * @param {*} defaultValue
-			 * @returns {Promise} new promise
-			 */
-			Promise.prototype['else'] = Promise.prototype.orElse = function(defaultValue) {
-				return this.then(void 0, function() {
-					return defaultValue;
-				});
-			};
-	
-			/**
-			 * Shortcut for .then(function() { return value; })
-			 * @param  {*} value
-			 * @return {Promise} a promise that:
-			 *  - is fulfilled if value is not a promise, or
-			 *  - if value is a promise, will fulfill with its value, or reject
-			 *    with its reason.
-			 */
-			Promise.prototype['yield'] = function(value) {
-				return this.then(function() {
-					return value;
-				});
-			};
-	
-			/**
-			 * Runs a side effect when this promise fulfills, without changing the
-			 * fulfillment value.
-			 * @param {function} onFulfilledSideEffect
-			 * @returns {Promise}
-			 */
-			Promise.prototype.tap = function(onFulfilledSideEffect) {
-				return this.then(onFulfilledSideEffect)['yield'](this);
-			};
-	
-			return Promise;
-		};
-	
-		function rejectInvalidPredicate() {
-			throw new TypeError('catch predicate must be a function');
-		}
-	
-		function evaluatePredicate(e, predicate) {
-			return isError(predicate) ? e instanceof predicate : predicate(e);
-		}
-	
-		function isError(predicate) {
-			return predicate === Error
-				|| (predicate != null && predicate.prototype instanceof Error);
-		}
-	
-		function maybeThenable(x) {
-			return (typeof x === 'object' || typeof x === 'function') && x !== null;
-		}
-	
-		function identity(x) {
-			return x;
-		}
-	
-	}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	}(__webpack_require__(227)));
-
-
-/***/ },
-/* 289 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;/** @license MIT License (c) copyright 2010-2014 original author or authors */
-	/** @author Brian Cavalier */
-	/** @author John Hann */
-	/** @author Jeff Escalante */
-	
-	(function(define) { 'use strict';
-	!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
-	
-		return function fold(Promise) {
-	
-			Promise.prototype.fold = function(f, z) {
-				var promise = this._beget();
-	
-				this._handler.fold(function(z, x, to) {
-					Promise._handler(z).fold(function(x, z, to) {
-						to.resolve(f.call(this, z, x));
-					}, x, this, to);
-				}, z, promise._handler.receiver, promise._handler);
-	
-				return promise;
-			};
-	
-			return Promise;
-		};
-	
-	}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	}(__webpack_require__(227)));
-
-
-/***/ },
-/* 290 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;/** @license MIT License (c) copyright 2010-2014 original author or authors */
-	/** @author Brian Cavalier */
-	/** @author John Hann */
-	
-	(function(define) { 'use strict';
-	!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require) {
-	
-		var inspect = __webpack_require__(286).inspect;
-	
-		return function inspection(Promise) {
-	
-			Promise.prototype.inspect = function() {
-				return inspect(Promise._handler(this));
-			};
-	
-			return Promise;
-		};
-	
-	}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	}(__webpack_require__(227)));
-
-
-/***/ },
-/* 291 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;/** @license MIT License (c) copyright 2010-2014 original author or authors */
-	/** @author Brian Cavalier */
-	/** @author John Hann */
-	
-	(function(define) { 'use strict';
-	!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
-	
-		return function generate(Promise) {
-	
-			var resolve = Promise.resolve;
-	
-			Promise.iterate = iterate;
-			Promise.unfold = unfold;
-	
-			return Promise;
-	
-			/**
-			 * @deprecated Use github.com/cujojs/most streams and most.iterate
-			 * Generate a (potentially infinite) stream of promised values:
-			 * x, f(x), f(f(x)), etc. until condition(x) returns true
-			 * @param {function} f function to generate a new x from the previous x
-			 * @param {function} condition function that, given the current x, returns
-			 *  truthy when the iterate should stop
-			 * @param {function} handler function to handle the value produced by f
-			 * @param {*|Promise} x starting value, may be a promise
-			 * @return {Promise} the result of the last call to f before
-			 *  condition returns true
-			 */
-			function iterate(f, condition, handler, x) {
-				return unfold(function(x) {
-					return [x, f(x)];
-				}, condition, handler, x);
-			}
-	
-			/**
-			 * @deprecated Use github.com/cujojs/most streams and most.unfold
-			 * Generate a (potentially infinite) stream of promised values
-			 * by applying handler(generator(seed)) iteratively until
-			 * condition(seed) returns true.
-			 * @param {function} unspool function that generates a [value, newSeed]
-			 *  given a seed.
-			 * @param {function} condition function that, given the current seed, returns
-			 *  truthy when the unfold should stop
-			 * @param {function} handler function to handle the value produced by unspool
-			 * @param x {*|Promise} starting value, may be a promise
-			 * @return {Promise} the result of the last value produced by unspool before
-			 *  condition returns true
-			 */
-			function unfold(unspool, condition, handler, x) {
-				return resolve(x).then(function(seed) {
-					return resolve(condition(seed)).then(function(done) {
-						return done ? seed : resolve(unspool(seed)).spread(next);
-					});
-				});
-	
-				function next(item, newSeed) {
-					return resolve(handler(item)).then(function() {
-						return unfold(unspool, condition, handler, newSeed);
-					});
-				}
-			}
-		};
-	
-	}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	}(__webpack_require__(227)));
-
-
-/***/ },
-/* 292 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;/** @license MIT License (c) copyright 2010-2014 original author or authors */
-	/** @author Brian Cavalier */
-	/** @author John Hann */
-	
-	(function(define) { 'use strict';
-	!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
-	
-		return function progress(Promise) {
-	
-			/**
-			 * @deprecated
-			 * Register a progress handler for this promise
-			 * @param {function} onProgress
-			 * @returns {Promise}
-			 */
-			Promise.prototype.progress = function(onProgress) {
-				return this.then(void 0, void 0, onProgress);
-			};
-	
-			return Promise;
-		};
-	
-	}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	}(__webpack_require__(227)));
-
-
-/***/ },
-/* 293 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;/** @license MIT License (c) copyright 2010-2014 original author or authors */
-	/** @author Brian Cavalier */
-	/** @author John Hann */
-	
-	(function(define) { 'use strict';
-	!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
-	
-		return function addWith(Promise) {
-			/**
-			 * Returns a promise whose handlers will be called with `this` set to
-			 * the supplied receiver.  Subsequent promises derived from the
-			 * returned promise will also have their handlers called with receiver
-			 * as `this`. Calling `with` with undefined or no arguments will return
-			 * a promise whose handlers will again be called in the usual Promises/A+
-			 * way (no `this`) thus safely undoing any previous `with` in the
-			 * promise chain.
-			 *
-			 * WARNING: Promises returned from `with`/`withThis` are NOT Promises/A+
-			 * compliant, specifically violating 2.2.5 (http://promisesaplus.com/#point-41)
-			 *
-			 * @param {object} receiver `this` value for all handlers attached to
-			 *  the returned promise.
-			 * @returns {Promise}
-			 */
-			Promise.prototype['with'] = Promise.prototype.withThis = function(receiver) {
-				var p = this._beget();
-				var child = p._handler;
-				child.receiver = receiver;
-				this._handler.chain(child, receiver);
-				return p;
-			};
-	
-			return Promise;
-		};
-	
-	}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	}(__webpack_require__(227)));
-	
-
-
-/***/ },
-/* 294 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;/** @license MIT License (c) copyright 2010-2014 original author or authors */
-	/** @author Brian Cavalier */
-	/** @author John Hann */
-	
-	(function(define) { 'use strict';
-	!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require) {
-	
-		var setTimer = __webpack_require__(282).setTimer;
-		var format = __webpack_require__(295);
-	
-		return function unhandledRejection(Promise) {
-	
-			var logError = noop;
-			var logInfo = noop;
-			var localConsole;
-	
-			if(typeof console !== 'undefined') {
-				// Alias console to prevent things like uglify's drop_console option from
-				// removing console.log/error. Unhandled rejections fall into the same
-				// category as uncaught exceptions, and build tools shouldn't silence them.
-				localConsole = console;
-				logError = typeof localConsole.error !== 'undefined'
-					? function (e) { localConsole.error(e); }
-					: function (e) { localConsole.log(e); };
-	
-				logInfo = typeof localConsole.info !== 'undefined'
-					? function (e) { localConsole.info(e); }
-					: function (e) { localConsole.log(e); };
-			}
-	
-			Promise.onPotentiallyUnhandledRejection = function(rejection) {
-				enqueue(report, rejection);
-			};
-	
-			Promise.onPotentiallyUnhandledRejectionHandled = function(rejection) {
-				enqueue(unreport, rejection);
-			};
-	
-			Promise.onFatalRejection = function(rejection) {
-				enqueue(throwit, rejection.value);
-			};
-	
-			var tasks = [];
-			var reported = [];
-			var running = null;
-	
-			function report(r) {
-				if(!r.handled) {
-					reported.push(r);
-					logError('Potentially unhandled rejection [' + r.id + '] ' + format.formatError(r.value));
-				}
-			}
-	
-			function unreport(r) {
-				var i = reported.indexOf(r);
-				if(i >= 0) {
-					reported.splice(i, 1);
-					logInfo('Handled previous rejection [' + r.id + '] ' + format.formatObject(r.value));
-				}
-			}
-	
-			function enqueue(f, x) {
-				tasks.push(f, x);
-				if(running === null) {
-					running = setTimer(flush, 0);
-				}
-			}
-	
-			function flush() {
-				running = null;
-				while(tasks.length > 0) {
-					tasks.shift()(tasks.shift());
-				}
-			}
-	
-			return Promise;
-		};
-	
-		function throwit(e) {
-			throw e;
-		}
-	
-		function noop() {}
-	
-	}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	}(__webpack_require__(227)));
-
-
-/***/ },
-/* 295 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;/** @license MIT License (c) copyright 2010-2014 original author or authors */
-	/** @author Brian Cavalier */
-	/** @author John Hann */
-	
-	(function(define) { 'use strict';
-	!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
-	
-		return {
-			formatError: formatError,
-			formatObject: formatObject,
-			tryStringify: tryStringify
-		};
-	
-		/**
-		 * Format an error into a string.  If e is an Error and has a stack property,
-		 * it's returned.  Otherwise, e is formatted using formatObject, with a
-		 * warning added about e not being a proper Error.
-		 * @param {*} e
-		 * @returns {String} formatted string, suitable for output to developers
-		 */
-		function formatError(e) {
-			var s = typeof e === 'object' && e !== null && (e.stack || e.message) ? e.stack || e.message : formatObject(e);
-			return e instanceof Error ? s : s + ' (WARNING: non-Error used)';
-		}
-	
-		/**
-		 * Format an object, detecting "plain" objects and running them through
-		 * JSON.stringify if possible.
-		 * @param {Object} o
-		 * @returns {string}
-		 */
-		function formatObject(o) {
-			var s = String(o);
-			if(s === '[object Object]' && typeof JSON !== 'undefined') {
-				s = tryStringify(o, s);
-			}
-			return s;
-		}
-	
-		/**
-		 * Try to return the result of JSON.stringify(x).  If that fails, return
-		 * defaultValue
-		 * @param {*} x
-		 * @param {*} defaultValue
-		 * @returns {String|*} JSON.stringify(x) or defaultValue
-		 */
-		function tryStringify(x, defaultValue) {
-			try {
-				return JSON.stringify(x);
-			} catch(e) {
-				return defaultValue;
-			}
-		}
-	
-	}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	}(__webpack_require__(227)));
-
-
-/***/ },
-/* 296 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;/** @license MIT License (c) copyright 2010-2014 original author or authors */
-	/** @author Brian Cavalier */
-	/** @author John Hann */
-	
-	(function(define) { 'use strict';
-	!(__WEBPACK_AMD_DEFINE_RESULT__ = function (require) {
-	
-		var makePromise = __webpack_require__(297);
-		var Scheduler = __webpack_require__(298);
-		var async = __webpack_require__(282).asap;
-	
-		return makePromise({
-			scheduler: new Scheduler(async)
-		});
-	
-	}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	})(__webpack_require__(227));
-
-
-/***/ },
-/* 297 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(process) {/** @license MIT License (c) copyright 2010-2014 original author or authors */
-	/** @author Brian Cavalier */
-	/** @author John Hann */
-	
-	(function(define) { 'use strict';
-	!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
-	
-		return function makePromise(environment) {
-	
-			var tasks = environment.scheduler;
-			var emitRejection = initEmitRejection();
-	
-			var objectCreate = Object.create ||
-				function(proto) {
-					function Child() {}
-					Child.prototype = proto;
-					return new Child();
-				};
-	
-			/**
-			 * Create a promise whose fate is determined by resolver
-			 * @constructor
-			 * @returns {Promise} promise
-			 * @name Promise
-			 */
-			function Promise(resolver, handler) {
-				this._handler = resolver === Handler ? handler : init(resolver);
-			}
-	
-			/**
-			 * Run the supplied resolver
-			 * @param resolver
-			 * @returns {Pending}
-			 */
-			function init(resolver) {
-				var handler = new Pending();
-	
-				try {
-					resolver(promiseResolve, promiseReject, promiseNotify);
-				} catch (e) {
-					promiseReject(e);
-				}
-	
-				return handler;
-	
-				/**
-				 * Transition from pre-resolution state to post-resolution state, notifying
-				 * all listeners of the ultimate fulfillment or rejection
-				 * @param {*} x resolution value
-				 */
-				function promiseResolve (x) {
-					handler.resolve(x);
-				}
-				/**
-				 * Reject this promise with reason, which will be used verbatim
-				 * @param {Error|*} reason rejection reason, strongly suggested
-				 *   to be an Error type
-				 */
-				function promiseReject (reason) {
-					handler.reject(reason);
-				}
-	
-				/**
-				 * @deprecated
-				 * Issue a progress event, notifying all progress listeners
-				 * @param {*} x progress event payload to pass to all listeners
-				 */
-				function promiseNotify (x) {
-					handler.notify(x);
-				}
-			}
-	
-			// Creation
-	
-			Promise.resolve = resolve;
-			Promise.reject = reject;
-			Promise.never = never;
-	
-			Promise._defer = defer;
-			Promise._handler = getHandler;
-	
-			/**
-			 * Returns a trusted promise. If x is already a trusted promise, it is
-			 * returned, otherwise returns a new trusted Promise which follows x.
-			 * @param  {*} x
-			 * @return {Promise} promise
-			 */
-			function resolve(x) {
-				return isPromise(x) ? x
-					: new Promise(Handler, new Async(getHandler(x)));
-			}
-	
-			/**
-			 * Return a reject promise with x as its reason (x is used verbatim)
-			 * @param {*} x
-			 * @returns {Promise} rejected promise
-			 */
-			function reject(x) {
-				return new Promise(Handler, new Async(new Rejected(x)));
-			}
-	
-			/**
-			 * Return a promise that remains pending forever
-			 * @returns {Promise} forever-pending promise.
-			 */
-			function never() {
-				return foreverPendingPromise; // Should be frozen
-			}
-	
-			/**
-			 * Creates an internal {promise, resolver} pair
-			 * @private
-			 * @returns {Promise}
-			 */
-			function defer() {
-				return new Promise(Handler, new Pending());
-			}
-	
-			// Transformation and flow control
-	
-			/**
-			 * Transform this promise's fulfillment value, returning a new Promise
-			 * for the transformed result.  If the promise cannot be fulfilled, onRejected
-			 * is called with the reason.  onProgress *may* be called with updates toward
-			 * this promise's fulfillment.
-			 * @param {function=} onFulfilled fulfillment handler
-			 * @param {function=} onRejected rejection handler
-			 * @param {function=} onProgress @deprecated progress handler
-			 * @return {Promise} new promise
-			 */
-			Promise.prototype.then = function(onFulfilled, onRejected, onProgress) {
-				var parent = this._handler;
-				var state = parent.join().state();
-	
-				if ((typeof onFulfilled !== 'function' && state > 0) ||
-					(typeof onRejected !== 'function' && state < 0)) {
-					// Short circuit: value will not change, simply share handler
-					return new this.constructor(Handler, parent);
-				}
-	
-				var p = this._beget();
-				var child = p._handler;
-	
-				parent.chain(child, parent.receiver, onFulfilled, onRejected, onProgress);
-	
-				return p;
-			};
-	
-			/**
-			 * If this promise cannot be fulfilled due to an error, call onRejected to
-			 * handle the error. Shortcut for .then(undefined, onRejected)
-			 * @param {function?} onRejected
-			 * @return {Promise}
-			 */
-			Promise.prototype['catch'] = function(onRejected) {
-				return this.then(void 0, onRejected);
-			};
-	
-			/**
-			 * Creates a new, pending promise of the same type as this promise
-			 * @private
-			 * @returns {Promise}
-			 */
-			Promise.prototype._beget = function() {
-				return begetFrom(this._handler, this.constructor);
-			};
-	
-			function begetFrom(parent, Promise) {
-				var child = new Pending(parent.receiver, parent.join().context);
-				return new Promise(Handler, child);
-			}
-	
-			// Array combinators
-	
-			Promise.all = all;
-			Promise.race = race;
-			Promise._traverse = traverse;
-	
-			/**
-			 * Return a promise that will fulfill when all promises in the
-			 * input array have fulfilled, or will reject when one of the
-			 * promises rejects.
-			 * @param {array} promises array of promises
-			 * @returns {Promise} promise for array of fulfillment values
-			 */
-			function all(promises) {
-				return traverseWith(snd, null, promises);
-			}
-	
-			/**
-			 * Array<Promise<X>> -> Promise<Array<f(X)>>
-			 * @private
-			 * @param {function} f function to apply to each promise's value
-			 * @param {Array} promises array of promises
-			 * @returns {Promise} promise for transformed values
-			 */
-			function traverse(f, promises) {
-				return traverseWith(tryCatch2, f, promises);
-			}
-	
-			function traverseWith(tryMap, f, promises) {
-				var handler = typeof f === 'function' ? mapAt : settleAt;
-	
-				var resolver = new Pending();
-				var pending = promises.length >>> 0;
-				var results = new Array(pending);
-	
-				for (var i = 0, x; i < promises.length && !resolver.resolved; ++i) {
-					x = promises[i];
-	
-					if (x === void 0 && !(i in promises)) {
-						--pending;
-						continue;
-					}
-	
-					traverseAt(promises, handler, i, x, resolver);
-				}
-	
-				if(pending === 0) {
-					resolver.become(new Fulfilled(results));
-				}
-	
-				return new Promise(Handler, resolver);
-	
-				function mapAt(i, x, resolver) {
-					if(!resolver.resolved) {
-						traverseAt(promises, settleAt, i, tryMap(f, x, i), resolver);
-					}
-				}
-	
-				function settleAt(i, x, resolver) {
-					results[i] = x;
-					if(--pending === 0) {
-						resolver.become(new Fulfilled(results));
-					}
-				}
-			}
-	
-			function traverseAt(promises, handler, i, x, resolver) {
-				if (maybeThenable(x)) {
-					var h = getHandlerMaybeThenable(x);
-					var s = h.state();
-	
-					if (s === 0) {
-						h.fold(handler, i, void 0, resolver);
-					} else if (s > 0) {
-						handler(i, h.value, resolver);
-					} else {
-						resolver.become(h);
-						visitRemaining(promises, i+1, h);
-					}
-				} else {
-					handler(i, x, resolver);
-				}
-			}
-	
-			Promise._visitRemaining = visitRemaining;
-			function visitRemaining(promises, start, handler) {
-				for(var i=start; i<promises.length; ++i) {
-					markAsHandled(getHandler(promises[i]), handler);
-				}
-			}
-	
-			function markAsHandled(h, handler) {
-				if(h === handler) {
-					return;
-				}
-	
-				var s = h.state();
-				if(s === 0) {
-					h.visit(h, void 0, h._unreport);
-				} else if(s < 0) {
-					h._unreport();
-				}
-			}
-	
-			/**
-			 * Fulfill-reject competitive race. Return a promise that will settle
-			 * to the same state as the earliest input promise to settle.
-			 *
-			 * WARNING: The ES6 Promise spec requires that race()ing an empty array
-			 * must return a promise that is pending forever.  This implementation
-			 * returns a singleton forever-pending promise, the same singleton that is
-			 * returned by Promise.never(), thus can be checked with ===
-			 *
-			 * @param {array} promises array of promises to race
-			 * @returns {Promise} if input is non-empty, a promise that will settle
-			 * to the same outcome as the earliest input promise to settle. if empty
-			 * is empty, returns a promise that will never settle.
-			 */
-			function race(promises) {
-				if(typeof promises !== 'object' || promises === null) {
-					return reject(new TypeError('non-iterable passed to race()'));
-				}
-	
-				// Sigh, race([]) is untestable unless we return *something*
-				// that is recognizable without calling .then() on it.
-				return promises.length === 0 ? never()
-					 : promises.length === 1 ? resolve(promises[0])
-					 : runRace(promises);
-			}
-	
-			function runRace(promises) {
-				var resolver = new Pending();
-				var i, x, h;
-				for(i=0; i<promises.length; ++i) {
-					x = promises[i];
-					if (x === void 0 && !(i in promises)) {
-						continue;
-					}
-	
-					h = getHandler(x);
-					if(h.state() !== 0) {
-						resolver.become(h);
-						visitRemaining(promises, i+1, h);
-						break;
-					} else {
-						h.visit(resolver, resolver.resolve, resolver.reject);
-					}
-				}
-				return new Promise(Handler, resolver);
-			}
-	
-			// Promise internals
-			// Below this, everything is @private
-	
-			/**
-			 * Get an appropriate handler for x, without checking for cycles
-			 * @param {*} x
-			 * @returns {object} handler
-			 */
-			function getHandler(x) {
-				if(isPromise(x)) {
-					return x._handler.join();
-				}
-				return maybeThenable(x) ? getHandlerUntrusted(x) : new Fulfilled(x);
-			}
-	
-			/**
-			 * Get a handler for thenable x.
-			 * NOTE: You must only call this if maybeThenable(x) == true
-			 * @param {object|function|Promise} x
-			 * @returns {object} handler
-			 */
-			function getHandlerMaybeThenable(x) {
-				return isPromise(x) ? x._handler.join() : getHandlerUntrusted(x);
-			}
-	
-			/**
-			 * Get a handler for potentially untrusted thenable x
-			 * @param {*} x
-			 * @returns {object} handler
-			 */
-			function getHandlerUntrusted(x) {
-				try {
-					var untrustedThen = x.then;
-					return typeof untrustedThen === 'function'
-						? new Thenable(untrustedThen, x)
-						: new Fulfilled(x);
-				} catch(e) {
-					return new Rejected(e);
-				}
-			}
-	
-			/**
-			 * Handler for a promise that is pending forever
-			 * @constructor
-			 */
-			function Handler() {}
-	
-			Handler.prototype.when
-				= Handler.prototype.become
-				= Handler.prototype.notify // deprecated
-				= Handler.prototype.fail
-				= Handler.prototype._unreport
-				= Handler.prototype._report
-				= noop;
-	
-			Handler.prototype._state = 0;
-	
-			Handler.prototype.state = function() {
-				return this._state;
-			};
-	
-			/**
-			 * Recursively collapse handler chain to find the handler
-			 * nearest to the fully resolved value.
-			 * @returns {object} handler nearest the fully resolved value
-			 */
-			Handler.prototype.join = function() {
-				var h = this;
-				while(h.handler !== void 0) {
-					h = h.handler;
-				}
-				return h;
-			};
-	
-			Handler.prototype.chain = function(to, receiver, fulfilled, rejected, progress) {
-				this.when({
-					resolver: to,
-					receiver: receiver,
-					fulfilled: fulfilled,
-					rejected: rejected,
-					progress: progress
-				});
-			};
-	
-			Handler.prototype.visit = function(receiver, fulfilled, rejected, progress) {
-				this.chain(failIfRejected, receiver, fulfilled, rejected, progress);
-			};
-	
-			Handler.prototype.fold = function(f, z, c, to) {
-				this.when(new Fold(f, z, c, to));
-			};
-	
-			/**
-			 * Handler that invokes fail() on any handler it becomes
-			 * @constructor
-			 */
-			function FailIfRejected() {}
-	
-			inherit(Handler, FailIfRejected);
-	
-			FailIfRejected.prototype.become = function(h) {
-				h.fail();
-			};
-	
-			var failIfRejected = new FailIfRejected();
-	
-			/**
-			 * Handler that manages a queue of consumers waiting on a pending promise
-			 * @constructor
-			 */
-			function Pending(receiver, inheritedContext) {
-				Promise.createContext(this, inheritedContext);
-	
-				this.consumers = void 0;
-				this.receiver = receiver;
-				this.handler = void 0;
-				this.resolved = false;
-			}
-	
-			inherit(Handler, Pending);
-	
-			Pending.prototype._state = 0;
-	
-			Pending.prototype.resolve = function(x) {
-				this.become(getHandler(x));
-			};
-	
-			Pending.prototype.reject = function(x) {
-				if(this.resolved) {
-					return;
-				}
-	
-				this.become(new Rejected(x));
-			};
-	
-			Pending.prototype.join = function() {
-				if (!this.resolved) {
-					return this;
-				}
-	
-				var h = this;
-	
-				while (h.handler !== void 0) {
-					h = h.handler;
-					if (h === this) {
-						return this.handler = cycle();
-					}
-				}
-	
-				return h;
-			};
-	
-			Pending.prototype.run = function() {
-				var q = this.consumers;
-				var handler = this.handler;
-				this.handler = this.handler.join();
-				this.consumers = void 0;
-	
-				for (var i = 0; i < q.length; ++i) {
-					handler.when(q[i]);
-				}
-			};
-	
-			Pending.prototype.become = function(handler) {
-				if(this.resolved) {
-					return;
-				}
-	
-				this.resolved = true;
-				this.handler = handler;
-				if(this.consumers !== void 0) {
-					tasks.enqueue(this);
-				}
-	
-				if(this.context !== void 0) {
-					handler._report(this.context);
-				}
-			};
-	
-			Pending.prototype.when = function(continuation) {
-				if(this.resolved) {
-					tasks.enqueue(new ContinuationTask(continuation, this.handler));
-				} else {
-					if(this.consumers === void 0) {
-						this.consumers = [continuation];
-					} else {
-						this.consumers.push(continuation);
-					}
-				}
-			};
-	
-			/**
-			 * @deprecated
-			 */
-			Pending.prototype.notify = function(x) {
-				if(!this.resolved) {
-					tasks.enqueue(new ProgressTask(x, this));
-				}
-			};
-	
-			Pending.prototype.fail = function(context) {
-				var c = typeof context === 'undefined' ? this.context : context;
-				this.resolved && this.handler.join().fail(c);
-			};
-	
-			Pending.prototype._report = function(context) {
-				this.resolved && this.handler.join()._report(context);
-			};
-	
-			Pending.prototype._unreport = function() {
-				this.resolved && this.handler.join()._unreport();
-			};
-	
-			/**
-			 * Wrap another handler and force it into a future stack
-			 * @param {object} handler
-			 * @constructor
-			 */
-			function Async(handler) {
-				this.handler = handler;
-			}
-	
-			inherit(Handler, Async);
-	
-			Async.prototype.when = function(continuation) {
-				tasks.enqueue(new ContinuationTask(continuation, this));
-			};
-	
-			Async.prototype._report = function(context) {
-				this.join()._report(context);
-			};
-	
-			Async.prototype._unreport = function() {
-				this.join()._unreport();
-			};
-	
-			/**
-			 * Handler that wraps an untrusted thenable and assimilates it in a future stack
-			 * @param {function} then
-			 * @param {{then: function}} thenable
-			 * @constructor
-			 */
-			function Thenable(then, thenable) {
-				Pending.call(this);
-				tasks.enqueue(new AssimilateTask(then, thenable, this));
-			}
-	
-			inherit(Pending, Thenable);
-	
-			/**
-			 * Handler for a fulfilled promise
-			 * @param {*} x fulfillment value
-			 * @constructor
-			 */
-			function Fulfilled(x) {
-				Promise.createContext(this);
-				this.value = x;
-			}
-	
-			inherit(Handler, Fulfilled);
-	
-			Fulfilled.prototype._state = 1;
-	
-			Fulfilled.prototype.fold = function(f, z, c, to) {
-				runContinuation3(f, z, this, c, to);
-			};
-	
-			Fulfilled.prototype.when = function(cont) {
-				runContinuation1(cont.fulfilled, this, cont.receiver, cont.resolver);
-			};
-	
-			var errorId = 0;
-	
-			/**
-			 * Handler for a rejected promise
-			 * @param {*} x rejection reason
-			 * @constructor
-			 */
-			function Rejected(x) {
-				Promise.createContext(this);
-	
-				this.id = ++errorId;
-				this.value = x;
-				this.handled = false;
-				this.reported = false;
-	
-				this._report();
-			}
-	
-			inherit(Handler, Rejected);
-	
-			Rejected.prototype._state = -1;
-	
-			Rejected.prototype.fold = function(f, z, c, to) {
-				to.become(this);
-			};
-	
-			Rejected.prototype.when = function(cont) {
-				if(typeof cont.rejected === 'function') {
-					this._unreport();
-				}
-				runContinuation1(cont.rejected, this, cont.receiver, cont.resolver);
-			};
-	
-			Rejected.prototype._report = function(context) {
-				tasks.afterQueue(new ReportTask(this, context));
-			};
-	
-			Rejected.prototype._unreport = function() {
-				if(this.handled) {
-					return;
-				}
-				this.handled = true;
-				tasks.afterQueue(new UnreportTask(this));
-			};
-	
-			Rejected.prototype.fail = function(context) {
-				this.reported = true;
-				emitRejection('unhandledRejection', this);
-				Promise.onFatalRejection(this, context === void 0 ? this.context : context);
-			};
-	
-			function ReportTask(rejection, context) {
-				this.rejection = rejection;
-				this.context = context;
-			}
-	
-			ReportTask.prototype.run = function() {
-				if(!this.rejection.handled && !this.rejection.reported) {
-					this.rejection.reported = true;
-					emitRejection('unhandledRejection', this.rejection) ||
-						Promise.onPotentiallyUnhandledRejection(this.rejection, this.context);
-				}
-			};
-	
-			function UnreportTask(rejection) {
-				this.rejection = rejection;
-			}
-	
-			UnreportTask.prototype.run = function() {
-				if(this.rejection.reported) {
-					emitRejection('rejectionHandled', this.rejection) ||
-						Promise.onPotentiallyUnhandledRejectionHandled(this.rejection);
-				}
-			};
-	
-			// Unhandled rejection hooks
-			// By default, everything is a noop
-	
-			Promise.createContext
-				= Promise.enterContext
-				= Promise.exitContext
-				= Promise.onPotentiallyUnhandledRejection
-				= Promise.onPotentiallyUnhandledRejectionHandled
-				= Promise.onFatalRejection
-				= noop;
-	
-			// Errors and singletons
-	
-			var foreverPendingHandler = new Handler();
-			var foreverPendingPromise = new Promise(Handler, foreverPendingHandler);
-	
-			function cycle() {
-				return new Rejected(new TypeError('Promise cycle'));
-			}
-	
-			// Task runners
-	
-			/**
-			 * Run a single consumer
-			 * @constructor
-			 */
-			function ContinuationTask(continuation, handler) {
-				this.continuation = continuation;
-				this.handler = handler;
-			}
-	
-			ContinuationTask.prototype.run = function() {
-				this.handler.join().when(this.continuation);
-			};
-	
-			/**
-			 * Run a queue of progress handlers
-			 * @constructor
-			 */
-			function ProgressTask(value, handler) {
-				this.handler = handler;
-				this.value = value;
-			}
-	
-			ProgressTask.prototype.run = function() {
-				var q = this.handler.consumers;
-				if(q === void 0) {
-					return;
-				}
-	
-				for (var c, i = 0; i < q.length; ++i) {
-					c = q[i];
-					runNotify(c.progress, this.value, this.handler, c.receiver, c.resolver);
-				}
-			};
-	
-			/**
-			 * Assimilate a thenable, sending it's value to resolver
-			 * @param {function} then
-			 * @param {object|function} thenable
-			 * @param {object} resolver
-			 * @constructor
-			 */
-			function AssimilateTask(then, thenable, resolver) {
-				this._then = then;
-				this.thenable = thenable;
-				this.resolver = resolver;
-			}
-	
-			AssimilateTask.prototype.run = function() {
-				var h = this.resolver;
-				tryAssimilate(this._then, this.thenable, _resolve, _reject, _notify);
-	
-				function _resolve(x) { h.resolve(x); }
-				function _reject(x)  { h.reject(x); }
-				function _notify(x)  { h.notify(x); }
-			};
-	
-			function tryAssimilate(then, thenable, resolve, reject, notify) {
-				try {
-					then.call(thenable, resolve, reject, notify);
-				} catch (e) {
-					reject(e);
-				}
-			}
-	
-			/**
-			 * Fold a handler value with z
-			 * @constructor
-			 */
-			function Fold(f, z, c, to) {
-				this.f = f; this.z = z; this.c = c; this.to = to;
-				this.resolver = failIfRejected;
-				this.receiver = this;
-			}
-	
-			Fold.prototype.fulfilled = function(x) {
-				this.f.call(this.c, this.z, x, this.to);
-			};
-	
-			Fold.prototype.rejected = function(x) {
-				this.to.reject(x);
-			};
-	
-			Fold.prototype.progress = function(x) {
-				this.to.notify(x);
-			};
-	
-			// Other helpers
-	
-			/**
-			 * @param {*} x
-			 * @returns {boolean} true iff x is a trusted Promise
-			 */
-			function isPromise(x) {
-				return x instanceof Promise;
-			}
-	
-			/**
-			 * Test just enough to rule out primitives, in order to take faster
-			 * paths in some code
-			 * @param {*} x
-			 * @returns {boolean} false iff x is guaranteed *not* to be a thenable
-			 */
-			function maybeThenable(x) {
-				return (typeof x === 'object' || typeof x === 'function') && x !== null;
-			}
-	
-			function runContinuation1(f, h, receiver, next) {
-				if(typeof f !== 'function') {
-					return next.become(h);
-				}
-	
-				Promise.enterContext(h);
-				tryCatchReject(f, h.value, receiver, next);
-				Promise.exitContext();
-			}
-	
-			function runContinuation3(f, x, h, receiver, next) {
-				if(typeof f !== 'function') {
-					return next.become(h);
-				}
-	
-				Promise.enterContext(h);
-				tryCatchReject3(f, x, h.value, receiver, next);
-				Promise.exitContext();
-			}
-	
-			/**
-			 * @deprecated
-			 */
-			function runNotify(f, x, h, receiver, next) {
-				if(typeof f !== 'function') {
-					return next.notify(x);
-				}
-	
-				Promise.enterContext(h);
-				tryCatchReturn(f, x, receiver, next);
-				Promise.exitContext();
-			}
-	
-			function tryCatch2(f, a, b) {
-				try {
-					return f(a, b);
-				} catch(e) {
-					return reject(e);
-				}
-			}
-	
-			/**
-			 * Return f.call(thisArg, x), or if it throws return a rejected promise for
-			 * the thrown exception
-			 */
-			function tryCatchReject(f, x, thisArg, next) {
-				try {
-					next.become(getHandler(f.call(thisArg, x)));
-				} catch(e) {
-					next.become(new Rejected(e));
-				}
-			}
-	
-			/**
-			 * Same as above, but includes the extra argument parameter.
-			 */
-			function tryCatchReject3(f, x, y, thisArg, next) {
-				try {
-					f.call(thisArg, x, y, next);
-				} catch(e) {
-					next.become(new Rejected(e));
-				}
-			}
-	
-			/**
-			 * @deprecated
-			 * Return f.call(thisArg, x), or if it throws, *return* the exception
-			 */
-			function tryCatchReturn(f, x, thisArg, next) {
-				try {
-					next.notify(f.call(thisArg, x));
-				} catch(e) {
-					next.notify(e);
-				}
-			}
-	
-			function inherit(Parent, Child) {
-				Child.prototype = objectCreate(Parent.prototype);
-				Child.prototype.constructor = Child;
-			}
-	
-			function snd(x, y) {
-				return y;
-			}
-	
-			function noop() {}
-	
-			function initEmitRejection() {
-				/*global process, self, CustomEvent*/
-				if(typeof process !== 'undefined' && process !== null
-					&& typeof process.emit === 'function') {
-					// Returning falsy here means to call the default
-					// onPotentiallyUnhandledRejection API.  This is safe even in
-					// browserify since process.emit always returns falsy in browserify:
-					// https://github.com/defunctzombie/node-process/blob/master/browser.js#L40-L46
-					return function(type, rejection) {
-						return type === 'unhandledRejection'
-							? process.emit(type, rejection.value, rejection)
-							: process.emit(type, rejection);
-					};
-				} else if(typeof self !== 'undefined' && typeof CustomEvent === 'function') {
-					return (function(noop, self, CustomEvent) {
-						var hasCustomEvent = false;
-						try {
-							var ev = new CustomEvent('unhandledRejection');
-							hasCustomEvent = ev instanceof CustomEvent;
-						} catch (e) {}
-	
-						return !hasCustomEvent ? noop : function(type, rejection) {
-							var ev = new CustomEvent(type, {
-								detail: {
-									reason: rejection.value,
-									key: rejection
-								},
-								bubbles: false,
-								cancelable: true
-							});
-	
-							return !self.dispatchEvent(ev);
-						};
-					}(noop, self, CustomEvent));
-				}
-	
-				return noop;
-			}
-	
-			return Promise;
-		};
-	}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	}(__webpack_require__(227)));
-	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
-
-/***/ },
-/* 298 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;/** @license MIT License (c) copyright 2010-2014 original author or authors */
-	/** @author Brian Cavalier */
-	/** @author John Hann */
-	
-	(function(define) { 'use strict';
-	!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
-	
-		// Credit to Twisol (https://github.com/Twisol) for suggesting
-		// this type of extensible queue + trampoline approach for next-tick conflation.
-	
-		/**
-		 * Async task scheduler
-		 * @param {function} async function to schedule a single async function
-		 * @constructor
-		 */
-		function Scheduler(async) {
-			this._async = async;
-			this._running = false;
-	
-			this._queue = this;
-			this._queueLen = 0;
-			this._afterQueue = {};
-			this._afterQueueLen = 0;
-	
-			var self = this;
-			this.drain = function() {
-				self._drain();
-			};
-		}
-	
-		/**
-		 * Enqueue a task
-		 * @param {{ run:function }} task
-		 */
-		Scheduler.prototype.enqueue = function(task) {
-			this._queue[this._queueLen++] = task;
-			this.run();
-		};
-	
-		/**
-		 * Enqueue a task to run after the main task queue
-		 * @param {{ run:function }} task
-		 */
-		Scheduler.prototype.afterQueue = function(task) {
-			this._afterQueue[this._afterQueueLen++] = task;
-			this.run();
-		};
-	
-		Scheduler.prototype.run = function() {
-			if (!this._running) {
-				this._running = true;
-				this._async(this.drain);
-			}
-		};
-	
-		/**
-		 * Drain the handler queue entirely, and then the after queue
-		 */
-		Scheduler.prototype._drain = function() {
-			var i = 0;
-			for (; i < this._queueLen; ++i) {
-				this._queue[i].run();
-				this._queue[i] = void 0;
-			}
-	
-			this._queueLen = 0;
-			this._running = false;
-	
-			for (i = 0; i < this._afterQueueLen; ++i) {
-				this._afterQueue[i].run();
-				this._afterQueue[i] = void 0;
-			}
-	
-			this._afterQueueLen = 0;
-		};
-	
-		return Scheduler;
-	
-	}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	}(__webpack_require__(227)));
-
-
-/***/ },
-/* 299 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;/*
-	 * Copyright 2012-2013 the original author or authors
-	 * @license MIT, see LICENSE.txt for details
-	 *
-	 * @author Scott Andrews
-	 */
-	
-	(function (define, location) {
-		'use strict';
-	
-		var undef;
-	
-		!(__WEBPACK_AMD_DEFINE_RESULT__ = function (require) {
-	
-			var mixin, origin, urlRE, absoluteUrlRE, fullyQualifiedUrlRE;
-	
-			mixin = __webpack_require__(300);
-	
-			urlRE = /([a-z][a-z0-9\+\-\.]*:)\/\/([^@]+@)?(([^:\/]+)(:([0-9]+))?)?(\/[^?#]*)?(\?[^#]*)?(#\S*)?/i;
-			absoluteUrlRE = /^([a-z][a-z0-9\-\+\.]*:\/\/|\/)/i;
-			fullyQualifiedUrlRE = /([a-z][a-z0-9\+\-\.]*:)\/\/([^@]+@)?(([^:\/]+)(:([0-9]+))?)?\//i;
-	
-			/**
-			 * Apply params to the template to create a URL.
-			 *
-			 * Parameters that are not applied directly to the template, are appended
-			 * to the URL as query string parameters.
-			 *
-			 * @param {string} template the URI template
-			 * @param {Object} params parameters to apply to the template
-			 * @return {string} the resulting URL
-			 */
-			function buildUrl(template, params) {
-				// internal builder to convert template with params.
-				var url, name, queryStringParams, re;
-	
-				url = template;
-				queryStringParams = {};
-	
-				if (params) {
-					for (name in params) {
-						/*jshint forin:false */
-						re = new RegExp('\\{' + name + '\\}');
-						if (re.test(url)) {
-							url = url.replace(re, encodeURIComponent(params[name]), 'g');
-						}
-						else {
-							queryStringParams[name] = params[name];
-						}
-					}
-					for (name in queryStringParams) {
-						url += url.indexOf('?') === -1 ? '?' : '&';
-						url += encodeURIComponent(name);
-						if (queryStringParams[name] !== null && queryStringParams[name] !== undefined) {
-							url += '=';
-							url += encodeURIComponent(queryStringParams[name]);
-						}
-					}
-				}
-				return url;
-			}
-	
-			function startsWith(str, test) {
-				return str.indexOf(test) === 0;
-			}
-	
-			/**
-			 * Create a new URL Builder
-			 *
-			 * @param {string|UrlBuilder} template the base template to build from, may be another UrlBuilder
-			 * @param {Object} [params] base parameters
-			 * @constructor
-			 */
-			function UrlBuilder(template, params) {
-				if (!(this instanceof UrlBuilder)) {
-					// invoke as a constructor
-					return new UrlBuilder(template, params);
-				}
-	
-				if (template instanceof UrlBuilder) {
-					this._template = template.template;
-					this._params = mixin({}, this._params, params);
-				}
-				else {
-					this._template = (template || '').toString();
-					this._params = params || {};
-				}
-			}
-	
-			UrlBuilder.prototype = {
-	
-				/**
-				 * Create a new UrlBuilder instance that extends the current builder.
-				 * The current builder is unmodified.
-				 *
-				 * @param {string} [template] URL template to append to the current template
-				 * @param {Object} [params] params to combine with current params.  New params override existing params
-				 * @return {UrlBuilder} the new builder
-				 */
-				append: function (template,  params) {
-					// TODO consider query strings and fragments
-					return new UrlBuilder(this._template + template, mixin({}, this._params, params));
-				},
-	
-				/**
-				 * Create a new UrlBuilder with a fully qualified URL based on the
-				 * window's location or base href and the current templates relative URL.
-				 *
-				 * Path variables are preserved.
-				 *
-				 * *Browser only*
-				 *
-				 * @return {UrlBuilder} the fully qualified URL template
-				 */
-				fullyQualify: function () {
-					if (!location) { return this; }
-					if (this.isFullyQualified()) { return this; }
-	
-					var template = this._template;
-	
-					if (startsWith(template, '//')) {
-						template = origin.protocol + template;
-					}
-					else if (startsWith(template, '/')) {
-						template = origin.origin + template;
-					}
-					else if (!this.isAbsolute()) {
-						template = origin.origin + origin.pathname.substring(0, origin.pathname.lastIndexOf('/') + 1);
-					}
-	
-					if (template.indexOf('/', 8) === -1) {
-						// default the pathname to '/'
-						template = template + '/';
-					}
-	
-					return new UrlBuilder(template, this._params);
-				},
-	
-				/**
-				 * True if the URL is absolute
-				 *
-				 * @return {boolean}
-				 */
-				isAbsolute: function () {
-					return absoluteUrlRE.test(this.build());
-				},
-	
-				/**
-				 * True if the URL is fully qualified
-				 *
-				 * @return {boolean}
-				 */
-				isFullyQualified: function () {
-					return fullyQualifiedUrlRE.test(this.build());
-				},
-	
-				/**
-				 * True if the URL is cross origin. The protocol, host and port must not be
-				 * the same in order to be cross origin,
-				 *
-				 * @return {boolean}
-				 */
-				isCrossOrigin: function () {
-					if (!origin) {
-						return true;
-					}
-					var url = this.parts();
-					return url.protocol !== origin.protocol ||
-					       url.hostname !== origin.hostname ||
-					       url.port !== origin.port;
-				},
-	
-				/**
-				 * Split a URL into its consituent parts following the naming convention of
-				 * 'window.location'. One difference is that the port will contain the
-				 * protocol default if not specified.
-				 *
-				 * @see https://developer.mozilla.org/en-US/docs/DOM/window.location
-				 *
-				 * @returns {Object} a 'window.location'-like object
-				 */
-				parts: function () {
-					/*jshint maxcomplexity:20 */
-					var url, parts;
-					url = this.fullyQualify().build().match(urlRE);
-					parts = {
-						href: url[0],
-						protocol: url[1],
-						host: url[3] || '',
-						hostname: url[4] || '',
-						port: url[6],
-						pathname: url[7] || '',
-						search: url[8] || '',
-						hash: url[9] || ''
-					};
-					parts.origin = parts.protocol + '//' + parts.host;
-					parts.port = parts.port || (parts.protocol === 'https:' ? '443' : parts.protocol === 'http:' ? '80' : '');
-					return parts;
-				},
-	
-				/**
-				 * Expand the template replacing path variables with parameters
-				 *
-				 * @param {Object} [params] params to combine with current params.  New params override existing params
-				 * @return {string} the expanded URL
-				 */
-				build: function (params) {
-					return buildUrl(this._template, mixin({}, this._params, params));
-				},
-	
-				/**
-				 * @see build
-				 */
-				toString: function () {
-					return this.build();
-				}
-	
-			};
-	
-			origin = location ? new UrlBuilder(location.href).parts() : undef;
-	
-			return UrlBuilder;
-		}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	
-	}(
-		__webpack_require__(227),
-		typeof window !== 'undefined' ? window.location : void 0
-		// Boilerplate for AMD and Node
-	));
-
-
-/***/ },
-/* 300 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;/*
-	 * Copyright 2012-2013 the original author or authors
-	 * @license MIT, see LICENSE.txt for details
-	 *
-	 * @author Scott Andrews
-	 */
-	
-	(function (define) {
-		'use strict';
-	
-		// derived from dojo.mixin
-		!(__WEBPACK_AMD_DEFINE_RESULT__ = function (/* require */) {
-	
-			var empty = {};
-	
-			/**
-			 * Mix the properties from the source object into the destination object.
-			 * When the same property occurs in more then one object, the right most
-			 * value wins.
-			 *
-			 * @param {Object} dest the object to copy properties to
-			 * @param {Object} sources the objects to copy properties from.  May be 1 to N arguments, but not an Array.
-			 * @return {Object} the destination object
-			 */
-			function mixin(dest /*, sources... */) {
-				var i, l, source, name;
-	
-				if (!dest) { dest = {}; }
-				for (i = 1, l = arguments.length; i < l; i += 1) {
-					source = arguments[i];
-					for (name in source) {
-						if (!(name in dest) || (dest[name] !== source[name] && (!(name in empty) || empty[name] !== source[name]))) {
-							dest[name] = source[name];
-						}
-					}
-				}
-	
-				return dest; // Object
-			}
-	
-			return mixin;
-	
-		}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	
-	}(
-		__webpack_require__(227)
-		// Boilerplate for AMD and Node
-	));
-
-
-/***/ },
-/* 301 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;/*
-	 * Copyright 2012 the original author or authors
-	 * @license MIT, see LICENSE.txt for details
-	 *
-	 * @author Scott Andrews
-	 */
-	
-	(function (define) {
-		'use strict';
-	
-		!(__WEBPACK_AMD_DEFINE_RESULT__ = function (/* require */) {
-	
-			/**
-			 * Normalize HTTP header names using the pseudo camel case.
-			 *
-			 * For example:
-			 *   content-type         -> Content-Type
-			 *   accepts              -> Accepts
-			 *   x-custom-header-name -> X-Custom-Header-Name
-			 *
-			 * @param {string} name the raw header name
-			 * @return {string} the normalized header name
-			 */
-			function normalizeHeaderName(name) {
-				return name.toLowerCase()
-					.split('-')
-					.map(function (chunk) { return chunk.charAt(0).toUpperCase() + chunk.slice(1); })
-					.join('-');
-			}
-	
-			return normalizeHeaderName;
-	
-		}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	
-	}(
-		__webpack_require__(227)
-		// Boilerplate for AMD and Node
-	));
-
-
-/***/ },
-/* 302 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;/*
-	 * Copyright 2014-2015 the original author or authors
-	 * @license MIT, see LICENSE.txt for details
-	 *
-	 * @author Scott Andrews
-	 */
-	
-	(function (define) {
-		'use strict';
-	
-		!(__WEBPACK_AMD_DEFINE_RESULT__ = function (require) {
-	
-			var when = __webpack_require__(280),
-				normalizeHeaderName = __webpack_require__(301);
-	
-			function property(promise, name) {
-				return promise.then(
-					function (value) {
-						return value && value[name];
-					},
-					function (value) {
-						return when.reject(value && value[name]);
-					}
-				);
-			}
-	
-			/**
-			 * Obtain the response entity
-			 *
-			 * @returns {Promise} for the response entity
-			 */
-			function entity() {
-				/*jshint validthis:true */
-				return property(this, 'entity');
-			}
-	
-			/**
-			 * Obtain the response status
-			 *
-			 * @returns {Promise} for the response status
-			 */
-			function status() {
-				/*jshint validthis:true */
-				return property(property(this, 'status'), 'code');
-			}
-	
-			/**
-			 * Obtain the response headers map
-			 *
-			 * @returns {Promise} for the response headers map
-			 */
-			function headers() {
-				/*jshint validthis:true */
-				return property(this, 'headers');
-			}
-	
-			/**
-			 * Obtain a specific response header
-			 *
-			 * @param {String} headerName the header to retrieve
-			 * @returns {Promise} for the response header's value
-			 */
-			function header(headerName) {
-				/*jshint validthis:true */
-				headerName = normalizeHeaderName(headerName);
-				return property(this.headers(), headerName);
-			}
-	
-			/**
-			 * Follow a related resource
-			 *
-			 * The relationship to follow may be define as a plain string, an object
-			 * with the rel and params, or an array containing one or more entries
-			 * with the previous forms.
-			 *
-			 * Examples:
-			 *   response.follow('next')
-			 *
-			 *   response.follow({ rel: 'next', params: { pageSize: 100 } })
-			 *
-			 *   response.follow([
-			 *       { rel: 'items', params: { projection: 'noImages' } },
-			 *       'search',
-			 *       { rel: 'findByGalleryIsNull', params: { projection: 'noImages' } },
-			 *       'items'
-			 *   ])
-			 *
-			 * @param {String|Object|Array} rels one, or more, relationships to follow
-			 * @returns ResponsePromise<Response> related resource
-			 */
-			function follow(rels) {
-				/*jshint validthis:true */
-				rels = [].concat(rels);
-				return make(when.reduce(rels, function (response, rel) {
-					if (typeof rel === 'string') {
-						rel = { rel: rel };
-					}
-					if (typeof response.entity.clientFor !== 'function') {
-						throw new Error('Hypermedia response expected');
-					}
-					var client = response.entity.clientFor(rel.rel);
-					return client({ params: rel.params });
-				}, this));
-			}
-	
-			/**
-			 * Wrap a Promise as an ResponsePromise
-			 *
-			 * @param {Promise<Response>} promise the promise for an HTTP Response
-			 * @returns {ResponsePromise<Response>} wrapped promise for Response with additional helper methods
-			 */
-			function make(promise) {
-				promise.status = status;
-				promise.headers = headers;
-				promise.header = header;
-				promise.entity = entity;
-				promise.follow = follow;
-				return promise;
-			}
-	
-			function responsePromise() {
-				return make(when.apply(when, arguments));
-			}
-	
-			responsePromise.make = make;
-			responsePromise.reject = function (val) {
-				return make(when.reject(val));
-			};
-			responsePromise.promise = function (func) {
-				return make(when.promise(func));
-			};
-	
-			return responsePromise;
-	
-		}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	
-	}(
-		__webpack_require__(227)
-		// Boilerplate for AMD and Node
-	));
-
-
-/***/ },
-/* 303 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;/*
-	 * Copyright 2013 the original author or authors
-	 * @license MIT, see LICENSE.txt for details
-	 *
-	 * @author Scott Andrews
-	 */
-	
-	(function (define) {
-		'use strict';
-	
-		!(__WEBPACK_AMD_DEFINE_RESULT__ = function (require) {
-	
-			var interceptor, mixinUtil, defaulter;
-	
-			interceptor = __webpack_require__(304);
-			mixinUtil = __webpack_require__(300);
-	
-			defaulter = (function () {
-	
-				function mixin(prop, target, defaults) {
-					if (prop in target || prop in defaults) {
-						target[prop] = mixinUtil({}, defaults[prop], target[prop]);
-					}
-				}
-	
-				function copy(prop, target, defaults) {
-					if (prop in defaults && !(prop in target)) {
-						target[prop] = defaults[prop];
-					}
-				}
-	
-				var mappings = {
-					method: copy,
-					path: copy,
-					params: mixin,
-					headers: mixin,
-					entity: copy,
-					mixin: mixin
-				};
-	
-				return function (target, defaults) {
-					for (var prop in mappings) {
-						/*jshint forin: false */
-						mappings[prop](prop, target, defaults);
-					}
-					return target;
-				};
-	
-			}());
-	
-			/**
-			 * Provide default values for a request. These values will be applied to the
-			 * request if the request object does not already contain an explicit value.
-			 *
-			 * For 'params', 'headers', and 'mixin', individual values are mixed in with the
-			 * request's values. The result is a new object representiing the combined
-			 * request and config values. Neither input object is mutated.
-			 *
-			 * @param {Client} [client] client to wrap
-			 * @param {string} [config.method] the default method
-			 * @param {string} [config.path] the default path
-			 * @param {Object} [config.params] the default params, mixed with the request's existing params
-			 * @param {Object} [config.headers] the default headers, mixed with the request's existing headers
-			 * @param {Object} [config.mixin] the default "mixins" (http/https options), mixed with the request's existing "mixins"
-			 *
-			 * @returns {Client}
-			 */
-			return interceptor({
-				request: function handleRequest(request, config) {
-					return defaulter(request, config);
-				}
-			});
-	
-		}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	
-	}(
-		__webpack_require__(227)
-		// Boilerplate for AMD and Node
-	));
-
-
-/***/ },
-/* 304 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;/*
-	 * Copyright 2012-2015 the original author or authors
-	 * @license MIT, see LICENSE.txt for details
-	 *
-	 * @author Scott Andrews
-	 */
-	
-	(function (define) {
-		'use strict';
-	
-		!(__WEBPACK_AMD_DEFINE_RESULT__ = function (require) {
-	
-			var defaultClient, mixin, responsePromise, client, when;
-	
-			defaultClient = __webpack_require__(277);
-			mixin = __webpack_require__(300);
-			responsePromise = __webpack_require__(302);
-			client = __webpack_require__(278);
-			when = __webpack_require__(280);
-	
-			/**
-			 * Interceptors have the ability to intercept the request and/org response
-			 * objects.  They may augment, prune, transform or replace the
-			 * request/response as needed.  Clients may be composed by wrapping
-			 * together multiple interceptors.
-			 *
-			 * Configured interceptors are functional in nature.  Wrapping a client in
-			 * an interceptor will not affect the client, merely the data that flows in
-			 * and out of that client.  A common configuration can be created once and
-			 * shared; specialization can be created by further wrapping that client
-			 * with custom interceptors.
-			 *
-			 * @param {Client} [target] client to wrap
-			 * @param {Object} [config] configuration for the interceptor, properties will be specific to the interceptor implementation
-			 * @returns {Client} A client wrapped with the interceptor
-			 *
-			 * @class Interceptor
-			 */
-	
-			function defaultInitHandler(config) {
-				return config;
-			}
-	
-			function defaultRequestHandler(request /*, config, meta */) {
-				return request;
-			}
-	
-			function defaultResponseHandler(response /*, config, meta */) {
-				return response;
-			}
-	
-			function race(promisesOrValues) {
-				// this function is different than when.any as the first to reject also wins
-				return when.promise(function (resolve, reject) {
-					promisesOrValues.forEach(function (promiseOrValue) {
-						when(promiseOrValue, resolve, reject);
-					});
-				});
-			}
-	
-			/**
-			 * Alternate return type for the request handler that allows for more complex interactions.
-			 *
-			 * @param properties.request the traditional request return object
-			 * @param {Promise} [properties.abort] promise that resolves if/when the request is aborted
-			 * @param {Client} [properties.client] override the defined client with an alternate client
-			 * @param [properties.response] response for the request, short circuit the request
-			 */
-			function ComplexRequest(properties) {
-				if (!(this instanceof ComplexRequest)) {
-					// in case users forget the 'new' don't mix into the interceptor
-					return new ComplexRequest(properties);
-				}
-				mixin(this, properties);
-			}
-	
-			/**
-			 * Create a new interceptor for the provided handlers.
-			 *
-			 * @param {Function} [handlers.init] one time intialization, must return the config object
-			 * @param {Function} [handlers.request] request handler
-			 * @param {Function} [handlers.response] response handler regardless of error state
-			 * @param {Function} [handlers.success] response handler when the request is not in error
-			 * @param {Function} [handlers.error] response handler when the request is in error, may be used to 'unreject' an error state
-			 * @param {Function} [handlers.client] the client to use if otherwise not specified, defaults to platform default client
-			 *
-			 * @returns {Interceptor}
-			 */
-			function interceptor(handlers) {
-	
-				var initHandler, requestHandler, successResponseHandler, errorResponseHandler;
-	
-				handlers = handlers || {};
-	
-				initHandler            = handlers.init    || defaultInitHandler;
-				requestHandler         = handlers.request || defaultRequestHandler;
-				successResponseHandler = handlers.success || handlers.response || defaultResponseHandler;
-				errorResponseHandler   = handlers.error   || function () {
-					// Propagate the rejection, with the result of the handler
-					return when((handlers.response || defaultResponseHandler).apply(this, arguments), when.reject, when.reject);
-				};
-	
-				return function (target, config) {
-	
-					if (typeof target === 'object') {
-						config = target;
-					}
-					if (typeof target !== 'function') {
-						target = handlers.client || defaultClient;
-					}
-	
-					config = initHandler(config || {});
-	
-					function interceptedClient(request) {
-						var context, meta;
-						context = {};
-						meta = { 'arguments': Array.prototype.slice.call(arguments), client: interceptedClient };
-						request = typeof request === 'string' ? { path: request } : request || {};
-						request.originator = request.originator || interceptedClient;
-						return responsePromise(
-							requestHandler.call(context, request, config, meta),
-							function (request) {
-								var response, abort, next;
-								next = target;
-								if (request instanceof ComplexRequest) {
-									// unpack request
-									abort = request.abort;
-									next = request.client || next;
-									response = request.response;
-									// normalize request, must be last
-									request = request.request;
-								}
-								response = response || when(request, function (request) {
-									return when(
-										next(request),
-										function (response) {
-											return successResponseHandler.call(context, response, config, meta);
-										},
-										function (response) {
-											return errorResponseHandler.call(context, response, config, meta);
-										}
-									);
-								});
-								return abort ? race([response, abort]) : response;
-							},
-							function (error) {
-								return when.reject({ request: request, error: error });
-							}
-						);
-					}
-	
-					return client(interceptedClient, target);
-				};
-			}
-	
-			interceptor.ComplexRequest = ComplexRequest;
-	
-			return interceptor;
-	
-		}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	
-	}(
-		__webpack_require__(227)
-		// Boilerplate for AMD and Node
-	));
-
-
-/***/ },
-/* 305 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;/*
-	 * Copyright 2012-2014 the original author or authors
-	 * @license MIT, see LICENSE.txt for details
-	 *
-	 * @author Scott Andrews
-	 */
-	
-	(function (define) {
-		'use strict';
-	
-		!(__WEBPACK_AMD_DEFINE_RESULT__ = function (require) {
-	
-			var interceptor, mime, registry, noopConverter, when;
-	
-			interceptor = __webpack_require__(304);
-			mime = __webpack_require__(306);
-			registry = __webpack_require__(307);
-			when = __webpack_require__(280);
-	
-			noopConverter = {
-				read: function (obj) { return obj; },
-				write: function (obj) { return obj; }
-			};
-	
-			/**
-			 * MIME type support for request and response entities.  Entities are
-			 * (de)serialized using the converter for the MIME type.
-			 *
-			 * Request entities are converted using the desired converter and the
-			 * 'Accept' request header prefers this MIME.
-			 *
-			 * Response entities are converted based on the Content-Type response header.
-			 *
-			 * @param {Client} [client] client to wrap
-			 * @param {string} [config.mime='text/plain'] MIME type to encode the request
-			 *   entity
-			 * @param {string} [config.accept] Accept header for the request
-			 * @param {Client} [config.client=<request.originator>] client passed to the
-			 *   converter, defaults to the client originating the request
-			 * @param {Registry} [config.registry] MIME registry, defaults to the root
-			 *   registry
-			 * @param {boolean} [config.permissive] Allow an unkown request MIME type
-			 *
-			 * @returns {Client}
-			 */
-			return interceptor({
-				init: function (config) {
-					config.registry = config.registry || registry;
-					return config;
-				},
-				request: function (request, config) {
-					var type, headers;
-	
-					headers = request.headers || (request.headers = {});
-					type = mime.parse(headers['Content-Type'] = headers['Content-Type'] || config.mime || 'text/plain');
-					headers.Accept = headers.Accept || config.accept || type.raw + ', application/json;q=0.8, text/plain;q=0.5, */*;q=0.2';
-	
-					if (!('entity' in request)) {
-						return request;
-					}
-	
-					return config.registry.lookup(type).otherwise(function () {
-						// failed to resolve converter
-						if (config.permissive) {
-							return noopConverter;
-						}
-						throw 'mime-unknown';
-					}).then(function (converter) {
-						var client = config.client || request.originator;
-	
-						return when.attempt(converter.write, request.entity, { client: client, request: request, mime: type, registry: config.registry })
-							.otherwise(function() {
-								throw 'mime-serialization';
-							})
-							.then(function(entity) {
-								request.entity = entity;
-								return request;
-							});
-					});
-				},
-				response: function (response, config) {
-					if (!(response.headers && response.headers['Content-Type'] && response.entity)) {
-						return response;
-					}
-	
-					var type = mime.parse(response.headers['Content-Type']);
-	
-					return config.registry.lookup(type).otherwise(function () { return noopConverter; }).then(function (converter) {
-						var client = config.client || response.request && response.request.originator;
-	
-						return when.attempt(converter.read, response.entity, { client: client, response: response, mime: type, registry: config.registry })
-							.otherwise(function (e) {
-								response.error = 'mime-deserialization';
-								response.cause = e;
-								throw response;
-							})
-							.then(function (entity) {
-								response.entity = entity;
-								return response;
-							});
-					});
-				}
-			});
-	
-		}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	
-	}(
-		__webpack_require__(227)
-		// Boilerplate for AMD and Node
-	));
-
-
-/***/ },
-/* 306 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;/*
-	* Copyright 2014 the original author or authors
-	* @license MIT, see LICENSE.txt for details
-	*
-	* @author Scott Andrews
-	*/
-	
-	(function (define) {
-		'use strict';
-	
-		var undef;
-	
-		!(__WEBPACK_AMD_DEFINE_RESULT__ = function (/* require */) {
-	
-			/**
-			 * Parse a MIME type into it's constituent parts
-			 *
-			 * @param {string} mime MIME type to parse
-			 * @return {{
-			 *   {string} raw the original MIME type
-			 *   {string} type the type and subtype
-			 *   {string} [suffix] mime suffix, including the plus, if any
-			 *   {Object} params key/value pair of attributes
-			 * }}
-			 */
-			function parse(mime) {
-				var params, type;
-	
-				params = mime.split(';');
-				type = params[0].trim().split('+');
-	
-				return {
-					raw: mime,
-					type: type[0],
-					suffix: type[1] ? '+' + type[1] : '',
-					params: params.slice(1).reduce(function (params, pair) {
-						pair = pair.split('=');
-						params[pair[0].trim()] = pair[1] ? pair[1].trim() : undef;
-						return params;
-					}, {})
-				};
-			}
-	
-			return {
-				parse: parse
-			};
-	
-		}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	
-	}(
-		__webpack_require__(227)
-		// Boilerplate for AMD and Node
-	));
-
-
-/***/ },
-/* 307 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;/*
-	 * Copyright 2012-2014 the original author or authors
-	 * @license MIT, see LICENSE.txt for details
-	 *
-	 * @author Scott Andrews
-	 */
-	
-	(function (define) {
-		'use strict';
-	
-		!(__WEBPACK_AMD_DEFINE_RESULT__ = function (require) {
-	
-			var mime, when, registry;
-	
-			mime = __webpack_require__(306);
-			when = __webpack_require__(280);
-	
-			function Registry(mimes) {
-	
-				/**
-				 * Lookup the converter for a MIME type
-				 *
-				 * @param {string} type the MIME type
-				 * @return a promise for the converter
-				 */
-				this.lookup = function lookup(type) {
-					var parsed;
-	
-					parsed = typeof type === 'string' ? mime.parse(type) : type;
-	
-					if (mimes[parsed.raw]) {
-						return mimes[parsed.raw];
-					}
-					if (mimes[parsed.type + parsed.suffix]) {
-						return mimes[parsed.type + parsed.suffix];
-					}
-					if (mimes[parsed.type]) {
-						return mimes[parsed.type];
-					}
-					if (mimes[parsed.suffix]) {
-						return mimes[parsed.suffix];
-					}
-	
-					return when.reject(new Error('Unable to locate converter for mime "' + parsed.raw + '"'));
-				};
-	
-				/**
-				 * Create a late dispatched proxy to the target converter.
-				 *
-				 * Common when a converter is registered under multiple names and
-				 * should be kept in sync if updated.
-				 *
-				 * @param {string} type mime converter to dispatch to
-				 * @returns converter whose read/write methods target the desired mime converter
-				 */
-				this.delegate = function delegate(type) {
-					return {
-						read: function () {
-							var args = arguments;
-							return this.lookup(type).then(function (converter) {
-								return converter.read.apply(this, args);
-							}.bind(this));
-						}.bind(this),
-						write: function () {
-							var args = arguments;
-							return this.lookup(type).then(function (converter) {
-								return converter.write.apply(this, args);
-							}.bind(this));
-						}.bind(this)
-					};
-				};
-	
-				/**
-				 * Register a custom converter for a MIME type
-				 *
-				 * @param {string} type the MIME type
-				 * @param converter the converter for the MIME type
-				 * @return a promise for the converter
-				 */
-				this.register = function register(type, converter) {
-					mimes[type] = when(converter);
-					return mimes[type];
-				};
-	
-				/**
-				 * Create a child registry whoes registered converters remain local, while
-				 * able to lookup converters from its parent.
-				 *
-				 * @returns child MIME registry
-				 */
-				this.child = function child() {
-					return new Registry(Object.create(mimes));
-				};
-	
-			}
-	
-			registry = new Registry({});
-	
-			// include provided serializers
-			registry.register('application/hal', __webpack_require__(308));
-			registry.register('application/json', __webpack_require__(315));
-			registry.register('application/x-www-form-urlencoded', __webpack_require__(316));
-			registry.register('multipart/form-data', __webpack_require__(317));
-			registry.register('text/plain', __webpack_require__(318));
-	
-			registry.register('+json', registry.delegate('application/json'));
-	
-			return registry;
-	
-		}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	
-	}(
-		__webpack_require__(227)
-		// Boilerplate for AMD and Node
-	));
-
-
-/***/ },
-/* 308 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;/*
-	 * Copyright 2013-2015 the original author or authors
-	 * @license MIT, see LICENSE.txt for details
-	 *
-	 * @author Scott Andrews
-	 */
-	
-	(function (define) {
-		'use strict';
-	
-		!(__WEBPACK_AMD_DEFINE_RESULT__ = function (require) {
-	
-			var pathPrefix, template, find, lazyPromise, responsePromise, when;
-	
-			pathPrefix = __webpack_require__(309);
-			template = __webpack_require__(310);
-			find = __webpack_require__(313);
-			lazyPromise = __webpack_require__(314);
-			responsePromise = __webpack_require__(302);
-			when = __webpack_require__(280);
-	
-			function defineProperty(obj, name, value) {
-				Object.defineProperty(obj, name, {
-					value: value,
-					configurable: true,
-					enumerable: false,
-					writeable: true
-				});
-			}
-	
-			/**
-			 * Hypertext Application Language serializer
-			 *
-			 * Implemented to https://tools.ietf.org/html/draft-kelly-json-hal-06
-			 *
-			 * As the spec is still a draft, this implementation will be updated as the
-			 * spec evolves
-			 *
-			 * Objects are read as HAL indexing links and embedded objects on to the
-			 * resource. Objects are written as plain JSON.
-			 *
-			 * Embedded relationships are indexed onto the resource by the relationship
-			 * as a promise for the related resource.
-			 *
-			 * Links are indexed onto the resource as a lazy promise that will GET the
-			 * resource when a handler is first registered on the promise.
-			 *
-			 * A `requestFor` method is added to the entity to make a request for the
-			 * relationship.
-			 *
-			 * A `clientFor` method is added to the entity to get a full Client for a
-			 * relationship.
-			 *
-			 * The `_links` and `_embedded` properties on the resource are made
-			 * non-enumerable.
-			 */
-			return {
-	
-				read: function (str, opts) {
-					var client, console;
-	
-					opts = opts || {};
-					client = opts.client;
-					console = opts.console || console;
-	
-					function deprecationWarning(relationship, deprecation) {
-						if (deprecation && console && console.warn || console.log) {
-							(console.warn || console.log).call(console, 'Relationship \'' + relationship + '\' is deprecated, see ' + deprecation);
-						}
-					}
-	
-					return opts.registry.lookup(opts.mime.suffix).then(function (converter) {
-						return when(converter.read(str, opts)).then(function (root) {
-	
-							find.findProperties(root, '_embedded', function (embedded, resource, name) {
-								Object.keys(embedded).forEach(function (relationship) {
-									if (relationship in resource) { return; }
-									var related = responsePromise({
-										entity: embedded[relationship]
-									});
-									defineProperty(resource, relationship, related);
-								});
-								defineProperty(resource, name, embedded);
-							});
-							find.findProperties(root, '_links', function (links, resource, name) {
-								Object.keys(links).forEach(function (relationship) {
-									var link = links[relationship];
-									if (relationship in resource) { return; }
-									defineProperty(resource, relationship, responsePromise.make(lazyPromise(function () {
-										if (link.deprecation) { deprecationWarning(relationship, link.deprecation); }
-										if (link.templated === true) {
-											return template(client)({ path: link.href });
-										}
-										return client({ path: link.href });
-									})));
-								});
-								defineProperty(resource, name, links);
-								defineProperty(resource, 'clientFor', function (relationship, clientOverride) {
-									var link = links[relationship];
-									if (!link) {
-										throw new Error('Unknown relationship: ' + relationship);
-									}
-									if (link.deprecation) { deprecationWarning(relationship, link.deprecation); }
-									if (link.templated === true) {
-										return template(
-											clientOverride || client,
-											{ template: link.href }
-										);
-									}
-									return pathPrefix(
-										clientOverride || client,
-										{ prefix: link.href }
-									);
-								});
-								defineProperty(resource, 'requestFor', function (relationship, request, clientOverride) {
-									var client = this.clientFor(relationship, clientOverride);
-									return client(request);
-								});
-							});
-	
-							return root;
-						});
-					});
-	
-				},
-	
-				write: function (obj, opts) {
-					return opts.registry.lookup(opts.mime.suffix).then(function (converter) {
-						return converter.write(obj, opts);
-					});
-				}
-	
-			};
-		}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	
-	}(
-		__webpack_require__(227)
-		// Boilerplate for AMD and Node
-	));
-
-
-/***/ },
-/* 309 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;/*
-	 * Copyright 2012-2013 the original author or authors
-	 * @license MIT, see LICENSE.txt for details
-	 *
-	 * @author Scott Andrews
-	 */
-	
-	(function (define) {
-		'use strict';
-	
-		!(__WEBPACK_AMD_DEFINE_RESULT__ = function (require) {
-	
-			var interceptor, UrlBuilder;
-	
-			interceptor = __webpack_require__(304);
-			UrlBuilder = __webpack_require__(299);
-	
-			function startsWith(str, prefix) {
-				return str.indexOf(prefix) === 0;
-			}
-	
-			function endsWith(str, suffix) {
-				return str.lastIndexOf(suffix) + suffix.length === str.length;
-			}
-	
-			/**
-			 * Prefixes the request path with a common value.
-			 *
-			 * @param {Client} [client] client to wrap
-			 * @param {number} [config.prefix] path prefix
-			 *
-			 * @returns {Client}
-			 */
-			return interceptor({
-				request: function (request, config) {
-					var path;
-	
-					if (config.prefix && !(new UrlBuilder(request.path).isFullyQualified())) {
-						path = config.prefix;
-						if (request.path) {
-							if (!endsWith(path, '/') && !startsWith(request.path, '/')) {
-								// add missing '/' between path sections
-								path += '/';
-							}
-							path += request.path;
-						}
-						request.path = path;
-					}
-	
-					return request;
-				}
-			});
-	
-		}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	
-	}(
-		__webpack_require__(227)
-		// Boilerplate for AMD and Node
-	));
-
-
-/***/ },
-/* 310 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;/*
-	 * Copyright 2015 the original author or authors
-	 * @license MIT, see LICENSE.txt for details
-	 *
-	 * @author Scott Andrews
-	 */
-	
-	(function (define) {
-		'use strict';
-	
-		!(__WEBPACK_AMD_DEFINE_RESULT__ = function (require) {
-	
-			var interceptor, uriTemplate, mixin;
-	
-			interceptor = __webpack_require__(304);
-			uriTemplate = __webpack_require__(311);
-			mixin = __webpack_require__(300);
-	
-			/**
-			 * Applies request params to the path as a URI Template
-			 *
-			 * Params are removed from the request object, as they have been consumed.
-			 *
-			 * @see https://tools.ietf.org/html/rfc6570
-			 *
-			 * @param {Client} [client] client to wrap
-			 * @param {Object} [config.params] default param values
-			 * @param {string} [config.template] default template
-			 *
-			 * @returns {Client}
-			 */
-			return interceptor({
-				init: function (config) {
-					config.params = config.params || {};
-					config.template = config.template || '';
-					return config;
-				},
-				request: function (request, config) {
-					var template, params;
-	
-					template = request.path || config.template;
-					params = mixin({}, request.params, config.params);
-	
-					request.path = uriTemplate.expand(template, params);
-					delete request.params;
-	
-					return request;
-				}
-			});
-	
-		}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	
-	}(
-		__webpack_require__(227)
-		// Boilerplate for AMD and Node
-	));
-
-
-/***/ },
-/* 311 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;/*
-	 * Copyright 2015 the original author or authors
-	 * @license MIT, see LICENSE.txt for details
-	 *
-	 * @author Scott Andrews
-	 */
-	
-	(function (define) {
-		'use strict';
-	
-		var undef;
-	
-		!(__WEBPACK_AMD_DEFINE_RESULT__ = function (require) {
-	
-			var uriEncoder, operations, prefixRE;
-	
-			uriEncoder = __webpack_require__(312);
-	
-			prefixRE = /^([^:]*):([0-9]+)$/;
-			operations = {
-				'':  { first: '',  separator: ',', named: false, empty: '',  encoder: uriEncoder.encode },
-				'+': { first: '',  separator: ',', named: false, empty: '',  encoder: uriEncoder.encodeURL },
-				'#': { first: '#', separator: ',', named: false, empty: '',  encoder: uriEncoder.encodeURL },
-				'.': { first: '.', separator: '.', named: false, empty: '',  encoder: uriEncoder.encode },
-				'/': { first: '/', separator: '/', named: false, empty: '',  encoder: uriEncoder.encode },
-				';': { first: ';', separator: ';', named: true,  empty: '',  encoder: uriEncoder.encode },
-				'?': { first: '?', separator: '&', named: true,  empty: '=', encoder: uriEncoder.encode },
-				'&': { first: '&', separator: '&', named: true,  empty: '=', encoder: uriEncoder.encode },
-				'=': { reserved: true },
-				',': { reserved: true },
-				'!': { reserved: true },
-				'@': { reserved: true },
-				'|': { reserved: true }
-			};
-	
-			function apply(operation, expression, params) {
-				/*jshint maxcomplexity:11 */
-				return expression.split(',').reduce(function (result, variable) {
-					var opts, value;
-	
-					opts = {};
-					if (variable.slice(-1) === '*') {
-						variable = variable.slice(0, -1);
-						opts.explode = true;
-					}
-					if (prefixRE.test(variable)) {
-						var prefix = prefixRE.exec(variable);
-						variable = prefix[1];
-						opts.maxLength = parseInt(prefix[2]);
-					}
-	
-					variable = uriEncoder.decode(variable);
-					value = params[variable];
-	
-					if (value === undef || value === null) {
-						return result;
-					}
-					if (Array.isArray(value)) {
-						result += value.reduce(function (result, value) {
-							if (result.length) {
-								result += opts.explode ? operation.separator : ',';
-								if (operation.named && opts.explode) {
-									result += operation.encoder(variable);
-									result += value.length ? '=' : operation.empty;
-								}
-							}
-							else {
-								result += operation.first;
-								if (operation.named) {
-									result += operation.encoder(variable);
-									result += value.length ? '=' : operation.empty;
-								}
-							}
-							result += operation.encoder(value);
-							return result;
-						}, '');
-					}
-					else if (typeof value === 'object') {
-						result += Object.keys(value).reduce(function (result, name) {
-							if (result.length) {
-								result += opts.explode ? operation.separator : ',';
-							}
-							else {
-								result += operation.first;
-								if (operation.named && !opts.explode) {
-									result += operation.encoder(variable);
-									result += value[name].length ? '=' : operation.empty;
-								}
-							}
-							result += operation.encoder(name);
-							result += opts.explode ? '=' : ',';
-							result += operation.encoder(value[name]);
-							return result;
-						}, '');
-					}
-					else {
-						value = String(value);
-						if (opts.maxLength) {
-							value = value.slice(0, opts.maxLength);
-						}
-						result += result.length ? operation.separator : operation.first;
-						if (operation.named) {
-							result += operation.encoder(variable);
-							result += value.length ? '=' : operation.empty;
-						}
-						result += operation.encoder(value);
-					}
-	
-					return result;
-				}, '');
-			}
-	
-			function expandExpression(expression, params) {
-				var operation;
-	
-				operation = operations[expression.slice(0,1)];
-				if (operation) {
-					expression = expression.slice(1);
-				}
-				else {
-					operation = operations[''];
-				}
-	
-				if (operation.reserved) {
-					throw new Error('Reserved expression operations are not supported');
-				}
-	
-				return apply(operation, expression, params);
-			}
-	
-			function expandTemplate(template, params) {
-				var start, end, uri;
-	
-				uri = '';
-				end = 0;
-				while (true) {
-					start = template.indexOf('{', end);
-					if (start === -1) {
-						// no more expressions
-						uri += template.slice(end);
-						break;
-					}
-					uri += template.slice(end, start);
-					end = template.indexOf('}', start) + 1;
-					uri += expandExpression(template.slice(start + 1, end - 1), params);
-				}
-	
-				return uri;
-			}
-	
-			return {
-	
-				/**
-				 * Expand a URI Template with parameters to form a URI.
-				 *
-				 * Full implementation (level 4) of rfc6570.
-				 * @see https://tools.ietf.org/html/rfc6570
-				 *
-				 * @param {string} template URI template
-				 * @param {Object} [params] params to apply to the template durring expantion
-				 * @returns {string} expanded URI
-				 */
-				expand: expandTemplate
-	
-			};
-	
-		}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	
-	}(
-		__webpack_require__(227)
-		// Boilerplate for AMD and Node
-	));
-
-
-/***/ },
-/* 312 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;/*
-	 * Copyright 2015 the original author or authors
-	 * @license MIT, see LICENSE.txt for details
-	 *
-	 * @author Scott Andrews
-	 */
-	
-	(function (define) {
-		'use strict';
-	
-		!(__WEBPACK_AMD_DEFINE_RESULT__ = function (/* require */) {
-	
-			var charMap;
-	
-			charMap = (function () {
-				var strings = {
-					alpha: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz',
-					digit: '0123456789'
-				};
-	
-				strings.genDelims = ':/?#[]@';
-				strings.subDelims = '!$&\'()*+,;=';
-				strings.reserved = strings.genDelims + strings.subDelims;
-				strings.unreserved = strings.alpha + strings.digit + '-._~';
-				strings.url = strings.reserved + strings.unreserved;
-				strings.scheme = strings.alpha + strings.digit + '+-.';
-				strings.userinfo = strings.unreserved + strings.subDelims + ':';
-				strings.host = strings.unreserved + strings.subDelims;
-				strings.port = strings.digit;
-				strings.pchar = strings.unreserved + strings.subDelims + ':@';
-				strings.segment = strings.pchar;
-				strings.path = strings.segment + '/';
-				strings.query = strings.pchar + '/?';
-				strings.fragment = strings.pchar + '/?';
-	
-				return Object.keys(strings).reduce(function (charMap, set) {
-					charMap[set] = strings[set].split('').reduce(function (chars, myChar) {
-						chars[myChar] = true;
-						return chars;
-					}, {});
-					return charMap;
-				}, {});
-			}());
-	
-			function encode(str, allowed) {
-				if (typeof str !== 'string') {
-					throw new Error('String required for URL encoding');
-				}
-				return str.split('').map(function (myChar) {
-					if (allowed.hasOwnProperty(myChar)) {
-						return myChar;
-					}
-					var code = myChar.charCodeAt(0);
-					if (code <= 127) {
-						var encoded = code.toString(16).toUpperCase();
-						return '%' + (encoded.length % 2 === 1 ? '0' : '') + encoded;
-					}
-					else {
-						return encodeURIComponent(myChar).toUpperCase();
-					}
-				}).join('');
-			}
-	
-			function makeEncoder(allowed) {
-				allowed = allowed || charMap.unreserved;
-				return function (str) {
-					return encode(str, allowed);
-				};
-			}
-	
-			function decode(str) {
-				return decodeURIComponent(str);
-			}
-	
-			return {
-	
-				/*
-				 * Decode URL encoded strings
-				 *
-				 * @param {string} URL encoded string
-				 * @returns {string} URL decoded string
-				 */
-				decode: decode,
-	
-				/*
-				 * URL encode a string
-				 *
-				 * All but alpha-numerics and a very limited set of punctuation - . _ ~ are
-				 * encoded.
-				 *
-				 * @param {string} string to encode
-				 * @returns {string} URL encoded string
-				 */
-				encode: makeEncoder(),
-	
-				/*
-				* URL encode a URL
-				*
-				* All character permitted anywhere in a URL are left unencoded even
-				* if that character is not permitted in that portion of a URL.
-				*
-				* Note: This method is typically not what you want.
-				*
-				* @param {string} string to encode
-				* @returns {string} URL encoded string
-				*/
-				encodeURL: makeEncoder(charMap.url),
-	
-				/*
-				 * URL encode the scheme portion of a URL
-				 *
-				 * @param {string} string to encode
-				 * @returns {string} URL encoded string
-				 */
-				encodeScheme: makeEncoder(charMap.scheme),
-	
-				/*
-				 * URL encode the user info portion of a URL
-				 *
-				 * @param {string} string to encode
-				 * @returns {string} URL encoded string
-				 */
-				encodeUserInfo: makeEncoder(charMap.userinfo),
-	
-				/*
-				 * URL encode the host portion of a URL
-				 *
-				 * @param {string} string to encode
-				 * @returns {string} URL encoded string
-				 */
-				encodeHost: makeEncoder(charMap.host),
-	
-				/*
-				 * URL encode the port portion of a URL
-				 *
-				 * @param {string} string to encode
-				 * @returns {string} URL encoded string
-				 */
-				encodePort: makeEncoder(charMap.port),
-	
-				/*
-				 * URL encode a path segment portion of a URL
-				 *
-				 * @param {string} string to encode
-				 * @returns {string} URL encoded string
-				 */
-				encodePathSegment: makeEncoder(charMap.segment),
-	
-				/*
-				 * URL encode the path portion of a URL
-				 *
-				 * @param {string} string to encode
-				 * @returns {string} URL encoded string
-				 */
-				encodePath: makeEncoder(charMap.path),
-	
-				/*
-				 * URL encode the query portion of a URL
-				 *
-				 * @param {string} string to encode
-				 * @returns {string} URL encoded string
-				 */
-				encodeQuery: makeEncoder(charMap.query),
-	
-				/*
-				 * URL encode the fragment portion of a URL
-				 *
-				 * @param {string} string to encode
-				 * @returns {string} URL encoded string
-				 */
-				encodeFragment: makeEncoder(charMap.fragment)
-	
-			};
-	
-		}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	
-	}(
-		__webpack_require__(227)
-		// Boilerplate for AMD and Node
-	));
-
-
-/***/ },
-/* 313 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;/*
-	 * Copyright 2013 the original author or authors
-	 * @license MIT, see LICENSE.txt for details
-	 *
-	 * @author Scott Andrews
-	 */
-	
-	(function (define) {
-		'use strict';
-	
-		!(__WEBPACK_AMD_DEFINE_RESULT__ = function (/* require */) {
-	
-			return {
-	
-				/**
-				 * Find objects within a graph the contain a property of a certain name.
-				 *
-				 * NOTE: this method will not discover object graph cycles.
-				 *
-				 * @param {*} obj object to search on
-				 * @param {string} prop name of the property to search for
-				 * @param {Function} callback function to receive the found properties and their parent
-				 */
-				findProperties: function findProperties(obj, prop, callback) {
-					if (typeof obj !== 'object' || obj === null) { return; }
-					if (prop in obj) {
-						callback(obj[prop], obj, prop);
-					}
-					Object.keys(obj).forEach(function (key) {
-						findProperties(obj[key], prop, callback);
-					});
-				}
-	
-			};
-	
-		}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	
-	}(
-		__webpack_require__(227)
-		// Boilerplate for AMD and Node
-	));
-
-
-/***/ },
-/* 314 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;/*
-	 * Copyright 2013 the original author or authors
-	 * @license MIT, see LICENSE.txt for details
-	 *
-	 * @author Scott Andrews
-	 */
-	
-	(function (define) {
-		'use strict';
-	
-		!(__WEBPACK_AMD_DEFINE_RESULT__ = function (require) {
-	
-			var when;
-	
-			when = __webpack_require__(280);
-	
-			/**
-			 * Create a promise whose work is started only when a handler is registered.
-			 *
-			 * The work function will be invoked at most once. Thrown values will result
-			 * in promise rejection.
-			 *
-			 * @param {Function} work function whose ouput is used to resolve the
-			 *   returned promise.
-			 * @returns {Promise} a lazy promise
-			 */
-			function lazyPromise(work) {
-				var defer, started, resolver, promise, then;
-	
-				defer = when.defer();
-				started = false;
-	
-				resolver = defer.resolver;
-				promise = defer.promise;
-				then = promise.then;
-	
-				promise.then = function () {
-					if (!started) {
-						started = true;
-						when.attempt(work).then(resolver.resolve, resolver.reject);
-					}
-					return then.apply(promise, arguments);
-				};
-	
-				return promise;
-			}
-	
-			return lazyPromise;
-	
-		}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	
-	}(
-		__webpack_require__(227)
-		// Boilerplate for AMD and Node
-	));
-
-
-/***/ },
-/* 315 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;/*
-	 * Copyright 2012-2015 the original author or authors
-	 * @license MIT, see LICENSE.txt for details
-	 *
-	 * @author Scott Andrews
-	 */
-	
-	(function (define) {
-		'use strict';
-	
-		!(__WEBPACK_AMD_DEFINE_RESULT__ = function (/* require */) {
-	
-			/**
-			 * Create a new JSON converter with custom reviver/replacer.
-			 *
-			 * The extended converter must be published to a MIME registry in order
-			 * to be used. The existing converter will not be modified.
-			 *
-			 * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON
-			 *
-			 * @param {function} [reviver=undefined] custom JSON.parse reviver
-			 * @param {function|Array} [replacer=undefined] custom JSON.stringify replacer
-			 */
-			function createConverter(reviver, replacer) {
-				return {
-	
-					read: function (str) {
-						return JSON.parse(str, reviver);
-					},
-	
-					write: function (obj) {
-						return JSON.stringify(obj, replacer);
-					},
-	
-					extend: createConverter
-	
-				};
-			}
-	
-			return createConverter();
-	
-		}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	
-	}(
-		__webpack_require__(227)
-		// Boilerplate for AMD and Node
-	));
-
-
-/***/ },
-/* 316 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;/*
-	 * Copyright 2012 the original author or authors
-	 * @license MIT, see LICENSE.txt for details
-	 *
-	 * @author Scott Andrews
-	 */
-	
-	(function (define) {
-		'use strict';
-	
-		!(__WEBPACK_AMD_DEFINE_RESULT__ = function (/* require */) {
-	
-			var encodedSpaceRE, urlEncodedSpaceRE;
-	
-			encodedSpaceRE = /%20/g;
-			urlEncodedSpaceRE = /\+/g;
-	
-			function urlEncode(str) {
-				str = encodeURIComponent(str);
-				// spec says space should be encoded as '+'
-				return str.replace(encodedSpaceRE, '+');
-			}
-	
-			function urlDecode(str) {
-				// spec says space should be encoded as '+'
-				str = str.replace(urlEncodedSpaceRE, ' ');
-				return decodeURIComponent(str);
-			}
-	
-			function append(str, name, value) {
-				if (Array.isArray(value)) {
-					value.forEach(function (value) {
-						str = append(str, name, value);
-					});
-				}
-				else {
-					if (str.length > 0) {
-						str += '&';
-					}
-					str += urlEncode(name);
-					if (value !== undefined && value !== null) {
-						str += '=' + urlEncode(value);
-					}
-				}
-				return str;
-			}
-	
-			return {
-	
-				read: function (str) {
-					var obj = {};
-					str.split('&').forEach(function (entry) {
-						var pair, name, value;
-						pair = entry.split('=');
-						name = urlDecode(pair[0]);
-						if (pair.length === 2) {
-							value = urlDecode(pair[1]);
-						}
-						else {
-							value = null;
-						}
-						if (name in obj) {
-							if (!Array.isArray(obj[name])) {
-								// convert to an array, perserving currnent value
-								obj[name] = [obj[name]];
-							}
-							obj[name].push(value);
-						}
-						else {
-							obj[name] = value;
-						}
-					});
-					return obj;
-				},
-	
-				write: function (obj) {
-					var str = '';
-					Object.keys(obj).forEach(function (name) {
-						str = append(str, name, obj[name]);
-					});
-					return str;
-				}
-	
-			};
-		}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	
-	}(
-		__webpack_require__(227)
-		// Boilerplate for AMD and Node
-	));
-
-
-/***/ },
-/* 317 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;/*
-	 * Copyright 2014 the original author or authors
-	 * @license MIT, see LICENSE.txt for details
-	 *
-	 * @author Michael Jackson
-	 */
-	
-	/* global FormData, File, Blob */
-	
-	(function (define) {
-		'use strict';
-	
-		!(__WEBPACK_AMD_DEFINE_RESULT__ = function (/* require */) {
-	
-			function isFormElement(object) {
-				return object &&
-					object.nodeType === 1 && // Node.ELEMENT_NODE
-					object.tagName === 'FORM';
-			}
-	
-			function createFormDataFromObject(object) {
-				var formData = new FormData();
-	
-				var value;
-				for (var property in object) {
-					if (object.hasOwnProperty(property)) {
-						value = object[property];
-	
-						if (value instanceof File) {
-							formData.append(property, value, value.name);
-						} else if (value instanceof Blob) {
-							formData.append(property, value);
-						} else {
-							formData.append(property, String(value));
-						}
-					}
-				}
-	
-				return formData;
-			}
-	
-			return {
-	
-				write: function (object) {
-					if (typeof FormData === 'undefined') {
-						throw new Error('The multipart/form-data mime serializer requires FormData support');
-					}
-	
-					// Support FormData directly.
-					if (object instanceof FormData) {
-						return object;
-					}
-	
-					// Support <form> elements.
-					if (isFormElement(object)) {
-						return new FormData(object);
-					}
-	
-					// Support plain objects, may contain File/Blob as value.
-					if (typeof object === 'object' && object !== null) {
-						return createFormDataFromObject(object);
-					}
-	
-					throw new Error('Unable to create FormData from object ' + object);
-				}
-	
-			};
-		}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	
-	}(
-		__webpack_require__(227)
-		// Boilerplate for AMD and Node
-	));
-
-
-/***/ },
-/* 318 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;/*
-	 * Copyright 2012 the original author or authors
-	 * @license MIT, see LICENSE.txt for details
-	 *
-	 * @author Scott Andrews
-	 */
-	
-	(function (define) {
-		'use strict';
-	
-		!(__WEBPACK_AMD_DEFINE_RESULT__ = function (/* require */) {
-	
-			return {
-	
-				read: function (str) {
-					return str;
-				},
-	
-				write: function (obj) {
-					return obj.toString();
-				}
-	
-			};
-		}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	
-	}(
-		__webpack_require__(227)
-		// Boilerplate for AMD and Node
-	));
-
-
-/***/ },
-/* 319 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;'use strict';
-	
-	!(__WEBPACK_AMD_DEFINE_RESULT__ = function (require) {
-		'use strict';
-	
-		var interceptor = __webpack_require__(304);
-	
-		return interceptor({
-			request: function request(_request /*, config, meta */) {
-				/* If the URI is a URI Template per RFC 6570 (http://tools.ietf.org/html/rfc6570), trim out the template part */
-				if (_request.path.indexOf('{') === -1) {
-					return _request;
-				} else {
-					_request.path = _request.path.split('{')[0];
-					return _request;
-				}
-			}
-		});
-	}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-
-/***/ },
-/* 320 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;/*
-	 * Copyright 2012-2013 the original author or authors
-	 * @license MIT, see LICENSE.txt for details
-	 *
-	 * @author Scott Andrews
-	 */
-	
-	(function (define) {
-		'use strict';
-	
-		!(__WEBPACK_AMD_DEFINE_RESULT__ = function (require) {
-	
-			var interceptor, when;
-	
-			interceptor = __webpack_require__(304);
-			when = __webpack_require__(280);
-	
-			/**
-			 * Rejects the response promise based on the status code.
-			 *
-			 * Codes greater than or equal to the provided value are rejected.  Default
-			 * value 400.
-			 *
-			 * @param {Client} [client] client to wrap
-			 * @param {number} [config.code=400] code to indicate a rejection
-			 *
-			 * @returns {Client}
-			 */
-			return interceptor({
-				init: function (config) {
-					config.code = config.code || 400;
-					return config;
-				},
-				response: function (response, config) {
-					if (response.status && response.status.code >= config.code) {
-						return when.reject(response);
-					}
-					return response;
-				}
-			});
-	
-		}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	
-	}(
-		__webpack_require__(227)
-		// Boilerplate for AMD and Node
-	));
-
-
-/***/ },
-/* 321 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;'use strict';
-	
-	!(__WEBPACK_AMD_DEFINE_RESULT__ = function () {
-		'use strict';
-	
-		/* Convert a single or array of resources into "URI1\nURI2\nURI3..." */
-		return {
-			read: function read(str /*, opts */) {
-				return str.split('\n');
-			},
-			write: function write(obj /*, opts */) {
-				// If this is an Array, extract the self URI and then join using a newline
-				if (obj instanceof Array) {
-					return obj.map(function (resource) {
-						return resource._links.self.href;
-					}).join('\n');
-				} else {
-					// otherwise, just return the self URI
-					return obj._links.self.href;
-				}
-			}
-		};
-	}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 
 /***/ }
 /******/ ]);

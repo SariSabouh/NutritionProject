@@ -1,8 +1,11 @@
 body {
   font-family: "Open Sans", sans-serif;
   height: 100vh;
-  background: url("http://1.bp.blogspot.com/-qcn12SvTJS4/Uf_mOlUYTEI/AAAAAAAABU0/wgIPCwJJ_Tk/s1600/fresh-fruits-vegetables-2419.jpg") 50% fixed;
+  background: url(../img/com2.jpeg) 50% fixed;
   background-size: cover;
+  background-color: #fff;
+ 
+  
 }
 
 @keyframes spinner {
@@ -19,28 +22,76 @@ body {
 
 .wrapper {
   display: flex;
-  align-items: center;
+  align-items: left ;
   flex-direction: column;
   justify-content: center;
   width: 100%;
   min-height: 100%;
-  padding: 20px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   background: ;
 }
 
+@media screen and (max-width:360px){
+	.wrapper{
+	
+	align-items: left;
+	width: 300px;
+	margin-left: 0px;
+	margin-left: 100px;
+	
+	
+	}
+}
+
+@media screen and (max-width:799px){
+	.wrapper{
+	
+	align-items: center;
+	
+	
+	}
+}
+
+
+
+
+
+
+
+
 .login {
-  border-radius: 2px 2px 5px 5px;
-  padding: 10px 20px 20px 20px;
-  width: 90%;
+  border-radius: 10px 10px 10px 10px;
+  padding: 20px 20px 20px 20px;
+  width: 80%;
   max-width: 320px;
   background: #ffffff;
   position: relative;
   padding-bottom: 80px;
-  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+  margin-top: 1px;
+  box-shadow: 0px 1px 100px rgba(0, 0, 0, 0.3);
 }
+
+@media screen and (min-width:800px){	
+.login {
+  border-radius: 2px 2px 5px 5px;
+  padding: 70px 20px 20px 20px;
+  width: 90%;
+  
+  background: #ffffff;
+  position: relative;
+  padding-bottom: 100px;
+  
+  
+  box-shadow: 0px 1px 100px rgba(0, 0, 0, 0.3);
+}
+
+}
+
+
 .login.loading button {
   max-height: 100%;
-  padding-top: 50px;
+  padding-top: 10px;
 }
 .login.loading button .spinner {
   opacity: 1;
@@ -58,23 +109,56 @@ body {
   transform: rotateZ(-45deg);
 }
 .login input {
-  display: block;
-  padding: 15px 10px;
-  margin-bottom: 10px;
+  display: inline-block;
+  padding: 5px 10px;
   width: 100%;
   border: 1px solid #ddd;
   transition: border-width 0.2s ease;
-  border-radius: 2px;
+  border-radius: 40px;
   color: #ccc;
+}
+
+@media screen and (min-width:800px){
+	.login input {
+  display: block;
+  padding-top: 10px;
+ padding-right: 10px;
+ padding-bottom: 5px;
+ padding-left: 10px;
+  margin-top: 100px;
+  width: 100%;
+  hight: 40px;
+  border: 1px solid #ddd;
+  transition: border-width 0.2s ease;
+  border-radius: 40px;
+  color: #ccc;
+}
+	
+	
 }
 .login input + i.fa {
   color: #fff;
-  font-size: 1em;
+  font-size: 2em;
   position: absolute;
-  margin-top: -47px;
+  margin-top: 1px;
   opacity: 0;
   left: 0;
   transition: all 0.1s ease-in;
+}
+
+@media screen and (min-width:800px){
+	
+	.login input + i.fa{
+	color: #fff;
+  font-size: 2em;
+  position: absolute;
+  margin-top: -30px;
+  opacity: 0;
+  left: 0;
+  transition: all 0.1s ease-in;
+	
+	}
+	
 }
 .login input:focus {
   outline: none;
@@ -84,11 +168,14 @@ body {
 }
 .login input:focus + i.fa {
   opacity: 1;
-  left: 30px;
+  left: 27px;
   transition: all 0.25s ease-out;
 }
 .login a {
+	
   font-size: 0.8em;
+  margin-bottom: 50px;
+  margin-top: 100px;
   color: #ff7f7f;
   text-decoration: none;
 }
