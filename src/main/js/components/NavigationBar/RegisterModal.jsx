@@ -71,31 +71,31 @@ export default class RegisterModal extends React.Component {
                             <ModalBody>
                                 <form>
                                      <div className="form-group">
-                                        <label for="Email">Email</label>
-                                        <input type="Email" name="Email" id="Email" tabindex="2" className="form-control" placeholder="Email" autocomplete="off" />
+                                        <label htmlFor="Email">Email</label>
+                                        <input type="Email" name="Email" id="Email" tabIndex="2" className="form-control" placeholder="Email" autoComplete="off" />
                                     </div>
 
                                     <div className="form-group">
-                                        <label for="password">Password</label>
-                                        <input type="" name="" id="Email" tabindex="2" className="form-control" placeholder="Password" autocomplete="off" />
+                                        <label htmlFor="password">Password</label>
+                                        <input type="" name="" id="Email" tabIndex="2" className="form-control" placeholder="Password" autoComplete="off" />
                                     </div>
                                      <div className="form-group">
                                         <label>FirstName</label>
-                                        <input type="" name="" id="" tabindex="2" className="form-control" placeholder="FirstName" autocomplete="off" />
+                                        <input type="" name="" id="" tabIndex="2" className="form-control" placeholder="FirstName" autoComplete="off" />
                                     </div>
 
                                     <div className="form-group">
                                         <label>LastName</label>
-                                        <input type="" name="" id="" tabindex="2" className="form-control" placeholder="LastName" autocomplete="off" />
+                                        <input type="" name="" id="" tabIndex="2" className="form-control" placeholder="LastName" autoComplete="off" />
                                     </div>
                                      <div className="form-group">
                                         <label >Medical</label>
-                                        <input type="" name="" id="" tabindex="2" className="form-control" placeholder="medical" autocomplete="off" />
+                                        <input type="" name="" id="" tabIndex="2" className="form-control" placeholder="medical" autoComplete="off" />
                                     </div>
 
                                     <div className="form-group">
                                         <label>Age</label>
-                                        <input type="" name="" id="" tabindex="2" className="form-control" placeholder="Age" autocomplete="off" />
+                                        <input type="" name="" id="" tabIndex="2" className="form-control" placeholder="Age" autoComplete="off" />
                                     </div>
                                 </form>
                             </ModalBody>

@@ -22051,7 +22051,6 @@
 	    _createClass(NavTabs, [{
 	        key: 'render',
 	        value: function render() {
-	
 	            return _react2['default'].createElement(
 	                'div',
 	                null,
@@ -22120,7 +22119,7 @@
 	                            { className: 'dropdown' },
 	                            _react2['default'].createElement(
 	                                'a',
-	                                { 'class': 'dropdown-toggle', 'data-toggle': 'dropdown' },
+	                                { className: 'dropdown-toggle', 'data-toggle': 'dropdown' },
 	                                'Log In | Register ',
 	                                _react2['default'].createElement('span', { className: 'caret' })
 	                            ),
@@ -22151,20 +22150,20 @@
 	                                            { className: 'form-group' },
 	                                            _react2['default'].createElement(
 	                                                'label',
-	                                                { 'for': 'Email' },
+	                                                { htmlFor: 'Email' },
 	                                                'Email'
 	                                            ),
-	                                            _react2['default'].createElement('input', { type: 'Email', name: 'Email', id: 'Email', tabindex: '2', className: 'form-control', placeholder: 'Email', autocomplete: 'off' })
+	                                            _react2['default'].createElement('input', { type: 'Email', name: 'Email', id: 'Email', tabIndex: '2', className: 'form-control', placeholder: 'Email', autoComplete: 'off' })
 	                                        ),
 	                                        _react2['default'].createElement(
 	                                            'div',
 	                                            { className: 'form-group' },
 	                                            _react2['default'].createElement(
 	                                                'label',
-	                                                { 'for': 'password' },
+	                                                { htmlFor: 'password' },
 	                                                'Password'
 	                                            ),
-	                                            _react2['default'].createElement('input', { type: '', name: '', id: 'Email', tabindex: '2', className: 'form-control', placeholder: 'Password', autocomplete: 'off' })
+	                                            _react2['default'].createElement('input', { type: '', name: '', id: 'Email', tabIndex: '2', className: 'form-control', placeholder: 'Password', autoComplete: 'off' })
 	                                        ),
 	                                        _react2['default'].createElement(
 	                                            'div',
@@ -22175,17 +22174,17 @@
 	                                                _react2['default'].createElement(
 	                                                    'div',
 	                                                    { className: 'col-xs-7' },
-	                                                    _react2['default'].createElement('input', { type: 'checkbox', tabindex: '3', name: 'remember', id: 'remember' }),
+	                                                    _react2['default'].createElement('input', { type: 'checkbox', tabIndex: '3', name: 'remember', id: 'remember' }),
 	                                                    _react2['default'].createElement(
 	                                                        'label',
-	                                                        { 'for': 'remember', id: 'remembermargin' },
+	                                                        { htmlFor: 'remember', id: 'remembermargin' },
 	                                                        'Remember Me'
 	                                                    )
 	                                                ),
 	                                                _react2['default'].createElement(
 	                                                    'div',
 	                                                    { className: 'col-xs-5 pull-right' },
-	                                                    _react2['default'].createElement('input', { type: 'submit', name: 'login-submit', id: 'login-submit', tabindex: '4', className: 'form-control btn btn-success', value: 'Log In' })
+	                                                    _react2['default'].createElement('input', { type: 'submit', name: 'login-submit', id: 'login-submit', tabIndex: '4', className: 'form-control btn btn-success', value: 'Log In' })
 	                                                )
 	                                            )
 	                                        ),
@@ -22203,7 +22202,7 @@
 	                                                        { className: 'text-center' },
 	                                                        _react2['default'].createElement(
 	                                                            'a',
-	                                                            { tabindex: '5', className: 'forgot-password' },
+	                                                            { tabIndex: '5', className: 'forgot-password' },
 	                                                            'Forgot Password?'
 	                                                        )
 	                                                    )
@@ -22347,20 +22346,20 @@
 	                                        { className: 'form-group' },
 	                                        _react2['default'].createElement(
 	                                            'label',
-	                                            { 'for': 'Email' },
+	                                            { htmlFor: 'Email' },
 	                                            'Email'
 	                                        ),
-	                                        _react2['default'].createElement('input', { type: 'Email', name: 'Email', id: 'Email', tabindex: '2', className: 'form-control', placeholder: 'Email', autocomplete: 'off' })
+	                                        _react2['default'].createElement('input', { type: 'Email', name: 'Email', id: 'Email', tabIndex: '2', className: 'form-control', placeholder: 'Email', autoComplete: 'off' })
 	                                    ),
 	                                    _react2['default'].createElement(
 	                                        'div',
 	                                        { className: 'form-group' },
 	                                        _react2['default'].createElement(
 	                                            'label',
-	                                            { 'for': 'password' },
+	                                            { htmlFor: 'password' },
 	                                            'Password'
 	                                        ),
-	                                        _react2['default'].createElement('input', { type: '', name: '', id: 'Email', tabindex: '2', className: 'form-control', placeholder: 'Password', autocomplete: 'off' })
+	                                        _react2['default'].createElement('input', { type: '', name: '', id: 'Email', tabIndex: '2', className: 'form-control', placeholder: 'Password', autoComplete: 'off' })
 	                                    ),
 	                                    _react2['default'].createElement(
 	                                        'div',
@@ -22370,7 +22369,7 @@
 	                                            null,
 	                                            'FirstName'
 	                                        ),
-	                                        _react2['default'].createElement('input', { type: '', name: '', id: '', tabindex: '2', className: 'form-control', placeholder: 'FirstName', autocomplete: 'off' })
+	                                        _react2['default'].createElement('input', { type: '', name: '', id: '', tabIndex: '2', className: 'form-control', placeholder: 'FirstName', autoComplete: 'off' })
 	                                    ),
 	                                    _react2['default'].createElement(
 	                                        'div',
@@ -22380,7 +22379,7 @@
 	                                            null,
 	                                            'LastName'
 	                                        ),
-	                                        _react2['default'].createElement('input', { type: '', name: '', id: '', tabindex: '2', className: 'form-control', placeholder: 'LastName', autocomplete: 'off' })
+	                                        _react2['default'].createElement('input', { type: '', name: '', id: '', tabIndex: '2', className: 'form-control', placeholder: 'LastName', autoComplete: 'off' })
 	                                    ),
 	                                    _react2['default'].createElement(
 	                                        'div',
@@ -22390,7 +22389,7 @@
 	                                            null,
 	                                            'Medical'
 	                                        ),
-	                                        _react2['default'].createElement('input', { type: '', name: '', id: '', tabindex: '2', className: 'form-control', placeholder: 'medical', autocomplete: 'off' })
+	                                        _react2['default'].createElement('input', { type: '', name: '', id: '', tabIndex: '2', className: 'form-control', placeholder: 'medical', autoComplete: 'off' })
 	                                    ),
 	                                    _react2['default'].createElement(
 	                                        'div',
@@ -22400,7 +22399,7 @@
 	                                            null,
 	                                            'Age'
 	                                        ),
-	                                        _react2['default'].createElement('input', { type: '', name: '', id: '', tabindex: '2', className: 'form-control', placeholder: 'Age', autocomplete: 'off' })
+	                                        _react2['default'].createElement('input', { type: '', name: '', id: '', tabIndex: '2', className: 'form-control', placeholder: 'Age', autoComplete: 'off' })
 	                                    )
 	                                )
 	                            ),
@@ -29906,10 +29905,6 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _LoginJsx = __webpack_require__(273);
-	
-	var _LoginJsx2 = _interopRequireDefault(_LoginJsx);
-	
 	var _componentsNavigationBarNavigationBarJsx = __webpack_require__(184);
 	
 	var _componentsNavigationBarNavigationBarJsx2 = _interopRequireDefault(_componentsNavigationBarNavigationBarJsx);
@@ -29926,7 +29921,6 @@
 	    _createClass(LoginManager, [{
 	        key: 'render',
 	        value: function render() {
-	
 	            return _react2['default'].createElement(
 	                'div',
 	                { id: 'Login' },
@@ -29939,130 +29933,6 @@
 	})(_react2['default'].Component);
 	
 	exports['default'] = LoginManager;
-	module.exports = exports['default'];
-
-/***/ },
-/* 273 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, '__esModule', {
-	    value: true
-	});
-	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-	
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _reactDom = __webpack_require__(32);
-	
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-	
-	var Login = (function (_React$Component) {
-	    _inherits(Login, _React$Component);
-	
-	    function Login() {
-	        _classCallCheck(this, Login);
-	
-	        _get(Object.getPrototypeOf(Login.prototype), 'constructor', this).apply(this, arguments);
-	    }
-	
-	    _createClass(Login, [{
-	        key: 'render',
-	        value: function render() {
-	            return _react2['default'].createElement(
-	                'div',
-	                { className: 'top-content' },
-	                _react2['default'].createElement(
-	                    'div',
-	                    { className: 'inner-bg' },
-	                    _react2['default'].createElement(
-	                        'div',
-	                        { className: 'container' },
-	                        _react2['default'].createElement(
-	                            'div',
-	                            { className: 'row' },
-	                            _react2['default'].createElement(
-	                                'div',
-	                                { className: 'col-sm-5' },
-	                                _react2['default'].createElement(
-	                                    'div',
-	                                    { className: 'form-box' },
-	                                    _react2['default'].createElement(
-	                                        'div',
-	                                        { className: 'form-top' },
-	                                        _react2['default'].createElement(
-	                                            'div',
-	                                            { className: 'form-top-left' },
-	                                            _react2['default'].createElement(
-	                                                'h3',
-	                                                null,
-	                                                'Login to our site'
-	                                            )
-	                                        ),
-	                                        _react2['default'].createElement(
-	                                            'div',
-	                                            { className: 'form-top-right' },
-	                                            _react2['default'].createElement('i', { className: 'fa fa-key' })
-	                                        )
-	                                    ),
-	                                    _react2['default'].createElement(
-	                                        'div',
-	                                        { className: 'form-bottom' },
-	                                        _react2['default'].createElement(
-	                                            'form',
-	                                            { className: 'login-form' },
-	                                            _react2['default'].createElement(
-	                                                'div',
-	                                                { className: 'form-group' },
-	                                                _react2['default'].createElement(
-	                                                    'label',
-	                                                    { className: 'sr-only' },
-	                                                    'Username'
-	                                                ),
-	                                                _react2['default'].createElement('input', { type: 'text', placeholder: 'Username...', className: 'form-username form-control' })
-	                                            ),
-	                                            _react2['default'].createElement(
-	                                                'div',
-	                                                { className: 'form-group' },
-	                                                _react2['default'].createElement(
-	                                                    'label',
-	                                                    { className: 'sr-only' },
-	                                                    'Password'
-	                                                ),
-	                                                _react2['default'].createElement('input', { type: 'password', placeholder: 'Password...', className: 'form-password form-control' })
-	                                            ),
-	                                            _react2['default'].createElement(
-	                                                'button',
-	                                                { type: 'submit', className: 'btn' },
-	                                                'Sign in!'
-	                                            )
-	                                        )
-	                                    )
-	                                )
-	                            )
-	                        )
-	                    )
-	                )
-	            );
-	        }
-	    }]);
-	
-	    return Login;
-	})(_react2['default'].Component);
-	
-	exports['default'] = Login;
 	module.exports = exports['default'];
 
 /***/ }
