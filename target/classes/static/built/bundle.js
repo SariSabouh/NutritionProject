@@ -29476,7 +29476,7 @@
 	                  _react2['default'].createElement(
 	                    'div',
 	                    { className: 'member-image' },
-	                    _react2['default'].createElement('img', { className: 'img-responsive', src: 'img/team/MAYSARA.jpg', alt: '' })
+	                    _react2['default'].createElement('img', { className: 'img-responsive', src: 'img/team/SariSabouh.jpg', alt: '' })
 	                  ),
 	                  _react2['default'].createElement(
 	                    'div',
