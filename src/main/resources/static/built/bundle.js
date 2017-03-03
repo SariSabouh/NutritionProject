@@ -22125,7 +22125,7 @@
 	                            ),
 	                            _react2['default'].createElement(
 	                                'ul',
-	                                { className: 'dropdown-menu dropdown-lr animated lightSpeedIn', role: 'menu' },
+	                                { className: 'dropdown-menu dropdown-lr animated flipInX', role: 'menu' },
 	                                _react2['default'].createElement(
 	                                    'div',
 	                                    { className: 'col-lg-12' },

@@ -17,7 +17,7 @@ export default class NavTabs extends React.Component {
 
                         <li className="dropdown">
                             <a className="dropdown-toggle" data-toggle="dropdown">Log In | Register <span className="caret"></span></a>
-                            <ul className="dropdown-menu dropdown-lr animated lightSpeedIn" role="menu">
+                            <ul className="dropdown-menu dropdown-lr animated flipInX" role="menu">
                                 <div className="col-lg-12">
                                     <div className="text-center"><h3><b>Log In</b></h3></div>
                                     <form>
