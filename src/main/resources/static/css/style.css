@@ -75,6 +75,7 @@ p {
 }
 .navbar-nav > li > a {
 	font-family: "Lato", Helvetica, Arial, sans-serif;
+	cursor: pointer;
 }
 /* End Fonts */
 
@@ -154,8 +155,8 @@ section {
 	background-repeat: no-repeat;
 	background-position: left center;
 	position:absolute;
-	width: 100%;
-	height: auto;
+	width: 150px;
+	height: 60px;
 	padding: 24px 0;
 	text-indent: -99999px;
 	font-size: 20px;
@@ -172,21 +173,13 @@ section {
 
 
 .navbar-default .navbar-brand {
-	background-image: ;
+	background-image: url(../img/logos.png);
 }
 .navbar-shrink .navbar-brand {
-<<<<<<< HEAD
-	background-image: ;
-=======
-	background-image: ;
->>>>>>> branch 'dev' of https://github.com/SariSabouh/NutritionProject.git
+	background-image: url(../img/logos.png);
 }
 .navbar-transparent .navbar-brand {
-<<<<<<< HEAD
-	background-image: url(../img/logo.jpg);
-=======
 	background-image: url(../img/logos.png);
->>>>>>> branch 'dev' of https://github.com/SariSabouh/NutritionProject.git
 }
 .navbar-inverse .navbar-brand {
 	background-image: url(../img/logos.png);

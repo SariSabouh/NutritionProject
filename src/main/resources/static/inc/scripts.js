@@ -178,9 +178,28 @@ $(document).on('click', '.navbar-collapse.in', function(e) {
 	}
 });
 
+////////////////////////////////////////////////////////////////////
+//Fixed an issue with Modals location
+////////////////////////////////////////////////////////////////////
 $('.modalButton').click(function() {
 	if($('.body div').first().attr('class') != 'modal-backdrop') {
 		$('.body').prepend($('.modal-backdrop'));
 	}
 });
 
+////////////////////////////////////////////////////////////////////
+//Login managing
+////////////////////////////////////////////////////////////////////
+$(document).ready(function () {
+	if($('#thError').length > 0){
+		$('.error').removeAttr('hidden');
+	}
+
+
+	$('.login').submit(function(e) {
+		$('#email2').val($('#email').val());
+		$('#password2').val($('#password').val());
+		$('.testLogin').submit();
+		e.preventDefault();
+	});
+});
