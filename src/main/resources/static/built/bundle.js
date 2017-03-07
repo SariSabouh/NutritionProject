@@ -22193,9 +22193,14 @@
 	                        )
 	                    ),
 	                    _react2['default'].createElement(
-	                        'span',
-	                        { className: 'error alert-danger', hidden: true },
-	                        'Please check the login information'
+	                        'center',
+	                        null,
+	                        ' ',
+	                        _react2['default'].createElement(
+	                            'h6',
+	                            { className: 'error alert-danger', hidden: true },
+	                            'Please check the login information'
+	                        )
 	                    ),
 	                    _react2['default'].createElement(
 	                        'form',
@@ -22257,7 +22262,7 @@
 	                                        { className: 'text-center' },
 	                                        _react2['default'].createElement(
 	                                            'a',
-	                                            { tabIndex: '5', className: 'forgot-password' },
+	                                            { tabIndex: '5', id: 'forget', className: 'forgot-password' },
 	                                            'Forgot Password?'
 	                                        )
 	                                    )

@@ -9,7 +9,7 @@ export default class Login extends React.Component {
             <ul className="dropdown-menu dropdown-lr animated flipInX" role="menu">
                 <div className="col-lg-12">
                     <div className="text-center"><h3><b>Log In</b></h3></div>
-                    <span className="error alert-danger" hidden>Please check the login information</span>
+                   <center> <h6 className="error alert-danger" hidden>Please check the login information</h6></center>
                     <form className="login">
 
                         <div className="form-group">
@@ -40,7 +40,7 @@ export default class Login extends React.Component {
                             <div className="row">
                                 <div className="col-lg-12">
                                     <div className="text-center">
-                                        <a tabIndex="5" className="forgot-password">Forgot Password?</a>
+                                        <a tabIndex="5" id="forget" className="forgot-password">Forgot Password?</a>
                                     </div>
                                 </div>
                             </div>

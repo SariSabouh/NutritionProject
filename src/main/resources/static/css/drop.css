@@ -28,11 +28,24 @@ ul.dropdown-lr {
 height: 45px;
 
 }
+#btnregister:hover{background-color:#4cae4c;}
+#forget{
+	color: #ff4447;
+}
 #remembermargin{
-	margin-left: 2px;
+	margin-left: 3px;
 }
 
 #modalheadercolor{
 	background-color: #72a602;
 }
+
+@media only screen and (max-width : 767px){
+	#btnregister{
+		background-color: #b3de81;
+		width: 100%;
+	}
+	
+}
+
 
