@@ -1,0 +1,51 @@
+
+/* General sizing */
+ul.dropdown-lr {
+  width: 300px;
+}
+
+/* mobile fix */
+@media (max-width: 768px) {
+	.dropdown-lr h3 {
+		color: #eee;
+	}
+	.dropdown-lr label {
+		color: #eee;
+	}
+}
+
+.colorrijeemk{
+	
+	background-color: #72a602;
+}
+#btnregister{
+
+    
+    width: 270px;
+    background-color: #72a602;
+    color: #fff;
+    margin-bottom: -23px;
+height: 45px;
+
+}
+#btnregister:hover{background-color:#4cae4c;}
+#forget{
+	color: #ff4447;
+}
+#remembermargin{
+	margin-left: 3px;
+}
+
+#modalheadercolor{
+	background-color: #72a602;
+}
+
+@media only screen and (max-width : 767px){
+	#btnregister{
+		background-color: #b3de81;
+		width: 100%;
+	}
+	
+}
+
+

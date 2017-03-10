@@ -9,13 +9,13 @@
 		<meta name="keywords" content="HTML5, Bootsrtrap, One Page, Responsive, Template, Portfolio" />
 		<meta name="author" content="imransdesign.com"></meta>
 
-		<!-- Mobile Metas -->
+		<!-- Mobile Meta -->
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-        
+       
         <!-- Google Fonts  -->
-		<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'/><!-- Body font -->
-		<link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'/> <!-- Navbar font -->
-
+        <link rel="stylesheet" href="inc/GoogleFontsNav.min.css" type='text/css' />
+        <link rel="stylesheet" href="inc/GoogleFonts.min.css" type='text/css' />
+ 
 		<!-- Libs and Plugins CSS -->
 		<link rel="stylesheet" href="inc/bootstrap/css/bootstrap.min.css"/>
 		<link rel="stylesheet" href="inc/animations/css/animate.min.css"/>
@@ -27,14 +27,11 @@
         <link rel="stylesheet" href="css/reset.css"/>
 		<link rel="stylesheet" href="css/style.css"/>
 		<link rel="stylesheet" href="css/mobile.css"/>
+		<link rel="stylesheet" href="css/drop.css"/>
 
 		<!-- Skin CSS -->
-<!-- 		<link rel="stylesheet" href="css/skin/cool-gray.css"/> -->
-<!--         <link rel="stylesheet" href="css/skin/ice-blue.css"/> -->
-<!--         <link rel="stylesheet" href="css/skin/summer-orange.css"/> -->
         <link rel="stylesheet" href="css/skin/fresh-lime.css"/>
-<!--         <link rel="stylesheet" href="css/skin/night-purple.css"/> -->
-
+     
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 
@@ -44,10 +41,25 @@
 		<![endif]-->
 	</head>
 
-    <body data-spy="scroll" data-target="#main-navbar">
+   	<body>
+    
     	<div class="page-loader"></div>  <!-- Display loading image while page loads -->
-   		<div class="body" id="app">
-   		</div>
+   			<div class="body" id="app">
+        </div>
+        
+        <div class="disabled" hidden="hidden">
+			<p th:if="${loginError}" id="thError" class="error">Wrong user or password</p>
+			<form class="testLogin" th:action="@{/}" method="post">
+				<label for="email">Username</label>: 
+				<input type="text" id="email2" name="username" autofocus="autofocus" />
+				<br /> 
+				<label for="password2">Password</label>: 
+				<input type="password" id="password2" name="password" />
+				<br /> 
+				<input type="submit" value="Log in" />
+			</form>
+		</div>
+   
    		<!-- Plugins JS -->
    		<script src="built/bundle.js"></script>
 		<script src="inc/jquery/jquery-1.11.1.min.js"></script>
@@ -55,15 +67,15 @@
 		<script src="inc/owl-carousel/js/owl.carousel.min.js"></script>
 		<script src="inc/stellar/js/jquery.stellar.min.js"></script>
 		<script src="inc/animations/js/wow.min.js"></script>
-        <script src="inc/waypoints.min.js"></script>
-		<script src="inc/isotope.pkgd.min.js"></script>
-		<script src="inc/classie.js"></script>
-		<script src="inc/jquery.easing.min.js"></script>
-		<script src="inc/jquery.counterup.min.js"></script>
-		<script src="inc/smoothscroll.js"></script>
-
-		<!-- Theme JS -->
-		<script src="theme.js"></script>
+        <script src="inc/stellar/js/waypoints.min.js"></script>
+		<script src="inc/stellar/js/isotope.pkgd.min.js"></script>
+		<script src="inc/stellar/js/classie.js"></script>
+		<script src="inc/jquery/jquery.easing.min.js"></script>
+		<script src="inc/jquery/jquery.counterup.min.js"></script>
+		<script src="inc/stellar/js/smoothscroll.js"></script>
+	
+        <!-- Theme JS -->
+		<script src="inc/scripts.js"></script>
 	</body>
 		
 </html>

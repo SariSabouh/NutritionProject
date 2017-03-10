@@ -75,6 +75,7 @@ p {
 }
 .navbar-nav > li > a {
 	font-family: "Lato", Helvetica, Arial, sans-serif;
+	cursor: pointer;
 }
 /* End Fonts */
 
@@ -153,11 +154,12 @@ section {
 .navbar-brand {
 	background-repeat: no-repeat;
 	background-position: left center;
+	position:absolute;
 	width: 150px;
-	height: auto;
+	height: 60px;
 	padding: 24px 0;
 	text-indent: -99999px;
-	font-size: 24px;
+	font-size: 20px;
 	font-weight: 600;
 	line-height: 20px;
 	letter-spacing: 4px;
@@ -166,18 +168,21 @@ section {
 	-o-transition: all 0.2s ease-in-out;
 	-ms-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
+	
 }
+
+
 .navbar-default .navbar-brand {
-	background-image: url(../img/logo.jpg);
+	background-image: url(../img/logos.png);
 }
 .navbar-shrink .navbar-brand {
-	background-image: url(../img/logo.jpg);
+	background-image: url(../img/logos.png);
 }
 .navbar-transparent .navbar-brand {
-	background-image: url(../img/logo.jpg);
+	background-image: url(../img/logos.png);
 }
 .navbar-inverse .navbar-brand {
-	background-image: url(../img/logo.jpg);
+	background-image: url(../img/logos.png);
 }
 
 /* Navbar links */
@@ -211,11 +216,13 @@ section {
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .dropdown-menu > li > a.active, .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
 	text-decoration: none;
 	background-color: transparent;
+	
 }
 
 /* Navbar inverse dropdown */
 .navbar-inverse .dropdown-menu {
 	padding: 10px 0;
+	text-align: center;
 }
 
 /* Navbar fixed */
@@ -235,12 +242,14 @@ section {
 }
 .navbar-shrink .navbar-brand {
 	font-size: 20px;
+	
 }
 .navbar-default.navbar-fixed-top.navbar-shrink .container {
 }
 .navbar-fixed-top.navbar-shrink .container {
 	padding-top: 0 !important;
 	padding-bottom: 0 !important;
+	
 }
 .navbar-default.navbar-fixed-top.navbar-shrink .navbar-nav > li > a {
 	padding-top: 24px;
