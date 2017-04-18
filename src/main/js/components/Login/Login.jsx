@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import RegisterModal from './RegisterModal.jsx';
+import RegisterModal from '../Registration/RegisterModal.jsx';
 
 export default class Login extends React.Component {
     render() {

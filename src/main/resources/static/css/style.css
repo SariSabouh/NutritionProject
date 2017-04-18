@@ -1249,3 +1249,7 @@ p.subtitle {
   margin-bottom: 15px;
   color: #999;
 }
+
+.row .control-label {
+	text-align: left;
+}

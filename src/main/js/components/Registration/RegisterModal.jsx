@@ -1,4 +1,6 @@
 import React from 'react';
+import MultiStep from './MultiStep.jsx';
+import { steps } from './Steps.jsx';
 
 import {
     Modal,
@@ -66,38 +68,10 @@ export default class RegisterModal extends React.Component {
                         <Modal isOpen={this.state.isOpen} backdropStyles={backdropStyles} size='modal-lg' onRequestHide={this.hideModal.bind( this ) }>
                             <ModalHeader>
                                 <ModalClose onClick={this.hideModal.bind( this ) }/>
-                                <ModalTitle>Register</ModalTitle>
+                                <ModalTitle>Registeration</ModalTitle>
                             </ModalHeader>
                             <ModalBody>
-                                <form>
-                                     <div className="form-group">
-                                        <label htmlFor="Email">Email</label>
-                                        <input type="Email" name="Email" id="Email" tabIndex="2" className="form-control" placeholder="Email" autoComplete="off" />
-                                    </div>
-
-                                    <div className="form-group">
-                                        <label htmlFor="password">Password</label>
-                                        <input type="" name="" id="Email" tabIndex="2" className="form-control" placeholder="Password" autoComplete="off" />
-                                    </div>
-                                     <div className="form-group">
-                                        <label>FirstName</label>
-                                        <input type="" name="" id="" tabIndex="2" className="form-control" placeholder="FirstName" autoComplete="off" />
-                                    </div>
-
-                                    <div className="form-group">
-                                        <label>LastName</label>
-                                        <input type="" name="" id="" tabIndex="2" className="form-control" placeholder="LastName" autoComplete="off" />
-                                    </div>
-                                     <div className="form-group">
-                                        <label >Medical</label>
-                                        <input type="" name="" id="" tabIndex="2" className="form-control" placeholder="medical" autoComplete="off" />
-                                    </div>
-
-                                    <div className="form-group">
-                                        <label>Age</label>
-                                        <input type="" name="" id="" tabIndex="2" className="form-control" placeholder="Age" autoComplete="off" />
-                                    </div>
-                                </form>
+                                <MultiStep initialStep={1} steps={steps}/>
                             </ModalBody>
                             <ModalFooter>
                                 <button className='btn btn-default' onClick={this.hideModal.bind( this ) }>

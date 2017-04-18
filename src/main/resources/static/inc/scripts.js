@@ -195,11 +195,14 @@ $(document).ready(function () {
 		$('.error').removeAttr('hidden');
 	}
 
-
 	$('.login').submit(function(e) {
 		$('#email2').val($('#email').val());
 		$('#password2').val($('#password').val());
 		$('.testLogin').submit();
+		e.preventDefault();
+	});
+	
+	$('.registerForm').submit(function(e){
 		e.preventDefault();
 	});
 });
