@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 
-const store = { firstName: '', lastName: '' }
+const store = { firstName: '', lastName: '', email: '', password: '', confirmPassword: '', dob: '' }
 
 const PersonalDetails = React.createClass( {
     getInitialState() {
@@ -14,6 +14,26 @@ const PersonalDetails = React.createClass( {
 
     handleLastNameChanged( event ) {
         store.lastName = event.target.value
+        this.setState( store )
+    },
+    
+    handleEmailChanged( event ) {
+        store.email = event.target.value
+        this.setState( store )
+    },
+    
+    handlePasswordChanged( event ) {
+        store.password = event.target.value
+        this.setState( store )
+    },
+    
+    handleConfirmPasswordChanged( event ) {
+        store.confirmPassword = event.target.value
+        this.setState( store )
+    },
+    
+    handleDOBChanged( event ) {
+        store.dob = event.target.value
         this.setState( store )
     },
 
@@ -69,6 +89,8 @@ const PersonalDetails = React.createClass( {
                         <label className="control-label" htmlFor="confrimPassword">Confirm Password</label>
                         <input id="confirmPassword" className="u-full-width form-control" placeholder="$trongPa55word"
                             type="password"
+                            onChange={this.handleConfirmPasswordChanged}
+                            value={this.state.confirmPassword}
                             minLength="6"
                             autoFocus
                             required/>
@@ -76,11 +98,11 @@ const PersonalDetails = React.createClass( {
                 </div>
                 <div className="row">
                     <div>
-                        <label className="control-label" htmlFor="dob">Age</label>
+                        <label className="control-label" htmlFor="dob">Date of Birth</label>
                         <input id="dob" className="u-full-width form-control" placeholder="21"
                             type="date"
-                            onChange={this.handleAgeChanged}
-                            value={this.state.age}
+                            onChange={this.handleDOBChanged}
+                            value={this.state.dob}
                             autoFocus
                             required/>
                     </div>

@@ -22111,7 +22111,7 @@
 	                            { className: 'dropdown' },
 	                            _react2['default'].createElement(
 	                                'a',
-	                                { className: 'dropdown-toggle', 'data-toggle': 'dropdown' },
+	                                { className: 'dropdown-toggle login-dropdown', 'data-toggle': 'dropdown' },
 	                                'Log In | Register ',
 	                                _react2['default'].createElement('span', { className: 'caret' })
 	                            ),
@@ -22198,7 +22198,7 @@
 	                        ' ',
 	                        _react2['default'].createElement(
 	                            'h6',
-	                            { className: 'error alert-danger', hidden: true },
+	                            { className: 'error', hidden: true },
 	                            'Please check the login information'
 	                        )
 	                    ),
@@ -22250,7 +22250,7 @@
 	                        ),
 	                        _react2['default'].createElement(
 	                            'div',
-	                            { className: 'form-group' },
+	                            null,
 	                            _react2['default'].createElement(
 	                                'div',
 	                                { className: 'row' },
@@ -22699,7 +22699,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var store = { firstName: '', lastName: '' };
+	var store = { firstName: '', lastName: '', email: '', password: '', confirmPassword: '', dob: '' };
 	
 	var PersonalDetails = _react2['default'].createClass({
 	    displayName: 'PersonalDetails',
@@ -22715,6 +22715,26 @@
 	
 	    handleLastNameChanged: function handleLastNameChanged(event) {
 	        store.lastName = event.target.value;
+	        this.setState(store);
+	    },
+	
+	    handleEmailChanged: function handleEmailChanged(event) {
+	        store.email = event.target.value;
+	        this.setState(store);
+	    },
+	
+	    handlePasswordChanged: function handlePasswordChanged(event) {
+	        store.password = event.target.value;
+	        this.setState(store);
+	    },
+	
+	    handleConfirmPasswordChanged: function handleConfirmPasswordChanged(event) {
+	        store.confirmPassword = event.target.value;
+	        this.setState(store);
+	    },
+	
+	    handleDOBChanged: function handleDOBChanged(event) {
+	        store.dob = event.target.value;
 	        this.setState(store);
 	    },
 	
@@ -22811,6 +22831,8 @@
 	                    ),
 	                    _react2['default'].createElement('input', { id: 'confirmPassword', className: 'u-full-width form-control', placeholder: '$trongPa55word',
 	                        type: 'password',
+	                        onChange: this.handleConfirmPasswordChanged,
+	                        value: this.state.confirmPassword,
 	                        minLength: '6',
 	                        autoFocus: true,
 	                        required: true })
@@ -22825,12 +22847,12 @@
 	                    _react2['default'].createElement(
 	                        'label',
 	                        { className: 'control-label', htmlFor: 'dob' },
-	                        'Age'
+	                        'Date of Birth'
 	                    ),
 	                    _react2['default'].createElement('input', { id: 'dob', className: 'u-full-width form-control', placeholder: '21',
 	                        type: 'date',
-	                        onChange: this.handleAgeChanged,
-	                        value: this.state.age,
+	                        onChange: this.handleDOBChanged,
+	                        value: this.state.dob,
 	                        autoFocus: true,
 	                        required: true })
 	                )
@@ -22857,7 +22879,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var store = { email: '', emailConfirm: '' };
+	var store = { activities: [] };
 	
 	var PhysicalFitness = _react2['default'].createClass({
 	    displayName: 'PhysicalFitness',
@@ -22866,17 +22888,38 @@
 	        return store;
 	    },
 	
-	    handleEmailChanged: function handleEmailChanged(event) {
-	        store.email = event.target.value;
-	        this.setState(store);
+	    inputsValid: function inputsValid(activityCounter) {
+	        //FOX TTHIS
+	        var isValid = true;
+	        $('#' + activityCounter + ' input').each(function () {
+	            var $el = $(this);
+	            if (!$el.val()) {
+	                $('.activity-errors .' + $el.attr('id') + '-error').removeClass('no-visible');
+	                isValid = false;
+	            } else {
+	                $('.activity-errors .' + $el.attr('id') + '-error').addClass('no-visible');
+	            }
+	        });
+	        return isValid;
 	    },
 	
-	    handleEmailConfirmChanged: function handleEmailConfirmChanged(event) {
-	        store.emailConfirm = event.target.value;
-	        this.setState(store);
+	    handleActivitiesChanged: function handleActivitiesChanged() {
+	        var activityCounter = store.activities.length;
+	        if (this.inputsValid(activityCounter + 1)) {
+	            store.activities.push({
+	                activity: $('#' + activityCounter + ' #activity').val(),
+	                duration: $('#' + activityCounter + ' #duration').val(),
+	                frequency: $('#' + activityCounter + ' #frequency').val()
+	            });
+	            this.setState(store);
+	            $('.physical-activity').last().after($('.physical-activity').first().clone()).attr('id', activityCounter + 1);
+	            $('.physical-activity').last().find('input').val('');
+	        }
 	    },
 	
 	    render: function render() {
+	        var _this = this;
+	
 	        return _react2['default'].createElement(
 	            'div',
 	            null,
@@ -22885,34 +22928,61 @@
 	                { className: 'row' },
 	                _react2['default'].createElement(
 	                    'div',
-	                    { className: 'six columns' },
+	                    { className: 'activity-list' },
 	                    _react2['default'].createElement(
 	                        'label',
-	                        null,
-	                        'Your email'
+	                        { className: 'col-md-6 no-left-padding' },
+	                        'Physical Activity'
 	                    ),
-	                    _react2['default'].createElement('input', { className: 'u-full-width required', placeholder: 'test@mailbox.com',
-	                        type: 'email',
-	                        onChange: this.handleEmailChanged,
-	                        value: this.state.email,
-	                        autoFocus: true })
-	                )
-	            ),
-	            _react2['default'].createElement(
-	                'div',
-	                { className: 'row' },
-	                _react2['default'].createElement(
-	                    'div',
-	                    { className: 'six columns' },
 	                    _react2['default'].createElement(
 	                        'label',
-	                        null,
-	                        'Confirm email'
+	                        { className: 'col-md-3 no-left-padding' },
+	                        'Duration (minutes)'
 	                    ),
-	                    _react2['default'].createElement('input', { className: 'u-full-width', placeholder: 'Confirm email',
-	                        type: 'email',
-	                        onChange: this.handleEmailConfirmChanged,
-	                        value: this.state.emailConfirm })
+	                    _react2['default'].createElement(
+	                        'label',
+	                        { className: 'col-md-3 no-left-padding' },
+	                        'Frequency (days a week)'
+	                    ),
+	                    _react2['default'].createElement(
+	                        'div',
+	                        { className: 'physical-activity', id: '0' },
+	                        _react2['default'].createElement('input', { className: 'col-md-6', id: 'activity', placeholder: 'Running',
+	                            type: 'text',
+	                            autoFocus: true }),
+	                        _react2['default'].createElement('input', { className: 'col-md-3', id: 'duration', placeholder: '30',
+	                            type: 'number',
+	                            autoFocus: true }),
+	                        _react2['default'].createElement('input', { className: 'col-md-3', id: 'frequency', placeholder: '2',
+	                            type: 'number',
+	                            autoFocus: true })
+	                    ),
+	                    _react2['default'].createElement(
+	                        'div',
+	                        { className: 'activity-errors' },
+	                        _react2['default'].createElement(
+	                            'label',
+	                            { className: 'col-md-6 no-left-padding no-visible error activity-error' },
+	                            'Physical Activity'
+	                        ),
+	                        _react2['default'].createElement(
+	                            'label',
+	                            { className: 'col-md-3 no-left-padding no-visible error duration-error' },
+	                            'Duration (minutes)'
+	                        ),
+	                        _react2['default'].createElement(
+	                            'label',
+	                            { className: 'col-md-3 no-left-padding no-visible error frequency-error' },
+	                            'Frequency (days a week)'
+	                        )
+	                    ),
+	                    _react2['default'].createElement(
+	                        'button',
+	                        { className: 'add-activity-button', onClick: function () {
+	                                _this.handleActivitiesChanged();
+	                            } },
+	                        'Add Activity'
+	                    )
 	                )
 	            )
 	        );

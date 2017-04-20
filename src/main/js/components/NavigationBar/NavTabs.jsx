@@ -16,7 +16,7 @@ export default class NavTabs extends React.Component {
                         <li><a className="page-scroll" href="#contact-section">Contact</a></li>
 
                         <li className="dropdown">
-                            <a className="dropdown-toggle" data-toggle="dropdown">Log In | Register <span className="caret"></span></a>
+                            <a className="dropdown-toggle login-dropdown" data-toggle="dropdown">Log In | Register <span className="caret"></span></a>
                             <Login />
                         </li>
                     </ul>

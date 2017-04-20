@@ -1253,3 +1253,31 @@ p.subtitle {
 .row .control-label {
 	text-align: left;
 }
+
+#remember {
+	display: inline;
+}
+
+.no-left-padding {
+	padding-left: 0px !important;
+}
+
+input::placeholder {
+	color: darkgrey;
+}
+
+.physical-activity input {
+	margin-bottom: 5px;
+}
+
+.activity-errors label {
+	margin-bottom: 20px;
+}
+
+.no-visible {
+	visibility: hidden;
+}
+
+.error {
+	color: #a94442;
+}

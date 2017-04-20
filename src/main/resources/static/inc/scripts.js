@@ -191,13 +191,14 @@ $('.modalButton').click(function() {
 //Login managing
 ////////////////////////////////////////////////////////////////////
 $(document).ready(function () {
-	if($('#thError').length > 0){
+	if($('#loginError').length > 0){
 		$('.error').removeAttr('hidden');
+		$('.login-dropdown').click();
 	}
 
 	$('.login').submit(function(e) {
-		$('#email2').val($('#email').val());
-		$('#password2').val($('#password').val());
+		$('#thyme-email').val($('#email').val());
+		$('#thyme-password').val($('#password').val());
 		$('.testLogin').submit();
 		e.preventDefault();
 	});
