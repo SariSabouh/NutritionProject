@@ -39,7 +39,7 @@ const PersonalDetails = React.createClass( {
 
     render() {
         return (
-            <div id="register">
+            <div id="personalDetails">
                 <div className="row">
                     <div>
                         <label className="control-label" htmlFor="firstName">First Name</label>

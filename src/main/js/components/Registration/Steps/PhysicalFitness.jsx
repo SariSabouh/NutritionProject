@@ -7,7 +7,7 @@ const PhysicalFitness = React.createClass( {
         return store
     },
     
-    inputsValid( activityCounter ) { //Make first row greyed out then replace second with first then submit.
+    inputsValid( activityCounter ) {
       let isValid = true;
       $('#' + activityCounter + ' input').each(function() {
           let $el = $(this);
@@ -21,18 +21,25 @@ const PhysicalFitness = React.createClass( {
       });
       return isValid;  
     },
+    
+    updateRows( activityCounter ) {
+        $('.physical-activity').last().after($('.physical-activity').last().clone().attr('id', activityCounter));
+        $('.physical-activity').last().find('input').val('');
+        if (activityCounter > 1)
+            $('.physical-activity').first().remove();
+        $('.physical-activity').first().find('input').addClass('input-disabled').attr('disabled', 'disabled');
+    },
 
     handleActivitiesChanged() {
-        let activityCounter = store.activities.length;
-        if(this.inputsValid(activityCounter + 1)) {
+        let activityCounter = parseInt($('.physical-activity').last().attr('id'));
+        if(this.inputsValid(activityCounter)) {
             store.activities.push({
                 activity : $('#' + activityCounter + ' #activity').val(),
                 duration: $('#' + activityCounter + ' #duration').val(),
                 frequency: $('#' + activityCounter + ' #frequency').val()
             });
             this.setState( store );
-            $('.physical-activity').last().after($('.physical-activity').first().clone()).attr('id', activityCounter+1);
-            $('.physical-activity').last().find('input').val('');
+            this.updateRows(activityCounter + 1)
         }
     },
 

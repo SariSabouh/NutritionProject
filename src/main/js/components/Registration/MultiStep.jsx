@@ -68,12 +68,12 @@ export default class MultiStep extends Component {
         }
     }
 
-    inputsValid() {
+    personalInputsValid() {
         let $inputs = $('.registrationModal .container input');
         let inputFlags = true;
         let passErrorMessage = ' (Passwords must match and be longer than 6 digits)';
-        let $password = $('#register #password');
-        let $confirmPassword = $('#register #confirmPassword');
+        let $password = $('#personalDetails #password');
+        let $confirmPassword = $('#personalDetails #confirmPassword');
         $inputs.each(function(id, el) {
             let $el = $(el);
             if ($el.val().trim() === '') {
@@ -110,9 +110,11 @@ export default class MultiStep extends Component {
     }
 
     next() {
-        if ( this.inputsValid() ) {
-            this.setNavState( this.state.compState + 1 )
+        if ( $('#personalDetails').length && this.personalInputsValid() ) {
+            this.setNavState( this.state.compState + 1 );
+            return;
         }
+        this.setNavState( this.state.compState + 1 );
     }
 
     previous() {

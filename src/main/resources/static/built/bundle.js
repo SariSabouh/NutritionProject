@@ -22521,13 +22521,13 @@
 	            }
 	        }
 	    }, {
-	        key: 'inputsValid',
-	        value: function inputsValid() {
+	        key: 'personalInputsValid',
+	        value: function personalInputsValid() {
 	            var $inputs = $('.registrationModal .container input');
 	            var inputFlags = true;
 	            var passErrorMessage = ' (Passwords must match and be longer than 6 digits)';
-	            var $password = $('#register #password');
-	            var $confirmPassword = $('#register #confirmPassword');
+	            var $password = $('#personalDetails #password');
+	            var $confirmPassword = $('#personalDetails #confirmPassword');
 	            $inputs.each(function (id, el) {
 	                var $el = $(el);
 	                if ($el.val().trim() === '') {
@@ -22563,9 +22563,11 @@
 	    }, {
 	        key: 'next',
 	        value: function next() {
-	            if (this.inputsValid()) {
+	            if ($('#personalDetails').length && this.personalInputsValid()) {
 	                this.setNavState(this.state.compState + 1);
+	                return;
 	            }
+	            this.setNavState(this.state.compState + 1);
 	        }
 	    }, {
 	        key: 'previous',
@@ -22741,7 +22743,7 @@
 	    render: function render() {
 	        return _react2['default'].createElement(
 	            'div',
-	            { id: 'register' },
+	            { id: 'personalDetails' },
 	            _react2['default'].createElement(
 	                'div',
 	                { className: 'row' },
@@ -22889,7 +22891,6 @@
 	    },
 	
 	    inputsValid: function inputsValid(activityCounter) {
-	        //FOX TTHIS
 	        var isValid = true;
 	        $('#' + activityCounter + ' input').each(function () {
 	            var $el = $(this);
@@ -22903,17 +22904,23 @@
 	        return isValid;
 	    },
 	
+	    updateRows: function updateRows(activityCounter) {
+	        $('.physical-activity').last().after($('.physical-activity').last().clone().attr('id', activityCounter));
+	        $('.physical-activity').last().find('input').val('');
+	        if (activityCounter > 1) $('.physical-activity').first().remove();
+	        $('.physical-activity').first().find('input').addClass('input-disabled').attr('disabled', 'disabled');
+	    },
+	
 	    handleActivitiesChanged: function handleActivitiesChanged() {
-	        var activityCounter = store.activities.length;
-	        if (this.inputsValid(activityCounter + 1)) {
+	        var activityCounter = parseInt($('.physical-activity').last().attr('id'));
+	        if (this.inputsValid(activityCounter)) {
 	            store.activities.push({
 	                activity: $('#' + activityCounter + ' #activity').val(),
 	                duration: $('#' + activityCounter + ' #duration').val(),
 	                frequency: $('#' + activityCounter + ' #frequency').val()
 	            });
 	            this.setState(store);
-	            $('.physical-activity').last().after($('.physical-activity').first().clone()).attr('id', activityCounter + 1);
-	            $('.physical-activity').last().find('input').val('');
+	            this.updateRows(activityCounter + 1);
 	        }
 	    },
 	
