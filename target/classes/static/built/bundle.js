@@ -22618,7 +22618,7 @@
 	                    { className: 'container' },
 	                    _react2['default'].createElement(
 	                        'form',
-	                        { className: 'form-horizontal registerForm' },
+	                        { className: 'form-horizontal registerForm', id: 'registrationForm' },
 	                        this.props.steps[this.state.compState].component,
 	                        _react2['default'].createElement(
 	                            'div',
@@ -22629,6 +22629,11 @@
 	                                    className: 'multistep__btn--prev',
 	                                    onClick: this.previous },
 	                                'Previous'
+	                            ),
+	                            _react2['default'].createElement(
+	                                'button',
+	                                { type: 'submit' },
+	                                ' '
 	                            ),
 	                            _react2['default'].createElement(
 	                                'button',
@@ -22889,7 +22894,7 @@
 	    },
 	
 	    inputsValid: function inputsValid(activityCounter) {
-	        //FOX TTHIS
+	        //Make first row greyed out then replace second with first then submit.
 	        var isValid = true;
 	        $('#' + activityCounter + ' input').each(function () {
 	            var $el = $(this);

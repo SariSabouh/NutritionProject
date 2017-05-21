@@ -1,5 +1,7 @@
 package com.paliup.nutrition.controller;
 
+
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,5 +29,14 @@ public class HomeController {
 	    model.addAttribute("loginError", true);
 	    return "index";
 	  }
+	
+	
+	
+	
+	
+	
+	
+	
+		
 	
 }
