@@ -22898,24 +22898,23 @@
 	        $('#' + activityCounter + ' input').each(function () {
 	            var $el = $(this);
 	            if (!$el.val()) {
-	                $('.activity-errors .' + $el.attr('id') + '-error').removeClass('no-visible');
+	                $('.activity-list .' + $el.attr('id') + '-error').removeClass('no-visible');
 	                isValid = false;
 	            } else {
-	                $('.activity-errors .' + $el.attr('id') + '-error').addClass('no-visible');
+	                $('.activity-list .' + $el.attr('id') + '-error').addClass('no-visible');
 	            }
 	        });
 	        return isValid;
 	    },
 	
 	    updateRows: function updateRows(activityCounter) {
-	        $('.physical-activity').last().after($('.physical-activity').last().clone().attr('id', activityCounter));
-	        $('.physical-activity').last().find('input').val('');
-	        if (activityCounter > 1) $('.physical-activity').first().remove();
-	        $('.physical-activity').first().find('input').addClass('input-disabled').attr('disabled', 'disabled');
+	        var activityList = $('.activity-list');
+	        activityList.last().after(activityList.last().clone().attr('id', activityCounter));
+	        activityList.last().find('input').val('');
 	    },
 	
 	    handleActivitiesChanged: function handleActivitiesChanged() {
-	        var activityCounter = parseInt($('.physical-activity').last().attr('id'));
+	        var activityCounter = parseInt($('.activity-list').last().attr('id'));
 	        if (this.inputsValid(activityCounter)) {
 	            store.activities.push({
 	                activity: $('#' + activityCounter + ' #activity').val(),
@@ -22938,62 +22937,69 @@
 	                { className: 'row' },
 	                _react2['default'].createElement(
 	                    'div',
-	                    { className: 'activity-list' },
+	                    { className: 'activity-list', id: '0' },
 	                    _react2['default'].createElement(
-	                        'label',
-	                        { className: 'col-md-6 no-left-padding' },
-	                        'Physical Activity'
-	                    ),
-	                    _react2['default'].createElement(
-	                        'label',
-	                        { className: 'col-md-3 no-left-padding' },
-	                        'Duration (minutes)'
-	                    ),
-	                    _react2['default'].createElement(
-	                        'label',
-	                        { className: 'col-md-3 no-left-padding' },
-	                        'Frequency (days a week)'
-	                    ),
-	                    _react2['default'].createElement(
-	                        'div',
-	                        { className: 'physical-activity', id: '0' },
-	                        _react2['default'].createElement('input', { className: 'col-md-6', id: 'activity', placeholder: 'Running',
-	                            type: 'text',
-	                            autoFocus: true }),
-	                        _react2['default'].createElement('input', { className: 'col-md-3', id: 'duration', placeholder: '30',
-	                            type: 'number',
-	                            autoFocus: true }),
-	                        _react2['default'].createElement('input', { className: 'col-md-3', id: 'frequency', placeholder: '2',
-	                            type: 'number',
-	                            autoFocus: true })
-	                    ),
-	                    _react2['default'].createElement(
-	                        'div',
-	                        { className: 'activity-errors' },
+	                        'button',
+	                        { type: 'button', className: 'close remove-activity', 'aria-label': 'Close' },
 	                        _react2['default'].createElement(
-	                            'label',
-	                            { className: 'col-md-6 no-left-padding no-visible error activity-error' },
-	                            'Physical Activity'
-	                        ),
-	                        _react2['default'].createElement(
-	                            'label',
-	                            { className: 'col-md-3 no-left-padding no-visible error duration-error' },
-	                            'Duration (minutes)'
-	                        ),
-	                        _react2['default'].createElement(
-	                            'label',
-	                            { className: 'col-md-3 no-left-padding no-visible error frequency-error' },
-	                            'Frequency (days a week)'
+	                            'span',
+	                            { 'aria-hidden': 'true' },
+	                            '×'
 	                        )
 	                    ),
 	                    _react2['default'].createElement(
-	                        'button',
-	                        { className: 'add-activity-button', onClick: function () {
-	                                _this.handleActivitiesChanged();
-	                            } },
-	                        'Add Activity'
+	                        'div',
+	                        null,
+	                        _react2['default'].createElement(
+	                            'label',
+	                            null,
+	                            'Physical Activity'
+	                        ),
+	                        _react2['default'].createElement('input', { id: 'activity', placeholder: 'Running', type: 'text', autoFocus: true }),
+	                        _react2['default'].createElement(
+	                            'label',
+	                            { className: 'no-visible error activity-error' },
+	                            'Physical Activity'
+	                        )
+	                    ),
+	                    _react2['default'].createElement(
+	                        'div',
+	                        null,
+	                        _react2['default'].createElement(
+	                            'label',
+	                            null,
+	                            'Duration (minutes)'
+	                        ),
+	                        _react2['default'].createElement('input', { id: 'duration', placeholder: '30', type: 'number', autoFocus: true }),
+	                        _react2['default'].createElement(
+	                            'label',
+	                            { className: 'no-visible error duration-error' },
+	                            'Duration (minutes)'
+	                        )
+	                    ),
+	                    _react2['default'].createElement(
+	                        'div',
+	                        null,
+	                        _react2['default'].createElement(
+	                            'label',
+	                            null,
+	                            'Frequency (days a week)'
+	                        ),
+	                        _react2['default'].createElement('input', { id: 'frequency', placeholder: '2', type: 'number', autoFocus: true }),
+	                        _react2['default'].createElement(
+	                            'label',
+	                            { className: 'no-visible error frequency-error' },
+	                            'Frequency (days a week)'
+	                        )
 	                    )
 	                )
+	            ),
+	            _react2['default'].createElement(
+	                'button',
+	                { className: 'add-activity-button', onClick: function () {
+	                        _this.handleActivitiesChanged();
+	                    } },
+	                'Add Activity'
 	            )
 	        );
 	    }
@@ -23039,7 +23045,7 @@
 	    render: function render() {
 	        return _react2['default'].createElement(
 	            'div',
-	            null,
+	            { className: 'health-facts' },
 	            _react2['default'].createElement(
 	                'div',
 	                { className: 'row' },

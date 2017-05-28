@@ -1262,10 +1262,39 @@ input::placeholder {
 	color: darkgrey;
 }
 
-.physical-activity input {
-	margin-bottom: 5px;
+.activity-list input {
+	margin-bottom: 0px;
 }
 
-.activity-errors label {
-	margin-bottom: 20px;
+.activity-list .error {
+	margin-bottom: 10px;
+}
+
+.activity-list label {
+	margin: 2px 0;
+}
+
+.activity-list {
+	margin-left: 20px;
+	float: left;
+    border: 1px solid lightgray;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.add-activity-button {
+    margin: 0 auto 15px;
+    display: block;
+}
+
+.multistep__btn--next {
+	float: right;
+}
+
+.remove-activity {
+    margin-bottom: 0px;
+}
+
+.remove-activity span {
+    vertical-align: super;
 }
