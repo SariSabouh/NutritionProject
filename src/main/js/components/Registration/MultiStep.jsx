@@ -64,7 +64,9 @@ export default class MultiStep extends Component {
 
     handleKeyDown( evt ) {
         if ( evt.which === 13 ) {
-            this.next()
+            if ( !$('#physicalFitness').length) {
+                this.next()
+            }
         }
     }
 
@@ -148,14 +150,12 @@ export default class MultiStep extends Component {
                     {this.renderSteps() }
                 </ol>
                 <div className="container">
-                    <form className="form-horizontal registerForm" id="registrationForm">
+                    <form className="form-horizontal registerForm">
                         {this.props.steps[this.state.compState].component}
                         <div style={this.props.showNavigation ? {} : this.hidden}>
                             <button style={this.state.showPreviousBtn ? {} : this.hidden}
                                 className="multistep__btn--prev"
                                 onClick={this.previous}>Previous</button>
-                            
-                            <button type = "submit"> </button>
 
                             <button style={this.state.showNextBtn ? {} : this.hidden}
                                 className="multistep__btn--next"

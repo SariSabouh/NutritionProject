@@ -1262,14 +1262,6 @@ input::placeholder {
 	color: darkgrey;
 }
 
-.activity-list input {
-	margin-bottom: 0px;
-}
-
-.activity-list .error {
-	margin-bottom: 10px;
-}
-
 .activity-list label {
 	margin: 2px 0;
 }
