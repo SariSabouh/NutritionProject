@@ -22517,17 +22517,19 @@
 	        key: 'handleKeyDown',
 	        value: function handleKeyDown(evt) {
 	            if (evt.which === 13) {
-	                this.next();
+	                if (!$('#physicalFitness').length) {
+	                    this.next();
+	                }
 	            }
 	        }
 	    }, {
-	        key: 'inputsValid',
-	        value: function inputsValid() {
+	        key: 'personalInputsValid',
+	        value: function personalInputsValid() {
 	            var $inputs = $('.registrationModal .container input');
 	            var inputFlags = true;
 	            var passErrorMessage = ' (Passwords must match and be longer than 6 digits)';
-	            var $password = $('#register #password');
-	            var $confirmPassword = $('#register #confirmPassword');
+	            var $password = $('#personalDetails #password');
+	            var $confirmPassword = $('#personalDetails #confirmPassword');
 	            $inputs.each(function (id, el) {
 	                var $el = $(el);
 	                if ($el.val().trim() === '') {
@@ -22551,21 +22553,26 @@
 	                $password.parent().addClass('has-success').removeClass('has-error');
 	                $confirmPassword.parent().addClass('has-success').removeClass('has-error');
 	            }
-	            if (!/(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test($('#register #email').val())) {
+	            if (!/(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test($('.registerForm #email').val())) {
 	                inputFlags = false;
-	                $('#register #email').parent().addClass('has-error');
-	                $('#register #email').prev().text('E-Mail (Enter valid email format. Like email@gmail.com)');
+	                $('.registerForm #email').parent().addClass('has-error');
+	                $('.registerForm #email').prev().text('E-Mail (Enter valid email format. Like email@gmail.com)');
 	            } else {
-	                $('#register #email').prev().text('E-Mail');
+	                $('.registerForm #email').prev().text('E-Mail');
 	            }
 	            return inputFlags;
 	        }
 	    }, {
 	        key: 'next',
 	        value: function next() {
-	            if (this.inputsValid()) {
-	                this.setNavState(this.state.compState + 1);
+	            if ($('#personalDetails').length) {
+	                if (this.personalInputsValid()) {
+	                    this.setNavState(this.state.compState + 1);
+	                } else {
+	                    return;
+	                }
 	            }
+	            this.setNavState(this.state.compState + 1);
 	        }
 	    }, {
 	        key: 'previous',
@@ -22618,7 +22625,7 @@
 	                    { className: 'container' },
 	                    _react2['default'].createElement(
 	                        'form',
-	                        { className: 'form-horizontal registerForm', id: 'registrationForm' },
+	                        { className: 'form-horizontal registerForm' },
 	                        this.props.steps[this.state.compState].component,
 	                        _react2['default'].createElement(
 	                            'div',
@@ -22629,11 +22636,6 @@
 	                                    className: 'multistep__btn--prev',
 	                                    onClick: this.previous },
 	                                'Previous'
-	                            ),
-	                            _react2['default'].createElement(
-	                                'button',
-	                                { type: 'submit' },
-	                                ' '
 	                            ),
 	                            _react2['default'].createElement(
 	                                'button',
@@ -22746,7 +22748,7 @@
 	    render: function render() {
 	        return _react2['default'].createElement(
 	            'div',
-	            { id: 'register' },
+	            { id: 'personalDetails' },
 	            _react2['default'].createElement(
 	                'div',
 	                { className: 'row' },
@@ -22890,105 +22892,131 @@
 	    displayName: 'PhysicalFitness',
 	
 	    getInitialState: function getInitialState() {
-	        return store;
+	        return {
+	            store: store,
+	            isDisabled: true
+	        };
 	    },
 	
-	    inputsValid: function inputsValid(activityCounter) {
-	        //Make first row greyed out then replace second with first then submit.
-	        var isValid = true;
-	        $('#' + activityCounter + ' input').each(function () {
-	            var $el = $(this);
-	            if (!$el.val()) {
-	                $('.activity-errors .' + $el.attr('id') + '-error').removeClass('no-visible');
-	                isValid = false;
-	            } else {
-	                $('.activity-errors .' + $el.attr('id') + '-error').addClass('no-visible');
+	    bindCalls: function bindCalls() {
+	        var _this = this;
+	
+	        $('.remove-activity').click(function (e) {
+	            var activity = $(e.currentTarget).parents('.activity-list');
+	            if (activity.find('input')[0].hasAttribute('disabled')) {
+	                activity.remove();
+	
+	                store.activities = store.activities.filter(function (obj) {
+	                    return obj.id !== parseInt(activity.attr('id'));
+	                });
+	                _this.setState(store);
 	            }
 	        });
-	        return isValid;
+	
+	        $('#physicalFitness input').on('input', function (e) {
+	            var isValid = true;
+	            $(e.currentTarget).parents('.activity-list').find('input').each(function (i, el) {
+	                if (!$(el).val()) {
+	                    $('.add-activity-button').attr('disabled', 'true');
+	                    isValid = false;
+	                    _this.setState({ isDisabled: true });
+	                }
+	            });
+	            if (isValid) {
+	                $('.add-activity-button').removeAttr('disabled');
+	                _this.setState({ isDisabled: false });
+	            }
+	        });
+	    },
+	
+	    componentDidMount: function componentDidMount() {
+	        this.bindCalls();
+	    },
+	
+	    updateRows: function updateRows(activityCounter) {
+	        var activityList = $('.activity-list');
+	        activityList.last().after(activityList.last().clone().attr('id', activityCounter)).find('input').attr('disabled', 'true');
+	        $('.activity-list').last().find('input').val('');
+	        this.bindCalls();
 	    },
 	
 	    handleActivitiesChanged: function handleActivitiesChanged() {
-	        var activityCounter = store.activities.length;
-	        if (this.inputsValid(activityCounter + 1)) {
-	            store.activities.push({
-	                activity: $('#' + activityCounter + ' #activity').val(),
-	                duration: $('#' + activityCounter + ' #duration').val(),
-	                frequency: $('#' + activityCounter + ' #frequency').val()
-	            });
-	            this.setState(store);
-	            $('.physical-activity').last().after($('.physical-activity').first().clone()).attr('id', activityCounter + 1);
-	            $('.physical-activity').last().find('input').val('');
-	        }
+	        var activityCounter = parseInt($('.activity-list').last().attr('id'));
+	        store.activities.push({
+	            activity: $('#' + activityCounter + ' #activity').val(),
+	            duration: $('#' + activityCounter + ' #duration').val(),
+	            frequency: $('#' + activityCounter + ' #frequency').val(),
+	            id: activityCounter
+	        });
+	        $('.add-activity-button').attr('disabled', 'true');
+	        this.setState({
+	            store: store,
+	            isDisabled: true
+	        });
+	        this.updateRows(activityCounter + 1);
 	    },
 	
 	    render: function render() {
-	        var _this = this;
+	        var _this2 = this;
+	
+	        var isDisabled = this.state.isDisabled;
 	
 	        return _react2['default'].createElement(
 	            'div',
-	            null,
+	            { id: 'physicalFitness' },
 	            _react2['default'].createElement(
 	                'div',
 	                { className: 'row' },
 	                _react2['default'].createElement(
 	                    'div',
-	                    { className: 'activity-list' },
+	                    { className: 'activity-list', id: '0' },
 	                    _react2['default'].createElement(
-	                        'label',
-	                        { className: 'col-md-6 no-left-padding' },
-	                        'Physical Activity'
-	                    ),
-	                    _react2['default'].createElement(
-	                        'label',
-	                        { className: 'col-md-3 no-left-padding' },
-	                        'Duration (minutes)'
-	                    ),
-	                    _react2['default'].createElement(
-	                        'label',
-	                        { className: 'col-md-3 no-left-padding' },
-	                        'Frequency (days a week)'
-	                    ),
-	                    _react2['default'].createElement(
-	                        'div',
-	                        { className: 'physical-activity', id: '0' },
-	                        _react2['default'].createElement('input', { className: 'col-md-6', id: 'activity', placeholder: 'Running',
-	                            type: 'text',
-	                            autoFocus: true }),
-	                        _react2['default'].createElement('input', { className: 'col-md-3', id: 'duration', placeholder: '30',
-	                            type: 'number',
-	                            autoFocus: true }),
-	                        _react2['default'].createElement('input', { className: 'col-md-3', id: 'frequency', placeholder: '2',
-	                            type: 'number',
-	                            autoFocus: true })
-	                    ),
-	                    _react2['default'].createElement(
-	                        'div',
-	                        { className: 'activity-errors' },
+	                        'button',
+	                        { type: 'button', className: 'close remove-activity', 'aria-label': 'Close' },
 	                        _react2['default'].createElement(
-	                            'label',
-	                            { className: 'col-md-6 no-left-padding no-visible error activity-error' },
-	                            'Physical Activity'
-	                        ),
-	                        _react2['default'].createElement(
-	                            'label',
-	                            { className: 'col-md-3 no-left-padding no-visible error duration-error' },
-	                            'Duration (minutes)'
-	                        ),
-	                        _react2['default'].createElement(
-	                            'label',
-	                            { className: 'col-md-3 no-left-padding no-visible error frequency-error' },
-	                            'Frequency (days a week)'
+	                            'span',
+	                            { 'aria-hidden': 'true' },
+	                            '×'
 	                        )
 	                    ),
 	                    _react2['default'].createElement(
-	                        'button',
-	                        { className: 'add-activity-button', onClick: function () {
-	                                _this.handleActivitiesChanged();
-	                            } },
-	                        'Add Activity'
+	                        'div',
+	                        null,
+	                        _react2['default'].createElement(
+	                            'label',
+	                            null,
+	                            'Physical Activity'
+	                        ),
+	                        _react2['default'].createElement('input', { id: 'activity', placeholder: 'Running', type: 'text', autoFocus: true })
+	                    ),
+	                    _react2['default'].createElement(
+	                        'div',
+	                        null,
+	                        _react2['default'].createElement(
+	                            'label',
+	                            null,
+	                            'Duration ( minutes ) '
+	                        ),
+	                        _react2['default'].createElement('input', { id: 'duration', placeholder: '30', type: 'number', autoFocus: true })
+	                    ),
+	                    _react2['default'].createElement(
+	                        'div',
+	                        null,
+	                        _react2['default'].createElement(
+	                            'label',
+	                            null,
+	                            'Frequency ( days a week ) '
+	                        ),
+	                        _react2['default'].createElement('input', { className: 'no-margin', id: 'frequency', placeholder: '2', type: 'number', autoFocus: true })
 	                    )
 	                )
+	            ),
+	            _react2['default'].createElement(
+	                'button',
+	                { className: 'add-activity-button btn-primary', onClick: function () {
+	                        _this2.handleActivitiesChanged();
+	                    }, disabled: isDisabled },
+	                'Add Activity'
 	            )
 	        );
 	    }
@@ -23034,7 +23062,7 @@
 	    render: function render() {
 	        return _react2['default'].createElement(
 	            'div',
-	            null,
+	            { className: 'health-facts' },
 	            _react2['default'].createElement(
 	                'div',
 	                { className: 'row' },
