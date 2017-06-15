@@ -19,20 +19,19 @@ public class Medical implements Serializable {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "MedicalId")
 	private Long id;
-	
+
 	@Column(name = "name")
 	private String nameOfMedical;
 
 	public Medical() {}
-	
-	public Medical(String nameOfMedical){
+
+	public Medical(String nameOfMedical) {
 		this.nameOfMedical = nameOfMedical;
 	}
 
 	public Medical(Medical medical) {
 		this.id = medical.id;
 		this.nameOfMedical = medical.nameOfMedical;
-		
 	}
 
 	public Long getId() {
@@ -51,7 +50,4 @@ public class Medical implements Serializable {
 		this.nameOfMedical = nameOfMedical;
 	}
 
-	
-	
-	
 }

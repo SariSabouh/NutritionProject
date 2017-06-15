@@ -59,23 +59,21 @@ public class PersistanceServiceClassTest {
 
 	@Test
 	public void testSaveUserShouldReturnUserId() {
-		User user = this.entityManager.persist(new User());
+		User user = entityManager.persist(new User());
 		long id = persistanceService.saveUser(user);
 		assertEquals(1, id);
 	}
 
 	@Test
 	public void testSaveCoachShouldReturnCaochId() {
-
-		Coach coach = this.entityManager.persist(new Coach());
+		Coach coach = entityManager.persist(new Coach());
 		long id = persistanceService.saveCoach(coach, 1);
 		assertEquals(2, id);
-
 	}
 
 	@Test
 	public void testSavePaymentShouldReturnPaymentId() {
-		Payment payment = this.entityManager.persist(new Payment());
+		Payment payment = entityManager.persist(new Payment());
 		persistanceService.savePayment(payment, 1);
 		List<Payment> paymentList = paymentRepository.findAll();
 		assertEquals(1, paymentList.size());
@@ -85,38 +83,37 @@ public class PersistanceServiceClassTest {
 
 	@Test
 	public void testSaveMedicalShouldReturnMedicalId() {
-		Medical medical = this.entityManager.persist(new Medical("flu"));
+		Medical medical = entityManager.persist(new Medical("flu"));
 		long id = persistanceService.saveMedical(medical);
 		assertEquals(1, id);
 	}
 
 	@Test
 	public void testSaveCustomerMedicalShouldReturnCustomerMedicalId() {
-		CustomerMedical customerMedical = this.entityManager.persist(new CustomerMedical());
-		this.entityManager.persist(new Customer("test"));
-		this.entityManager.persist(new Medical("flu"));
+		CustomerMedical customerMedical = entityManager.persist(new CustomerMedical());
+		entityManager.persist(new Customer("test"));
+		entityManager.persist(new Medical("flu"));
 		persistanceService.saveCustomerMedical(customerMedical, 1, 1);
 		List<CustomerMedical> customerMedicalList = custMedicalRepo.findAll();
 		assertEquals(1, customerMedicalList.size());
 		long customerMedicalId = customerMedicalList.get(0).getId();
 		assertEquals(1, customerMedicalId);
-
 	}
 
 	@Test
 	public void testSaveCustomerShouldReturnCustomerId() {
-		Customer customer = this.entityManager.persist(new Customer("Sari"));
+		Customer customer = entityManager.persist(new Customer("Sari"));
 		long id = persistanceService.saveCustomer(customer, 1);
 		assertEquals(2, id);
 	}
 
 	@Test
 	public void testSaveCustomerCoachShouldReturnCustomerCoachId() {
-		CustomerCoach customerCoach = this.entityManager.persist(new CustomerCoach());
+		CustomerCoach customerCoach = entityManager.persist(new CustomerCoach());
 		Coach coach = new Coach();
 		coach.setFirstName("Coach");
-		this.entityManager.persist(coach);
-		this.entityManager.persist(new Customer("Test"));
+		entityManager.persist(coach);
+		entityManager.persist(new Customer("Test"));
 		persistanceService.saveCustomerCoach(customerCoach, 1, 1);
 		List<CustomerCoach> custCoachList = custCoachRepo.findAll();
 		assertEquals(1, custCoachList.size());
@@ -128,14 +125,12 @@ public class PersistanceServiceClassTest {
 	
 	@Test
 	public void  testSaveSubscribtionShouldReturnSubscribtionId(){
-		Subscribtion subscribtion = this.entityManager.persist(new Subscribtion());
+		Subscribtion subscribtion = entityManager.persist(new Subscribtion());
 		persistanceService.saveSubscribtion(subscribtion);
 		List<Subscribtion> subscribtionList = subscribtionRepo.findAll();
 		assertEquals(1 , subscribtionList.size());
 		long SubscribtionId = subscribtionList.get(0).getId();
-		assertEquals(2 , SubscribtionId);
-		
-		
+		assertEquals(2 , SubscribtionId);		
 	}
 
 	@Test
@@ -143,12 +138,11 @@ public class PersistanceServiceClassTest {
 		CustomerSubscribtion customerSubscribtion = new CustomerSubscribtion();
 		Subscribtion subscribtion = new Subscribtion();
 		subscribtion.setName("basic");
-		this.entityManager.persist(subscribtion);
-		this.entityManager.persist(new Customer("cust1"));
+		entityManager.persist(subscribtion);
+		entityManager.persist(new Customer("cust1"));
 		persistanceService.saveCustomerSubscribtion(customerSubscribtion, 1, 1);
 		List<CustomerSubscribtion> custSubList = custSubRepo.findAll();
 		assertEquals(1, custSubList.size());
-
 	}
 
 }

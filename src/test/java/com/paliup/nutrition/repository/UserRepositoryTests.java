@@ -24,7 +24,7 @@ public class UserRepositoryTests {
 
     @Test
     public void findByEmailShouldReturnUser() {
-        this.entityManager.persist(new User("a@a", "123"));
+        entityManager.persist(new User("a@a", "123"));
         User user = this.userRepository.findByEmail("a@a");
         
         assertEquals("a@a" , user.getEmail());

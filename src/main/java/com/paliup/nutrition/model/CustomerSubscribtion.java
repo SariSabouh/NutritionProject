@@ -12,24 +12,24 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "customerpackage")
 public class CustomerSubscribtion implements Serializable {
-	
+
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id")
 	private Long id;
-	
+
 	@Column(name = "customer_id")
 	private Long customerId;
-	
+
 	@Column(name = "package_id")
 	private Long subscribtionId;
-	
-	public CustomerSubscribtion(){}
-	
-	public CustomerSubscribtion(CustomerSubscribtion customerSubscribtion){
-		this.id =customerSubscribtion.id;
+
+	public CustomerSubscribtion() {}
+
+	public CustomerSubscribtion(CustomerSubscribtion customerSubscribtion) {
+		this.id = customerSubscribtion.id;
 		this.customerId = customerSubscribtion.customerId;
 		this.subscribtionId = customerSubscribtion.subscribtionId;
 	}

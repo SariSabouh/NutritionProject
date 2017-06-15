@@ -24,15 +24,13 @@ public class CustomUserDeatailsServiceTest {
 
 	@Test(expected = UsernameNotFoundException.class)
 	public void testLoadUserByUsernameIfCondition() {
-		this.entityManager.persist(new User("a@a", "123"));
+		entityManager.persist(new User("a@a", "123"));
 		customUserDetailsService.loadUserByUsername("aa");
 	}
 
 	@Test
 	public void testLoadUserByUsernameElseCondition() {
-
-		this.entityManager.persist(new User("a@a", "123"));
+		entityManager.persist(new User("a@a", "123"));
 		customUserDetailsService.loadUserByUsername("a@a");
 	}
-
 }

@@ -26,14 +26,13 @@ public class UserRoleRepositoryTest {
 
 	@Test
 	public void findRoleByEmailShouldReturnRole() {
-		this.entityManager.persist(new User("a@a", "123"));
-		this.entityManager.persist(new UserRole((long) 1, "Admin"));
-		List<String> Role = this.userRoleRepository.findRoleByEmail("a@a");
-		String roleName = Role.get(0);
+		entityManager.persist(new User("a@a", "123"));
+		entityManager.persist(new UserRole((long) 1, "Admin"));
+		List<String> role = userRoleRepository.findRoleByEmail("a@a");
+		String roleName = role.get(0);
 		List<UserRole> userRole = (List<UserRole>) userRoleRepository.findAll();
 		assertEquals(1, userRole.size());
 		assertEquals("Admin", roleName);
-
 	}
 
 }

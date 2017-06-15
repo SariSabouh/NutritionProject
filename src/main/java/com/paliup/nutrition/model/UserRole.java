@@ -16,11 +16,10 @@ public class UserRole {
 
 	@Column(name = "Role")
 	private String role;
-	
-	public UserRole(long userId , String role){
+
+	public UserRole(long userId, String role) {
 		this.userId = userId;
 		this.role = role;
-		
 	}
 
 	public String getRole() {
