@@ -9,9 +9,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.test.context.junit4.SpringRunner;;
+
+
 @RunWith(SpringRunner.class)
 @Ignore
-@ComponentScan(basePackageClasses = { UserDetails.class , CustomUserDetails.class })
+@ComponentScan(basePackageClasses = { UserDetails.class, CustomUserDetails.class })
 public class CustomUserDetailsTest {
 
 	@Autowired
@@ -19,9 +21,8 @@ public class CustomUserDetailsTest {
 
 	@Test
 	public void testIsAccountNonExpired() {
-
-	 customUserDetails.isAccountNonExpired();
-
+		customUserDetails.isAccountNonExpired();
+		assertTrue(false);
 	}
 
 }

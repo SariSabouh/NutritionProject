@@ -1,12 +1,11 @@
 package com.paliup.nutrition.model;
 
 public class Response {
+
 	private String status;
 	private Object data;
 	
-	public Response(){
-		
-	}
+	public Response(){}
 	
 	public Response(String status, Object data){
 		this.status = status;

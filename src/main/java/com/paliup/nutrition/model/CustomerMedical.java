@@ -12,27 +12,26 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "customermedical")
 public class CustomerMedical implements Serializable {
-	
+
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id")
 	private Long id;
-	
-	
+
 	@Column(name = "customer_id")
 	private Long customerId;
-	
+
 	@Column(name = "medical_id")
 	private Long medicalId;
-	
-	public CustomerMedical(){}
-	
-	public CustomerMedical(long medicalId , long customerId){
+
+	public CustomerMedical() {}
+
+	public CustomerMedical(long medicalId, long customerId) {
 		this.customerId = customerId;
 		this.medicalId = medicalId;
-		
+
 	}
 
 	public Long getId() {
@@ -58,7 +57,5 @@ public class CustomerMedical implements Serializable {
 	public void setMedicalid(Long medicalid) {
 		this.medicalId = medicalid;
 	}
-
-	
 
 }

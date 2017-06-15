@@ -53,8 +53,6 @@ public class PersistanceService {
 	private CustomerSubscribtionRepository customerSubscribtionRepository;
 
 	public long saveUser(User user) {
-		user.setEmail(user.getEmail());
-		user.setPassword(user.getPassword());
 		User newUser = userRepository.save(user);
 		return newUser.getId();
 	}
@@ -70,44 +68,38 @@ public class PersistanceService {
 		return customer.getId();
 	}
 
-	public void saveCustomerMedical(CustomerMedical custmid, long customerId, long medicalId) {
-		custmid.setMedicalid(medicalId);
-		custmid.setCustomerid(customerId);
-		customerMedicalRepository.save(custmid);
-
+	public void saveCustomerMedical(CustomerMedical custMedId, long customerId, long medicalId) {
+		custMedId.setMedicalid(medicalId);
+		custMedId.setCustomerid(customerId);
+		customerMedicalRepository.save(custMedId);
 	}
 
 	public void savePayment(Payment payment, long customerId) {
 		payment.setCustomerId(customerId);
 		paymentRepository.save(payment);
-
 	}
 
 	public long saveCoach(Coach coach, long userId) {
 		coach.setUserId(userId);
 		coach = coachRepository.save(coach);
 		return coach.getId();
-
 	}
 
-	public void saveCustomerCoach(CustomerCoach customercoach, long customerId, long coachId) {
-		customercoach.setCustomerId(customerId);
-		customercoach.setCaochId(coachId);
-		customercoachRepository.save(customercoach);
-
+	public void saveCustomerCoach(CustomerCoach customerCoach, long customerId, long coachId) {
+		customerCoach.setCustomerId(customerId);
+		customerCoach.setCaochId(coachId);
+		customercoachRepository.save(customerCoach);
 	}
 
 	public long saveSubscribtion(Subscribtion subscribtion) {
 		subscribtion = subscribtionRepository.save(subscribtion);
 		return subscribtion.getId();
-
 	}
 
 	public void saveCustomerSubscribtion(CustomerSubscribtion customerSubscribtion, long packageId, long customerId) {
 		customerSubscribtion.setCustomerId(customerId);
 		customerSubscribtion.setSubscribtionId(packageId);
 		customerSubscribtionRepository.save(customerSubscribtion);
-
 	}
 
 }

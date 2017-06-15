@@ -8,35 +8,36 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
 @Entity
-@Table(name="coach")
+@Table(name = "coach")
 public class Coach implements Serializable {
-	
+
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "caoch_id")
 	private Long Id;
-	
+
 	@Column(name = "user_id")
 	private Long userId;
-	
+
 	@Column(name = "first_name")
 	private String firstName;
 
 	@Column(name = "last_name")
 	private String lastName;
-	
+
 	@Column(name = "date_of_birth")
 	private String dateOfBirth;
-	
+
 	@Column(name = "phone")
 	private long phone;
-	
+
 	public Coach() {}
-	
-	public Coach(Coach coach){
+
+	public Coach(Coach coach) {
 		this.Id = coach.Id;
 		this.userId = coach.userId;
 		this.firstName = coach.firstName;
@@ -92,9 +93,5 @@ public class Coach implements Serializable {
 	public void setPhone(long phone) {
 		this.phone = phone;
 	}
-	
-	
-	
-	
 
 }

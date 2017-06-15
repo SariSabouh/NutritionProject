@@ -12,27 +12,25 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "customercoach")
 public class CustomerCoach implements Serializable {
-	
+
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id")
 	private Long id;
-	
-	
+
 	@Column(name = "customer_id")
 	private Long customerId;
-	
+
 	@Column(name = "caoch_id")
 	private Long caochId;
-	
-	public CustomerCoach(){}
-	
-	public CustomerCoach(CustomerCoach customercoach){
+
+	public CustomerCoach() {}
+
+	public CustomerCoach(CustomerCoach customercoach) {
 		this.customerId = customercoach.customerId;
 		this.caochId = customercoach.caochId;
-		
 	}
 
 	public Long getId() {
@@ -58,5 +56,5 @@ public class CustomerCoach implements Serializable {
 	public void setCaochId(Long caochId) {
 		this.caochId = caochId;
 	}
-	
+
 }

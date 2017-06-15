@@ -31,8 +31,7 @@ public class User implements Serializable {
 		this.password = user.password;
 	}
 
-	public User() {
-	}
+	public User() {}
 
 	public Long getId() {
 		return id;
