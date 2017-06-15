@@ -5,9 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import com.paliup.nutrition.model.Medical;
 
-
 @Repository
 public interface MedicalRepository extends JpaRepository<Medical, Long> {
-	
 
 }

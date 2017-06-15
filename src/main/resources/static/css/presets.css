@@ -1,0 +1,11 @@
+.no-left-padding {
+	padding-left: 0px !important;
+}
+
+.no-visible {
+	visibility: hidden;
+}
+
+.error {
+	color: #a94442;
+}

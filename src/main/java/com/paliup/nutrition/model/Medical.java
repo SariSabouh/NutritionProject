@@ -24,6 +24,10 @@ public class Medical implements Serializable {
 	private String nameOfMedical;
 
 	public Medical() {}
+	
+	public Medical(String nameOfMedical){
+		this.nameOfMedical = nameOfMedical;
+	}
 
 	public Medical(Medical medical) {
 		this.id = medical.id;

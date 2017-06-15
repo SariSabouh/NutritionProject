@@ -19,7 +19,7 @@ const HealthFacts = React.createClass( {
 
     render() {
         return (
-            <div>
+            <div className="health-facts">
                 <div className="row">
                     <div className="six columns">
                         <label>Password</label>

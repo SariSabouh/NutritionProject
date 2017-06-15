@@ -207,3 +207,11 @@ $(document).ready(function () {
 		e.preventDefault();
 	});
 });
+
+$(document).keypress(function(e) {
+    if (e.which === 13) {
+    	e.preventDefault();
+    	if ($(e.currentTarget.activeElement).parents('.health-facts').length)
+    		$('.add-activity-button').click();
+    }
+});

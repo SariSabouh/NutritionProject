@@ -1,7 +1,5 @@
 package com.paliup.nutrition.model;
 
-
-
 import java.io.Serializable;
 
 import javax.persistence.Column;
@@ -11,53 +9,52 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-
-
-
 @Entity
-@Table(name = "customer")	
-public class Customer implements Serializable  {
-	
+@Table(name = "customer")
+public class Customer implements Serializable {
+
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "customer_id")
 	private Long Id;
-	
+
 	@Column(name = "user_id")
 	private Long userId;
-	
+
 	@Column(name = "first_name")
 	private String firstName;
 
 	@Column(name = "last_name")
 	private String lastName;
-	
+
 	@Column(name = "date_of_birth")
 	private String dateOfBirth;
-	
+
 	@Column(name = "phone")
 	private long phone;
-	
+
 	@Column(name = "trial")
 	private int trial;
-	
+
 	@Column(name = "blocked")
 	private int blocked;
-	
+
 	@Column(name = "date_account_created")
 	private String dateAccountCreated;
-	
+
 	@Column(name = "height")
 	private double height;
-	
+
 	@Column(name = "weight")
 	private double weight;
-	
-	public Customer(){}
-	
-	public Customer(Customer customer ){
+
+	public Customer(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public Customer(Customer customer) {
 		this.Id = customer.Id;
 		this.userId = customer.userId;
 		this.firstName = customer.firstName;
@@ -69,8 +66,7 @@ public class Customer implements Serializable  {
 		this.phone = customer.phone;
 		this.dateAccountCreated = customer.dateAccountCreated;
 		this.trial = customer.trial;
-		
-		
+
 	}
 
 	public Long getId() {
@@ -160,12 +156,5 @@ public class Customer implements Serializable  {
 	public void setWeight(double weight) {
 		this.weight = weight;
 	}
-	
-	
-	
-
-	
-	
-	
 
 }

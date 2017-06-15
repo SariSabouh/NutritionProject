@@ -11,7 +11,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "customerpackage")
-public class CustomerPackage implements Serializable {
+public class CustomerSubscribtion implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	
@@ -24,14 +24,14 @@ public class CustomerPackage implements Serializable {
 	private Long customerId;
 	
 	@Column(name = "package_id")
-	private Long packageId;
+	private Long subscribtionId;
 	
-	public CustomerPackage(){}
+	public CustomerSubscribtion(){}
 	
-	public CustomerPackage(CustomerPackage customerpackage){
-		this.id =customerpackage.id;
-		this.customerId = customerpackage.customerId;
-		this.packageId = customerpackage.packageId;
+	public CustomerSubscribtion(CustomerSubscribtion customerSubscribtion){
+		this.id =customerSubscribtion.id;
+		this.customerId = customerSubscribtion.customerId;
+		this.subscribtionId = customerSubscribtion.subscribtionId;
 	}
 
 	public Long getId() {
@@ -50,12 +50,12 @@ public class CustomerPackage implements Serializable {
 		this.customerId = customerId;
 	}
 
-	public Long getPackageId() {
-		return packageId;
+	public Long getSubscribtionId() {
+		return subscribtionId;
 	}
 
-	public void setPackageId(Long packageId) {
-		this.packageId = packageId;
+	public void setSubscribtionId(Long packageId) {
+		this.subscribtionId = packageId;
 	}
 
 }

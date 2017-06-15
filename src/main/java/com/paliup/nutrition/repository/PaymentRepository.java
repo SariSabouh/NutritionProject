@@ -6,6 +6,5 @@ import com.paliup.nutrition.model.Payment;
 
 @Repository
 public interface PaymentRepository extends JpaRepository<Payment, Long> {
-	
 
 }

@@ -13,19 +13,25 @@ public class User implements Serializable {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "Id")
 	private Long id;
-	
+
 	@Column(name = "Password")
 	private String password;
 
 	@Column(name = "Email")
 	private String email;
 
-	public User() {}
+	public User(String email, String password) {
+		this.password = password;
+		this.email = email;
+	}
 
 	public User(User user) {
 		this.id = user.id;
 		this.email = user.email;
 		this.password = user.password;
+	}
+
+	public User() {
 	}
 
 	public Long getId() {

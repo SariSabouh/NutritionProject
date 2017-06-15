@@ -11,7 +11,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "package")
-public class Package1 implements Serializable {  // because package keyword is reserved
+public class Subscribtion implements Serializable {  // because package keyword is reserved
 	
 	private static final long serialVersionUID = 1L;
 	
@@ -23,11 +23,11 @@ public class Package1 implements Serializable {  // because package keyword is r
 	@Column(name = "name")
 	private String name;
 	
-	public Package1(){}
+	public Subscribtion(){}
 	
-	public Package1(Package1 package1){
-		this.id = package1.id;
-		this.name = package1.name;
+	public Subscribtion(Subscribtion subscribtion){
+		this.id = subscribtion.id;
+		this.name = subscribtion.name;
 	}
 
 	public Long getId() {

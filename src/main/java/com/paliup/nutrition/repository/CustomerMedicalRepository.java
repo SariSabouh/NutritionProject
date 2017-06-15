@@ -6,6 +6,5 @@ import com.paliup.nutrition.model.CustomerMedical;
 
 @Repository
 public interface CustomerMedicalRepository extends JpaRepository<CustomerMedical, Long> {
-	
 
 }

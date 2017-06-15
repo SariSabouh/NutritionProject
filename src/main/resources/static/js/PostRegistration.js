@@ -45,8 +45,8 @@ $( document ).ready(function() {
     			nameOfMedical : $("#nameOfMedical").val()
     	}
     	
-    	var package1 = {
-    			packageName : $("#packageName")
+    	var subscribtion = {
+    			subscribtion : $("#packageName")
     	}
     		
    	
@@ -65,7 +65,7 @@ $( document ).ready(function() {
 				coach: coach ,
 				payment : payment , 
 				medical : medical,
-				package1 : package1
+				subscribtion : subscribtion
 				
 			}),
 		

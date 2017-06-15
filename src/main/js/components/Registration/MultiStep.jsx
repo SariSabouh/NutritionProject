@@ -68,12 +68,12 @@ export default class MultiStep extends Component {
         }
     }
 
-    inputsValid() {
+    personalInputsValid() {
         let $inputs = $('.registrationModal .container input');
         let inputFlags = true;
         let passErrorMessage = ' (Passwords must match and be longer than 6 digits)';
-        let $password = $('#register #password');
-        let $confirmPassword = $('#register #confirmPassword');
+        let $password = $('#personalDetails #password');
+        let $confirmPassword = $('#personalDetails #confirmPassword');
         $inputs.each(function(id, el) {
             let $el = $(el);
             if ($el.val().trim() === '') {
@@ -98,21 +98,27 @@ export default class MultiStep extends Component {
             $password.parent().addClass('has-success').removeClass('has-error');
             $confirmPassword.parent().addClass('has-success').removeClass('has-error');
         }
-        if (!/(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test($('#register #email').val())) {
+        if (!/(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test($('.registerForm #email').val())) {
             inputFlags = false;
-            $('#register #email').parent().addClass('has-error');
-            $('#register #email').prev().text('E-Mail (Enter valid email format. Like email@gmail.com)')
+            $('.registerForm #email').parent().addClass('has-error');
+            $('.registerForm #email').prev().text('E-Mail (Enter valid email format. Like email@gmail.com)')
         }
         else {
-            $('#register #email').prev().text('E-Mail');
+            $('.registerForm #email').prev().text('E-Mail');
         }
         return inputFlags;
     }
 
     next() {
-        if ( this.inputsValid() ) {
-            this.setNavState( this.state.compState + 1 )
+        if ( $('#personalDetails').length) {
+            if (this.personalInputsValid() ) {
+                this.setNavState( this.state.compState + 1 );
+            }
+            else {
+                return;
+            }
         }
+        this.setNavState( this.state.compState + 1 );
     }
 
     previous() {
