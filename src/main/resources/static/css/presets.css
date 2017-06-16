@@ -14,6 +14,10 @@
 	color: #a94442;
 }
 
+.margin-tb-med {
+	margin: 15px;
+}
+
 input[disabled] {
 	background-color: #D3D3D3;
 	cursor: not-allowed;
@@ -23,4 +27,8 @@ input[disabled] {
 button[disabled] {
 	cursor: not-allowed;
     opacity: .65;
+}
+
+.full-width {
+	width: 100% !important;
 }
