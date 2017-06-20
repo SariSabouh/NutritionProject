@@ -23044,21 +23044,20 @@
 	
 	var _HealthFactInfoJsx2 = _interopRequireDefault(_HealthFactInfoJsx);
 	
-	var store = { healthFacts: [] };
+	var store = { healthFacts: [], modified: false };
 	
 	var HealthFacts = _react2['default'].createClass({
 	    displayName: 'HealthFacts',
 	
 	    getInitialState: function getInitialState() {
-	        return store;
+	        if (!store.modified) for (var i = 0; i < 11; i++) {
+	            store.healthFacts.push({ checkbox: '', description: '', inputText: '', objectId: i });
+	        }return store;
 	    },
 	
 	    handleHealthFactChange: function handleHealthFactChange(healthFact) {
-	        if (store.healthFacts[healthFact.objectId] !== undefined) {
-	            store.healthFacts[healthFact.objectId] = healthFact;
-	        } else {
-	            store.healthFacts.push(healthFact);
-	        }
+	        store.healthFacts[healthFact.objectId] = healthFact;
+	        store.modified = true;
 	        this.setState(store);
 	    },
 	
@@ -23108,27 +23107,25 @@
 /* 194 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 	
-	Object.defineProperty(exports, '__esModule', {
+	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
 	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 	
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
 	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var _react = __webpack_require__(1);
 	
 	var _react2 = _interopRequireDefault(_react);
-	
-	var healthFact = { checkbox: '', description: '', inputText: '', objectId: '' };
 	
 	var HealthFactInfo = (function (_React$Component) {
 	    _inherits(HealthFactInfo, _React$Component);
@@ -23136,38 +23133,39 @@
 	    function HealthFactInfo(props) {
 	        _classCallCheck(this, HealthFactInfo);
 	
-	        _get(Object.getPrototypeOf(HealthFactInfo.prototype), 'constructor', this).call(this, props);
-	        if (this.props.healthFact !== undefined) this.state = this.props.healthFact;else this.state = healthFact;
+	        _get(Object.getPrototypeOf(HealthFactInfo.prototype), "constructor", this).call(this, props);
+	        this.state = props.healthFact;
 	        this.handleCheckboxChange = this.handleCheckboxChange.bind(this);
 	        this.handleDescriptionChange = this.handleDescriptionChange.bind(this);
 	        this.handleInputTextChange = this.handleInputTextChange.bind(this);
 	    }
 	
 	    _createClass(HealthFactInfo, [{
-	        key: 'handleCheckboxChange',
+	        key: "handleCheckboxChange",
 	        value: function handleCheckboxChange(event) {
-	            healthFact.checkbox = event.target.checked;
-	            healthFact.objectId = this.props.objectId;
-	            this.setState(healthFact);
-	            this.props.handleHealthFactChange(healthFact);
+	            var currentState = this.state;
+	            currentState.checkbox = event.target.checked;
+	            this.setState(currentState);
+	            this.props.handleHealthFactChange(this.state);
 	        }
 	    }, {
-	        key: 'handleDescriptionChange',
+	        key: "handleDescriptionChange",
 	        value: function handleDescriptionChange(event) {
-	            healthFact.description = event.target.value;
-	            this.setState(healthFact);
-	            this.props.handleHealthFactChange(healthFact);
+	            var currentState = this.state;
+	            currentState.description = event.target.value;
+	            this.setState(currentState);
+	            this.props.handleHealthFactChange(this.state);
 	        }
 	    }, {
-	        key: 'handleInputTextChange',
+	        key: "handleInputTextChange",
 	        value: function handleInputTextChange(event) {
-	            healthFact.inputText = event.target.value;
-	            healthFact.objectId = this.props.objectId;
-	            this.setState(healthFact);
-	            this.props.handleHealthFactChange(healthFact);
+	            var currentState = this.state;
+	            currentState.inputText = event.target.value;
+	            this.setState(currentState);
+	            this.props.handleHealthFactChange(this.state);
 	        }
 	    }, {
-	        key: 'render',
+	        key: "render",
 	        value: function render() {
 	
 	            var placeholder = this.props.placeholder;
@@ -23177,42 +23175,42 @@
 	            }
 	
 	            if (this.props.checkbox) {
-	                return _react2['default'].createElement(
-	                    'div',
-	                    { className: 'fact margin-tb-med', id: this.props.id },
-	                    _react2['default'].createElement(
-	                        'div',
-	                        { className: 'checkbox-container' },
-	                        _react2['default'].createElement('input', {
-	                            type: 'checkbox',
+	                return _react2["default"].createElement(
+	                    "div",
+	                    { className: "fact margin-tb-med", id: this.props.id },
+	                    _react2["default"].createElement(
+	                        "div",
+	                        { className: "checkbox-container" },
+	                        _react2["default"].createElement("input", {
+	                            type: "checkbox",
 	                            onChange: this.handleCheckboxChange,
-	                            value: this.state.checkbox }),
-	                        _react2['default'].createElement(
-	                            'span',
+	                            checked: this.state.checkbox }),
+	                        _react2["default"].createElement(
+	                            "span",
 	                            null,
 	                            this.props.text
 	                        ),
-	                        _react2['default'].createElement('i', { 'aria-hidden': 'true', className: 'fa fa-question-circle', hidden: this.props.hideIcon })
+	                        _react2["default"].createElement("i", { "aria-hidden": "true", className: "fa fa-question-circle", hidden: this.props.hideIcon })
 	                    ),
-	                    _react2['default'].createElement('input', {
-	                        type: 'text',
-	                        className: 'description',
+	                    _react2["default"].createElement("input", {
+	                        type: "text",
+	                        className: "description",
 	                        placeholder: placeholder,
 	                        onChange: this.handleDescriptionChange,
 	                        value: this.state.description })
 	                );
 	            } else {
-	                return _react2['default'].createElement(
-	                    'div',
-	                    { className: 'fact margin-tb-med', id: this.props.id },
-	                    _react2['default'].createElement(
-	                        'label',
+	                return _react2["default"].createElement(
+	                    "div",
+	                    { className: "fact margin-tb-med", id: this.props.id },
+	                    _react2["default"].createElement(
+	                        "label",
 	                        null,
 	                        this.props.text
 	                    ),
-	                    _react2['default'].createElement('input', {
-	                        type: 'number',
-	                        className: 'description full-width',
+	                    _react2["default"].createElement("input", {
+	                        type: "number",
+	                        className: "description full-width",
 	                        placeholder: placeholder,
 	                        onChange: this.handleInputTextChange,
 	                        value: this.state.inputText })
@@ -23222,10 +23220,10 @@
 	    }]);
 	
 	    return HealthFactInfo;
-	})(_react2['default'].Component);
+	})(_react2["default"].Component);
 	
-	exports['default'] = HealthFactInfo;
-	module.exports = exports['default'];
+	exports["default"] = HealthFactInfo;
+	module.exports = exports["default"];
 
 /***/ },
 /* 195 */

@@ -1,19 +1,18 @@
 import React, { Component, PropTypes } from 'react';
 import HealthFactInfo from '../HealthFactInfo.jsx';
 
-const store = { healthFacts: [] }
+const store = { healthFacts: [], modified: false }
 
 const HealthFacts = React.createClass( {
     getInitialState() {
+        if (!store.modified)
+            for (let i = 0; i < 11; i++) store.healthFacts.push({ checkbox: '', description: '', inputText: '', objectId: i})
         return store
     },
 
     handleHealthFactChange( healthFact ) {
-        if ( store.healthFacts[healthFact.objectId] !== undefined ) {
-            store.healthFacts[healthFact.objectId] = healthFact;
-        } else {
-            store.healthFacts.push(healthFact)
-        }
+        store.healthFacts[healthFact.objectId] = healthFact
+        store.modified = true
         this.setState( store )
     },
 

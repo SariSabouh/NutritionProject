@@ -1,37 +1,33 @@
 import React from 'react';
 
-const healthFact = { checkbox: '', description: '', inputText: '', objectId: ''}
-
 export default class HealthFactInfo extends React.Component {
     constructor(props) {
         super(props);
-        if (this.props.healthFact !== undefined)
-            this.state = this.props.healthFact
-        else
-            this.state = healthFact;
+        this.state = props.healthFact
         this.handleCheckboxChange = this.handleCheckboxChange.bind(this);
         this.handleDescriptionChange = this.handleDescriptionChange.bind(this);
         this.handleInputTextChange = this.handleInputTextChange.bind(this);
     }
 
     handleCheckboxChange( event ) {
-        healthFact.checkbox = event.target.checked
-        healthFact.objectId = this.props.objectId
-        this.setState( healthFact )
-        this.props.handleHealthFactChange(healthFact)
+        let currentState = this.state
+        currentState.checkbox = event.target.checked
+        this.setState(currentState)
+        this.props.handleHealthFactChange(this.state)
     }
         
     handleDescriptionChange( event ) {
-        healthFact.description = event.target.value
-        this.setState( healthFact )
-        this.props.handleHealthFactChange(healthFact)
+        let currentState = this.state
+        currentState.description = event.target.value
+        this.setState(currentState)
+        this.props.handleHealthFactChange(this.state)
     }
         
     handleInputTextChange( event ) {
-        healthFact.inputText = event.target.value
-        healthFact.objectId = this.props.objectId
-        this.setState( healthFact )
-        this.props.handleHealthFactChange(healthFact)
+        let currentState = this.state
+        currentState.inputText = event.target.value
+        this.setState(currentState)
+        this.props.handleHealthFactChange(this.state)
     }
     
     render() {
@@ -49,7 +45,7 @@ export default class HealthFactInfo extends React.Component {
                         <input 
                             type="checkbox"
                             onChange={this.handleCheckboxChange}
-                            value={this.state.checkbox}/>
+                            checked={this.state.checkbox}/>
                         <span>{this.props.text}</span>
                         <i aria-hidden="true" className="fa fa-question-circle" hidden={this.props.hideIcon}></i>
                     </div>
