@@ -21781,43 +21781,43 @@
 	
 	var _componentsNavigationBarNavigationBarJsx2 = _interopRequireDefault(_componentsNavigationBarNavigationBarJsx);
 	
-	var _componentsCarouselCarouselJsx = __webpack_require__(267);
+	var _componentsCarouselCarouselJsx = __webpack_require__(268);
 	
 	var _componentsCarouselCarouselJsx2 = _interopRequireDefault(_componentsCarouselCarouselJsx);
 	
-	var _componentsBodyRijeemakSectionJsx = __webpack_require__(269);
+	var _componentsBodyRijeemakSectionJsx = __webpack_require__(270);
 	
 	var _componentsBodyRijeemakSectionJsx2 = _interopRequireDefault(_componentsBodyRijeemakSectionJsx);
 	
-	var _componentsBodyCounterSectionJsx = __webpack_require__(271);
+	var _componentsBodyCounterSectionJsx = __webpack_require__(272);
 	
 	var _componentsBodyCounterSectionJsx2 = _interopRequireDefault(_componentsBodyCounterSectionJsx);
 	
-	var _componentsBodyServicesSectionJsx = __webpack_require__(272);
+	var _componentsBodyServicesSectionJsx = __webpack_require__(273);
 	
 	var _componentsBodyServicesSectionJsx2 = _interopRequireDefault(_componentsBodyServicesSectionJsx);
 	
-	var _componentsBodyTestimonialsSectionJsx = __webpack_require__(273);
+	var _componentsBodyTestimonialsSectionJsx = __webpack_require__(274);
 	
 	var _componentsBodyTestimonialsSectionJsx2 = _interopRequireDefault(_componentsBodyTestimonialsSectionJsx);
 	
-	var _componentsBodyPricesSectionJsx = __webpack_require__(274);
+	var _componentsBodyPricesSectionJsx = __webpack_require__(275);
 	
 	var _componentsBodyPricesSectionJsx2 = _interopRequireDefault(_componentsBodyPricesSectionJsx);
 	
-	var _componentsBodyTeamSectionJsx = __webpack_require__(276);
+	var _componentsBodyTeamSectionJsx = __webpack_require__(277);
 	
 	var _componentsBodyTeamSectionJsx2 = _interopRequireDefault(_componentsBodyTeamSectionJsx);
 	
-	var _componentsBodyPartnersSectionJsx = __webpack_require__(277);
+	var _componentsBodyPartnersSectionJsx = __webpack_require__(278);
 	
 	var _componentsBodyPartnersSectionJsx2 = _interopRequireDefault(_componentsBodyPartnersSectionJsx);
 	
-	var _componentsBodySocialSectionJsx = __webpack_require__(278);
+	var _componentsBodySocialSectionJsx = __webpack_require__(279);
 	
 	var _componentsBodySocialSectionJsx2 = _interopRequireDefault(_componentsBodySocialSectionJsx);
 	
-	var _componentsBodyContactSectionJsx = __webpack_require__(279);
+	var _componentsBodyContactSectionJsx = __webpack_require__(280);
 	
 	var _componentsBodyContactSectionJsx2 = _interopRequireDefault(_componentsBodyContactSectionJsx);
 	
@@ -22271,7 +22271,7 @@
 	                        ),
 	                        _react2['default'].createElement('input', { type: 'hidden', className: 'hide', name: 'token', id: 'token', value: 'a465a2791ae0bae853cf4bf485dbe1b6' })
 	                    ),
-	                    _react2['default'].createElement(_RegistrationRegisterModalJsx2['default'], { modalText: 'Register', id: 'btnregister' })
+	                    _react2['default'].createElement(_RegistrationRegisterModalJsx2['default'], { modalText: 'Register' })
 	                )
 	            );
 	        }
@@ -22669,7 +22669,7 @@
 	'use strict';
 	
 	Object.defineProperty(exports, '__esModule', {
-	    value: true
+	  value: true
 	});
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
@@ -22684,9 +22684,9 @@
 	
 	var _StepsHealthFactsJsx = __webpack_require__(193);
 	
-	var _StepsDietInfoJsx = __webpack_require__(195);
+	var _StepsDietInfoJsx = __webpack_require__(267);
 	
-	var steps = [{ name: 'Health Facts', component: _react2['default'].createElement(_StepsHealthFactsJsx.HealthFacts, null) }, { name: 'Personal Details', component: _react2['default'].createElement(_StepsPersonalDetailsJsx.PersonalDetails, null) }, { name: 'Physical Fitness', component: _react2['default'].createElement(_StepsPhysicalFitnessJsx.PhysicalFitness, null) }, { name: 'Diet Information', component: _react2['default'].createElement(_StepsDietInfoJsx.DietInfo, null) }];
+	var steps = [{ name: 'Personal Details', component: _react2['default'].createElement(_StepsPersonalDetailsJsx.PersonalDetails, null) }, { name: 'Physical Fitness', component: _react2['default'].createElement(_StepsPhysicalFitnessJsx.PhysicalFitness, null) }, { name: 'Health Facts', component: _react2['default'].createElement(_StepsHealthFactsJsx.HealthFacts, null) }, { name: 'Diet Information', component: _react2['default'].createElement(_StepsDietInfoJsx.DietInfo, null) }];
 	
 	exports.steps = steps;
 
@@ -23080,15 +23080,15 @@
 	            _react2['default'].createElement(_HealthFactInfoJsx2['default'], { handleHealthFactChange: this.handleHealthFactChange, healthFact: this.state.healthFacts[1],
 	                objectId: '1', checkbox: 'true', hideIcon: 'true', text: 'Blood Sugar', id: 'blood-sugar' }),
 	            _react2['default'].createElement(_HealthFactInfoJsx2['default'], { handleHealthFactChange: this.handleHealthFactChange, healthFact: this.state.healthFacts[2],
-	                objectId: '2', checkbox: 'true', text: 'HBA1C', id: 'HBA1C' }),
+	                objectId: '2', checkbox: 'true', text: 'HBA1C', id: 'HBA1C', moreInfoText: 'SOmething' }),
 	            _react2['default'].createElement(_HealthFactInfoJsx2['default'], { handleHealthFactChange: this.handleHealthFactChange, healthFact: this.state.healthFacts[3],
-	                objectId: '3', checkbox: 'true', text: 'LDL', id: 'LDL' }),
+	                objectId: '3', checkbox: 'true', text: 'LDL', id: 'LDL', moreInfoText: 'SOmething' }),
 	            _react2['default'].createElement(_HealthFactInfoJsx2['default'], { handleHealthFactChange: this.handleHealthFactChange, healthFact: this.state.healthFacts[4],
-	                objectId: '4', checkbox: 'true', text: 'HDL', id: 'HDL' }),
+	                objectId: '4', checkbox: 'true', text: 'HDL', id: 'HDL', moreInfoText: 'SOmething' }),
 	            _react2['default'].createElement(_HealthFactInfoJsx2['default'], { handleHealthFactChange: this.handleHealthFactChange, healthFact: this.state.healthFacts[5],
-	                objectId: '5', checkbox: 'true', text: 'Cholestrol', id: 'cholestrol' }),
+	                objectId: '5', checkbox: 'true', text: 'Cholestrol', id: 'cholestrol', moreInfoText: 'SOmething' }),
 	            _react2['default'].createElement(_HealthFactInfoJsx2['default'], { handleHealthFactChange: this.handleHealthFactChange, healthFact: this.state.healthFacts[6],
-	                objectId: '6', checkbox: 'true', text: 'Trig', id: 'trig' }),
+	                objectId: '6', checkbox: 'true', text: 'Trig', id: 'trig', moreInfoText: 'SOmething' }),
 	            _react2['default'].createElement(_HealthFactInfoJsx2['default'], { handleHealthFactChange: this.handleHealthFactChange, healthFact: this.state.healthFacts[7],
 	                objectId: '7', placeholder: '168', text: 'Height in cms', id: 'height' }),
 	            _react2['default'].createElement(_HealthFactInfoJsx2['default'], { handleHealthFactChange: this.handleHealthFactChange, healthFact: this.state.healthFacts[8],
@@ -23107,25 +23107,29 @@
 /* 194 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 	
-	Object.defineProperty(exports, "__esModule", {
+	Object.defineProperty(exports, '__esModule', {
 	    value: true
 	});
 	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 	
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
 	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var _react = __webpack_require__(1);
 	
 	var _react2 = _interopRequireDefault(_react);
+	
+	var _MoreInfoModalJsx = __webpack_require__(195);
+	
+	var _MoreInfoModalJsx2 = _interopRequireDefault(_MoreInfoModalJsx);
 	
 	var HealthFactInfo = (function (_React$Component) {
 	    _inherits(HealthFactInfo, _React$Component);
@@ -23133,7 +23137,7 @@
 	    function HealthFactInfo(props) {
 	        _classCallCheck(this, HealthFactInfo);
 	
-	        _get(Object.getPrototypeOf(HealthFactInfo.prototype), "constructor", this).call(this, props);
+	        _get(Object.getPrototypeOf(HealthFactInfo.prototype), 'constructor', this).call(this, props);
 	        this.state = props.healthFact;
 	        this.handleCheckboxChange = this.handleCheckboxChange.bind(this);
 	        this.handleDescriptionChange = this.handleDescriptionChange.bind(this);
@@ -23141,7 +23145,7 @@
 	    }
 	
 	    _createClass(HealthFactInfo, [{
-	        key: "handleCheckboxChange",
+	        key: 'handleCheckboxChange',
 	        value: function handleCheckboxChange(event) {
 	            var currentState = this.state;
 	            currentState.checkbox = event.target.checked;
@@ -23149,7 +23153,7 @@
 	            this.props.handleHealthFactChange(this.state);
 	        }
 	    }, {
-	        key: "handleDescriptionChange",
+	        key: 'handleDescriptionChange',
 	        value: function handleDescriptionChange(event) {
 	            var currentState = this.state;
 	            currentState.description = event.target.value;
@@ -23157,7 +23161,7 @@
 	            this.props.handleHealthFactChange(this.state);
 	        }
 	    }, {
-	        key: "handleInputTextChange",
+	        key: 'handleInputTextChange',
 	        value: function handleInputTextChange(event) {
 	            var currentState = this.state;
 	            currentState.inputText = event.target.value;
@@ -23165,7 +23169,7 @@
 	            this.props.handleHealthFactChange(this.state);
 	        }
 	    }, {
-	        key: "render",
+	        key: 'render',
 	        value: function render() {
 	
 	            var placeholder = this.props.placeholder;
@@ -23175,42 +23179,42 @@
 	            }
 	
 	            if (this.props.checkbox) {
-	                return _react2["default"].createElement(
-	                    "div",
-	                    { className: "fact margin-tb-med", id: this.props.id },
-	                    _react2["default"].createElement(
-	                        "div",
-	                        { className: "checkbox-container" },
-	                        _react2["default"].createElement("input", {
-	                            type: "checkbox",
+	                return _react2['default'].createElement(
+	                    'div',
+	                    { className: 'fact margin-tb-med', id: this.props.id },
+	                    _react2['default'].createElement(
+	                        'div',
+	                        { className: 'checkbox-container' },
+	                        _react2['default'].createElement('input', {
+	                            type: 'checkbox',
 	                            onChange: this.handleCheckboxChange,
 	                            checked: this.state.checkbox }),
-	                        _react2["default"].createElement(
-	                            "span",
+	                        _react2['default'].createElement(
+	                            'span',
 	                            null,
 	                            this.props.text
 	                        ),
-	                        _react2["default"].createElement("i", { "aria-hidden": "true", className: "fa fa-question-circle", hidden: this.props.hideIcon })
+	                        _react2['default'].createElement(_MoreInfoModalJsx2['default'], { modalText: this.props.id, hideIcon: this.props.hideIcon, moreInfoText: this.props.moreInfoText })
 	                    ),
-	                    _react2["default"].createElement("input", {
-	                        type: "text",
-	                        className: "description",
+	                    _react2['default'].createElement('input', {
+	                        type: 'text',
+	                        className: 'description',
 	                        placeholder: placeholder,
 	                        onChange: this.handleDescriptionChange,
 	                        value: this.state.description })
 	                );
 	            } else {
-	                return _react2["default"].createElement(
-	                    "div",
-	                    { className: "fact margin-tb-med", id: this.props.id },
-	                    _react2["default"].createElement(
-	                        "label",
+	                return _react2['default'].createElement(
+	                    'div',
+	                    { className: 'fact margin-tb-med', id: this.props.id },
+	                    _react2['default'].createElement(
+	                        'label',
 	                        null,
 	                        this.props.text
 	                    ),
-	                    _react2["default"].createElement("input", {
-	                        type: "number",
-	                        className: "description full-width",
+	                    _react2['default'].createElement('input', {
+	                        type: 'number',
+	                        className: 'description full-width',
 	                        placeholder: placeholder,
 	                        onChange: this.handleInputTextChange,
 	                        value: this.state.inputText })
@@ -23220,106 +23224,125 @@
 	    }]);
 	
 	    return HealthFactInfo;
-	})(_react2["default"].Component);
+	})(_react2['default'].Component);
 	
-	exports["default"] = HealthFactInfo;
-	module.exports = exports["default"];
+	exports['default'] = HealthFactInfo;
+	module.exports = exports['default'];
 
 /***/ },
 /* 195 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 	
-	Object.defineProperty(exports, "__esModule", {
+	Object.defineProperty(exports, '__esModule', {
 	    value: true
 	});
 	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var _react = __webpack_require__(1);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var store = { checked: false };
+	var _reactModalBootstrap = __webpack_require__(196);
 	
-	var DietInfo = _react2["default"].createClass({
-	    displayName: "DietInfo",
+	var MoreInfoModal = (function (_React$Component) {
+	    _inherits(MoreInfoModal, _React$Component);
 	
-	    getInitialState: function getInitialState() {
-	        return store;
-	    },
+	    function MoreInfoModal(props) {
+	        _classCallCheck(this, MoreInfoModal);
 	
-	    handleCheckedChanged: function handleCheckedChanged(event) {
-	        store.checked = event.target.checked;
-	        this.setState(store);
-	    },
+	        _get(Object.getPrototypeOf(MoreInfoModal.prototype), 'constructor', this).call(this, props);
+	        this.state = {
+	            isOpen: false
+	        };
+	    }
 	
-	    render: function render() {
-	        return _react2["default"].createElement(
-	            "div",
-	            null,
-	            _react2["default"].createElement(
-	                "div",
-	                { className: "row" },
-	                _react2["default"].createElement(
-	                    "div",
-	                    { className: "ten columns terms" },
-	                    _react2["default"].createElement(
-	                        "span",
+	    _createClass(MoreInfoModal, [{
+	        key: 'openModal',
+	        value: function openModal() {
+	            this.setState({
+	                isOpen: true
+	            });
+	        }
+	    }, {
+	        key: 'hideModal',
+	        value: function hideModal() {
+	            this.setState({
+	                isOpen: false
+	            });
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            var backdropStyles = {
+	                base: {
+	                    background: 'rgba(0, 0, 0, .7)',
+	                    opacity: 0,
+	                    visibility: 'hidden',
+	                    transition: 'all 0.4s',
+	                    overflowX: 'hidden',
+	                    overflowY: 'auto',
+	                    zIndex: '999999',
+	                    position: 'fixed',
+	                    width: '100%',
+	                    height: '100%'
+	                },
+	                open: {
+	                    opacity: 1,
+	                    visibility: 'visible'
+	                }
+	            };
+	            return _react2['default'].createElement(
+	                'div',
+	                { className: 'more-info-modal' },
+	                _react2['default'].createElement('i', { 'aria-hidden': 'true', className: 'fa fa-question-circle', hidden: this.props.hideIcon, id: 'more-info-button', onClick: this.openModal.bind(this) }),
+	                _react2['default'].createElement(
+	                    _reactModalBootstrap.Modal,
+	                    { isOpen: this.state.isOpen, backdropStyles: backdropStyles, size: 'modal-lg', onRequestHide: this.hideModal.bind(this) },
+	                    _react2['default'].createElement(
+	                        _reactModalBootstrap.ModalHeader,
 	                        null,
-	                        "By clicking \"Accept\" I agree that: "
-	                    ),
-	                    _react2["default"].createElement(
-	                        "ul",
-	                        { className: "docs-terms" },
-	                        _react2["default"].createElement(
-	                            "li",
+	                        _react2['default'].createElement(_reactModalBootstrap.ModalClose, { onClick: this.hideModal.bind(this) }),
+	                        _react2['default'].createElement(
+	                            _reactModalBootstrap.ModalTitle,
 	                            null,
-	                            "I have read and accepted the ",
-	                            _react2["default"].createElement(
-	                                "a",
-	                                { href: "#" },
-	                                "User Agreement"
-	                            )
-	                        ),
-	                        _react2["default"].createElement(
-	                            "li",
-	                            null,
-	                            "I have read and accepted the ",
-	                            _react2["default"].createElement(
-	                                "a",
-	                                { href: "#" },
-	                                "Privacy Policy"
-	                            )
-	                        ),
-	                        _react2["default"].createElement(
-	                            "li",
-	                            null,
-	                            "I am at least 18 years old"
+	                            'Registeration'
 	                        )
 	                    ),
-	                    _react2["default"].createElement(
-	                        "label",
+	                    _react2['default'].createElement(
+	                        _reactModalBootstrap.ModalBody,
 	                        null,
-	                        _react2["default"].createElement("input", { type: "checkbox",
-	                            checked: this.state.checked,
-	                            onChange: this.handleCheckedChanged,
-	                            autoFocus: true }),
-	                        _react2["default"].createElement(
-	                            "span",
-	                            null,
-	                            " Accept "
-	                        ),
-	                        " "
+	                        this.props.moreInfoText
+	                    ),
+	                    _react2['default'].createElement(
+	                        _reactModalBootstrap.ModalFooter,
+	                        null,
+	                        _react2['default'].createElement(
+	                            'button',
+	                            { className: 'btn btn-default', onClick: this.hideModal.bind(this) },
+	                            'Close'
+	                        )
 	                    )
 	                )
-	            )
-	        );
-	    }
-	});
+	            );
+	        }
+	    }]);
 	
-	exports.DietInfo = DietInfo;
+	    return MoreInfoModal;
+	})(_react2['default'].Component);
+	
+	exports['default'] = MoreInfoModal;
+	module.exports = exports['default'];
 
 /***/ },
 /* 196 */
@@ -28683,6 +28706,102 @@
 /* 267 */
 /***/ function(module, exports, __webpack_require__) {
 
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var store = { checked: false };
+	
+	var DietInfo = _react2["default"].createClass({
+	    displayName: "DietInfo",
+	
+	    getInitialState: function getInitialState() {
+	        return store;
+	    },
+	
+	    handleCheckedChanged: function handleCheckedChanged(event) {
+	        store.checked = event.target.checked;
+	        this.setState(store);
+	    },
+	
+	    render: function render() {
+	        return _react2["default"].createElement(
+	            "div",
+	            null,
+	            _react2["default"].createElement(
+	                "div",
+	                { className: "row" },
+	                _react2["default"].createElement(
+	                    "div",
+	                    { className: "ten columns terms" },
+	                    _react2["default"].createElement(
+	                        "span",
+	                        null,
+	                        "By clicking \"Accept\" I agree that: "
+	                    ),
+	                    _react2["default"].createElement(
+	                        "ul",
+	                        { className: "docs-terms" },
+	                        _react2["default"].createElement(
+	                            "li",
+	                            null,
+	                            "I have read and accepted the ",
+	                            _react2["default"].createElement(
+	                                "a",
+	                                { href: "#" },
+	                                "User Agreement"
+	                            )
+	                        ),
+	                        _react2["default"].createElement(
+	                            "li",
+	                            null,
+	                            "I have read and accepted the ",
+	                            _react2["default"].createElement(
+	                                "a",
+	                                { href: "#" },
+	                                "Privacy Policy"
+	                            )
+	                        ),
+	                        _react2["default"].createElement(
+	                            "li",
+	                            null,
+	                            "I am at least 18 years old"
+	                        )
+	                    ),
+	                    _react2["default"].createElement(
+	                        "label",
+	                        null,
+	                        _react2["default"].createElement("input", { type: "checkbox",
+	                            checked: this.state.checked,
+	                            onChange: this.handleCheckedChanged,
+	                            autoFocus: true }),
+	                        _react2["default"].createElement(
+	                            "span",
+	                            null,
+	                            " Accept "
+	                        ),
+	                        " "
+	                    )
+	                )
+	            )
+	        );
+	    }
+	});
+	
+	exports.DietInfo = DietInfo;
+
+/***/ },
+/* 268 */
+/***/ function(module, exports, __webpack_require__) {
+
 	'use strict';
 	
 	Object.defineProperty(exports, '__esModule', {
@@ -28703,7 +28822,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _CarouselItemJsx = __webpack_require__(268);
+	var _CarouselItemJsx = __webpack_require__(269);
 	
 	var _CarouselItemJsx2 = _interopRequireDefault(_CarouselItemJsx);
 	
@@ -28753,7 +28872,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 268 */
+/* 269 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -28818,7 +28937,7 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 269 */
+/* 270 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28841,7 +28960,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _SectionHeaderJsx = __webpack_require__(270);
+	var _SectionHeaderJsx = __webpack_require__(271);
 	
 	var _SectionHeaderJsx2 = _interopRequireDefault(_SectionHeaderJsx);
 	
@@ -28970,7 +29089,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 270 */
+/* 271 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -29038,7 +29157,7 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 271 */
+/* 272 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29061,7 +29180,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _SectionHeaderJsx = __webpack_require__(270);
+	var _SectionHeaderJsx = __webpack_require__(271);
 	
 	var _SectionHeaderJsx2 = _interopRequireDefault(_SectionHeaderJsx);
 	
@@ -29185,7 +29304,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 272 */
+/* 273 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29208,7 +29327,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _SectionHeaderJsx = __webpack_require__(270);
+	var _SectionHeaderJsx = __webpack_require__(271);
 	
 	var _SectionHeaderJsx2 = _interopRequireDefault(_SectionHeaderJsx);
 	
@@ -29383,7 +29502,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 273 */
+/* 274 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29406,7 +29525,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _SectionHeaderJsx = __webpack_require__(270);
+	var _SectionHeaderJsx = __webpack_require__(271);
 	
 	var _SectionHeaderJsx2 = _interopRequireDefault(_SectionHeaderJsx);
 	
@@ -29525,7 +29644,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 274 */
+/* 275 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29548,11 +29667,11 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _SectionHeaderJsx = __webpack_require__(270);
+	var _SectionHeaderJsx = __webpack_require__(271);
 	
 	var _SectionHeaderJsx2 = _interopRequireDefault(_SectionHeaderJsx);
 	
-	var _MoreInfoModalJsx = __webpack_require__(275);
+	var _MoreInfoModalJsx = __webpack_require__(276);
 	
 	var _MoreInfoModalJsx2 = _interopRequireDefault(_MoreInfoModalJsx);
 	
@@ -29787,7 +29906,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 275 */
+/* 276 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30031,7 +30150,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 276 */
+/* 277 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30054,7 +30173,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _SectionHeaderJsx = __webpack_require__(270);
+	var _SectionHeaderJsx = __webpack_require__(271);
 	
 	var _SectionHeaderJsx2 = _interopRequireDefault(_SectionHeaderJsx);
 	
@@ -30444,7 +30563,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 277 */
+/* 278 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30467,7 +30586,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _SectionHeaderJsx = __webpack_require__(270);
+	var _SectionHeaderJsx = __webpack_require__(271);
 	
 	var _SectionHeaderJsx2 = _interopRequireDefault(_SectionHeaderJsx);
 	
@@ -30521,7 +30640,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 278 */
+/* 279 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30544,7 +30663,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _SectionHeaderJsx = __webpack_require__(270);
+	var _SectionHeaderJsx = __webpack_require__(271);
 	
 	var _SectionHeaderJsx2 = _interopRequireDefault(_SectionHeaderJsx);
 	
@@ -30611,7 +30730,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 279 */
+/* 280 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30634,7 +30753,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _SectionHeaderJsx = __webpack_require__(270);
+	var _SectionHeaderJsx = __webpack_require__(271);
 	
 	var _SectionHeaderJsx2 = _interopRequireDefault(_SectionHeaderJsx);
 	

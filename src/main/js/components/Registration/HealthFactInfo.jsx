@@ -1,5 +1,7 @@
 import React from 'react';
 
+import MoreInfoModal from './MoreInfoModal.jsx';
+
 export default class HealthFactInfo extends React.Component {
     constructor(props) {
         super(props);
@@ -47,7 +49,7 @@ export default class HealthFactInfo extends React.Component {
                             onChange={this.handleCheckboxChange}
                             checked={this.state.checkbox}/>
                         <span>{this.props.text}</span>
-                        <i aria-hidden="true" className="fa fa-question-circle" hidden={this.props.hideIcon}></i>
+                        <MoreInfoModal modalText={this.props.id} hideIcon={this.props.hideIcon} moreInfoText={this.props.moreInfoText}/>
                     </div>
                     <input 
                         type="text" 

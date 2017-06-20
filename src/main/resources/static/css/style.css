@@ -1311,3 +1311,7 @@ input::placeholder {
 	margin-bottom: 0px;
 	width: 50%;
 }
+
+.fact .more-info-modal {
+	display: inline-block;
+}

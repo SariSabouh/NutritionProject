@@ -26,15 +26,15 @@ const HealthFacts = React.createClass( {
                 <HealthFactInfo handleHealthFactChange={this.handleHealthFactChange} healthFact={this.state.healthFacts[1]} 
                     objectId="1" checkbox="true" hideIcon="true" text="Blood Sugar" id="blood-sugar" />
                 <HealthFactInfo handleHealthFactChange={this.handleHealthFactChange} healthFact={this.state.healthFacts[2]}
-                    objectId="2"  checkbox="true"text="HBA1C" id="HBA1C" />
+                    objectId="2"  checkbox="true"text="HBA1C" id="HBA1C" moreInfoText="SOmething"/>
                 <HealthFactInfo handleHealthFactChange={this.handleHealthFactChange} healthFact={this.state.healthFacts[3]}
-                    objectId="3"  checkbox="true" text="LDL" id="LDL" />
+                    objectId="3"  checkbox="true" text="LDL" id="LDL" moreInfoText="SOmething"/>
                 <HealthFactInfo handleHealthFactChange={this.handleHealthFactChange} healthFact={this.state.healthFacts[4]} 
-                    objectId="4"  checkbox="true" text="HDL" id="HDL" />
+                    objectId="4"  checkbox="true" text="HDL" id="HDL" moreInfoText="SOmething"/>
                 <HealthFactInfo handleHealthFactChange={this.handleHealthFactChange} healthFact={this.state.healthFacts[5]}
-                    objectId="5"  checkbox="true" text="Cholestrol" id="cholestrol" />
+                    objectId="5"  checkbox="true" text="Cholestrol" id="cholestrol" moreInfoText="SOmething"/>
                 <HealthFactInfo handleHealthFactChange={this.handleHealthFactChange} healthFact={this.state.healthFacts[6]}
-                    objectId="6"  checkbox="true" text="Trig" id="trig" />
+                    objectId="6"  checkbox="true" text="Trig" id="trig" moreInfoText="SOmething"/>
                 <HealthFactInfo handleHealthFactChange={this.handleHealthFactChange} healthFact={this.state.healthFacts[7]}
                     objectId="7"  placeholder="168" text="Height in cms" id="height" />
                 <HealthFactInfo handleHealthFactChange={this.handleHealthFactChange} healthFact={this.state.healthFacts[8]} 
