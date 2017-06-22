@@ -69,6 +69,8 @@ public class Customer implements Serializable {
 
 	}
 
+	public Customer() {}
+
 	public Long getId() {
 		return Id;
 	}

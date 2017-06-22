@@ -12,6 +12,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.google.gson.Gson;
 import com.paliup.nutrition.model.Coach;
 import com.paliup.nutrition.model.Customer;
 import com.paliup.nutrition.model.CustomerCoach;
@@ -63,14 +64,37 @@ public class RestWebControllerTest {
 	@Autowired
 	private CustomerSubscribtionRepository customerSubscribtionRepo;
 
-	 @Test
-	 public void testPostCustomerShouldReturnDoneResponse() throws
-	 JsonProcessingException, IOException{
-	 final String json =
-	 "{\"id\":1,\"firstName\":\"test\",\"lastName\":\"testo\",\"dateOfBirth\":\"1.1.1996\",\"email\":\"a@a\",\"accountNumber\":\"1234\",\"nameOfMedical\":\"flu\",\"subscribtion\":\"basic\"}";
-	 Response response = restWebController.postCustomer(json);
-	 assertEquals("Done" , response.getStatus());
-	 }
+	@Test
+	public void testPostCustomerShouldReturnDoneResponse() throws JsonProcessingException, IOException {
+		// final String json =
+		// "{\"id\":1,\"firstName\":\"test\",\"lastName\":\"testo\",\"dateOfBirth\":\"1.1.1996\",\"email\":\"a@a\",\"accountNumber\":\"1234\",\"nameOfMedical\":\"flu\",\"subscribtion\":\"basic\"}";
+		User user = new User();
+		user.setEmail("test");
+		user.setPassword("123123");
+		Customer cust = new Customer();
+		cust.setDateOfBirth("1/1/1");
+		cust.setFirstName("test");
+		cust.setLastName("test");
+		cust.setUserId((long) 1);
+		Subscribtion sub = new Subscribtion();
+		sub.setName("basic");
+		Medical medical = new Medical();
+		medical.setNameOfMedical("flue");
+		Payment payment = new Payment();
+		payment.setAccountNumber((long) 123456);
+		payment.setCustomerId((long) 1);
+
+		Gson gson = new Gson();
+		String json1 = gson.toJson(user);
+		String json2 = gson.toJson(cust);
+		String json3 = gson.toJson(sub);
+		String json4 = gson.toJson(medical);
+		String json5 = gson.toJson(payment);
+		String json = json1 + json2 + json3 + json4 + json5;
+
+		Response response = restWebController.postCustomer(json);
+		assertEquals("Done", response.getStatus());
+	}
 
 	@Test
 	public void testGetObjectsShouldPersistAllObjects() {

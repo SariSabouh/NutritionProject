@@ -56,6 +56,7 @@ public class PersistanceServiceClassTest {
 	
 	@Autowired
 	private SubscribtionRepository subscribtionRepo;
+	
 
 	@Test
 	public void testSaveUserShouldReturnUserId() {
