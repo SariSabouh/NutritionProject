@@ -1,5 +1,5 @@
-import React, { Component, PropTypes } from 'react';
-import HealthFactInfo from '../HealthFactInfo.jsx';
+import React, { Component, PropTypes } from 'react'
+import HealthFactInfo from './Utils/HealthFactInfo.jsx'
 
 const store = { healthFacts: [], modified: false }
 

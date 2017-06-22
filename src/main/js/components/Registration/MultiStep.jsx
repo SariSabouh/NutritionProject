@@ -64,7 +64,7 @@ export default class MultiStep extends Component {
 
     handleKeyDown( evt ) {
         if ( evt.which === 13 ) {
-            if ( !$('#physicalFitness').length) {
+            if ( !$('#physicalFitness').length && !$('#diet-info').length) {
                 this.next()
             }
         }

@@ -6,10 +6,10 @@ import { DietInfo } from './Steps/DietInfo.jsx'
 
 const steps = 
     [
+        {name: 'Diet Information', component: <DietInfo/>},
       {name: 'Personal Details', component: <PersonalDetails/>},
       {name: 'Physical Fitness', component: <PhysicalFitness/>},
       {name: 'Health Facts', component: <HealthFacts/>},
-      {name: 'Diet Information', component: <DietInfo/>}
     ]
 
 export { steps }
