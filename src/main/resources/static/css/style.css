@@ -1262,6 +1262,12 @@ input::placeholder {
 	color: darkgrey;
 }
 
+/** MultiStep */
+.multistep__btn--next {
+	float: right;
+}
+
+/** Physical Activity */
 .activity-list label {
 	margin: 2px 0;
 }
@@ -1279,14 +1285,38 @@ input::placeholder {
     display: block;
 }
 
-.multistep__btn--next {
-	float: right;
-}
-
 .remove-activity {
     margin-bottom: 0px;
 }
 
 .remove-activity span {
     vertical-align: super;
+}
+
+/** Health Facts */
+.fact .checkbox-container {
+	width: 50%;
+	display: inline-block;
+}
+
+.fact .fa {
+	font-size: 20px;
+    color: green;
+    margin: auto 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.fact .description {
+	margin-bottom: 0px;
+	width: 50%;
+}
+
+.fact .more-info-modal {
+	display: inline-block;
+}
+
+/** Diet Info */
+#diet-info mark {
+	font-style: normal;
 }

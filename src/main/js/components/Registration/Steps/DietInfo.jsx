@@ -1,35 +1,42 @@
 import React, { Component, PropTypes } from 'react'
+import { WithContext as ReactTags } from 'react-tag-input';
 
 const store = { checked: false }
 
 const DietInfo = React.createClass( {
     getInitialState() {
-        return store
+        return {store: store, tags: []}
     },
 
-    handleCheckedChanged( event ) {
-        store.checked = event.target.checked
-        this.setState( store )
+    handleDelete(i) {
+        let tags = this.state.tags;
+        tags.splice(i, 1);
+        this.setState({store: store, tags: tags});
+    },
+ 
+    handleAddition(tag) {
+        let tags = this.state.tags;
+        tags.push({
+            id: tags.length + 1,
+            text: tag
+        });
+        this.setState({
+            store,
+            tags
+        })
     },
 
     render() {
+        const { tags } = this.state;
         return (
-            <div>
-                <div className="row">
-                    <div className="ten columns terms">
-                        <span>By clicking "Accept" I agree that: </span>
-                        <ul className="docs-terms">
-                            <li>I have read and accepted the <a href="#">User Agreement</a></li>
-                            <li>I have read and accepted the <a href="#">Privacy Policy</a></li>
-                            <li>I am at least 18 years old</li>
-                        </ul>
-                        <label><input type="checkbox"
-                            checked={this.state.checked}
-                            onChange={this.handleCheckedChanged}
-                            autoFocus/>
-                            <span> Accept </span> </label>
-                    </div>
-                </div>
+            <div id="diet-info">
+                <ReactTags tags={tags}
+                    suggestions={["Test", "test2"]}
+                    placeholder={"lamb, pultry, sea food, legums, nuts..."}
+                    autofocus={true}
+                    handleDelete={this.handleDelete}
+                    handleAddition={this.handleAddition}
+                    classNames={{selected: 'ReactTags__selected protein-container'}}/>
             </div>
         )
     }
