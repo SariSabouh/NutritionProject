@@ -13,12 +13,23 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	@Autowired
 	private UserDetailsService userDetailsService;
 
-	// TODO CSRF
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http.authorizeRequests().antMatchers("/css/**", "/index").permitAll().antMatchers("/user/**").hasRole("USER")
-				.and().formLogin().loginPage("/").failureUrl("/login-error").defaultSuccessUrl("/user/loggedIn").and()
-				.logout().logoutSuccessUrl("/").invalidateHttpSession(true).deleteCookies("JSESSIONID");
+		http.authorizeRequests()
+			.antMatchers("/css/**", "/index").permitAll()
+			.antMatchers("/user/**").hasRole("USER")
+		.and()
+			.formLogin()
+				.loginPage("/")
+					.failureUrl("/login-error")
+					.defaultSuccessUrl("/user/loggedIn")
+					.usernameParameter("thyme-email")
+					.passwordParameter("thyme-password")
+				.and()
+				.logout()
+					.logoutSuccessUrl("/")
+					.invalidateHttpSession(true)
+					.deleteCookies("JSESSIONID");
 	}
 
 	@Autowired

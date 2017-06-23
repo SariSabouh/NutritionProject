@@ -8,6 +8,8 @@
 		<meta name="description" content="Unika - Responsive One Page HTML5 Template"/>
 		<meta name="keywords" content="HTML5, Bootsrtrap, One Page, Responsive, Template, Portfolio" />
 		<meta name="author" content="imransdesign.com"></meta>
+		<meta name="_csrf" th:content="${_csrf.token}"/>
+		<meta name="_csrf_header" th:content="${_csrf.headerName}"/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         
 		<!-- Mobile Meta -->
@@ -56,12 +58,12 @@
         
         <div class="disabled" hidden="hidden">
 			<p th:if="${loginError}" id="loginError" class="error">Wrong user or password</p>
-			<form class="testLogin" th:action="@{/}" method="post">
-				<label for="email">Username</label>: 
-				<input type="text" id="thyme-email" name="email" autofocus="autofocus" />
+			<form class="thymeLogin" th:action="@{/}" method="post">
+				<label for="thyme-email">Username</label>: 
+				<input type="text" id="thyme-email" name="thyme-email" autofocus="autofocus" />
 				<br /> 
-				<label for="password2">Password</label>: 
-				<input type="password" id="thyme-password" name="password" />
+				<label for="thyme-password">Password</label>: 
+				<input type="password" id="thyme-password" name="thyme-password" />
 				<br /> 
 				<input type="submit" value="Log in" />
 			</form>

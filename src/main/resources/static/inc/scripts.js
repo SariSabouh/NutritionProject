@@ -199,7 +199,7 @@ $(document).ready(function () {
 	$('.login').submit(function(e) {
 		$('#thyme-email').val($('#email').val());
 		$('#thyme-password').val($('#password').val());
-		$('.testLogin').submit();
+		$('.thymeLogin').submit();
 		e.preventDefault();
 	});
 	
@@ -209,7 +209,7 @@ $(document).ready(function () {
 });
 
 $(document).keypress(function(e) {
-    if (e.which === 13) {
+    if (e.which === 13 && $('.registrationModal').parents('.modal-backdrop').attr('style').includes('visibility: visible')) {
     	e.preventDefault();
     	if ($(e.currentTarget.activeElement).parents('.health-facts').length)
     		$('.add-activity-button').click();
