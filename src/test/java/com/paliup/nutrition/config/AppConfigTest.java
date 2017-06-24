@@ -29,11 +29,6 @@ public class AppConfigTest {
 				this.appConfig.transferServiceCustomUserDetails().getClass().toString());
 	}
 
-	@Test
-	public void testHomeControllerBean() {
-		assertEquals("class com.paliup.nutrition.controller.HomeController",
-				this.appConfig.transferServiceHomeController().getClass().toString());
 
-	}
 
 }

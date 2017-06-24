@@ -24,9 +24,5 @@ public class AppConfig {
 		return new CustomUserDetails();
 	}
 
-	@Bean
-	public HomeController transferServiceHomeController() {
-		return new HomeController();
-	}
 
 }
