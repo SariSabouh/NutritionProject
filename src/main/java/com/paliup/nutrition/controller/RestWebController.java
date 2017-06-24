@@ -65,9 +65,9 @@ public class RestWebController {
 		Medical medical = mapper.convertValue(node.get("medical"), Medical.class);
 		Payment payment = mapper.convertValue(node.get("payment"), Payment.class);
 		Coach coach = mapper.convertValue(node.get("coach"), Coach.class);
-		Subscribtion subscribtion = mapper.convertValue(node.get("package"), Subscribtion.class);
+		Subscribtion subscribtion = mapper.convertValue(node.get("subscribtion"), Subscribtion.class);
 
-		//getObjects(user, customer, medical, payment, coach, subscribtion);
+		getObjects(user, customer, medical, payment, coach, subscribtion);
 
 		Response response = new Response("Done", user);
 

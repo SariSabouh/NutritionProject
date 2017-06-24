@@ -66,8 +66,7 @@ public class RestWebControllerTest {
 
 	@Test
 	public void testPostCustomerShouldReturnDoneResponse() throws JsonProcessingException, IOException {
-		// final String json =
-		// "{\"id\":1,\"firstName\":\"test\",\"lastName\":\"testo\",\"dateOfBirth\":\"1.1.1996\",\"email\":\"a@a\",\"accountNumber\":\"1234\",\"nameOfMedical\":\"flu\",\"subscribtion\":\"basic\"}";
+		
 		User user = new User();
 		user.setEmail("test");
 		user.setPassword("123123");
@@ -83,17 +82,43 @@ public class RestWebControllerTest {
 		Payment payment = new Payment();
 		payment.setAccountNumber((long) 123456);
 		payment.setCustomerId((long) 1);
+		
+		Coach coach = new Coach();
+		coach.setFirstName("test");
+		coach.setDateOfBirth("1/1/1");
+		coach.setLastName("test");
+		coach.setPhone(032234);
+		coach.setUserId((long) 1);
+		
 
 		Gson gson = new Gson();
-		String json1 = gson.toJson(user);
-		String json2 = gson.toJson(cust);
-		String json3 = gson.toJson(sub);
-		String json4 = gson.toJson(medical);
-		String json5 = gson.toJson(payment);
-		String json = json1 + json2 + json3 + json4 + json5;
-
+		String userJ = gson.toJson(user);
+		String custJ = gson.toJson(cust);
+		String subJ = gson.toJson(sub);
+		String medicalJ = gson.toJson(medical);
+		String paymentJ = gson.toJson(payment);
+		String coachJ = gson.toJson(coach);
+		
+		String json = "{\"user\":" + userJ + ", \"customer\": " + custJ + ", \"subscribtion\": " + subJ
+				+ ", \"medical\": " + medicalJ + ", \"payment\": " + paymentJ + " , \"coach\": " + coachJ + "}";
 		Response response = restWebController.postCustomer(json);
 		assertEquals("Done", response.getStatus());
+	}
+	
+	@Test (expected = NullPointerException.class)
+	public void testPostCustomerShouldReturnNullPointerException() throws JsonProcessingException, IOException{
+		
+		User user = new User();
+		user.setEmail("test");
+		user.setPassword("123123");
+		Gson gson = new Gson();
+		String userJ = gson.toJson(user);
+		
+		String json = "{\"user\":" + userJ + "}";
+		
+		Response response = restWebController.postCustomer(json);
+		assertEquals("Done", response.getStatus());	
+		
 	}
 
 	@Test
