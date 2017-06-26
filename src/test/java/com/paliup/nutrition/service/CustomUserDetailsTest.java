@@ -2,27 +2,42 @@ package com.paliup.nutrition.service;
 
 import static org.junit.Assert.*;
 
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.test.context.junit4.SpringRunner;;
-
+import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
-@Ignore
-@ComponentScan(basePackageClasses = { UserDetails.class, CustomUserDetails.class })
+@DataJpaTest
+@ComponentScan(basePackageClasses = { CustomUserDetails.class })
 public class CustomUserDetailsTest {
 
 	@Autowired
-	private UserDetails customUserDetails;
+	private CustomUserDetails customUserDetails;
 
 	@Test
 	public void testIsAccountNonExpired() {
-		customUserDetails.isAccountNonExpired();
-		assertTrue(false);
+
+		assertTrue(customUserDetails.isAccountNonExpired());
+	}
+
+	@Test
+	public void testIsAccountNonLocked() {
+		assertTrue(customUserDetails.isAccountNonLocked());
+	}
+
+	@Test
+	public void testIsCredentialsNonExpired() {
+
+		assertTrue(customUserDetails.isCredentialsNonExpired());
+	}
+
+	@Test
+	public void testIsEnabled() {
+
+		assertTrue(customUserDetails.isEnabled());
 	}
 
 }

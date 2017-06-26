@@ -45,8 +45,6 @@ export default class Login extends React.Component {
                                 </div>
                             </div>
                         </div>
-
-                        <input type="hidden" className="hide" name="token" id="token" value="a465a2791ae0bae853cf4bf485dbe1b6" />
                     </form>
                     <RegisterModal modalText="Register" />
                 </div>

@@ -12,6 +12,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.google.gson.Gson;
 import com.paliup.nutrition.model.Coach;
 import com.paliup.nutrition.model.Customer;
 import com.paliup.nutrition.model.CustomerCoach;
@@ -63,14 +64,62 @@ public class RestWebControllerTest {
 	@Autowired
 	private CustomerSubscribtionRepository customerSubscribtionRepo;
 
-	 @Test
-	 public void testPostCustomerShouldReturnDoneResponse() throws
-	 JsonProcessingException, IOException{
-	 final String json =
-	 "{\"id\":1,\"firstName\":\"test\",\"lastName\":\"testo\",\"dateOfBirth\":\"1.1.1996\",\"email\":\"a@a\",\"accountNumber\":\"1234\",\"nameOfMedical\":\"flu\",\"subscribtion\":\"basic\"}";
-	 Response response = restWebController.postCustomer(json);
-	 assertEquals("Done" , response.getStatus());
-	 }
+	@Test
+	public void testPostCustomerShouldReturnDoneResponse() throws JsonProcessingException, IOException {
+		
+		User user = new User();
+		user.setEmail("test");
+		user.setPassword("123123");
+		Customer cust = new Customer();
+		cust.setDateOfBirth("1/1/1");
+		cust.setFirstName("test");
+		cust.setLastName("test");
+		cust.setUserId((long) 1);
+		Subscribtion sub = new Subscribtion();
+		sub.setName("basic");
+		Medical medical = new Medical();
+		medical.setNameOfMedical("flue");
+		Payment payment = new Payment();
+		payment.setAccountNumber((long) 123456);
+		payment.setCustomerId((long) 1);
+		
+		Coach coach = new Coach();
+		coach.setFirstName("test");
+		coach.setDateOfBirth("1/1/1");
+		coach.setLastName("test");
+		coach.setPhone(032234);
+		coach.setUserId((long) 1);
+		
+
+		Gson gson = new Gson();
+		String userJ = gson.toJson(user);
+		String custJ = gson.toJson(cust);
+		String subJ = gson.toJson(sub);
+		String medicalJ = gson.toJson(medical);
+		String paymentJ = gson.toJson(payment);
+		String coachJ = gson.toJson(coach);
+		
+		String json = "{\"user\":" + userJ + ", \"customer\": " + custJ + ", \"subscribtion\": " + subJ
+				+ ", \"medical\": " + medicalJ + ", \"payment\": " + paymentJ + " , \"coach\": " + coachJ + "}";
+		Response response = restWebController.postCustomer(json);
+		assertEquals("Done", response.getStatus());
+	}
+	
+	@Test (expected = NullPointerException.class)
+	public void testPostCustomerShouldReturnNullPointerException() throws JsonProcessingException, IOException{
+		
+		User user = new User();
+		user.setEmail("test");
+		user.setPassword("123123");
+		Gson gson = new Gson();
+		String userJ = gson.toJson(user);
+		
+		String json = "{\"user\":" + userJ + "}";
+		
+		Response response = restWebController.postCustomer(json);
+		assertEquals("Done", response.getStatus());	
+		
+	}
 
 	@Test
 	public void testGetObjectsShouldPersistAllObjects() {

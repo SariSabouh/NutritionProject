@@ -1,7 +1,11 @@
 package com.paliup.nutrition.controller;
 
 import java.io.IOException;
+import java.util.List;
 
+import org.json.JSONArray;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,11 +20,13 @@ import com.paliup.nutrition.model.Customer;
 import com.paliup.nutrition.model.CustomerCoach;
 import com.paliup.nutrition.model.CustomerMedical;
 import com.paliup.nutrition.model.CustomerSubscribtion;
+import com.paliup.nutrition.model.DietTag;
 import com.paliup.nutrition.model.Medical;
 import com.paliup.nutrition.model.Payment;
 import com.paliup.nutrition.model.Response;
 import com.paliup.nutrition.model.Subscribtion;
 import com.paliup.nutrition.model.User;
+import com.paliup.nutrition.repository.DietTagRepository;
 import com.paliup.nutrition.service.PersistanceService;
 
 @RestController
@@ -28,7 +34,32 @@ public class RestWebController {
 
 	@Autowired
 	private PersistanceService persistanceService;
+	
+	@Autowired
+	private DietTagRepository dietTagRepository;
 
+	private final Logger log = LoggerFactory.getLogger(this.getClass());
+	
+	@RequestMapping(value = "/api/tags",  method = RequestMethod.GET)
+	public List<String> getTags(){
+		List<String> dietTags = null;
+		if(dietTagRepository != null){
+			dietTags = dietTagRepository.findAllTags();
+		}
+		return dietTags;
+	}
+	
+	@RequestMapping(value = "/api/tags",  method = RequestMethod.POST)
+	public void setTags(@RequestBody String jsonTags){
+		JSONArray tags = new JSONArray(jsonTags);
+		for (int i = 0; i<tags.length(); i++) {
+			if(dietTagRepository != null){
+				log.debug("New tag persisted to database: " + tags.get(i).toString());
+				dietTagRepository.save(new DietTag(tags.get(i).toString()));
+			}
+		}
+	}
+	
 	@RequestMapping(value = "/post", method = RequestMethod.POST)
 	public Response postCustomer(@RequestBody String registraionString) throws JsonProcessingException, IOException {
 		ObjectMapper mapper = new ObjectMapper();
@@ -39,9 +70,9 @@ public class RestWebController {
 		Medical medical = mapper.convertValue(node.get("medical"), Medical.class);
 		Payment payment = mapper.convertValue(node.get("payment"), Payment.class);
 		Coach coach = mapper.convertValue(node.get("coach"), Coach.class);
-		Subscribtion subscribtion = mapper.convertValue(node.get("package"), Subscribtion.class);
+		Subscribtion subscribtion = mapper.convertValue(node.get("subscribtion"), Subscribtion.class);
 
-		//getObjects(user, customer, medical, payment, coach, subscribtion);
+		getObjects(user, customer, medical, payment, coach, subscribtion);
 
 		Response response = new Response("Done", user);
 

@@ -6,10 +6,11 @@ import java.util.List;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
 import com.paliup.nutrition.model.User;
-
+@Service("customUserDetailService")
 public class CustomUserDetails extends User implements UserDetails {
 
 	private static final long serialVersionUID = 1L;
@@ -19,6 +20,8 @@ public class CustomUserDetails extends User implements UserDetails {
 		super(user);
 		this.userRoles = userRoles;
 	}
+
+	public CustomUserDetails() {}
 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
