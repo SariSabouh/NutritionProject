@@ -1,11 +1,9 @@
 package com.paliup.nutrition.config;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -20,13 +18,13 @@ public class AppConfigTest {
 	@Test
 	public void testPersistanceServiceBean() {
 		assertEquals("class com.paliup.nutrition.service.PersistanceService",
-				this.appConfig.transferService().getClass().toString());
+				appConfig.transferService().getClass().toString());
 	}
 
 	@Test
 	public void testCustomUserDetailsBean() {
 		assertEquals("class com.paliup.nutrition.service.CustomUserDetails",
-				this.appConfig.transferServiceCustomUserDetails().getClass().toString());
+				appConfig.transferServiceCustomUserDetails().getClass().toString());
 	}
 
 

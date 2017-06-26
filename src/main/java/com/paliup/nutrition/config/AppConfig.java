@@ -3,9 +3,7 @@ package com.paliup.nutrition.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.stereotype.Service;
 
-import com.paliup.nutrition.controller.HomeController;
 import com.paliup.nutrition.service.CustomUserDetails;
 import com.paliup.nutrition.service.PersistanceService;
 
