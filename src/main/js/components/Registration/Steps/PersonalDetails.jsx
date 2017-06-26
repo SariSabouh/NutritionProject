@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 
-const store = { firstName: '', lastName: '', email: '', password: '', confirmPassword: '', dob: '' }
+const store = { firstName: '', lastName: '', email: '', password: '', confirmPassword: '', dob: '', phoneNumber: '' }
 
 const PersonalDetails = React.createClass( {
     getInitialState() {
@@ -34,6 +34,13 @@ const PersonalDetails = React.createClass( {
     
     handleDOBChanged( event ) {
         store.dob = event.target.value
+        this.setState( store )
+    },
+    
+    handlePhoneNumberChange( event ) {
+        const phoneNumber = event.target
+        if (phoneNumber.value.length > phoneNumber.maxLength) phoneNumber.value = phoneNumber.value.slice(0, phoneNumber.maxLength);
+        store.phoneNumber = event.target.value
         this.setState( store )
     },
 
@@ -103,6 +110,19 @@ const PersonalDetails = React.createClass( {
                             type="date"
                             onChange={this.handleDOBChanged}
                             value={this.state.dob}
+                            autoFocus
+                            required/>
+                    </div>
+                </div>
+                <div className="row">
+                    <div>
+                        <label className="control-label" htmlFor="phone-number">Phone Number</label>
+                        <input id="phone-number" className="u-full-width form-control" placeholder="xxxx-xxx-xxx"
+                            type="number"
+                            minLength="10"
+                            maxLength="10"
+                            onChange={this.handlePhoneNumberChange}
+                            value={this.state.phoneNumber}
                             autoFocus
                             required/>
                     </div>

@@ -24078,7 +24078,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var store = { firstName: '', lastName: '', email: '', password: '', confirmPassword: '', dob: '' };
+	var store = { firstName: '', lastName: '', email: '', password: '', confirmPassword: '', dob: '', phoneNumber: '' };
 	
 	var PersonalDetails = _react2['default'].createClass({
 	    displayName: 'PersonalDetails',
@@ -24114,6 +24114,13 @@
 	
 	    handleDOBChanged: function handleDOBChanged(event) {
 	        store.dob = event.target.value;
+	        this.setState(store);
+	    },
+	
+	    handlePhoneNumberChange: function handlePhoneNumberChange(event) {
+	        var phoneNumber = event.target;
+	        if (phoneNumber.value.length > phoneNumber.maxLength) phoneNumber.value = phoneNumber.value.slice(0, phoneNumber.maxLength);
+	        store.phoneNumber = event.target.value;
 	        this.setState(store);
 	    },
 	
@@ -24232,6 +24239,27 @@
 	                        type: 'date',
 	                        onChange: this.handleDOBChanged,
 	                        value: this.state.dob,
+	                        autoFocus: true,
+	                        required: true })
+	                )
+	            ),
+	            _react2['default'].createElement(
+	                'div',
+	                { className: 'row' },
+	                _react2['default'].createElement(
+	                    'div',
+	                    null,
+	                    _react2['default'].createElement(
+	                        'label',
+	                        { className: 'control-label', htmlFor: 'phone-number' },
+	                        'Phone Number'
+	                    ),
+	                    _react2['default'].createElement('input', { id: 'phone-number', className: 'u-full-width form-control', placeholder: 'xxxx-xxx-xxx',
+	                        type: 'number',
+	                        minLength: '10',
+	                        maxLength: '10',
+	                        onChange: this.handlePhoneNumberChange,
+	                        value: this.state.phoneNumber,
 	                        autoFocus: true,
 	                        required: true })
 	                )
@@ -42263,7 +42291,7 @@
 	'use strict';
 	
 	Object.defineProperty(exports, '__esModule', {
-	  value: true
+	    value: true
 	});
 	
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
@@ -42285,45 +42313,45 @@
 	var _CarouselItemJsx2 = _interopRequireDefault(_CarouselItemJsx);
 	
 	var Carousel = (function (_React$Component) {
-	  _inherits(Carousel, _React$Component);
+	    _inherits(Carousel, _React$Component);
 	
-	  function Carousel() {
-	    _classCallCheck(this, Carousel);
+	    function Carousel() {
+	        _classCallCheck(this, Carousel);
 	
-	    _get(Object.getPrototypeOf(Carousel.prototype), 'constructor', this).apply(this, arguments);
-	  }
-	
-	  _createClass(Carousel, [{
-	    key: 'render',
-	    value: function render() {
-	
-	      var carouselStyle = {
-	        backgroundImage: 'url(img/slider-bg.jpg)'
-	      };
-	
-	      return _react2['default'].createElement(
-	        'section',
-	        { id: 'text-carousel-intro-section', className: 'parallax', 'data-stellar-background-ratio': '0.5', style: carouselStyle },
-	        _react2['default'].createElement(
-	          'div',
-	          { className: 'container' },
-	          _react2['default'].createElement(
-	            'div',
-	            { className: 'caption text-center text-white', 'data-stellar-ratio': '0.7' },
-	            _react2['default'].createElement(
-	              'div',
-	              { id: 'owl-intro-text', className: 'owl-carousel' },
-	              _react2['default'].createElement(_CarouselItemJsx2['default'], { header: 'Rijeemak Online', subHeader: 'Your Diet, At Your Comfort', href: '#rijeemak-section', hrefText: 'Learn More!' }),
-	              _react2['default'].createElement(_CarouselItemJsx2['default'], { header: 'IT\'S ALL ABOUT YOU', subHeader: 'Love, Care and a great health program', href: '#services-section', hrefText: 'Learn More!' }),
-	              _react2['default'].createElement(_CarouselItemJsx2['default'], { header: 'Best Prices', subHeader: 'Cheaper than going to an actual appointment? WHAAAAT?!?', href: '#prices-section', hrefText: 'Learn More!' })
-	            )
-	          )
-	        )
-	      );
+	        _get(Object.getPrototypeOf(Carousel.prototype), 'constructor', this).apply(this, arguments);
 	    }
-	  }]);
 	
-	  return Carousel;
+	    _createClass(Carousel, [{
+	        key: 'render',
+	        value: function render() {
+	
+	            var carouselStyle = {
+	                backgroundImage: 'url(img/slider-bg.jpg)'
+	            };
+	
+	            return _react2['default'].createElement(
+	                'section',
+	                { id: 'text-carousel-intro-section', className: 'parallax', 'data-stellar-background-ratio': '0.5', style: carouselStyle },
+	                _react2['default'].createElement(
+	                    'div',
+	                    { className: 'container' },
+	                    _react2['default'].createElement(
+	                        'div',
+	                        { className: 'caption text-center text-white', 'data-stellar-ratio': '0.7' },
+	                        _react2['default'].createElement(
+	                            'div',
+	                            { id: 'owl-intro-text', className: 'owl-carousel' },
+	                            _react2['default'].createElement(_CarouselItemJsx2['default'], { header: 'Rijeemak Online', subHeader: 'Your Diet, At Your Comfort', href: '#rijeemak-section', hrefText: 'Learn More!' }),
+	                            _react2['default'].createElement(_CarouselItemJsx2['default'], { header: 'IT\'S ALL ABOUT YOU', subHeader: 'Love, Care and a great health program', href: '#services-section', hrefText: 'Learn More!' }),
+	                            _react2['default'].createElement(_CarouselItemJsx2['default'], { header: 'Best Prices', subHeader: 'Cheaper than going to an actual appointment? WHAAAAT?!?', href: '#prices-section', hrefText: 'Learn More!' })
+	                        )
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return Carousel;
 	})(_react2['default'].Component);
 	
 	exports['default'] = Carousel;

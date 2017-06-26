@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.util.List;
 
 import org.json.JSONArray;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -36,6 +38,8 @@ public class RestWebController {
 	@Autowired
 	private DietTagRepository dietTagRepository;
 
+	private final Logger log = LoggerFactory.getLogger(this.getClass());
+	
 	@RequestMapping(value = "/api/tags",  method = RequestMethod.GET)
 	public List<String> getTags(){
 		List<String> dietTags = null;
@@ -50,6 +54,7 @@ public class RestWebController {
 		JSONArray tags = new JSONArray(jsonTags);
 		for (int i = 0; i<tags.length(); i++) {
 			if(dietTagRepository != null){
+				log.debug("New tag persisted to database: " + tags.get(i).toString());
 				dietTagRepository.save(new DietTag(tags.get(i).toString()));
 			}
 		}

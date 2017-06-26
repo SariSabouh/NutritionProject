@@ -31,7 +31,7 @@ public class CustomUserDetailsService implements UserDetailsService {
 	public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
 		User user = userRepository.findByEmail(email);
 		if (null == user) {
-			log.error("No user present with email: " + email);
+			log.debug("No user present with email: " + email);
 			throw new UsernameNotFoundException("No user present with email: " + email);
 		} else {
 			List<String> userRoles = userRoleRepository.findRoleByEmail(email);
