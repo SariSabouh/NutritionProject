@@ -23,7 +23,7 @@ public class HomeControllerTest {
 	@Test
 	public void testUserIndexShouldReturnUserloggedInView() {
 		String viewName = controller.userIndex();
-		assertEquals("user/loggedIn", viewName);
+		assertEquals("user/landing", viewName);
 	}
 
 	@Test

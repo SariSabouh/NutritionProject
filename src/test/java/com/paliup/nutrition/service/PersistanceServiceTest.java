@@ -1,6 +1,6 @@
 package com.paliup.nutrition.service;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import java.util.List;
 
@@ -31,7 +31,7 @@ import com.paliup.nutrition.repository.SubscribtionRepository;
 @RunWith(SpringRunner.class)
 @DataJpaTest
 @ComponentScan(basePackageClasses = { PersistanceService.class })
-public class PersistanceServiceClassTest {
+public class PersistanceServiceTest {
 
 	@Autowired
 	private TestEntityManager entityManager;
@@ -57,10 +57,10 @@ public class PersistanceServiceClassTest {
 	@Autowired
 	private SubscribtionRepository subscribtionRepo;
 	
-
 	@Test
 	public void testSaveUserShouldReturnUserId() {
 		User user = entityManager.persist(new User());
+		user.setPassword("1");
 		long id = persistanceService.saveUser(user);
 		assertEquals(1, id);
 	}
