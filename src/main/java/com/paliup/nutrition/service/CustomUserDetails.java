@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
 import com.paliup.nutrition.model.User;
+
 @Service("customUserDetailService")
 public class CustomUserDetails extends User implements UserDetails {
 

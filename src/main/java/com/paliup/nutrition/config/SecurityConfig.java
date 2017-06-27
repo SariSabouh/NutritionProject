@@ -22,7 +22,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 			.formLogin()
 				.loginPage("/")
 					.failureUrl("/login-error")
-					.defaultSuccessUrl("/user/loggedIn")
+					.defaultSuccessUrl("/user/landing")
 					.usernameParameter("thyme-email")
 					.passwordParameter("thyme-password")
 				.and()
