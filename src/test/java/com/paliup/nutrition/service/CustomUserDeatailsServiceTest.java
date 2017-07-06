@@ -9,11 +9,12 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import com.paliup.nutrition.config.SecurityConfig;
 import com.paliup.nutrition.model.User;
 
 @RunWith(SpringRunner.class)
 @DataJpaTest
-@ComponentScan(basePackageClasses = { CustomUserDetails.class })
+@ComponentScan(basePackageClasses = { CustomUserDetails.class , SecurityConfig.class })
 public class CustomUserDeatailsServiceTest {
 
 	@Autowired
@@ -24,13 +25,13 @@ public class CustomUserDeatailsServiceTest {
 
 	@Test(expected = UsernameNotFoundException.class)
 	public void testLoadUserByUsernameIfCondition() {
-		entityManager.persist(new User("a@a", "123"));
+		entityManager.persist(new User("a@a", "123123"));
 		customUserDetailsService.loadUserByUsername("aa");
 	}
 
 	@Test
 	public void testLoadUserByUsernameElseCondition() {
-		entityManager.persist(new User("a@a", "123"));
+		entityManager.persist(new User("a@a", "123123"));
 		customUserDetailsService.loadUserByUsername("a@a");
 	}
 }

@@ -26,7 +26,7 @@ public class UserRoleRepositoryTest {
 
 	@Test
 	public void findRoleByEmailShouldReturnRole() {
-		entityManager.persist(new User("a@a", "123"));
+		entityManager.persist(new User("a@a", "123123"));
 		entityManager.persist(new UserRole((long) 1, "Admin"));
 		List<String> role = userRoleRepository.findRoleByEmail("a@a");
 		String roleName = role.get(0);

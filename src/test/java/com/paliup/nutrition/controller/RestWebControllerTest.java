@@ -9,10 +9,12 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.google.gson.Gson;
+import com.paliup.nutrition.config.SecurityConfig;
 import com.paliup.nutrition.model.Coach;
 import com.paliup.nutrition.model.Customer;
 import com.paliup.nutrition.model.CustomerCoach;
@@ -36,7 +38,7 @@ import com.paliup.nutrition.service.PersistanceService;
 
 @RunWith(SpringRunner.class)
 @DataJpaTest
-@ComponentScan(basePackageClasses = { RestWebController.class, PersistanceService.class })
+@ComponentScan(basePackageClasses = { RestWebController.class, PersistanceService.class , SecurityConfig.class })
 public class RestWebControllerTest {
 
 	@Autowired
@@ -44,6 +46,7 @@ public class RestWebControllerTest {
 
 	@Autowired
 	PersistanceService persistanceService;
+	
 
 	@Autowired
 	private UserRepository userRepo;
@@ -63,13 +66,15 @@ public class RestWebControllerTest {
 	private CustomerCoachRepository customerCoachRepo;
 	@Autowired
 	private CustomerSubscribtionRepository customerSubscribtionRepo;
+	@Autowired
+	private PasswordEncoder passwordEncoder;
 
 	@Test
 	public void testPostCustomerShouldReturnDoneResponse() throws JsonProcessingException, IOException {
 		
 		User user = new User();
 		user.setEmail("test");
-		user.setPassword("123123");
+		user.setPassword("123");
 		Customer cust = new Customer();
 		cust.setDateOfBirth("1/1/1");
 		cust.setFirstName("test");
@@ -110,7 +115,7 @@ public class RestWebControllerTest {
 		
 		User user = new User();
 		user.setEmail("test");
-		user.setPassword("123123");
+		user.setPassword("12313123");
 		Gson gson = new Gson();
 		String userJ = gson.toJson(user);
 		
@@ -124,6 +129,7 @@ public class RestWebControllerTest {
 	@Test
 	public void testGetObjectsShouldPersistAllObjects() {
 		User user = new User();
+		user.setPassword("12212");
 		Coach coach = new Coach();
 		Payment payment = new Payment();
 		Medical medical = new Medical("flu");

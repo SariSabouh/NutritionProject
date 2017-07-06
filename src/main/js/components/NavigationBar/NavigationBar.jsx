@@ -7,10 +7,10 @@ export default class NavigationBar extends React.Component {
         return (
             <header id="header" className="header-main">
                 <nav id="main-navbar" className="navbar navbar-default navbar-fixed-top" role="navigation">
-                  <div className="container">
-                    <NavLogo />
-                    <NavTabs />
-                  </div>
+                    <div className="container">
+                        <NavLogo />
+                        <NavTabs />
+                    </div>
                 </nav>
             </header>
         )

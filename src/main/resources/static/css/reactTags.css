@@ -5,9 +5,10 @@ div.ReactTags__tags {
 
 /* Styles for the input */
 div.ReactTags__tagInput {
-    width: 100%;
+    width: 200px;
     border-radius: 2px;
-    margin: 10px 0;
+    display: inline-block;
+    margin-top: 5px;
 }
 div.ReactTags__tagInput input.ReactTags__tagInputField,
 div.ReactTags__tagInput input.ReactTags__tagInputField:focus {
@@ -19,12 +20,18 @@ div.ReactTags__tagInput input.ReactTags__tagInputField:focus {
 }
 
 /* Styles for selected tags */
+div.ReactTags__selected {
+	margin-top: 10px;
+}
+
 div.ReactTags__selected span.ReactTags__tag {
     border: 1px solid #ddd;
     background: #eee;
     font-size: 12px;
+    display: inline-block;
     padding: 5px;
-    margin: 0 5px;
+    margin: 5px;
+    cursor: move;
     border-radius: 2px;
 }
 div.ReactTags__selected a.ReactTags__remove {

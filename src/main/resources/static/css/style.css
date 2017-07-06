@@ -1254,7 +1254,7 @@ p.subtitle {
 	text-align: left;
 }
 
-#remember {
+#remember, #remember-label {
 	display: inline;
 }
 
@@ -1319,4 +1319,15 @@ input::placeholder {
 /** Diet Info */
 #diet-info mark {
 	font-style: normal;
+}
+
+.diet-info-nav {
+    margin: 0 5px 5px;
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+}
+
+.diet-info-nav.active {
+    color: #72A603
 }

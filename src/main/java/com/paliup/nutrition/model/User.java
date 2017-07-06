@@ -1,7 +1,14 @@
 package com.paliup.nutrition.model;
 
 import java.io.Serializable;
-import javax.persistence.*;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import org.hibernate.validator.constraints.Length;
 
 @Entity
 @Table(name = "user")
@@ -14,6 +21,7 @@ public class User implements Serializable {
 	@Column(name = "Id")
 	private Long id;
 
+	@Length(min=6)
 	@Column(name = "Password")
 	private String password;
 

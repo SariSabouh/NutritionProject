@@ -208,6 +208,9 @@ $(document).ready(function () {
 	});
 });
 
+////////////////////////////////////////////////////////////////////
+//Registration managing
+////////////////////////////////////////////////////////////////////
 $(document).keypress(function(e) {
     if (e.which === 13 && $('.registrationModal').parents('.modal-backdrop').attr('style').includes('visibility: visible')) {
     	e.preventDefault();

@@ -5,21 +5,15 @@
 		<meta charset="utf-8"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 		<title>Rijeemak Online</title>
-		<meta name="description" content="Unika - Responsive One Page HTML5 Template"/>
-		<meta name="keywords" content="HTML5, Bootsrtrap, One Page, Responsive, Template, Portfolio" />
-		<meta name="author" content="imransdesign.com"></meta>
+		<meta name="description" content="Rijeemak Online. Get Professional Nutrition Assistance At Your Own Convenience."/>
+		<meta name="keywords" content="Rijeemak, Rijeemek, Nutirition, Diet, Muscle, Health" />
+		<meta name="author" content="paliup.com"></meta>
 		<meta name="_csrf" th:content="${_csrf.token}"/>
 		<meta name="_csrf_header" th:content="${_csrf.headerName}"/>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        
-		<!-- Mobile Meta -->
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
        
-        <!-- Google Fonts  -->
         <link rel="stylesheet" href="inc/GoogleFontsNav.min.css" type='text/css' />
         <link rel="stylesheet" href="inc/GoogleFonts.min.css" type='text/css' />
- 
-		<!-- Libs and Plugins CSS -->
 		<link rel="stylesheet" href="inc/bootstrap/css/bootstrap.min.css"/>
 		<link rel="stylesheet" href="inc/animations/css/animate.min.css"/>
 		<link rel="stylesheet" href="inc/font-awesome/css/font-awesome.min.css"/> <!-- Font Icons -->
@@ -29,32 +23,21 @@
 		<link rel="stylesheet" href="css/multistep/skeleton.css"/>
 		<link rel="stylesheet" href="css/multistep/custom.css"/>
 		<link rel="stylesheet" href="css/multistep/prog-tracker.css"/>
-
-		<!-- Theme CSS -->
         <link rel="stylesheet" href="css/reset.css"/>
 		<link rel="stylesheet" href="css/style.css"/>
 		<link rel="stylesheet" href="css/presets.css"/>
 		<link rel="stylesheet" href="css/mobile.css"/>
 		<link rel="stylesheet" href="css/drop.css"/>
-
-		<!-- Skin CSS -->
         <link rel="stylesheet" href="css/skin/fresh-lime.css"/>
         <link rel="stylesheet" href="css/reactTags.css"/>
      
-		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-
-		<!--[if lt IE 9]>
-			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
+     	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	</head>
 
    	<body>
     
     	<div class="page-loader"></div>  <!-- Display loading image while page loads -->
-   			<div class="body" id="app">
-        </div>
+   		<div class="body" id="app"></div>
         
         <div class="disabled" hidden="hidden">
 			<p th:if="${loginError}" id="loginError" class="error">Wrong user or password</p>
@@ -68,8 +51,7 @@
 				<input type="submit" value="Log in" />
 			</form>
 		</div>
-   
-   		<!-- Plugins JS -->
+
    		<script src="built/bundle.js"></script>
 		<script src="inc/jquery/jquery-1.11.1.min.js"></script>
 		<script src="inc/bootstrap/js/bootstrap.min.js"></script>
@@ -82,10 +64,7 @@
 		<script src="inc/jquery/jquery.easing.min.js"></script>
 		<script src="inc/jquery/jquery.counterup.min.js"></script>
 		<script src="inc/stellar/js/smoothscroll.js"></script>
-		<script src="js/PostRegistration.js"></script>
-	
-        <!-- Theme JS -->
-		<script src="inc/scripts.js"></script>
+		<script src="js/homepageScripts.js"></script>
 	</body>
 		
 </html>

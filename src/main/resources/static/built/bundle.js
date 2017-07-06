@@ -60,7 +60,11 @@
 	
 	var _AppJsx2 = _interopRequireDefault(_AppJsx);
 	
-	_reactDom2['default'].render(_react2['default'].createElement(_AppJsx2['default'], null), document.getElementById('app'));
+	var _componentsUserLandingJsx = __webpack_require__(515);
+	
+	var _componentsUserLandingJsx2 = _interopRequireDefault(_componentsUserLandingJsx);
+	
+	if (window.location.href.includes('/user/')) _reactDom2['default'].render(_react2['default'].createElement(_componentsUserLandingJsx2['default'], null), document.getElementById('app'));else _reactDom2['default'].render(_react2['default'].createElement(_AppJsx2['default'], null), document.getElementById('app'));
 
 /***/ }),
 /* 1 */
@@ -23154,43 +23158,43 @@
 	
 	var _componentsNavigationBarNavigationBarJsx2 = _interopRequireDefault(_componentsNavigationBarNavigationBarJsx);
 	
-	var _componentsCarouselCarouselJsx = __webpack_require__(501);
+	var _componentsCarouselCarouselJsx = __webpack_require__(502);
 	
 	var _componentsCarouselCarouselJsx2 = _interopRequireDefault(_componentsCarouselCarouselJsx);
 	
-	var _componentsBodyRijeemakSectionJsx = __webpack_require__(503);
+	var _componentsBodyRijeemakSectionJsx = __webpack_require__(504);
 	
 	var _componentsBodyRijeemakSectionJsx2 = _interopRequireDefault(_componentsBodyRijeemakSectionJsx);
 	
-	var _componentsBodyCounterSectionJsx = __webpack_require__(505);
+	var _componentsBodyCounterSectionJsx = __webpack_require__(506);
 	
 	var _componentsBodyCounterSectionJsx2 = _interopRequireDefault(_componentsBodyCounterSectionJsx);
 	
-	var _componentsBodyServicesSectionJsx = __webpack_require__(506);
+	var _componentsBodyServicesSectionJsx = __webpack_require__(507);
 	
 	var _componentsBodyServicesSectionJsx2 = _interopRequireDefault(_componentsBodyServicesSectionJsx);
 	
-	var _componentsBodyTestimonialsSectionJsx = __webpack_require__(507);
+	var _componentsBodyTestimonialsSectionJsx = __webpack_require__(508);
 	
 	var _componentsBodyTestimonialsSectionJsx2 = _interopRequireDefault(_componentsBodyTestimonialsSectionJsx);
 	
-	var _componentsBodyPricesSectionJsx = __webpack_require__(508);
+	var _componentsBodyPricesSectionJsx = __webpack_require__(509);
 	
 	var _componentsBodyPricesSectionJsx2 = _interopRequireDefault(_componentsBodyPricesSectionJsx);
 	
-	var _componentsBodyTeamSectionJsx = __webpack_require__(510);
+	var _componentsBodyTeamSectionJsx = __webpack_require__(511);
 	
 	var _componentsBodyTeamSectionJsx2 = _interopRequireDefault(_componentsBodyTeamSectionJsx);
 	
-	var _componentsBodyPartnersSectionJsx = __webpack_require__(511);
+	var _componentsBodyPartnersSectionJsx = __webpack_require__(512);
 	
 	var _componentsBodyPartnersSectionJsx2 = _interopRequireDefault(_componentsBodyPartnersSectionJsx);
 	
-	var _componentsBodySocialSectionJsx = __webpack_require__(512);
+	var _componentsBodySocialSectionJsx = __webpack_require__(513);
 	
 	var _componentsBodySocialSectionJsx2 = _interopRequireDefault(_componentsBodySocialSectionJsx);
 	
-	var _componentsBodyContactSectionJsx = __webpack_require__(513);
+	var _componentsBodyContactSectionJsx = __webpack_require__(514);
 	
 	var _componentsBodyContactSectionJsx2 = _interopRequireDefault(_componentsBodyContactSectionJsx);
 	
@@ -23341,11 +23345,9 @@
 	    _createClass(NavLogo, [{
 	        key: "render",
 	        value: function render() {
-	
 	            if (window.location.pathname == "/login") {
 	                homeButton = "/";
 	            }
-	            // Actual logo set in CSS
 	            return _react2["default"].createElement(
 	                "div",
 	                { className: "navbar-header" },
@@ -23610,7 +23612,7 @@
 	                                    _react2['default'].createElement('input', { type: 'checkbox', tabIndex: '3', name: 'remember', id: 'remember' }),
 	                                    _react2['default'].createElement(
 	                                        'label',
-	                                        { htmlFor: 'remember', id: 'remember' },
+	                                        { htmlFor: 'remember', id: 'remember-label' },
 	                                        'Remember Me'
 	                                    )
 	                                ),
@@ -30132,14 +30134,29 @@
 	
 	var _reactTagInput = __webpack_require__(278);
 	
-	var store = { tags: [], suggestions: [] };
-	var newTags = [];
+	var _UtilsSubNavigationJsx = __webpack_require__(501);
 	
+	var _UtilsSubNavigationJsx2 = _interopRequireDefault(_UtilsSubNavigationJsx);
+	
+	var store = {
+	    tags: {
+	        proteinSources: [],
+	        grains: [],
+	        vegetables: [],
+	        fruits: [],
+	        dairy: [],
+	        highFatFoods: [],
+	        sugaryDrinks: []
+	    },
+	    suggestions: []
+	};
+	
+	var newTags = [];
 	var DietInfo = _react2['default'].createClass({
 	    displayName: 'DietInfo',
 	
 	    getInitialState: function getInitialState() {
-	        return { store: store };
+	        return { showContent: 'protein-sources' };
 	    },
 	
 	    componentDidMount: function componentDidMount() {
@@ -30167,13 +30184,15 @@
 	    },
 	
 	    handleDelete: function handleDelete(i) {
-	        store.tags.splice(i, 1);
+	        var storeTag = this.getStoreTag();
+	        storeTag.splice(i, 1);
 	        this.setState(store);
 	    },
 	
 	    handleAddition: function handleAddition(tag) {
-	        store.tags.push({
-	            id: store.tags.length + 1,
+	        var storeTag = this.getStoreTag();
+	        storeTag.push({
+	            id: storeTag.length + 1,
 	            text: tag
 	        });
 	        this.setState(store);
@@ -30182,22 +30201,119 @@
 	        }
 	    },
 	
+	    getStoreTag: function getStoreTag() {
+	        switch ($('.diet-info-nav.active').attr('id')) {
+	            case 'protein-sources':
+	                return store.tags.proteinSources;
+	            case 'grains':
+	                return store.tags.grains;
+	            case 'vegetables':
+	                return store.tags.vegetables;
+	            case 'fruits':
+	                return store.tags.fruits;
+	            case 'dairy':
+	                return store.tags.dairy;
+	            case 'high-fat-food':
+	                return store.tags.high - fat - food;
+	            case 'sugary-drinks':
+	                return store.tags.sugary - drinks;
+	            default:
+	                return store.tags;
+	        }
+	    },
+	
+	    viewSection: function viewSection(buttonId) {
+	        this.setState({ showContent: buttonId });
+	    },
+	
 	    render: function render() {
 	        return _react2['default'].createElement(
 	            'div',
 	            { id: 'diet-info' },
+	            _react2['default'].createElement(_UtilsSubNavigationJsx2['default'], { viewSection: this.viewSection, buttonId: 'protein-sources', buttonName: 'Protein Sources' }),
+	            _react2['default'].createElement(_UtilsSubNavigationJsx2['default'], { viewSection: this.viewSection, buttonId: 'grains', buttonName: 'Grains' }),
+	            _react2['default'].createElement(_UtilsSubNavigationJsx2['default'], { viewSection: this.viewSection, buttonId: 'vegetables', buttonName: 'Vegetables' }),
+	            _react2['default'].createElement(_UtilsSubNavigationJsx2['default'], { viewSection: this.viewSection, buttonId: 'fruits', buttonName: 'Fruits' }),
+	            _react2['default'].createElement(_UtilsSubNavigationJsx2['default'], { viewSection: this.viewSection, buttonId: 'dairy', buttonName: 'Dairy' }),
+	            _react2['default'].createElement(_UtilsSubNavigationJsx2['default'], { viewSection: this.viewSection, buttonId: 'high-fat-food', buttonName: 'High Fat Food' }),
+	            _react2['default'].createElement(_UtilsSubNavigationJsx2['default'], { viewSection: this.viewSection, buttonId: 'sugary-drinks', buttonName: 'Sugary Drink' }),
 	            _react2['default'].createElement(
-	                'label',
-	                null,
-	                'Protein Sources:'
+	                'div',
+	                { hidden: this.state.showContent != 'protein-sources' },
+	                _react2['default'].createElement(_reactTagInput.WithContext, { tags: store.tags.proteinSources,
+	                    suggestions: store.suggestions,
+	                    placeholder: "lamb, pultry, sea food, legums, nuts...",
+	                    autofocus: true,
+	                    handleDelete: this.handleDelete,
+	                    handleAddition: this.handleAddition,
+	                    classNames: { selected: 'ReactTags__selected' } })
 	            ),
-	            _react2['default'].createElement(_reactTagInput.WithContext, { tags: store.tags,
-	                suggestions: store.suggestions,
-	                placeholder: "lamb, pultry, sea food, legums, nuts...",
-	                autofocus: true,
-	                handleDelete: this.handleDelete,
-	                handleAddition: this.handleAddition,
-	                classNames: { selected: 'ReactTags__selected protein-container' } })
+	            _react2['default'].createElement(
+	                'div',
+	                { hidden: this.state.showContent != 'grains' },
+	                _react2['default'].createElement(_reactTagInput.WithContext, { tags: store.tags.grains,
+	                    suggestions: store.suggestions,
+	                    placeholder: "wheat, rice, corn, bulgur, barely...",
+	                    autofocus: true,
+	                    handleDelete: this.handleDelete,
+	                    handleAddition: this.handleAddition,
+	                    classNames: { selected: 'ReactTags__selected' } })
+	            ),
+	            _react2['default'].createElement(
+	                'div',
+	                { hidden: this.state.showContent != 'vegetables' },
+	                _react2['default'].createElement(_reactTagInput.WithContext, { tags: store.tags.vegetables,
+	                    suggestions: store.suggestions,
+	                    placeholder: "fresh, frozen, canned, dry, juice",
+	                    autofocus: true,
+	                    handleDelete: this.handleDelete,
+	                    handleAddition: this.handleAddition,
+	                    classNames: { selected: 'ReactTags__selected' } })
+	            ),
+	            _react2['default'].createElement(
+	                'div',
+	                { hidden: this.state.showContent != 'fruits' },
+	                _react2['default'].createElement(_reactTagInput.WithContext, { tags: store.tags.fruits,
+	                    suggestions: store.suggestions,
+	                    placeholder: "fresh, frozen, canned, dry, juice",
+	                    autofocus: true,
+	                    handleDelete: this.handleDelete,
+	                    handleAddition: this.handleAddition,
+	                    classNames: { selected: 'ReactTags__selected' } })
+	            ),
+	            _react2['default'].createElement(
+	                'div',
+	                { hidden: this.state.showContent != 'dairy' },
+	                _react2['default'].createElement(_reactTagInput.WithContext, { tags: store.tags.dairy,
+	                    suggestions: store.suggestions,
+	                    placeholder: "yogurt, cheese, milk, creams...",
+	                    autofocus: true,
+	                    handleDelete: this.handleDelete,
+	                    handleAddition: this.handleAddition,
+	                    classNames: { selected: 'ReactTags__selected' } })
+	            ),
+	            _react2['default'].createElement(
+	                'div',
+	                { hidden: this.state.showContent != 'high-fat-food' },
+	                _react2['default'].createElement(_reactTagInput.WithContext, { tags: store.tags.highFatFoods,
+	                    suggestions: store.suggestions,
+	                    placeholder: "nuts, fried foods, oils, butter, olives...",
+	                    autofocus: true,
+	                    handleDelete: this.handleDelete,
+	                    handleAddition: this.handleAddition,
+	                    classNames: { selected: 'ReactTags__selected' } })
+	            ),
+	            _react2['default'].createElement(
+	                'div',
+	                { hidden: this.state.showContent != 'sugary-drinks' },
+	                _react2['default'].createElement(_reactTagInput.WithContext, { tags: store.tags.sugaryDrinks,
+	                    suggestions: store.suggestions,
+	                    placeholder: "anything with sugar, juice, soda...",
+	                    autofocus: true,
+	                    handleDelete: this.handleDelete,
+	                    handleAddition: this.handleAddition,
+	                    classNames: { selected: 'ReactTags__selected' } })
+	            )
 	        );
 	    }
 	});
@@ -42308,57 +42424,122 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _CarouselItemJsx = __webpack_require__(502);
+	var SubNavigation = (function (_React$Component) {
+	    _inherits(SubNavigation, _React$Component);
 	
-	var _CarouselItemJsx2 = _interopRequireDefault(_CarouselItemJsx);
+	    function SubNavigation(props) {
+	        _classCallCheck(this, SubNavigation);
 	
-	var Carousel = (function (_React$Component) {
-	    _inherits(Carousel, _React$Component);
-	
-	    function Carousel() {
-	        _classCallCheck(this, Carousel);
-	
-	        _get(Object.getPrototypeOf(Carousel.prototype), 'constructor', this).apply(this, arguments);
+	        _get(Object.getPrototypeOf(SubNavigation.prototype), 'constructor', this).call(this, props);
+	        this.handleClick = this.handleClick.bind(this);
 	    }
 	
-	    _createClass(Carousel, [{
+	    _createClass(SubNavigation, [{
+	        key: 'handleClick',
+	        value: function handleClick(event) {
+	            $('.diet-info-nav').removeClass('active');
+	            $(event.target).addClass('active');
+	            this.props.viewSection(this.props.buttonId);
+	        }
+	    }, {
 	        key: 'render',
 	        value: function render() {
-	
-	            var carouselStyle = {
-	                backgroundImage: 'url(img/slider-bg.jpg)'
-	            };
-	
 	            return _react2['default'].createElement(
-	                'section',
-	                { id: 'text-carousel-intro-section', className: 'parallax', 'data-stellar-background-ratio': '0.5', style: carouselStyle },
+	                'div',
+	                { className: 'u-display-inline' },
 	                _react2['default'].createElement(
-	                    'div',
-	                    { className: 'container' },
-	                    _react2['default'].createElement(
-	                        'div',
-	                        { className: 'caption text-center text-white', 'data-stellar-ratio': '0.7' },
-	                        _react2['default'].createElement(
-	                            'div',
-	                            { id: 'owl-intro-text', className: 'owl-carousel' },
-	                            _react2['default'].createElement(_CarouselItemJsx2['default'], { header: 'Rijeemak Online', subHeader: 'Your Diet, At Your Comfort', href: '#rijeemak-section', hrefText: 'Learn More!' }),
-	                            _react2['default'].createElement(_CarouselItemJsx2['default'], { header: 'IT\'S ALL ABOUT YOU', subHeader: 'Love, Care and a great health program', href: '#services-section', hrefText: 'Learn More!' }),
-	                            _react2['default'].createElement(_CarouselItemJsx2['default'], { header: 'Best Prices', subHeader: 'Cheaper than going to an actual appointment? WHAAAAT?!?', href: '#prices-section', hrefText: 'Learn More!' })
-	                        )
-	                    )
+	                    'a',
+	                    {
+	                        className: this.props.buttonId == 'protein-sources' ? 'diet-info-nav active' : 'diet-info-nav',
+	                        id: this.props.buttonId,
+	                        onClick: this.handleClick },
+	                    this.props.buttonName
 	                )
 	            );
 	        }
 	    }]);
 	
-	    return Carousel;
+	    return SubNavigation;
+	})(_react2['default'].Component);
+	
+	exports['default'] = SubNavigation;
+	module.exports = exports['default'];
+
+/***/ }),
+/* 502 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _CarouselItemJsx = __webpack_require__(503);
+	
+	var _CarouselItemJsx2 = _interopRequireDefault(_CarouselItemJsx);
+	
+	var Carousel = (function (_React$Component) {
+	  _inherits(Carousel, _React$Component);
+	
+	  function Carousel() {
+	    _classCallCheck(this, Carousel);
+	
+	    _get(Object.getPrototypeOf(Carousel.prototype), 'constructor', this).apply(this, arguments);
+	  }
+	
+	  _createClass(Carousel, [{
+	    key: 'render',
+	    value: function render() {
+	
+	      var carouselStyle = {
+	        backgroundImage: 'url(img/slider-bg.jpg)'
+	      };
+	
+	      return _react2['default'].createElement(
+	        'section',
+	        { id: 'text-carousel-intro-section', className: 'parallax', 'data-stellar-background-ratio': '0.5', style: carouselStyle },
+	        _react2['default'].createElement(
+	          'div',
+	          { className: 'container' },
+	          _react2['default'].createElement(
+	            'div',
+	            { className: 'caption text-center text-white', 'data-stellar-ratio': '0.7' },
+	            _react2['default'].createElement(
+	              'div',
+	              { id: 'owl-intro-text', className: 'owl-carousel' },
+	              _react2['default'].createElement(_CarouselItemJsx2['default'], { header: 'Rijeemak Online', subHeader: 'Your Diet, At Your Comfort', href: '#rijeemak-section', hrefText: 'Learn More!' }),
+	              _react2['default'].createElement(_CarouselItemJsx2['default'], { header: 'IT\'S ALL ABOUT YOU', subHeader: 'Love, Care and a great health program', href: '#services-section', hrefText: 'Learn More!' }),
+	              _react2['default'].createElement(_CarouselItemJsx2['default'], { header: 'Best Prices', subHeader: 'Cheaper than going to an actual appointment? WHAAAAT?!?', href: '#prices-section', hrefText: 'Learn More!' })
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return Carousel;
 	})(_react2['default'].Component);
 	
 	exports['default'] = Carousel;
 	module.exports = exports['default'];
 
 /***/ }),
-/* 502 */
+/* 503 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -42423,7 +42604,7 @@
 	module.exports = exports["default"];
 
 /***/ }),
-/* 503 */
+/* 504 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -42446,7 +42627,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _SectionHeaderJsx = __webpack_require__(504);
+	var _SectionHeaderJsx = __webpack_require__(505);
 	
 	var _SectionHeaderJsx2 = _interopRequireDefault(_SectionHeaderJsx);
 	
@@ -42575,7 +42756,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 504 */
+/* 505 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -42643,7 +42824,7 @@
 	module.exports = exports["default"];
 
 /***/ }),
-/* 505 */
+/* 506 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -42666,7 +42847,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _SectionHeaderJsx = __webpack_require__(504);
+	var _SectionHeaderJsx = __webpack_require__(505);
 	
 	var _SectionHeaderJsx2 = _interopRequireDefault(_SectionHeaderJsx);
 	
@@ -42790,7 +42971,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 506 */
+/* 507 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -42813,7 +42994,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _SectionHeaderJsx = __webpack_require__(504);
+	var _SectionHeaderJsx = __webpack_require__(505);
 	
 	var _SectionHeaderJsx2 = _interopRequireDefault(_SectionHeaderJsx);
 	
@@ -42988,7 +43169,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 507 */
+/* 508 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43011,7 +43192,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _SectionHeaderJsx = __webpack_require__(504);
+	var _SectionHeaderJsx = __webpack_require__(505);
 	
 	var _SectionHeaderJsx2 = _interopRequireDefault(_SectionHeaderJsx);
 	
@@ -43130,7 +43311,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 508 */
+/* 509 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43153,11 +43334,11 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _SectionHeaderJsx = __webpack_require__(504);
+	var _SectionHeaderJsx = __webpack_require__(505);
 	
 	var _SectionHeaderJsx2 = _interopRequireDefault(_SectionHeaderJsx);
 	
-	var _MoreInfoModalJsx = __webpack_require__(509);
+	var _MoreInfoModalJsx = __webpack_require__(510);
 	
 	var _MoreInfoModalJsx2 = _interopRequireDefault(_MoreInfoModalJsx);
 	
@@ -43392,7 +43573,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 509 */
+/* 510 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43636,7 +43817,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 510 */
+/* 511 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43659,7 +43840,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _SectionHeaderJsx = __webpack_require__(504);
+	var _SectionHeaderJsx = __webpack_require__(505);
 	
 	var _SectionHeaderJsx2 = _interopRequireDefault(_SectionHeaderJsx);
 	
@@ -44049,7 +44230,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 511 */
+/* 512 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -44072,7 +44253,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _SectionHeaderJsx = __webpack_require__(504);
+	var _SectionHeaderJsx = __webpack_require__(505);
 	
 	var _SectionHeaderJsx2 = _interopRequireDefault(_SectionHeaderJsx);
 	
@@ -44126,7 +44307,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 512 */
+/* 513 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -44149,7 +44330,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _SectionHeaderJsx = __webpack_require__(504);
+	var _SectionHeaderJsx = __webpack_require__(505);
 	
 	var _SectionHeaderJsx2 = _interopRequireDefault(_SectionHeaderJsx);
 	
@@ -44216,7 +44397,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 513 */
+/* 514 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -44239,7 +44420,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _SectionHeaderJsx = __webpack_require__(504);
+	var _SectionHeaderJsx = __webpack_require__(505);
 	
 	var _SectionHeaderJsx2 = _interopRequireDefault(_SectionHeaderJsx);
 	
@@ -44380,6 +44561,77 @@
 	})(_react2['default'].Component);
 	
 	exports['default'] = ContactSection;
+	module.exports = exports['default'];
+
+/***/ }),
+/* 515 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _NavigationBarNavigationBarJsx = __webpack_require__(194);
+	
+	var _NavigationBarNavigationBarJsx2 = _interopRequireDefault(_NavigationBarNavigationBarJsx);
+	
+	var Landing = (function (_React$Component) {
+	    _inherits(Landing, _React$Component);
+	
+	    function Landing() {
+	        _classCallCheck(this, Landing);
+	
+	        _get(Object.getPrototypeOf(Landing.prototype), 'constructor', this).apply(this, arguments);
+	    }
+	
+	    _createClass(Landing, [{
+	        key: 'render',
+	        value: function render() {
+	            var role = $('#user-role').text();
+	
+	            if (role === '[ROLE_USER]') {
+	                return _react2['default'].createElement(
+	                    'div',
+	                    { id: 'user' },
+	                    _react2['default'].createElement(_NavigationBarNavigationBarJsx2['default'], null),
+	                    'Welcome User'
+	                );
+	            } else if (role === '[ROLE_COACH]') {
+	                return _react2['default'].createElement(
+	                    'div',
+	                    { id: 'coach' },
+	                    'Welcome Coach'
+	                );
+	            } else {
+	                return _react2['default'].createElement(
+	                    'div',
+	                    { id: 'admin' },
+	                    'Welcome Admin'
+	                );
+	            }
+	        }
+	    }]);
+	
+	    return Landing;
+	})(_react2['default'].Component);
+	
+	exports['default'] = Landing;
 	module.exports = exports['default'];
 
 /***/ })

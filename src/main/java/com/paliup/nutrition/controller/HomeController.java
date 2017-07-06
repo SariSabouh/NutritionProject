@@ -14,9 +14,9 @@ public class HomeController {
 		return "index";
 	}
 
-	@RequestMapping("/user/loggedIn")
+	@RequestMapping("/user/landing")
 	public String userIndex() {
-		return "user/loggedIn";
+		return "user/landing";
 	}
 
 	@RequestMapping(value = "/login")

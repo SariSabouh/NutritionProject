@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+	<title>Welcome Back!</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+
+	<!-- Display loading image while page loads -->
+	<div class="body" id="app"></div>
+	
+	<!-- This DIV Is temp!! -->
+	<div>
+		<form action="#" th:action="@{/logout}" method="post">
+			<input type="submit" value="Logout" />
+		</form>
+	</div>
+	
+	<div th:fragment="logout" class="logout disabled" sec:authorize="isAuthenticated()" hidden="hidden">
+		<span id="user-email" sec:authentication="name"></span>
+		<span id="user-role" sec:authentication="principal.authorities"></span>
+		<div>
+			<form action="#" th:action="@{/logout}" method="post">
+				<input type="submit" value="Logout" />
+			</form>
+		</div>
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="../built/bundle.js"></script>
+	<script src="../inc/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
