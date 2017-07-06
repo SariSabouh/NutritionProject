@@ -24,11 +24,11 @@ public class UserRepositoryTests {
 
     @Test
     public void findByEmailShouldReturnUser() {
-        entityManager.persist(new User("a@a", "123"));
+        entityManager.persist(new User("a@a", "123123"));
         User user = this.userRepository.findByEmail("a@a");
         
         assertEquals("a@a" , user.getEmail());
-        assertEquals("123" , user.getPassword());
+        assertEquals("123123" , user.getPassword());
     }
 
 }

@@ -9,9 +9,11 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import com.paliup.nutrition.config.SecurityConfig;
+
 @RunWith(SpringRunner.class)
 @DataJpaTest
-@ComponentScan(basePackageClasses = { CustomUserDetails.class })
+@ComponentScan(basePackageClasses = { CustomUserDetails.class , SecurityConfig.class })
 public class CustomUserDetailsTest {
 
 	@Autowired

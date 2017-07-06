@@ -53,11 +53,11 @@ public class PersistanceService {
 	@Autowired
 	private CustomerSubscribtionRepository customerSubscribtionRepository;
 	
-//	@Autowired
-//	private PasswordEncoder passwordEncoder;
+	@Autowired
+	private PasswordEncoder passwordEncoder;
 
 	public long saveUser(User user) {
-//		user.setPassword(passwordEncoder.encode(user.getPassword()));
+		user.setPassword(passwordEncoder.encode(user.getPassword()));
 		User newUser = userRepository.save(user);
 		return newUser.getId();
 	}

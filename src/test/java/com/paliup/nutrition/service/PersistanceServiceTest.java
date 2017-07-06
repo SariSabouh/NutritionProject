@@ -12,6 +12,7 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import com.paliup.nutrition.config.SecurityConfig;
 import com.paliup.nutrition.model.Coach;
 import com.paliup.nutrition.model.Customer;
 import com.paliup.nutrition.model.CustomerCoach;
@@ -30,7 +31,7 @@ import com.paliup.nutrition.repository.SubscribtionRepository;
 
 @RunWith(SpringRunner.class)
 @DataJpaTest
-@ComponentScan(basePackageClasses = { PersistanceService.class })
+@ComponentScan(basePackageClasses = { PersistanceService.class , SecurityConfig.class })
 public class PersistanceServiceTest {
 
 	@Autowired

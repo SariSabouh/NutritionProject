@@ -8,7 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.validation.constraints.Min;
+import org.hibernate.validator.constraints.Length;
 
 @Entity
 @Table(name = "user")
@@ -21,8 +21,8 @@ public class User implements Serializable {
 	@Column(name = "Id")
 	private Long id;
 
+	@Length(min=6)
 	@Column(name = "Password")
-	@Min(6)
 	private String password;
 
 	@Column(name = "Email")
