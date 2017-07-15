@@ -51,3 +51,9 @@ Temporary Items
 .settings
 .project
 /target/
+
+src/main/resources/static/img/team/MAYSARA.jpg
+
+src/main/js/components/Body/TeamSection.jsx
+
+src/main/java/com/paliup/nutrition/controller/HomeController.java
