@@ -3,33 +3,84 @@
 	xmlns:th="http://www.thymeleaf.org"
 	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 <head>
-	<title>Welcome Back!</title>
-	<meta charset="utf-8" />
+		<meta
+			content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+			name="viewport" />
+		<title>Welcome Back!</title>
+		<meta charset="utf-8" />
+
+
+
+		<!-- Custom CSS -->
+		<link href="../css/AdminPageCss/dist/css/AdminLTE.min.css" rel="stylesheet" />
+		<!-- Custom Fonts -->
+		<link rel="stylesheet" href="../inc/GoogleFontsNav.min.css" type='text/css' />
+		<link rel="stylesheet" href="../inc/GoogleFonts.min.css" type='text/css' />
+		<link rel="stylesheet" href="../inc/bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../inc/animations/css/animate.min.css" />
+		<link rel="stylesheet" href="../inc/font-awesome/css/font-awesome.min.css" />
+		<!-- Font Icons -->
+		<link rel="stylesheet" href="../inc/owl-carousel/css/owl.carousel.css" />
+		<link rel="stylesheet" href="../inc/owl-carousel/css/owl.theme.css" />
+		<link rel="stylesheet" href="../css/multistep/normalize.css" />
+		<link rel="stylesheet" href="../css/multistep/skeleton.css" />
+		<link rel="stylesheet" href="../css/multistep/custom.css" />
+		<link rel="stylesheet" href="../css/multistep/prog-tracker.css" />
+		<link rel="stylesheet" href="../css/reset.css" />
+		<link rel="stylesheet" href="../css/style.css" />
+		<link rel="stylesheet" href="../css/presets.css" />
+		<link rel="stylesheet" href="../css/mobile.css" />
+		<link rel="stylesheet" href="../css/drop.css" />
+		<link rel="stylesheet" href="../css/skin/fresh-lime.css" />
+		<link rel="stylesheet" href="../css/reactTags.css" />
+		
+		<!-- Theme style -->
+		<link rel="stylesheet" href="../css/AdminPageCss/dist/css/skins/_all-skins.min.css" />
+
 </head>
+<style>
+</style>
 <body>
 
 	<!-- Display loading image while page loads -->
 	<div class="body" id="app"></div>
-	
+
 	<!-- This DIV Is temp!! -->
 	<div>
 		<form action="#" th:action="@{/logout}" method="post">
 			<input type="submit" value="Logout" />
 		</form>
 	</div>
-	
-	<div th:fragment="logout" class="logout disabled" sec:authorize="isAuthenticated()" hidden="hidden">
-		<span id="user-email" sec:authentication="name"></span>
-		<span id="user-role" sec:authentication="principal.authorities"></span>
+
+	<div th:fragment="logout" class="logout disabled"
+		sec:authorize="isAuthenticated()" hidden="hidden">
+		<span id="user-email" sec:authentication="name"></span> <span
+			id="user-role" sec:authentication="principal.authorities"></span>
 		<div>
 			<form action="#" th:action="@{/logout}" method="post">
 				<input type="submit" value="Logout" />
 			</form>
 		</div>
 	</div>
-	
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="../built/bundle.js"></script>
 	<script src="../inc/bootstrap/js/bootstrap.min.js"></script>
+	<script src="built/bundle.js"></script>
+	<script src="../inc/jquery/jquery-1.11.1.min.js"></script>
+	<script src="../inc/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../inc/owl-carousel/js/owl.carousel.min.js"></script>
+	<script src="../inc/stellar/js/jquery.stellar.min.js"></script>
+	<script src="../inc/animations/js/wow.min.js"></script>
+	<script src="../inc/stellar/js/waypoints.min.js"></script>
+	<script src="../inc/stellar/js/isotope.pkgd.min.js"></script>
+	<script src="../inc/stellar/js/classie.js"></script>
+	<script src="../inc/jquery/jquery.easing.min.js"></script>
+	<script src="../inc/jquery/jquery.counterup.min.js"></script>
+	<script src="../inc/stellar/js/smoothscroll.js"></script>
+	<script src="../js/homepageScripts.js"></script>
+
+
+
 </body>
 </html>
