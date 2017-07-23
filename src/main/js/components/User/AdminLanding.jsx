@@ -4,13 +4,18 @@ import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'rec
 
 
 const data = [
-      {name: 'Page A', uv: 4000, pv: 2400, amt: 2400},
-      {name: 'Page B', uv: 3000, pv: 1398, amt: 2210},
-      {name: 'Page C', uv: 2000, pv: 9800, amt: 2290},
-      {name: 'Page D', uv: 2780, pv: 3908, amt: 2000},
-      {name: 'Page E', uv: 1890, pv: 4800, amt: 2181},
-      {name: 'Page F', uv: 2390, pv: 3800, amt: 2500},
-      {name: 'Page G', uv: 3490, pv: 4300, amt: 2100},
+      {name: 'Jan', Customers: 0, amt: 2400},
+      {name: 'Feb', Customers: 3000, amt: 2210},
+      {name: 'Mar', Customers: 2000, amt: 2290},
+      {name: 'Apr', Customers: 2780, amt: 2000},
+      {name: 'May', Customers: 1890, amt: 2181},
+      {name: 'Jun', Customers: 2390, amt: 2500},
+      {name: 'Jul', Customers: 3490, amt: 2100},
+      {name: 'Aug', Customers: 3490, amt: 2100},
+      {name: 'Sep', Customers: 3490, amt: 2100},
+      {name: 'Oct', Customers: 3490, amt: 2100},
+      {name: 'Nov', Customers: 3490, amt: 2100},
+      {name: 'Dec', Customers: 5000, amt: 2100}
 ];
 
 
@@ -55,12 +60,12 @@ export default class AdminLanding extends React.Component {
                     <div className="inner">
                       <h3>150</h3>
 
-                      <h4>Users</h4>
+                      <h4>Customers</h4>
                     </div>
                     <div className="icon">
                       <i className="fa fa-users" style ={faStyle}></i>
                     </div>
-                    <a href="#" className="small-box-footer">More info <i className="fa fa-arrow-circle-right"></i></a>
+                    <a href="/admin/customers" className="small-box-footer">More info <i className="fa fa-arrow-circle-right"></i></a>
                   </div>
                 </div>
 
@@ -75,7 +80,7 @@ export default class AdminLanding extends React.Component {
                     <div className="icon">
                       <i className="fa fa-users" style ={faStyle}></i>
                     </div>
-                    <a href="#" className="small-box-footer">More info <i className="fa fa-arrow-circle-right"></i></a>
+                    <a href="/admin/coaches" className="small-box-footer">More info <i className="fa fa-arrow-circle-right"></i></a>
                   </div>
                 </div>
 
@@ -90,7 +95,7 @@ export default class AdminLanding extends React.Component {
                     <div className="icon">
                       <i className="fa fa-star" style ={faStyle}></i>
                     </div>
-                    <a href="#" className="small-box-footer">More info <i className="fa fa-arrow-circle-right"></i></a>
+                    <a href="/admin/reviews" className="small-box-footer">More info <i className="fa fa-arrow-circle-right"></i></a>
                   </div>
                 </div>
 
@@ -105,7 +110,7 @@ export default class AdminLanding extends React.Component {
                     <div className="icon">
                       <i className="fa fa-envelope" style ={faStyle}></i>
                     </div>
-                    <a href="#" className="small-box-footer">More info <i className="fa fa-arrow-circle-right"></i></a>
+                    <a href="/admin/inbox" className="small-box-footer">More info <i className="fa fa-arrow-circle-right"></i></a>
                   </div>
                 </div>  
               </div>
@@ -119,8 +124,7 @@ export default class AdminLanding extends React.Component {
                    <CartesianGrid strokeDasharray="3 3"/>
                    <Tooltip/>
                    <Legend />
-                   <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{r: 8}}/>
-                   <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+                   <Line type="monotone" dataKey="Customers" stroke="#82ca9d" />
                 </LineChart>
                 
                       

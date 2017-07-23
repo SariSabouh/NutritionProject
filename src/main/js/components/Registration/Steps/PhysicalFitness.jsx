@@ -1,9 +1,13 @@
 import React, { Component, PropTypes } from 'react'
+import PhysicalFitnessInfo from './Utils/PhysicalFitnessInfo.jsx'
 
-const store = { activities: [] }
+const store = { activities: [] , modified:false}
 
 const PhysicalFitness = React.createClass( {
     getInitialState() {
+        
+        if (!store.modified)
+            for (let i = 0; i < 1; i++) store.activities.push({ activity: '', duration: '', frequency: '', id: i})
         return {
             store: store,
             isDisabled: true
@@ -41,6 +45,7 @@ const PhysicalFitness = React.createClass( {
 
     componentDidMount() {
         this.bindCalls();
+       
     },
 
     updateRows( activityCounter ) {
@@ -56,7 +61,8 @@ const PhysicalFitness = React.createClass( {
             activity: $( '#' + activityCounter + ' #activity' ).val(),
             duration: $( '#' + activityCounter + ' #duration' ).val(),
             frequency: $( '#' + activityCounter + ' #frequency' ).val(),
-            id: activityCounter
+            id: activityCounter,
+            
         });
         $( '.add-activity-button' ).attr( 'disabled', 'true' );
         this.setState(
@@ -65,34 +71,29 @@ const PhysicalFitness = React.createClass( {
                 isDisabled: true
             })
         this.updateRows( activityCounter + 1 )
+        store.modified = true
     },
+
 
     render() {
         const isDisabled = this.state.isDisabled;
 
         return (
-            <div id="physicalFitness">
-                <div className="row">
-                    <div className="activity-list"  id="0">
-                        <button type="button" className="close remove-activity" aria-label="Close">
-                            <span aria-hidden="true">×</span>
-                        </button>
-                        <div>
-                            <label>Physical Activity</label>
-                            <input id="activity" placeholder="Running" type="text" autoFocus/>
-                        </div>
-                        <div>
-                            <label>Duration ( minutes ) </label>
-                            <input id="duration" placeholder="30" type="number" autoFocus/>
-                        </div>
-                        <div>
-                            <label>Frequency ( days a week ) </label>
-                            <input className="no-margin" id="frequency" placeholder="2" type="number" autoFocus/>
-                        </div>
+            
+            <div className="row">
+                <div className="activity-list"  id="0">
+            
+                    <div id="physicalFitness">
+                
+                        <PhysicalFitnessInfo handleActivitiesChanged={this.handleActivitiesChanged} activity={this.state.activities}
+                    objectId={this.activityCounter} checkbox="true" hideIcon="true" />
+            
+                        <button className="add-activity-button btn-primary" onClick={ () => { this.handleActivitiesChanged() } } disabled={isDisabled}>Add Activity</button>
                     </div>
                 </div>
-                <button className="add-activity-button btn-primary" onClick={ () => { this.handleActivitiesChanged() } } disabled={isDisabled}>Add Activity</button>
             </div>
+            
+           
         )
     }
 })

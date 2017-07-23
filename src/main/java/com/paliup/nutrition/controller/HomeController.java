@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class HomeController {
 
-	public HomeController () {}
+	public HomeController() {}
 
 	@RequestMapping({ "/", "/index", "home", "body" })
 	public String root() {
@@ -17,6 +17,40 @@ public class HomeController {
 	@RequestMapping("/user/landing")
 	public String userIndex() {
 		return "user/landing";
+
+	}
+	
+	@RequestMapping("/user/user-profile")
+	public String userProfile() {
+		return "user/user-profile";
+
+	}
+	
+	@RequestMapping("/admin/landing")
+	public String adminIndex() {
+		
+		return "user/Adminlanding";
+	}
+	
+	
+	@RequestMapping("/admin/customers")
+	public String lsitCustomers() {
+		return "user/customers";
+	}
+	
+	@RequestMapping("/admin/coaches")
+	public String lsitCoaches() {
+		return "user/coaches";
+	}
+	
+	@RequestMapping("/admin/reviews")
+	public String lsitReviews() {
+		return "user/reviews";
+	}
+	
+	@RequestMapping("/admin/inbox")
+	public String lsitMails() {
+		return "user/inbox";
 	}
 
 	@RequestMapping(value = "/login")

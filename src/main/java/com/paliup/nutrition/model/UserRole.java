@@ -11,10 +11,10 @@ public class UserRole {
 	@Column(name = "Id")
 	private Long id;
 
-	@Column(name = "userid")
+	@Column(name = "user_id")
 	private Long userId;
 
-	@Column(name = "Role")
+	@Column(name = "user_role")
 	private String role;
 
 	public UserRole(long userId, String role) {
