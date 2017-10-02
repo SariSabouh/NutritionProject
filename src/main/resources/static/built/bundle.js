@@ -22766,7 +22766,7 @@
 	                                    _react2['default'].createElement('input', { type: 'checkbox', tabIndex: '3', name: 'remember', id: 'remember' }),
 	                                    _react2['default'].createElement(
 	                                        'label',
-	                                        { htmlFor: 'remember', id: 'remember' },
+	                                        { htmlFor: 'remember', id: 'remember-label' },
 	                                        'Remember Me'
 	                                    )
 	                                ),
@@ -23110,6 +23110,9 @@
 	            }
 	        }
 	    }, {
+	        key: 'submit',
+	        value: function submit() {}
+	    }, {
 	        key: 'getClassName',
 	        value: function getClassName(className, i) {
 	            return className + "-" + this.state.navState.styles[i];
@@ -23172,6 +23175,14 @@
 	                                    onClick: this.next,
 	                                    type: 'submit' },
 	                                'Next'
+	                            ),
+	                            _react2['default'].createElement(
+	                                'button',
+	                                { style: this.state.showNextBtn ? this.hidden : {},
+	                                    className: 'multistep__btn--next',
+	                                    onClick: this.submit,
+	                                    type: 'submit' },
+	                                'Submit'
 	                            )
 	                        )
 	                    )
@@ -23197,7 +23208,7 @@
 	'use strict';
 	
 	Object.defineProperty(exports, '__esModule', {
-	    value: true
+	  value: true
 	});
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
@@ -23214,7 +23225,7 @@
 	
 	var _StepsDietInfoJsx = __webpack_require__(269);
 	
-	var steps = [{ name: 'Diet Information', component: _react2['default'].createElement(_StepsDietInfoJsx.DietInfo, null) }, { name: 'Personal Details', component: _react2['default'].createElement(_StepsPersonalDetailsJsx.PersonalDetails, null) }, { name: 'Physical Fitness', component: _react2['default'].createElement(_StepsPhysicalFitnessJsx.PhysicalFitness, null) }, { name: 'Health Facts', component: _react2['default'].createElement(_StepsHealthFactsJsx.HealthFacts, null) }];
+	var steps = [{ name: 'Personal Details', component: _react2['default'].createElement(_StepsPersonalDetailsJsx.PersonalDetails, null) }, { name: 'Physical Fitness', component: _react2['default'].createElement(_StepsPhysicalFitnessJsx.PhysicalFitness, null) }, { name: 'Health Facts', component: _react2['default'].createElement(_StepsHealthFactsJsx.HealthFacts, null) }, { name: 'Diet Information', component: _react2['default'].createElement(_StepsDietInfoJsx.DietInfo, null) }];
 	
 	exports.steps = steps;
 
@@ -78014,34 +78025,35 @@
 	
 	var _reactBootstrapTable = __webpack_require__(837);
 	
-	var Customers = [{
-	    email: "maysara@ieee.org",
-	    firstName: "ahmad",
-	    lastName: "saleem",
-	    plan: "premium",
-	    phone: "0592305432",
-	    trial: "no",
-	    blocked: "no"
-	}, {
-	    email: "mohammad@gmail.com",
-	    firstName: "mohammad",
-	    lastName: "Odeh",
-	    plan: "basic",
-	    phone: "059830543212",
-	    trial: "yes",
-	    blocked: "no"
-	}];
-	
 	var CustomersTable = (function (_React$Component) {
 	    _inherits(CustomersTable, _React$Component);
 	
-	    function CustomersTable() {
+	    function CustomersTable(props) {
 	        _classCallCheck(this, CustomersTable);
 	
-	        _get(Object.getPrototypeOf(CustomersTable.prototype), 'constructor', this).apply(this, arguments);
+	        _get(Object.getPrototypeOf(CustomersTable.prototype), 'constructor', this).call(this, props);
+	        this.getCustomersData = this.getCustomersData.bind(this);
 	    }
 	
 	    _createClass(CustomersTable, [{
+	        key: 'componentDidMount',
+	        value: function componentDidMount() {
+	            this.getCustomersData();
+	        }
+	    }, {
+	        key: 'getCustomersData',
+	        value: function getCustomersData() {
+	            var _this = this;
+	
+	            fetch('/api/auth/user-list').then(function (response) {
+	                return response.json();
+	            }).then(function (responseJSON) {
+	                _this.setState({
+	                    customers: responseJSON
+	                });
+	            });
+	        }
+	    }, {
 	        key: 'render',
 	        value: function render() {
 	
@@ -78110,7 +78122,7 @@
 	                    ),
 	                    _react2['default'].createElement(
 	                        _reactBootstrapTable.BootstrapTable,
-	                        { data: Customers, selectRow: selectRowProp, search: true },
+	                        { data: this.state ? this.state.customers : [], selectRow: selectRowProp, search: true },
 	                        _react2['default'].createElement(
 	                            _reactBootstrapTable.TableHeaderColumn,
 	                            { isKey: true, dataField: 'email' },

@@ -3,6 +3,7 @@ package com.paliup.nutrition.config;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -22,6 +23,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
+			.antMatchers(HttpMethod.POST, "/api/auth/**").authenticated()
+	        .antMatchers(HttpMethod.PUT, "/api/auth/**").authenticated()
+	        .antMatchers(HttpMethod.DELETE, "/api/auth/**").authenticated()
+//	        .antMatchers(HttpMethod.GET, "/api/auth/**").authenticated()
 			.antMatchers("/css/**", "/index").permitAll()
 			.antMatchers("/user/**").hasAnyRole("USER, COACH, ADMIN")
 			.antMatchers("/admin/**").hasRole("ADMIN")

@@ -2,32 +2,31 @@ import React from 'react';
 import NavigationBar from '../NavigationBar/NavigationBar.jsx';
 import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 
-var Customers = [{
-      email: "maysara@ieee.org",
-      firstName: "ahmad",
-      lastName: "saleem",
-      plan: "premium",
-      phone:"0592305432",
-      trial: "no",
-      blocked:"no"
-  }, {
-      email: "mohammad@gmail.com",
-      firstName: "mohammad",
-      lastName:"Odeh",
-      plan: "basic",
-      phone:"059830543212",
-      trial: "yes",
-      blocked:"no"
-  }];
 export default class CustomersTable extends React.Component{
-    
+    constructor(props) {
+        super(props)
+        this.getCustomersData = this.getCustomersData.bind(this)
+    }
 
-    
-    render(){
+    componentDidMount() {
+        this.getCustomersData();
+    }
+
+    getCustomersData() {
+        fetch('/api/auth/user-list')
+            .then((response) => response.json()) 
+            .then((responseJSON) => { 
+                this.setState({ 
+                    customers: responseJSON, 
+                }); 
+            });   
+    }
+
+    render() {
         
         var divStyle = {
-         margin:'30px'
-            };
+            margin:'30px'
+        };
         var culomnHeadStyle ={
             fontSize:'14px'
         }
@@ -67,7 +66,7 @@ export default class CustomersTable extends React.Component{
                             </div>
                         </div>
                 </div>
-        <BootstrapTable data={Customers} selectRow={ selectRowProp } search={ true }>
+        <BootstrapTable data={this.state ? this.state.customers : []} selectRow={ selectRowProp } search={ true }>
             <TableHeaderColumn  isKey dataField='email'>email</TableHeaderColumn>
             <TableHeaderColumn dataField='firstName'>First Name</TableHeaderColumn>
             <TableHeaderColumn dataField='lastName'>Last Name</TableHeaderColumn>
