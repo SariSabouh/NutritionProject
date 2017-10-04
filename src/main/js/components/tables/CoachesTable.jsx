@@ -3,14 +3,27 @@ import NavigationBar from '../NavigationBar/NavigationBar.jsx';
 import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 import AddCoachModal from './AddCoachModal.jsx';
 
-var Coaches = [{
-      email: "tima@gmail.com",
-      firstName: "Tima",
-      lastName: "Pina",
-      phone:"0097234546",
 
-  }];
 export default class CoachesTable extends React.Component{
+    
+       constructor(props) {
+        super(props)
+        this.getCoachesData = this.getCoachesData.bind(this)
+    }
+
+    componentDidMount() {
+        this.getCoachesData();
+    }
+
+    getCoachesData() {
+        fetch('/api/auth/coach-list')
+            .then((response) => response.json()) 
+            .then((responseJSON) => { 
+                this.setState({ 
+                    coaches: responseJSON, 
+                }); 
+            });   
+    }
     
     render(){
         
@@ -57,7 +70,7 @@ export default class CoachesTable extends React.Component{
                         </div>
                 </div>
                
-        <BootstrapTable data={Coaches} selectRow={ selectRowProp } search={ true }>
+        <BootstrapTable data={this.state ? this.state.coaches : []} selectRow={ selectRowProp } search={ true }>
             <TableHeaderColumn  isKey dataField='email'>email</TableHeaderColumn>
             <TableHeaderColumn dataField='firstName'>First Name</TableHeaderColumn>
             <TableHeaderColumn dataField='lastName'>Last Name</TableHeaderColumn>

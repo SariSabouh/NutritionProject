@@ -8,7 +8,7 @@ import UserProfile from './components/User/UserProfile.jsx';
 import ReviewsTable from './components/tables/ReviewsTable.jsx';
 import Mailbox from './components/Mailbox/Mailbox.jsx';
 
-if ( window.location.href.includes( '/admin/landing' ) ) ReactDOM.render( <Landing />, document.getElementById( 'app' ) )
+if ( window.location.href.includes( '/user/landing' ) ) ReactDOM.render( <Landing />, document.getElementById( 'app' ) )
 else if (window.location.href.includes('/admin/customers'))ReactDOM.render(<CustomersTable />,
 document.getElementById( 'app' ))
 else if (window.location.href.includes('/admin/coaches'))ReactDOM.render(<CoachesTable />,

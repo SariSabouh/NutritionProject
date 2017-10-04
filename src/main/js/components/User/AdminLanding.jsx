@@ -1,6 +1,11 @@
 import React from 'react';
 import NavigationBar from '../NavigationBar/NavigationBar.jsx';
 import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
+import Customers from './AdminLandingComponents/Customers.jsx';
+import Coaches from './AdminLandingComponents/Coaches.jsx';
+import Reviews from './AdminLandingComponents/Reviews.jsx';
+import Mails from './AdminLandingComponents/Mails.jsx';
+import CustomersTable from '../tables/CustomersTable.jsx';
 
 
 const data = [
@@ -22,7 +27,6 @@ const data = [
 
 
 export default class AdminLanding extends React.Component {
-
 
     render(){
         
@@ -49,72 +53,18 @@ export default class AdminLanding extends React.Component {
             <div>
             <NavigationBar />
             
-           <div className="wrapper">
-               
+           <div className="wrapper">   
             <section className="content">
-
               <div className="row" style={boxStyle}>
-                <div className="col-lg-3 col-xs-6">
-
-                  <div className="small-box bg-aqua">
-                    <div className="inner">
-                      <h3>150</h3>
-
-                      <h4>Customers</h4>
-                    </div>
-                    <div className="icon">
-                      <i className="fa fa-users" style ={faStyle}></i>
-                    </div>
-                    <a href="/admin/customers" className="small-box-footer">More info <i className="fa fa-arrow-circle-right"></i></a>
-                  </div>
-                </div>
-
-                <div className="col-lg-3 col-xs-6">
-
-                  <div className="small-box bg-green">
-                    <div className="inner">
-                      <h3>1</h3>
-
-                      <h4>Coaches</h4>
-                    </div>
-                    <div className="icon">
-                      <i className="fa fa-users" style ={faStyle}></i>
-                    </div>
-                    <a href="/admin/coaches" className="small-box-footer">More info <i className="fa fa-arrow-circle-right"></i></a>
-                  </div>
-                </div>
-
-                <div className="col-lg-3 col-xs-6">
-
-                  <div className="small-box bg-yellow">
-                    <div className="inner">
-                      <h3>44</h3>
-
-                      <h4>Reviews</h4>
-                    </div>
-                    <div className="icon">
-                      <i className="fa fa-star" style ={faStyle}></i>
-                    </div>
-                    <a href="/admin/reviews" className="small-box-footer">More info <i className="fa fa-arrow-circle-right"></i></a>
-                  </div>
-                </div>
-
-                <div className="col-lg-3 col-xs-6">
-
-                  <div className="small-box bg-red">
-                    <div className="inner">
-                      <h3>65</h3>
-
-                      <h4>Mails</h4>
-                    </div>
-                    <div className="icon">
-                      <i className="fa fa-envelope" style ={faStyle}></i>
-                    </div>
-                    <a href="/admin/inbox" className="small-box-footer">More info <i className="fa fa-arrow-circle-right"></i></a>
-                  </div>
-                </div>  
+                  
+               <Customers />
+               <Coaches />
+               <Reviews />
+               <Mails />
+                  
               </div>
             </section>
+               
   
         </div>
                 <LineChart width={600} height={300} data={data}
@@ -126,8 +76,7 @@ export default class AdminLanding extends React.Component {
                    <Legend />
                    <Line type="monotone" dataKey="Customers" stroke="#82ca9d" />
                 </LineChart>
-                
-                      
+                          
           </div>
  
         )

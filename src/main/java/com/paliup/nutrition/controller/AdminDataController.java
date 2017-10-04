@@ -9,8 +9,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.paliup.nutrition.model.Coach;
 import com.paliup.nutrition.model.Customer;
 import com.paliup.nutrition.model.User;
+import com.paliup.nutrition.repository.CoachRepository;
 import com.paliup.nutrition.repository.CustomerRepository;
 import com.paliup.nutrition.repository.UserRepository;
 
@@ -23,6 +25,9 @@ private final Logger log = LoggerFactory.getLogger(this.getClass());
 	CustomerRepository customerRepo;
 	
 	@Autowired
+	CoachRepository coachRepo;
+	
+	@Autowired
 	UserRepository userRepo;
 	
 	@RequestMapping(value = "/api/auth/user-list",  method = RequestMethod.GET)
@@ -33,4 +38,12 @@ private final Logger log = LoggerFactory.getLogger(this.getClass());
 		return customerList;
 	}
 
+	
+	@RequestMapping(value = "/api/auth/coach-list",  method = RequestMethod.GET)
+	public List<Coach> getCoachList() {
+		List<User> userList = userRepo.findAll();
+		List<Coach> coachList = coachRepo.findAll();
+		coachList.stream().forEach(c -> c.setEmail(userList.stream().filter(u -> u.getId() == c.getUserId()).findFirst().get().getEmail()));
+		return coachList;
+	}
 }

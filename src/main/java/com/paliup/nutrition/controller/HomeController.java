@@ -20,18 +20,6 @@ public class HomeController {
 
 	}
 	
-	@RequestMapping("/user/user-profile")
-	public String userProfile() {
-		return "user/user-profile";
-
-	}
-	
-	@RequestMapping("/admin/landing")
-	public String adminIndex() {
-		
-		return "user/Adminlanding";
-	}
-	
 	
 	@RequestMapping("/admin/customers")
 	public String lsitCustomers() {
